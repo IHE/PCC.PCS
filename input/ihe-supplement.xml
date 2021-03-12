@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Start by finding all references to "myig" and updating to appropriate text for your IG, including changing realm -->
 <ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas-r5/fhir-single.xsd">
-  <id value="ihe.uv.ihe-supplement"/>
-  <url value="http://ihe.net/fhir/uv/ihe-supplement/ImplementationGuide/ihe.uv.ihe-supplement"/>
+  <id value="ihe.uv.ihe.pcc.pcs.fhir"/>
+  <url value="http://ihe.net/fhir/uv/ihe.pcc.pcs.fhir/ImplementationGuide/ihe.uv.ihe.pcc.pcs.fhir"/>
   <version value="0.2.0" />
-  <name value="IHEfooBarNameHere"/>
-  <title value="Your User Friendly Name for FooBar Here"/>
+  <name value="IHEpccpcs"/>
+  <title value="Paramedicine Care Summary"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <publisher value="IHE International - [Some] domain Group"/>
+  <publisher value="IHE International - PCC domain Group"/>
   <contact>
     <telecom>
       <!-- Or whatever URL and/or email address(es) are appropriate -->
@@ -29,7 +29,7 @@
       -->
     </coding>
   </jurisdiction>
-  <packageId value="example.fhir.uv.ihe-supplement"/>
+  <packageId value="ihe.pcc.pcs.fhir"/>
   <!-- This is whatever FHIR version the IG artifacts are targeting (not the version of this file, which should always be 'current release') -->
   <fhirVersion value="4.0.1"/>
   <definition>

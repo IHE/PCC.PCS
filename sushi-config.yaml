@@ -1,6 +1,6 @@
-id: fooBar.ihe.net
-canonical: https://profiles.ihe.net/fooBar
-name: FooBar
+id: ihe.pcc.pcs.fhir
+canonical: https://profiles.ihe.net/ihe.pcc.pcs.fhir
+name: ihe.pcc.pcs.fhir
 status: draft
 version: 0.1.0
 fhirVersion: 4.0.1
