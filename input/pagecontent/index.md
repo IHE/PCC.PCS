@@ -15,7 +15,7 @@ This guide is organized into four main sections:
    4. [Test Plan](5_testplan.html)
 
 2. Volume II: Transaction Detail
-   1. [FooBar do [domain-Y]](domain-Y.html)
+   1. [Document Sharing [PCC-1]](domain-Y.html)
 
 3. Volume III: Metadata
    1. **TODO: point to your content profiles if you have them**
