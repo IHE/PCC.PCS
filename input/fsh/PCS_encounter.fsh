@@ -57,4 +57,4 @@ slice:
 "
 * identifier 1..*
 // TODO add an extension element to statusHistory.status holding refined status for EMS  
-* class from NEMSYS_eResponse_VS
+* class from NEMSIS_eResponse_VS
