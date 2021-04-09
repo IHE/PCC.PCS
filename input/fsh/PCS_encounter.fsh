@@ -2,7 +2,8 @@ Profile:   IHE_PCS_Encounter
 Parent: Encounter
 Id:             IHE.PCC.PCS.Encounter
 Title: "IHE PCS Encounter"
-Description:      "an encounter resource used to deffine an emergency medical encounter of a patient"
+Description:      "an encounter resource used to deffine an emergency medical encounter of a patient
+
 * identifier 1..*
 * status 1..1 
 * status = [extend]
@@ -11,7 +12,7 @@ Description:      "an encounter resource used to deffine an emergency medical en
 * class 1..1
 * class = [extend] 
 * class ^slicing.discriminator.type = #value
-* class ^slicing.discriminator.path = "$this"
+* class ^slicing.discriminator.path = $this
 * class ^slicing.rules = #closed
 * class 0..1
 * class contains
@@ -51,4 +52,9 @@ slice:
 * Location.destination = Reference(Location) 
 * serviceProvider = 1..1
 * component[1].valueQuantity = 90.0 'mm[Hg]'
-* note.text = "a minimal blood pressure"
+* note.text = a minimal blood pressure
+
+"
+* identifier 1..*
+// TODO add an extension element to statusHistory.status holding refined status for EMS  
+* class from NEMSYS_eResponse_VS
