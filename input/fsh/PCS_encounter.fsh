@@ -1,5 +1,6 @@
-Instance:   IHE-PCS-Encounter-CompleteReport
-InstanceOf: Encounter
+Profile:   IHE_PCS_Encounter
+Parent: Encounter
+Id:             IHE.PCC.PCS.Encounter
 Title: "IHE PCS Encounter"
 Description:      "an encounter resource used to deffine an emergency medical encounter of a patient"
 * identifier 1..*
