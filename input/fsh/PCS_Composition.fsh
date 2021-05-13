@@ -8,6 +8,8 @@ Description:      "composition of the FHIR elements that are used to build the F
 
 *Patient 1..1
 
+*event.code 1..*
+
 *IPS Advance Directives 0..1
 
 *IPS Allergies and Intolerances 1..1

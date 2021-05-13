@@ -1,7 +1,7 @@
-Profile:   IHE_PCS_Encounter
+Profile:   IHE_PCS_Encounter_CLinicalSubset
 Parent: Encounter
-Id:             IHE.PCC.PCS.Encounter
-Title: "IHE PCS Encounter"
+Id:             IHE.PCC.PCS.Encounter.Complete Report
+Title: "IHE PCS Encounter CLinical Subset"
 Description:      "an encounter resource used to deffine an emergency medical encounter of a patient
 
 * identifier 1..*

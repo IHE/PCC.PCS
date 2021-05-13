@@ -1,9 +1,21 @@
 Profile:   IHE_PCS_Encounter_CompleteReport
-Parent: Encounter
+Parent: IHE.PCC.PCS.Encounter.ClinicalSubset
 Id:             IHE.PCC.PCS.Encounter.CompleteReport
 Title: "IHE PCS Encounter Complete Report"
 Description:      "an encounter resource used to deffine an emergency medical encounter of a patient"
+
 * identifier 1..* 
+
+* subject = Reference(StructureDefinition-us-core-patient) 1..1
+
+* episodeOfCare = Reference(episodeOfCare) 1..1
+* episodeOfCare.identifier 1..1
+* episodeOfCare.text 1..1
+
+* basedOn = Reference(ServiceRequest) 1..1
+* ServiceRequest.category 1..1
+* ServiceRequest.reasonCode 1..1
+* ServiceRequest.Coverage 0..1
 
 * statusHistory 1..* 
 * statusHistory = [extend]
@@ -84,3 +96,22 @@ Description:      "an encounter resource used to deffine an emergency medical en
 * Location.Scene contains
 * Location.Scene 1..1
 * Location.Scene = Reference (Location)
+
+
+Extension: StatusHistorySubType
+Id: Encounter.statusHistorySubType
+Description: "Refinement of the Encounter status for steps within EMS"
+Title: "PCS Encounter status history sub-type"
+* value[x] only CodeableConcept
+* valueCodeableConcept from Encounter.statusHistorySubTypes.VS
+
+CodeSystem: StatusHistorySubType
+Id: Encounter.statusHistorySubType.CS
+* #arrived "Arrived on scene"
+* #stablized "Stablized patient"
+* #flipped "Flipped patient over"
+* #painted "Painted toenails of patient"
+
+ValueSet: StatusHistorySubTypes
+Id: Encounter.statusHistorySubTypes.VS
+* codes from system Encounter.statusHistorySubType.CS
