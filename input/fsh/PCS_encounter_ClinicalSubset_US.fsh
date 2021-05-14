@@ -1,8 +1,8 @@
-Profile:   IHE_PCS_Encounter_CLinicalSubset
+Profile:   IHE_PCS_Encounter_ClinicalSubset
 Parent: Encounter
-Id:             IHE.PCC.PCS.Encounter.Complete Report
-Title: "IHE PCS Encounter CLinical Subset"
-Description:      "an encounter resource used to deffine an emergency medical encounter of a patient
+Id:             IHE.PCC.PCS.Encounter.ClinicalSubset
+Title: "IHE PCS Encounter Clinical Subset"
+Description:      "an encounter resource used to deffine an emergency medical encounter of a patient prior to the patient drop off or transfer of care, US realm"
 
 * identifier 1..*
 
@@ -121,8 +121,9 @@ Slice://The Slice has the name barriersToCare
 * diagnosis.barriersToCare = NEMSIS_eHistory.01_ Barriers to Patient Care_VS
  
 * serviceProvider = 1..1
-
-
+* serviceProvider = Reference (Organization)
+* organization.identifier 1..1
+* organization.name 1..1
 "
 * identifier 1..*
 // TODO add an extension element to statusHistory.status holding refined status for EMS  
