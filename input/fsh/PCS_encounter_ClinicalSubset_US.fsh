@@ -18,6 +18,7 @@ Description:      "an encounter resource used to deffine an emergency medical en
 
 * statusHistory 1..*
 * status 1..1 
+* StatusHistorySubType 0..1
 
  
 Extension: StatusHistorySubType
@@ -47,7 +48,6 @@ Id: Encounter.statusHistorySubType.CS
 * #EMS_Call_Completed "The date/time the responding unit completed all tasks associated with the event including transfer of the patient, and such things as cleaning and restocking."
 * #Unit_Arrived_at_Staging_Area "The date/time the responding unit arrived at a staging area, prior to arrival on scene."
 
-* StatusHistorySubType 0..1
 
 * priority 1..1
 
