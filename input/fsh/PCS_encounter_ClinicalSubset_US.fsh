@@ -13,7 +13,8 @@ Description:      "an encounter resource used to deffine an emergency medical en
 * episodeOfCare = Reference(episodeOfCare)
 * episodeOfCare.identifier 1..1
 
-* basedOn = Reference(ServiceRequest) 0..1
+* basedOn 0..1
+* basedOn = Reference(ServiceRequest)
 * ServiceRequest.category 0..1
 * ServiceRequest.reasonReference 0..1
 

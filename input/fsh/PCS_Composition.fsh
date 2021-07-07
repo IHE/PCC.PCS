@@ -11,6 +11,6 @@ Description:      "composition of the FHIR elements that are used to build the F
 
 * event.code 1..*
 
-* section:sectionFunctionalStatus 1..1
+//* section:sectionFunctionalStatus 1..1
 
 
