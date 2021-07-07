@@ -9,7 +9,8 @@ Description:      "an encounter resource used to deffine an emergency medical en
 * subject 1..1
 * subject = Reference(StructureDefinition-us-core-patient)
 
-* episodeOfCare = Reference(episodeOfCare) 0..1
+* episodeOfCare 0..1
+* episodeOfCare = Reference(episodeOfCare)
 * episodeOfCare.identifier 1..1
 
 * basedOn = Reference(ServiceRequest) 0..1

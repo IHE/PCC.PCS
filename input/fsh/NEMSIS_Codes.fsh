@@ -8,7 +8,7 @@ Id: NEMSIS
 * #2223007	"Non-Emergent Upgraded to Emergent"
 
 
-ValueSet: NEMSIS_eResponse.05_TypeofServiceRequested_VS
+ValueSet: NEMSIS_eResponse.05_TypeOfServiceRequested_VS
 Description:  "TThe type of service or category of service requested of the EMS Agency responding for this specific EMS event."
 Id: NEMSIS.eResponse.05.TypeofServiceRequested.VS
 * NEMSIS#2205001	"Emergency Response (Primary Response Area)"
@@ -76,7 +76,7 @@ Id: NEMSIS.eResponse.PossibleInjury.VS
 
 ValueSet: NEMSIS_eHistory.01_BarriersToPatientCare_VS
 Description:  "Indication of whether or not there were any patient specific barriers to serving the patient at the scene."
-Id: NEMSIS.eResponse. BarriersToPatientCare.VS
+Id: NEMSIS.eResponse.BarriersToPatientCare.VS
 * NEMSIS#3101001	"Cultural, Custom, Religious"
 * NEMSIS#3101003	"Developmentally Impaired"
 * NEMSIS#3101005	"Hearing Impaired"
