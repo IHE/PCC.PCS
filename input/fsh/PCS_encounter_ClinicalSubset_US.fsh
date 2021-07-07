@@ -79,19 +79,19 @@ Title: "PCS Encounter status history sub-type"
 * Impressions.code 1..*
 
 
-Slice://The Slice has the name possibleInjury
+//The Slice has the name possibleInjury
 * encounter ^slicing.discriminator.type = #value
 * encounter ^slicing.discriminator.path = "system"
 * encounter ^slicing.rules = #closed
 * possibleInjury 0..1
-* possibleInjury = NEMSIS_eSituation.02_PossibleInjury_VS
+* possibleInjury = NEMSIS_eSituation_PossibleInjury_VS
  
-Slice://The Slice has the name barriersToCare
+//The Slice has the name barriersToCare
 * encounter ^slicing.discriminator.type = #text
 * encounter ^slicing.discriminator.path = "system"
 * encounter ^slicing.rules = #closed
 * diagnosis.barriersToCare 0..*
-* diagnosis.barriersToCare = NEMSIS_eHistory.01_ Barriers to Patient Care_VS
+* diagnosis.barriersToCare = NEMSIS_eHistory_BarriersToPatientCare_VS
  
 * serviceProvider = 1..1
 * serviceProvider = Reference (Organization)
