@@ -47,9 +47,6 @@ Id: Encounter.statusHistorySubType.CS
 * #EMS Call Completed "The date/time the responding unit completed all tasks associated with the event including transfer of the patient, and such things as cleaning and restocking."
 * #Unit Arrived at Staging Area "The date/time the responding unit arrived at a staging area, prior to arrival on scene."
 
-ValueSet: StatusHistorySubTypes
-Id: Encounter.statusHistorySubTypes.VS
-* codes from system Encounter.statusHistorySubType.CS
 
 * priority 1..1
 
@@ -60,9 +57,6 @@ Id: Encounter.statusHistorySubTypes.VS
 * priority.priorityObservations 0..*
 * priority.priorityObservations = NEMSIS_eResponse_AdditionalResponseModeDescriptors_VS
 
-ValueSet: NEMSIS_eResponse_AdditionalResponseModeDescriptors_VS
-Id: NEMSIS.eResponse.AdditionalResponseModeDescriptors.VS
-* codes from system NEMSIS.eResponse.AdditionalResponseModeDescriptors.VS
 
 * participant 1..*
 
@@ -88,11 +82,11 @@ Id: NEMSIS.eResponse.AdditionalResponseModeDescriptors.VS
 * encounter ^slicing.discriminator.type = #value
 * encounter ^slicing.discriminator.path = "system"
 * encounter ^slicing.rules = #closed
-*MassCasualtyIncident 0..1
-*MassCasualtyIncident.NumberOfPatients 0..1
-*MassCasualtyIncident.NumberOfPatients = boulian y/n 
-*MassCasualtyIncident.triageClassification 0..1
-*MassCasualtyIncident.triageClassification = NEMSIS_eScene.08_Triage Classificationfor MCI Patient_VS	
+* MassCasualtyIncident 0..1
+* MassCasualtyIncident.NumberOfPatients 0..1
+* MassCasualtyIncident.NumberOfPatients = boulian y/n 
+* MassCasualtyIncident.triageClassification 0..1
+* MassCasualtyIncident.triageClassification = NEMSIS_eScene.08_Triage Classificationfor MCI Patient_VS	
 
 
 * diagnosis 0..* 
@@ -125,5 +119,10 @@ Slice://The Slice has the name barriersToCare
 * organization.name 1..1
 
 
+ValueSet: NEMSIS_eResponse_AdditionalResponseModeDescriptors_VS
+Id: NEMSIS.eResponse.AdditionalResponseModeDescriptors.VS
+* codes from system NEMSIS.eResponse.AdditionalResponseModeDescriptors.VS
 
-
+ValueSet: StatusHistorySubTypes
+Id: Encounter.statusHistorySubTypes.VS
+* codes from system Encounter.statusHistorySubType.CS
