@@ -54,7 +54,7 @@ Id: NEMSIS.eResponse.AdditionalResponseModeDescriptors.VS
 * NEMSIS#2224021	"Initial No Lights or Sirens, Upgraded to Lights and Sirens"
 * NEMSIS#2224023	"Initial Lights and Sirens, Downgraded to No Lights or Sirens"
 
-ValueSet: NEMSIS_eScene.08_Triage Classificationfor MCI Patient_VS
+ValueSet: NEMSIS_eScene.08_TriageClassificationforMCIPatient_VS
 Description:  "The color associated with the initial triage assessment/classification of the MCI patient."
 Id: NEMSIS.eResponse.Triage Classification for MCI Patient.VS
 * NEMSIS#2708001	"Red - Immediate"
@@ -74,7 +74,7 @@ Id: NEMSIS.eResponse.PossibleInjury.VS
 * NEMSIS#7701001	"Not Applicable"
 * NEMSIS#7701003	"Not Recorded"
 
-ValueSet: NEMSIS_eHistory.01_ Barriers to Patient Care_VS
+ValueSet: NEMSIS_eHistory.01_ BarriersToPatientCare_VS
 Description:  "Indication of whether or not there were any patient specific barriers to serving the patient at the scene."
 Id: NEMSIS.eResponse. Barriers to Patient Care.VS
 * NEMSIS#3101001	"Cultural, Custom, Religious"
