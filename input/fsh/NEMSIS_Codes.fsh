@@ -56,7 +56,7 @@ Id: NEMSIS.eResponse.AdditionalResponseModeDescriptors.VS
 
 ValueSet: NEMSIS_eScene.08_TriageClassificationforMCIPatient_VS
 Description:  "The color associated with the initial triage assessment/classification of the MCI patient."
-Id: NEMSIS.eResponse.Triage Classification for MCI Patient.VS
+Id: NEMSIS.eResponse.TriageClassificationforMCIPatient.VS
 * NEMSIS#2708001	"Red - Immediate"
 * NEMSIS#2708003	"Yellow - Delayed"
 * NEMSIS#2708005	"Green - Minimal (Minor)"
@@ -76,7 +76,7 @@ Id: NEMSIS.eResponse.PossibleInjury.VS
 
 ValueSet: NEMSIS_eHistory.01_ BarriersToPatientCare_VS
 Description:  "Indication of whether or not there were any patient specific barriers to serving the patient at the scene."
-Id: NEMSIS.eResponse. Barriers to Patient Care.VS
+Id: NEMSIS.eResponse. BarriersToPatientCare.VS
 * NEMSIS#3101001	"Cultural, Custom, Religious"
 * NEMSIS#3101003	"Developmentally Impaired"
 * NEMSIS#3101005	"Hearing Impaired"
