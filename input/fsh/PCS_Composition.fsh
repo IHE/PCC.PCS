@@ -6,7 +6,8 @@ Description:      "composition of the FHIR elements that are used to build the F
 * encounter 1..1
 //* encounter = Reference (IHE-PCS-Encounter-CompleteReport/ IHE-PCS-Encounter-ClinicalSubset/ IHE-PCS-Encounter-CompleteReport-US/ IHE-PCS-Encounter-ClinicalSubset-US) 
 
-* Patient 1..1
+* subject 1..1
+//* subject = Reference (StructureDefinition-us-core-patient)
 
 * event.code 1..*
 
