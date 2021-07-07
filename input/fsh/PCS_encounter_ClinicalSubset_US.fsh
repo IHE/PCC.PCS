@@ -6,7 +6,8 @@ Description:      "an encounter resource used to deffine an emergency medical en
 
 * identifier 1..*
 
-* subject = Reference(StructureDefinition-us-core-patient) 1..1
+* subject 1..1
+* subject = Reference(StructureDefinition-us-core-patient)
 
 * episodeOfCare = Reference(episodeOfCare) 0..1
 * episodeOfCare.identifier 1..1

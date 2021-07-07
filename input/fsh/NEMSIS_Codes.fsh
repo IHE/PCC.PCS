@@ -74,7 +74,7 @@ Id: NEMSIS.eResponse.PossibleInjury.VS
 * NEMSIS#7701001	"Not Applicable"
 * NEMSIS#7701003	"Not Recorded"
 
-ValueSet: NEMSIS_eHistory.01_ BarriersToPatientCare_VS
+ValueSet: NEMSIS_eHistory.01_BarriersToPatientCare_VS
 Description:  "Indication of whether or not there were any patient specific barriers to serving the patient at the scene."
 Id: NEMSIS.eResponse. BarriersToPatientCare.VS
 * NEMSIS#3101001	"Cultural, Custom, Religious"
