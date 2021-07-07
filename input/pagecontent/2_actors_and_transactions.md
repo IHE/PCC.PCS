@@ -113,6 +113,6 @@ For more details see the detailed [transaction description](PCC-1)
 
 #### ITI-65 transaction
 
-This transaction is used to **do' things
+The Provide Document Bundle [ITI-65] transaction passes a Provide Document Bundle Request from a Document Source to a Document Recipient.
 
-For more details see the detailed [transaction description](domain-Y.html)
+For more details see the detailed [transaction description](ITI-65.html)
