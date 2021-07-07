@@ -8,9 +8,9 @@ Id: NEMSIS
 * #2223007	"Non-Emergent Upgraded to Emergent"
 
 
-ValueSet: NEMSIS_eResponse.05_TypeOfServiceRequested_VS
+ValueSet: NEMSIS_eResponse_TypeOfServiceRequested_VS
 Description:  "TThe type of service or category of service requested of the EMS Agency responding for this specific EMS event."
-Id: NEMSIS.eResponse.05.TypeofServiceRequested.VS
+Id: NEMSIS.eResponse.TypeofServiceRequested.VS
 * NEMSIS#2205001	"Emergency Response (Primary Response Area)"
 * NEMSIS#2205003	"Emergency Response (Intercept)"
 * NEMSIS#2205009	"Emergency Response (Mutual Aid)"
@@ -54,7 +54,7 @@ Id: NEMSIS.eResponse.AdditionalResponseModeDescriptors.VS
 * NEMSIS#2224021	"Initial No Lights or Sirens, Upgraded to Lights and Sirens"
 * NEMSIS#2224023	"Initial Lights and Sirens, Downgraded to No Lights or Sirens"
 
-ValueSet: NEMSIS_eScene.08_TriageClassificationforMCIPatient_VS
+ValueSet: NEMSIS_eScene_TriageClassificationforMCIPatient_VS
 Description:  "The color associated with the initial triage assessment/classification of the MCI patient."
 Id: NEMSIS.eResponse.TriageClassificationforMCIPatient.VS
 * NEMSIS#2708001	"Red - Immediate"
@@ -65,18 +65,18 @@ Id: NEMSIS.eResponse.TriageClassificationforMCIPatient.VS
 * NEMSIS#7701001 	"Not Applicable"
 * NEMSIS#7701003 	"Not Recorded"
 
-ValueSet: NEMSIS_eSituation.02_PossibleInjury_VS
+ValueSet: NEMSIS_eSituation_PossibleInjury_VS
 Description:  "Indication whether or not there was an injury."
-Id: NEMSIS.eResponse.PossibleInjury.VS
+Id: NEMSIS.eSituation.PossibleInjury.VS
 * NEMSIS#9922001	"No"
 * NEMSIS#9922003	"Unknown"
 * NEMSIS#9922005	"Yes"	
 * NEMSIS#7701001	"Not Applicable"
 * NEMSIS#7701003	"Not Recorded"
 
-ValueSet: NEMSIS_eHistory.01_BarriersToPatientCare_VS
+ValueSet: NEMSIS_eHistory_BarriersToPatientCare_VS
 Description:  "Indication of whether or not there were any patient specific barriers to serving the patient at the scene."
-Id: NEMSIS.eResponse.BarriersToPatientCare.VS
+Id: NEMSIS.eHistory.BarriersToPatientCare.VS
 * NEMSIS#3101001	"Cultural, Custom, Religious"
 * NEMSIS#3101003	"Developmentally Impaired"
 * NEMSIS#3101005	"Hearing Impaired"
@@ -98,16 +98,16 @@ Id: NEMSIS.eResponse.BarriersToPatientCare.VS
 * NEMSIS#7701001 	"Not Applicable"
 * NEMSIS#7701003 	"Not Recorded"
 
-ValueSet: NEMSIS_ePayment.40_ResponseUrgency_VS
+ValueSet: NEMSIS_ePayment_ResponseUrgency_VS
 Description:  "IThe CMS service level for this EMS encounter."
-Id: NEMSIS.ePayment.40.ResponseUrgency.VS
+Id: NEMSIS.ePayment.ResponseUrgency.VS
 * NEMSIS#2640001	"Immediate"
 * NEMSIS#2640003	"Non-Immediate"
 
 
-ValueSet: NEMSIS_ePayment.50_CMSServiceLevel_VS
+ValueSet: NEMSIS_ePayment_CMSServiceLevel_VS
 Description:  "IThe CMS service level for this EMS encounter."
-Id: NEMSIS.eResponse.CMSServiceLevel.VS
+Id: NEMSIS.ePayment.CMSServiceLevel.VS
 * NEMSIS#2650001	"ALS, Level 1"
 * NEMSIS#2650003	"ALS, Level 1 Emergency"
 * NEMSIS#2650005	"ALS, Level 2"
@@ -120,9 +120,9 @@ Id: NEMSIS.eResponse.CMSServiceLevel.VS
 * NEMSIS#7701001 	"Not Applicable"
 * NEMSIS#7701003 	"Not Recorded"
 
-ValueSet: NEMSIS_eCrew.02_CrewMemberLevel_VS
+ValueSet: NEMSIS_eCrew_CrewMemberLevel_VS
 Description:  "The functioning level of the crew member ID during this EMS patient encounter."
-Id: NEMSIS.eCrew.02.CrewMemberLevelVS
+Id: NEMSIS.eCrew.CrewMemberLevel.VS
 * NEMSIS#9925001	"Advanced Emergency Medical Technician (AEMT)"
 * NEMSIS#9925002	"Emergency Medical Technician - Intermediate"
 * NEMSIS#9925003	"Emergency Medical Responder (EMR)"
@@ -144,9 +144,9 @@ Id: NEMSIS.eCrew.02.CrewMemberLevelVS
 * NEMSIS#7701005	"Not Reporting"
 
 
-ValueSet: NEMSIS_eCrew.03_CrewMemberResponseRole_VS
+ValueSet: NEMSIS_eCrew_CrewMemberResponseRole_VS
 Description:  "The role(s) of the crew member during response, at scene treatment, and/or transport."
-Id: NEMSIS.eCrew.03.CrewMemberResponseRole.VS
+Id: NEMSIS.eCrew.CrewMemberResponseRole.VS
 * NEMSIS#2403001	"Driver/Pilot-Response"
 * NEMSIS#2403003	"Driver/Pilot-Transport"
 * NEMSIS#2403005	"Other"

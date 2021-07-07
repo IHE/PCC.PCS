@@ -50,8 +50,8 @@ Id: Encounter.statusHistorySubType.CS
 
 
 * priority 1..1
-* priority.priorityObservations 0..*
 
+* priority.priorityObservations 0..*
 //The Slice has the name priorityObservations 
 * priority ^slicing.discriminator.type = #pattern
 * priority ^slicing.discriminator.path = "code"
@@ -84,10 +84,10 @@ Id: Encounter.statusHistorySubType.CS
 * encounter ^slicing.discriminator.path = "system"
 * encounter ^slicing.rules = #closed
 * MassCasualtyIncident 0..1
-/* MassCasualtyIncident = y/n
-/* MassCasualtyIncident.NumberOfPatients 0..* 
-/* MassCasualtyIncident.triageClassification 0..1
-/* MassCasualtyIncident.triageClassification = NEMSIS_eScene.08_TriageClassificationforMCIPatient_VS	
+* MassCasualtyIncident = y/n
+* MassCasualtyIncident.NumberOfPatients 0..* 
+* MassCasualtyIncident.triageClassification 0..1
+* MassCasualtyIncident.triageClassification = NEMSIS_eScene.08_TriageClassificationforMCIPatient_VS	
 
 
 * diagnosis 0..* 
