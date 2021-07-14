@@ -1,3 +1,12 @@
+
+Extension: StatusHistorySubType
+Id: Encounter.statusHistorySubType
+Description: "Refinement of the Encounter status for steps within EMS"
+Title: "PCS Encounter status history sub-type"
+* value[x] only CodeableConcept
+* valueCodeableConcept from Encounter.statusHistorySubTypes.VS
+
+
 Profile:   IHE_PCS_Encounter_ClinicalSubset
 Parent: Encounter
 Id:             IHE.PCC.PCS.Encounter.ClinicalSubset
@@ -18,27 +27,25 @@ Description:      "an encounter resource used to deffine an emergency medical en
 
 * statusHistory 1..*
 * status 1..1 
-* StatusHistorySubType 0..1
+* extension contains StatusHistorySubType named statusHistorySubType 0..1
+
 
  
-Extension: StatusHistorySubType
-Id: Encounter.statusHistorySubType
-Description: "Refinement of the Encounter status for steps within EMS"
-Title: "PCS Encounter status history sub-type"
-* value[x] only CodeableConcept
-* valueCodeableConcept from Encounter.statusHistorySubTypes.VS
 
+// QUESTION FROM JOHN -- Why do you set priority to 1..1, and a slice of 0..1 to have a code from the nemsis vs. Why not just indicate the code must be from the valueset? It seems to me this is more complex than it needs to be.
 * priority 1..1
 
-* priority.priorityObservations 0..*
-//The Slice has the name priorityObservations 
 * priority ^slicing.discriminator.type = #pattern
 * priority ^slicing.discriminator.path = "code"
 * priority ^slicing.rules = #closed
-* priority.priorityObservations = NEMSIS_eResponse_AdditionalResponseModeDescriptors_VS
+* priority contains priorityObservations 0..1
+//The Slice has the name priorityObservations 
+* priority[priorityObservations] from NEMSIS_eResponse_AdditionalResponseModeDescriptors_VS (required)
 
 
 * participant 1..*
+
+// QUESTION FROM JOHN -- I didnt know how to fix the following as it seems you are slicing encounter but setting location?
 
 * Location 1..*
 //The Slice has the name Scene
@@ -93,7 +100,7 @@ Title: "PCS Encounter status history sub-type"
 * diagnosis.barriersToCare 0..*
 * diagnosis.barriersToCare = NEMSIS_eHistory_BarriersToPatientCare_VS
  
-* serviceProvider = 1..1
+* serviceProvider 1..1
 * serviceProvider = Reference (Organization)
 * organization.identifier 1..1
 * organization.name 1..1
