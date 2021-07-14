@@ -66,7 +66,7 @@ Title: "PCS Encounter status history sub-type"
 * MassCasualtyIncident = y/n
 * MassCasualtyIncident.NumberOfPatients 0..* 
 * MassCasualtyIncident.triageClassification 0..1
-* MassCasualtyIncident.triageClassification = NEMSIS_eScene.08_TriageClassificationforMCIPatient_VS	
+* MassCasualtyIncident.triageClassification = NEMSIS_eScene_TriageClassificationforMCIPatient_VS	
 
 
 * diagnosis 0..* 
