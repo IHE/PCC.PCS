@@ -9,7 +9,7 @@ Id: NEMSIS
 
 
 ValueSet: NEMSIS_eResponse_TypeOfServiceRequested_VS
-Description:  "TThe type of service or category of service requested of the EMS Agency responding for this specific EMS event."
+Description:  "The type of service or category of service requested of the EMS Agency responding for this specific EMS event."
 Id: NEMSIS.eResponse.TypeofServiceRequested.VS
 * NEMSIS#2205001	"Emergency Response (Primary Response Area)"
 * NEMSIS#2205003	"Emergency Response (Intercept)"
@@ -83,6 +83,15 @@ Id: NEMSIS.eResponse.TriageClassificationforMCIPatient.VS
 * NEMSIS#2708009	"Black - Deceased"
 * NEMSIS#7701001 	"Not Applicable"
 * NEMSIS#7701003 	"Not Recorded"
+
+ValueSet: NEMSIS_eScene_MassCasualtyIncident_VS
+Description:  "Indicator if this event would be considered a mass casualty incident (overwhelmed existing EMS resources)."
+Id: NEMSIS.eScene.MassCasualtyIncident.VS
+* NEMSIS#7701001	"Not Applicable"
+* NEMSIS#7701003	"Not Recorded"
+* NEMSIS#9922001	"No"
+* NEMSIS#9922003	"Unknown"
+* NEMSIS#9922005	"Yes"
 
 ValueSet: NEMSIS_eSituation_PossibleInjury_VS
 Description:  "Indication whether or not there was an injury."
@@ -176,3 +185,100 @@ Id: NEMSIS.eCrew.CrewMemberResponseRole.VS
 * NEMSIS#7701001	"Not Applicable"
 * NEMSIS#7701003	"Not Recorded"
 * NEMSIS#7701005	"Not Reporting"
+
+ValueSet: NEMSIS_eDispatch_DispatchReason_VS
+Description:  "The dispatch reason reported to the responding unit."
+Id: NEMSIS.eDispatch.DispatchReason.VS
+* NEMSIS#2301001	"Abdominal Pain/Problems"
+* NEMSIS#2301003	"Allergic Reaction/Stings"
+* NEMSIS#2301005	"Animal Bite"
+* NEMSIS#2301007	"Assault"
+* NEMSIS#2301009	"Automated Crash Notification"
+* NEMSIS#2301011	"Back Pain (Non-Traumatic)"
+* NEMSIS#2301013	"Breathing Problem"
+* NEMSIS#2301015	"Burns/Explosion"
+* NEMSIS#2301017	"Carbon Monoxide/Hazmat/Inhalation/CBRN"
+* NEMSIS#2301019	"Cardiac Arrest/Death"
+* NEMSIS#2301021	"Chest Pain (Non-Traumatic)"
+* NEMSIS#2301023	"Choking"
+* NEMSIS#2301025	"Convulsions/Seizure"
+* NEMSIS#2301027	"Diabetic Problem"
+* NEMSIS#2301029	"Electrocution/Lightning"
+* NEMSIS#2301031	"Eye Problem/Injury"
+* NEMSIS#2301033	"Falls"
+* NEMSIS#2301035	"Fire"
+* NEMSIS#2301037	"Headache"
+* NEMSIS#2301039	"Healthcare Professional/Admission"
+* NEMSIS#2301041	"Heart Problems/AICD"
+* NEMSIS#2301043	"Heat/Cold Exposure"
+* NEMSIS#2301045	"Hemorrhage/Laceration"
+* NEMSIS#2301047	"Industrial Accident/Inaccessible Incident/Other Entrapments (Non-Vehicle)"
+* NEMSIS#2301049	"Medical Alarm"
+* NEMSIS#2301051	"No Other Appropriate Choice"
+* NEMSIS#2301053	"Overdose/Poisoning/Ingestion"
+* NEMSIS#2301055	"Pandemic/Epidemic/Outbreak"
+* NEMSIS#2301057	"Pregnancy/Childbirth/Miscarriage"
+* NEMSIS#2301059	"Psychiatric Problem/Abnormal Behavior/Suicide Attempt"
+* NEMSIS#2301061	"Sick Person"
+* NEMSIS#2301063	"Stab/Gunshot Wound/Penetrating Trauma"
+* NEMSIS#2301065	"Standby"
+* NEMSIS#2301067	"Stroke/CVA"
+* NEMSIS#2301069	"Traffic/Transportation Incident"
+* NEMSIS#2301071	"Transfer/Interfacility/Palliative Care"
+* NEMSIS#2301073	"Traumatic Injury"
+* NEMSIS#2301075	"Well Person Check"
+* NEMSIS#2301077	"Unconscious/Fainting/Near-Fainting"
+* NEMSIS#2301079	"Unknown Problem/Person Down"
+* NEMSIS#2301081	"Drowning/Diving/SCUBA Accident"
+* NEMSIS#2301083	"Airmedical Transport"
+* NEMSIS#2301085	"Altered Mental Status"
+* NEMSIS#2301087	"Intercept"
+* NEMSIS#2301089	"Nausea"
+* NEMSIS#2301091	"Vomiting"
+
+ValueSet: NEMSIS_eSituation_PatientAcuity_VS
+Description:  "The acuity of the patient's condition upon EMS arrival at the scene."
+Id: NEMSIS.eSituation.InitialPatientAcuity.VS
+* NEMSIS#2813001	"Critical (Red)"
+* NEMSIS#2813003	"Emergent (Yellow)"
+* NEMSIS#2813005	"Lower Acuity (Green)"
+* NEMSIS#2813007	"Dead without Resuscitation Efforts (Black)"
+* NEMSIS#2813009	"Non-Acute/Routine"
+
+ValueSet: NEMSIS_eSituation_PatientActivity_VS
+Description:  "The activity the patient was involved in at the time the patient experienced the onset of symptoms or experienced an injury."
+Id: NEMSIS.eSituation.PatientActivity.VS
+* NEMSIS#7701005	"Not Reporting"
+* NEMSIS#7701001	"Not Applicable"
+* NEMSIS#7701003	"Not Recorded"
+
+ValueSet: NEMSIS_eSituation_Date/TimeLastKnownWell_VS
+Description:  "The estimated date and time the patient was last known to be well or in their usual state of health. This is described or estimated by the patient, family, and/or bystanders."
+Id: NEMSIS.eSituation.Date/TimeLastKnownWell.VS
+* NEMSIS#7701001	"Not Applicable"
+* NEMSIS#7701003	"Not Recorded"
+* NEMSIS#8801023	"Unable to Complete"
+
+ValueSet: NEMSIS_eHistory_Alcohol/DrugUseIndicators_VS
+Description:  "The estimated date and time the patient was last known to be well or in their usual state of health. This is described or estimated by the patient, family, and/or bystanders."
+Id: NEMSIS.eHistory.Alcohol/DrugUseIndicators.VS
+* NEMSIS#7701005	"Not Reporting"
+* NEMSIS#7701001	"Not Applicable"
+* NEMSIS#7701003	"Not Recorded"
+* NEMSIS#8801023	"Unable to Complete"
+* NEMSIS#3117001	"Alcohol Containers/Paraphernalia at Scene"
+* NEMSIS#3117003	"Drug Paraphernalia at Scene"
+* NEMSIS#3117005	"Patient Admits to Alcohol Use"
+* NEMSIS#3117007	"Patient Admits to Drug Use"
+* NEMSIS#3117009	"Positive Level known from Law Enforcement or Hospital Record"
+* NEMSIS#3117013	"Physical Exam Indicates Suspected Alcohol or Drug Use"
+
+ValueSet: NEMSIS_eSituation_Work-RelatedIllness/Injury_VS
+Description:  "Indication of whether or not the illness or injury is work related."
+Id: NEMSIS.eSituation.Work-RelatedIllness/Injury.VS
+* NEMSIS#7701005	"Not Reporting"
+* NEMSIS#7701001	"Not Applicable"
+* NEMSIS#7701003	"Not Recorded"
+* NEMSIS#9922001	"No"
+* NEMSIS#9922003	"Unknown"
+* NEMSIS#9922005	"Yes"
