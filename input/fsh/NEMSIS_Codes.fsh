@@ -282,3 +282,18 @@ Id: NEMSIS.eSituation.Work-RelatedIllness/Injury.VS
 * NEMSIS#9922001	"No"
 * NEMSIS#9922003	"Unknown"
 * NEMSIS#9922005	"Yes"
+
+ValueSet: NEMSIS_ePayment_CMSTransportationIndicator_VS
+Description:  "The CMS Ambulance Fee Schedule Transportation and Air Medical Transportation Indicators are used to better describe why it was necessary for the patient to be transported in a particular way or circumstance."
+Id: NEMSIS.ePayment.CMSTransportationIndicator.VS
+* NEMSIS#C1	Interfacility Transport (Requires Higher level of care)
+* NEMSIS#C2	Interfacility Transport (service not available)
+* NEMSIS#C3	Emergency Trauma Dispatch Condition Code (Major Incident or Mechanism of Injury)
+* NEMSIS#C4	Medically Necessary Transport (Facility on Divert or Services Unavailable)
+* NEMSIS#C5	BLS Transport of ALS Patient (ALS not available)
+* NEMSIS#C6	ALS Response (Based on Dispatch Info) to BLS Patient (Condition)
+* NEMSIS#C7	IV Medications required en route (ALS)
+* NEMSIS#D1	Long Distance-patient's condition requires rapid transportation over a long distance
+* NEMSIS#D2	Rare Circumstances, Traffic Patterns Precludes Ground Transport
+* NEMSIS#D3	Time to the closest appropriate hospital due to the patient's condition precludes ground transport; maximize clinical benefits
+* NEMSIS#D4	Pick up Point not Accessible by Ground Transport
