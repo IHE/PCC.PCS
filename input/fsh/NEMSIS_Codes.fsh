@@ -54,6 +54,25 @@ Id: NEMSIS.eResponse.AdditionalResponseModeDescriptors.VS
 * NEMSIS#2224021	"Initial No Lights or Sirens, Upgraded to Lights and Sirens"
 * NEMSIS#2224023	"Initial Lights and Sirens, Downgraded to No Lights or Sirens"
 
+ValueSet: NEMSIS_ePayment_CMSServiceLevel_VS
+Description:  "The CMS service level for this EMS encounter."
+Id: NEMSIS.ePayment.CMSServiceLevel.VS
+* NEMSIS#2650001	"ALS, Level 1"
+* NEMSIS#2650003	"ALS, Level 1 Emergency"
+* NEMSIS#2650005	"ALS, Level 2"
+* NEMSIS#2650007	"BLS"
+* NEMSIS#2650009	"BLS, Emergency"
+* NEMSIS#2650011	"Fixed Wing (Airplane)"
+* NEMSIS#2650013	"Paramedic Intercept"
+* NEMSIS#2650015	"Specialty Care Transport"
+* NEMSIS#2650017	"Rotary Wing (Helicopter)"
+
+ValueSet: NEMSIS_ePayment_ResponseUrgency_VS
+Description:  "The urgency in which the EMS agency began to mobilize resources for this EMS encounter."
+Id: NEMSIS.Payment.ResponseUrgency.VS
+* NEMSIS#2640001	"Immediate"
+* NEMSIS#2640003	"Non-Immediate"
+
 ValueSet: NEMSIS_eScene_TriageClassificationforMCIPatient_VS
 Description:  "The color associated with the initial triage assessment/classification of the MCI patient."
 Id: NEMSIS.eResponse.TriageClassificationforMCIPatient.VS

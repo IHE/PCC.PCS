@@ -1,16 +1,7 @@
-
-Extension: StatusHistorySubType
-Id: Encounter.statusHistorySubType
-Description: "Refinement of the Encounter status for steps within EMS"
-Title: "PCS Encounter status history sub-type"
-* value[x] only CodeableConcept
-* valueCodeableConcept from Encounter.statusHistorySubTypes.VS
-
-
-Profile:   IHE_PCS_Encounter_ClinicalSubset
+Profile:   IHE_PCS_Encounter_ClinicalSubset_US
 Parent: Encounter
-Id:             IHE.PCC.PCS.Encounter.ClinicalSubset
-Title: "IHE PCS Encounter Clinical Subset"
+Id:             IHE.PCC.PCS.Encounter.ClinicalSubset.US
+Title: "IHE PCS Encounter Clinical Subset US"
 Description:      "an encounter resource used to deffine an emergency medical encounter of a patient prior to the patient drop off or transfer of care, US realm"
 
 * identifier 1..*
@@ -19,28 +10,38 @@ Description:      "an encounter resource used to deffine an emergency medical en
 * subject = Reference(StructureDefinition-us-core-patient)
 
 * episodeOfCare 0..1
-* episodeOfCare = Reference(episodeOfCare)
+* episodeOfCare = Reference(PCS_episodeOfCare)
 * episodeOfCare.identifier 1..1
 
 * basedOn 0..1
-* basedOn = Reference(ServiceRequest)
+* basedOn = Reference(PCS_ServiceRequest)
 
 * statusHistory 1..*
 * status 1..1 
 * extension contains StatusHistorySubType named statusHistorySubType 0..1
 
-
+Extension: StatusHistorySubType
+Id: Encounter.statusHistorySubType
+Description: "Refinement of the Encounter status for steps within EMS"
+Title: "PCS Encounter status history sub-type"
+* value[x] only CodeableConcept
+* valueCodeableConcept from Encounter.statusHistorySubTypes.VS
  
 
 // QUESTION FROM JOHN -- Why do you set priority to 1..1, and a slice of 0..1 to have a code from the nemsis vs. Why not just indicate the code must be from the valueset? It seems to me this is more complex than it needs to be.
 * priority 1..1
+* valueCodeableConcept from NEMSIS_eResponse_ResponseMode_VS (required)
 
+Slice: priorityObservations
+Id: Encounter.priority.priorityObservations 
 * priority ^slicing.discriminator.type = #pattern
 * priority ^slicing.discriminator.path = "code"
 * priority ^slicing.rules = #closed
-* priority contains priorityObservations 0..1
-//The Slice has the name priorityObservations 
-* priority[priorityObservations] from NEMSIS_eResponse_AdditionalResponseModeDescriptors_VS (required)
+* priority contains priorityObservations 0..*
+* value[x] only CodeableConcept
+* valueCodeableConcept from NEMSIS_ePayment_ResponseUrgency_VS
+* valueCodeableConcept from EMSIS_ePayment_CMSServiceLevel_VS
+* valueCodeableConcept from NEMSIS_eResponse_AdditionalResponseModeDescriptors_VS
 
 
 * participant 1..*
