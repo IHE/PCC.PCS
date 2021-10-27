@@ -1,11 +1,13 @@
 @startuml
 hide footbox
-participant "Client" as Client
-participant "Server" as Server
-activate "Client"
-"Client" -> "Server" : 1. Go Query [domain-Y]
-activate "Server"
-"Server" --> "Client" : 2. Go Response [domain-Y]
-deactivate "Client"
-deactivate "Server"
+participant "Content Creator" as Content Creator
+participant "Content Consumer" as Content Consumer
+"Content Creator" <--> "Content Consumer" : 1. Document Sharing [PCC-1]
+@enduml
+
+@startuml
+hide footbox
+participant "Content Creator" as Content Creator
+participant "Content Consumer" as Content Consumer
+"Content Creator" --> "Content Consumer" : 1. Provide Document Bundle [ITI-65]
 @enduml
