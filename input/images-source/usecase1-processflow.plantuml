@@ -1,13 +1,6 @@
 @startuml
 hide footbox
-participant "Content Creator" as Content Creator
-participant "Content Consumer" as Content Consumer
+participant "Content Creator" as ContentCreator
+participant "Content Consumer" as ContentConsumer
 "Content Creator" <--> "Content Consumer" : 1. Document Sharing [PCC-1]
-@enduml
-
-@startuml
-hide footbox
-participant "Content Creator" as Content Creator
-participant "Content Consumer" as Content Consumer
-"Content Creator" --> "Content Consumer" : 1. Provide Document Bundle [ITI-65]
 @enduml
