@@ -56,9 +56,6 @@ pages:
   volume-1.md:
     title: 1:XX. Profile Volume 1
     generation: markdown
-  PCC-1.md:
-    title: 2:3.1 Transaction one [PCC-1]
-    generation: markdown
   NEMSIS-Mapping.md:
     title: NEMSIS Mapping
     generation: markdown
@@ -79,8 +76,7 @@ menu:
     Overview: volume-1.html#overview
     Security Considerations: volume-1.html#security-considerations
     Cross-Profile Considerations: volume-1.html#grouping
-  Volume 2:
-    "Transaction one [PCC-1]": PCC-1.html
+  Volume 3:
     "NEMSIS Mapping": NEMSIS-Mapping.html
   Test Plan: testplan.html
   Artifacts: artifacts.html
