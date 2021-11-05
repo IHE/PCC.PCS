@@ -36,6 +36,15 @@ An encounter resource used to deffine the full emergency medical transport encou
 
 * statusHistory 1..*
 
+* statusHistory ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-PCS-Encounter"
+* statusHistory ^extension.valueString = "Section"
+* statusHistory ^slicing.discriminator.type = #pattern
+* statusHistory ^slicing.discriminator.path = "code"
+* statusHistory ^slicing.ordered = false
+* statusHistory ^slicing.rules = #open
+* statusHistory ^short = "Additional Status history vlaues"
+* statusHistory contains StatusHistorySubType 0..*
+
 * extension[StatusHistorySubType] ^definition = "Refinement of the Encounter Status History for steps within EMS."
 * extension[StatusHistorySubType] contains 
 	value[X] 1..1 and 
@@ -46,6 +55,15 @@ An encounter resource used to deffine the full emergency medical transport encou
 * class 1..1
 
 * priority 1..1 
+
+* priority ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-PCS-Encounter"
+* priority ^extension.valueString = "Section"
+* priority ^slicing.discriminator.type = #pattern
+* priority ^slicing.discriminator.path = "code"
+* priority ^slicing.ordered = false
+* priority ^slicing.rules = #open
+* priority ^short = "Additional Status history vlaues"
+* priority contains priorityDescriptors 0..*
 
 * extension[priorityDescriptors] ^definition = "The documentation of response mode techniques used for this EMS response."
 * extension[priorityDescriptors].value[x] only CodeableConcept
