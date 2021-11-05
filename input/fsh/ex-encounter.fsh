@@ -9,14 +9,14 @@ Description:      "holding typical values for the PCS Encounter resource"
 * identifier.value = "1234567"
 * identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#FILL
 * status = #finished
-* statusHistory.status[+] = #planned
-* statusHistory.period [=] = "2021-11-05T16:30:25"
+* statusHistory.status [+] = #planned
+* statusHistory.period [+] = "2021-11-05T16:30:25"
 * statusHistory.status[+] = #arrived
-* statusHistory.period [=] = "2021-11-05T16:32:58"
+* statusHistory.period [+] = "2021-11-05T16:32:58"
 * statusHistory.status[+] = #triaged
-* statusHistory.period [=] = "2021-11-05T16:33:15"
+* statusHistory.period [+] = "2021-11-05T16:33:15"
 * statusHistory.status[+] = #in-progress
-* statusHistory.period [=] = "2021-11-05T16:40:05"
+* statusHistory.period [+] = "2021-11-05T16:40:05"
 * statusHistory.period [=] = "2021-11-05T16:55:42"
 * statusHistory.status[+] = #finished
 * statusHistory.period.start[=] = "2021-11-05T17:00:15"
