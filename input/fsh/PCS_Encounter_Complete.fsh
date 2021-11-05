@@ -39,18 +39,16 @@ Extension: StatusHistorySubType
 Id: Encounter.statusHistory.StatusSubType
 Description: "Refinement of the Encounter Status History for steps within EMS"
 * insert FHIRPushStructureDefinitionContent
-* extension contains 
-	value[X] 0..1 and
-	period 1..1
+* extension contains value[X] 0..1 
+	and period 1..1
 * extension[StatusHistorySubType].value[x] only CodeableConcept
 //insert value set when ready (valueCodeableConcept from Encounter.statusHistorySubTypes.VS (example))
+* extension[StatusHistorySubType].period only datetime
 
 
 * class 1..1
 
 * priority 1..1 
-
-
 
 * subject 1..1
 
@@ -69,10 +67,5 @@ Description: "Refinement of the Encounter Status History for steps within EMS"
 * diagnosis 1..*
 //condition.category will = encounter-diagnosis and primary and scondary impressions should be indicated with the Diagnosis rank Number
 
-* extension[BarriersToPatientCare] ^definition = "Indication of whether or not there were any patient specific barriers to serving the patient."
-* extension[BarriersToPatientCare].value[x] only CodeableConcept
-
 * serviceProvider 1..1
 
-* extension[protocolsUsed] ^definition = "The protocol used by provider personnel to direct the clinical care of the patient."
-* extension[protocolsUsed].value[x] only CodeableConcept
