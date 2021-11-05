@@ -58,7 +58,7 @@ An encounter resource used to deffine the full emergency medical transport encou
 
 * reasonCode 1..*
 
-*diagnosis 1..*
+* diagnosis 1..*
 //condition.category will = encounter-diagnosis and primary and scondary impressions should be indicated with the Diagnosis rank Number
 
 * extension[BarriersToPatientCare] ^definition = "Indication of whether or not there were any patient specific barriers to serving the patient."
