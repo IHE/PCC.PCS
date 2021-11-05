@@ -50,5 +50,5 @@ Id: Encounter.statusHistory.StatusSubType
 Description: "Refinement of the Encounter Status History for steps within EMS"
 * extension contains 
 	StatusSubType 0..* 
-* extension[StatusSubType] only CodeableConcept
+* extension[StatusSubType].value[X] only valueCodeableConcept	
 //insert value set when ready (valueCodeableConcept from Encounter.statusHistorySubTypes.VS (example))
