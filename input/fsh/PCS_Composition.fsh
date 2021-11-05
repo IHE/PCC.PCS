@@ -54,5 +54,5 @@ Description:      "composition of the FHIR elements that are used to build the F
 
 
 // Addtional Composition elements: Physician Certification Statement, careTeam, protocols, last Known well, symptoms patient acuity (initial and final), Alcohol/Drug Use Indicators, Last Oral Intake, Presence of Emergency Information Form, transport observation, delays, barriers to care??
-
+// Narrative for the report needs to be a new slice here TODO
 

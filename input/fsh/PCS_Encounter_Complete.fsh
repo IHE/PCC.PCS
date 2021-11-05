@@ -26,8 +26,7 @@ An encounter resource used to deffine the full emergency medical transport encou
 - SHALL Contain Transport Extension
 - SHALL have Encounter.text to express the Patient Care Report Narrative
 """
-* text 1..1
-//Where the Patient Care Report Narrative is located
+
 
 * identifier 1..*
 
