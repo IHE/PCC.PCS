@@ -9,8 +9,9 @@ Description:      "composition of the FHIR elements that are used to build the F
 
 
 * event.code 1..*
+* event.code = http://terminology.hl7.org/CodeSystem/v3-ActClass#ENC
 
-* section.section:sectionFunctionalStatus 1..1
+* section[sectionFunctionalStatus] 1..1
 //Note: Functional Status entry:disability is where the eHistory.01 - Barriers to Patient Care conditions can be represented, such as Speech Impaired, Sight Impaired, and Hearing Impaired
 //Note: entry:functionalAssessment is where observations and clinical impressions.... can be noted 
 
