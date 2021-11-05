@@ -38,7 +38,6 @@ An encounter resource used to deffine the full emergency medical transport encou
 Extension: StatusHistorySubType
 Id: Encounter.statusHistory.StatusSubType
 Description: "Refinement of the Encounter Status History for steps within EMS"
-* insert FHIRPushStructureDefinitionContent
 * extension contains value[X] 0..1 
 	and period 1..1
 * extension[StatusHistorySubType].value[x] only CodeableConcept
