@@ -35,6 +35,8 @@ An encounter resource used to deffine the full emergency medical transport encou
 
 * statusHistory 1..*
 
+* statusHistory.StatusHistorySubType 0..* 
+
 * class 1..1
 
 * priority 1..1 
