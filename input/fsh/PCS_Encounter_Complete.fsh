@@ -38,11 +38,11 @@ An encounter resource used to deffine the full emergency medical transport encou
 Extension: StatusHistorySubType
 Id: Encounter.statusHistory.StatusSubType
 Description: "Refinement of the Encounter Status History for steps within EMS"
-* extension contains value[X] 0..1 
-	and period 1..1
-* extension[value[X]].value[x] = CodeableConcept
+* extension contains 
+	statusHistorySubTypes 1..* 
+* extension[statusHistorySubTypes].value[x] = CodeableConcept
 //insert value set when ready (valueCodeableConcept from Encounter.statusHistorySubTypes.VS (example))
-* extension[period] = datetime
+
 
 
 * class 1..1
