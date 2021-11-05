@@ -29,41 +29,27 @@ An encounter resource used to deffine the full emergency medical transport encou
 
 
 * identifier 1..*
-
 * status 1..1
 * status = #finished
-
 * statusHistory 1..*
-
-* statusHistory.StatusHistorySubType 0..* 
-
+* statusHistory.StatusSubType 0..* 
 * class 1..1
-
 * priority 1..1 
-
 * subject 1..1
-
 * episodeOfCare 1..1
-
 * basedOn 1..1
-
 * participant 1..*
-
 * participant.type 1..*
-
 * period 1..1
-
 * reasonCode 1..*
-
 * diagnosis 1..*
 //condition.category will = encounter-diagnosis and primary and scondary impressions should be indicated with the Diagnosis rank Number
-
 * serviceProvider 1..1
 
-Extension: StatusHistorySubType
+Extension: StatusSubType
 Id: Encounter.statusHistory.StatusSubType
 Description: "Refinement of the Encounter Status History for steps within EMS"
 * extension contains 
-	statusHistorySubTypes 1..* 
-* extension[statusHistorySubTypes].value[x] = CodeableConcept
+	StatusSubType 1..* 
+* extension[StatusSubType].value[x] = CodeableConcept
 //insert value set when ready (valueCodeableConcept from Encounter.statusHistorySubTypes.VS (example))
