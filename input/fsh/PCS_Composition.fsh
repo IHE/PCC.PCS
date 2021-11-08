@@ -6,8 +6,8 @@ Description:      "composition of the FHIR elements that are used to build the F
 
 * subject 1..1
 * encounter 1..1
-* encounter = Reference(Encounter) 
-// TODO: encounter = Reference(IHE-PCS-Encounter-CompleteReport or IHE-PCS-Encounter-ClinicalSubset or IHE-PCS-Encounter-CompleteReport-US or IHE-PCS-Encounter-ClinicalSubset-US)
+* encounter = Reference(IHE-PCS-Encounter-CompleteReport) 
+// TODO: encounter = Reference(IHE-PCS-Encounter-ClinicalSubset)
 
 
 * event.code 1..*
