@@ -46,48 +46,54 @@ An encounter resource used to deffine the full emergency medical transport encou
 * serviceProvider 1..1
 
 Extension: StatusSubType
-Id: Encounter.statusHistory.StatusSubType
+Id: StatusSubType
 Description: "Refinement of the Encounter Status History for steps within EMS"
 Title: "PCS Encounter status history sub-type"
 * extension contains 
 	StatusSubType 0..* 
-* extension[StatusSubType].value[X] valueCodeableConcept from http://hl7.org/fhir/encounter-status (example)
+* extension[StatusSubType].value[x] only CodeableConcept
+* extension[StatusSubType].value[x].valueCodeableConcept from http://hl7.org/fhir/encounter-status (example)
 //insert value set when ready (valueCodeableConcept from Encounter.statusHistorySubTypes.VS (example))
 
 Extension: StatusHistoryObservation
-Id: Encounter.statusHistory.StatusHistoryObservation
+Id: StatusHistoryObservation
 Description: "OdomoterReadings for an ambulance aligning with status history times"
 Title: "OdomoterReadings"
-* extension[ contains StatusHistoryObservation 0..*
+* extension contains StatusHistoryObservation 0..*
 * extension[StatusHistoryObservation].value[x] only valueQuantity
 
 Extension: priorityDescriptors
-Id: Encounter.priority.priorityDescriptors
+Id: priorityDescriptors
 Description: "The documentation of response mode techniques used for this EMS response."
 Title: "Priority Descriptors"
 * extension contains 
 	priorityDescriptors 0..* 
-* extension[StatusSubType].value[X] valueCodeableConcept from http://hl7.org/fhir/encounter-status (example)
+* extension[priorityDescriptors].value[x] only CodeableConcept
+* extension[priorityDescriptors].value[x].valueCodeableConcept from http://hl7.org/fhir/encounter-status (example)
 //insert value set when ready (valueCodeableConcept from Encounter.statusHistorySubTypes.VS (example))
 
 Extension: BarriersToPatientCare
-Id: Encounter.BarriersToPatientCare
+Id: BarriersToPatientCare
 Description: "Indication of whether or not there were any patient specific barriers to serving the patient."
 Title: Barriers To Patient Care"
 * extension contains 
 	Barriers 0..* 
-* extension[Barriers].value[X] valueCodeableConcept from http://hl7.org/fhir/encounter-status (example)
+* extension[Barriers].value[x] only CodeableConcept
+* extension[Barriers].value[x].valueCodeableConcept from http://hl7.org/fhir/encounter-status (example)
 //insert value set when ready (valueCodeableConcept from Encounter.statusHistorySubTypes.VS (example))
 
 Extension: protocolsUsed
-Id: Encounter.protocolsUsed
+Id: protocolsUsed
 Description: "The protocol used by provider personnel to direct the clinical care of the patient."
 Title: "Protocols Used"
 * extension contains 
 	Protocols 0..* and 
 	Category 0..1 and 
 	dataAbsentReason 0..1
-* extension[Protocols].value[X] valueCodeableConcept from http://hl7.org/fhir/encounter-status (example)
-* extension[Category].value[X] valueCodeableConcept from http://hl7.org/fhir/encounter-status (example)
-* extension[dataAbsentReason].value[X] valueCodeableConcept from http://hl7.org/fhir/encounter-status (example)
+* extension[Protocols].value[x] only CodeableConcept
+* extension[Protocols].value[x].valueCodeableConcept from http://hl7.org/fhir/encounter-status (example)
+* extension[Category].value[x] only CodeableConcept
+* extension[Category].value[x].valueCodeableConcept from http://hl7.org/fhir/encounter-status (example)
+* extension[dataAbsentReason].value[x] only CodeableConcept
+* extension[dataAbsentReason].value[x].valueCodeableConcept from http://hl7.org/fhir/encounter-status (example)
 //insert value set when ready (valueCodeableConcept from Encounter.statusHistorySubTypes.VS (example))
