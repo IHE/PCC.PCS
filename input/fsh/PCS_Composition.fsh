@@ -42,7 +42,7 @@ Description:      "composition of the FHIR elements that are used to build the F
 	sectionPhysicianCertificationStatement 0..1 and 
 	sectionTriage 0..1 and
 	sectionReviewOfSystems 1..1 MS and 
-	sectionEMSProtocols 0..1 and 
+	sectionEMSProtocols 0..* and 
 	sectionIntakeAndOutput 0..1 
 
 * section[sectionCoverage] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
@@ -115,7 +115,7 @@ Description:      "composition of the FHIR elements that are used to build the F
 * section[sectionTriage].entry ^short = "The documentarion of the triage criteria of the patient."
 * section[sectionTriage].entry ^definition = "The documentarion of the triage criteria of the patient."
 * section[sectionTriage].entry contains Exams 0..1 MS
-* section[sectionTriage].entry[Exams] only Reference(RiskAssessment|Observation)
+* section[sectionTriage].entry[Exams] only Reference(RiskAssessment or Observation)
 
 
 * section[sectionReviewOfSystems] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
@@ -148,7 +148,7 @@ Description:      "composition of the FHIR elements that are used to build the F
 * section[sectionEMSProtocols].entry ^short = "The EMS protocols used to direct the clinical care of the patient."
 * section[sectionEMSProtocols].entry ^definition = "The EMS protocols used to direct the clinical care of the patient."
 * section[sectionEMSProtocols].entry contains 
-	ProtocolsUsed 0..* MS and
+	ProtocolsUsed 0..1 MS and
 	ProtocolAgeCategory 0..1 
 * section[sectionEMSProtocols].entry[ProtocolsUsed] only Reference(Observation)
 * section[ProtocolAgeCategory].entry[ProtocolsUsed] only Reference(Observation)

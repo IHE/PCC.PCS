@@ -101,8 +101,8 @@ Description: "Transport Information for the encounter."
 * extension[ReasonForRefusal].valueCodeableConcept from http://hl7.org/fhir/ValueSet/encounter-status (example)
 * extension[TransportDisposition].value[x] only CodeableConcept 
 * extension[TransportDisposition].valueCodeableConcept from http://hl7.org/fhir/ValueSet/encounter-status (example)
-* extension[TransportDestination] only Reference(Location)
-* extension[AdditonalTransportInformation] only Reference(Observation)
+* extension[TransportDestination].value[x] only Reference(Location)
+* extension[AdditonalTransportInformation].value[x] only Reference(Observation)
 //insert value set when ready (valueCodeableConcept from Encounter.statusHistorySubTypes.VS (example))
 
 Extension: Incident
