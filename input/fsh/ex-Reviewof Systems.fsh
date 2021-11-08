@@ -9,5 +9,5 @@ Description:      "holding typical values for the PCS Review of Systems Observat
 * code = http://loinc.org#8709-8
 * subject = Reference(Patient/ex-patient)
 * encounter = Reference(Encounter/ex-encounter) 
-* effectiveDateTime = "2021-11-08T15:30:45"
+* effectiveDateTime = "2021-11-08T15:30.45"
 * valueCodeableConcept = http://snomed.info/sct#225544001
