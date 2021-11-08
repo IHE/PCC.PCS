@@ -60,7 +60,7 @@ Id: StatusHistoryObservation
 Description: "OdomoterReadings for an ambulance aligning with status history times"
 Title: "OdomoterReadings"
 * extension contains StatusHistoryObservation 0..*
-* extension[StatusHistoryObservation].value[x] only value
+* extension[StatusHistoryObservation].value[x] only value 
 
 Extension: priorityDescriptors
 Id: priorityDescriptors
@@ -74,12 +74,11 @@ Title: "Priority Descriptors"
 
 Extension: BarriersToPatientCare
 Id: BarriersToPatientCare
-Description: "Indication of whether or not there were any patient specific barriers to serving the patient."
 Title: "Barriers To Patient Care"
-* extension contains 
-	Barriers 0..* 
-* extension[Barriers].value[x] only CodeableConcept
-* extension[Barriers].value[x].valueCodeableConcept from http://hl7.org/fhir/encounter-status (example)
+Description: "Indication of whether or not there were any patient specific barriers to serving the patient."
+* value[x] only CodeableConcept 
+* value[x].valueCodeableConcept from http://hl7.org/fhir/encounter-status (example)
+* vvalue[x].valueCodeableConcept 0..* 
 //insert value set when ready (valueCodeableConcept from Encounter.statusHistorySubTypes.VS (example))
 
 Extension: protocolsUsed
