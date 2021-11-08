@@ -49,15 +49,14 @@ Extension: StatusSubType
 Id: StatusSubType
 Title: "PCS Encounter status history sub-type"
 Description: "Refinement of the Encounter Status History for steps within EMS"
-* value[x] only CodeableConcept
-* value[x].valueCodeableConcept from http://hl7.org/fhir/encounter-status (example)
+* value[x] only CodeableConcept from http://hl7.org/fhir/encounter-status (example)
 //insert value set when ready (valueCodeableConcept from Encounter.statusHistorySubTypes.VS (example))
 
 Extension: StatusHistoryObservation
 Id: StatusHistoryObservation
 Title: "OdomoterReadings"
 Description: "OdomoterReadings for an ambulance aligning with status history times"
-* value[x] only Quantity 0..*
+* value[x] only Quantity
 
 Extension: priorityDescriptors
 Id: priorityDescriptors
