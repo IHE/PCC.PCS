@@ -5,7 +5,6 @@ Title: "Paramedicince Care Summary Composition"
 Description:      "composition of the FHIR elements that are used to build the FHIR Document for the Paramedicine Care Summary"
 
 * subject 1..1
-* subject = Reference()
 * encounter 1..1
 * encounter = Reference(Encounter) 
 // TODO: encounter = Reference(IHE-PCS-Encounter-CompleteReport or IHE-PCS-Encounter-ClinicalSubset or IHE-PCS-Encounter-CompleteReport-US or IHE-PCS-Encounter-ClinicalSubset-US)
@@ -16,7 +15,7 @@ Description:      "composition of the FHIR elements that are used to build the F
 
 * section[sectionFunctionalStatus] 1..1
 //Note: Functional Status entry:disability is where the eHistory.01 - Barriers to Patient Care conditions can be represented, such as Speech Impaired, Sight Impaired, and Hearing Impaired
-//Note: entry:functionalAssessment is where observations and clinical impressions.... can be noted 
+//Note: entry:functionalAssessment is where observations and clinical impressions.... can be noted  
 
 //include medicaitons adminstered
 * section ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
