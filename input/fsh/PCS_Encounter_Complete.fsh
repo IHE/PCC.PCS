@@ -57,19 +57,18 @@ Title: "PCS Encounter status history sub-type"
 
 Extension: StatusHistoryObservation
 Id: StatusHistoryObservation
-Description: "OdomoterReadings for an ambulance aligning with status history times"
 Title: "OdomoterReadings"
+Description: "OdomoterReadings for an ambulance aligning with status history times"
+* value[x] only Quantity
+* value[x].valueQuantity 0..*
 * extension contains StatusHistoryObservation 0..*
-* extension[StatusHistoryObservation].value[x] only value 
 
 Extension: priorityDescriptors
 Id: priorityDescriptors
-Description: "The documentation of response mode techniques used for this EMS response."
 Title: "Priority Descriptors"
-* extension contains 
-	priorityDescriptors 0..* 
-* extension[priorityDescriptors].value[x] only CodeableConcept
-* extension[priorityDescriptors].value[x].valueCodeableConcept from http://hl7.org/fhir/encounter-status (example)
+Description: "The documentation of response mode techniques used for this EMS response."
+* value[x] only CodeableConcept
+* value[x].valueCodeableConcept from http://hl7.org/fhir/encounter-status (example)
 //insert value set when ready (valueCodeableConcept from Encounter.statusHistorySubTypes.VS (example))
 
 Extension: BarriersToPatientCare
@@ -83,8 +82,8 @@ Description: "Indication of whether or not there were any patient specific barri
 
 Extension: protocolsUsed
 Id: protocolsUsed
-Description: "The protocol used by provider personnel to direct the clinical care of the patient."
 Title: "Protocols Used"
+Description: "The protocol used by provider personnel to direct the clinical care of the patient."
 * extension contains 
 	Protocols 0..* and 
 	Category 0..1 and 
