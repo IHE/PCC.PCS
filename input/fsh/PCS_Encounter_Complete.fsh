@@ -62,6 +62,7 @@ Id: StatusHistoryObservation
 Title: "OdomoterReadings"
 Description: "OdomoterReadings for an ambulance aligning with status history times"
 * value[x] only Quantity
+// can this also be used to indicate status history delay reasons??
 
 Extension: PriorityDescriptors
 Id: PriorityDescriptors
@@ -78,6 +79,63 @@ Description: "Indication of whether or not there were any patient specific barri
 * value[x] only CodeableConcept 
 * valueCodeableConcept from http://hl7.org/fhir/ValueSet/encounter-status (example)
 //insert value set when ready (valueCodeableConcept from Encounter.statusHistorySubTypes.VS (example))
+
+Extension: Transport
+Id: Transport
+Title: "Transport"
+Description: "Transport Information for the encounter."
+* extension contains 
+	NumberofPatients 0..1 and 
+	TransportMode 0..1 and 
+	TrasnportReasonCode 0..* and 
+	ReasonForRefusal 0..* and
+	TransportDisposition 0..1 and
+	TransportDestination 0..1 and
+	AdditonalTransportInformation 0..1 
+* extension[NumberofPatients].value[x] only Quantity
+* extension[TransportMode].value[x] only CodeableConcept 
+* extension[TransportMode].valueCodeableConcept from http://hl7.org/fhir/ValueSet/encounter-status (example)
+* extension[TrasnportReasonCode].value[x] only CodeableConcept 
+* extension[TrasnportReasonCode].valueCodeableConcept from http://hl7.org/fhir/ValueSet/encounter-status (example)
+* extension[ReasonForRefusal].value[x] only CodeableConcept 
+* extension[ReasonForRefusal].valueCodeableConcept from http://hl7.org/fhir/ValueSet/encounter-status (example)
+* extension[TransportDisposition].value[x] only CodeableConcept 
+* extension[TransportDisposition].valueCodeableConcept from http://hl7.org/fhir/ValueSet/encounter-status (example)
+* extension[TransportDestination] only Reference(Location)
+* extension[AdditonalTransportInformation] only Reference(Observation)
+//insert value set when ready (valueCodeableConcept from Encounter.statusHistorySubTypes.VS (example))
+
+Extension: Incident
+Id: Incident
+Title: "Incident Observations"
+Description: "The information for the Patient incident"
+* extension contains 
+	MassCasualtyIncident 0..1 and 
+	NumberofPatients 0..1 and
+	TriageClassification 0..1 and
+	IncidentLocation 0..1 and
+	IncidentObservations 0..*
+* extension[MassCasualtyIncident].value[x] only CodeableConcept 
+* extension[MassCasualtyIncident].valueCodeableConcept from http://hl7.org/fhir/ValueSet/encounter-status (example)
+* extension[NumberofPatients].value[x] only only Quantity
+* extension[TriageClassification].value[x] only CodeableConcept
+* extension[TriageClassification].valueCodeableConcept from http://hl7.org/fhir/ValueSet/encounter-status (example) 
+* extension[IncidentLocation].value[x] only Reference(Location)
+* extension[IncidentObservations].value[x] only Reference(Observation)
+
+Extension: Injury 
+Id: Injury
+Title: "Injury Observations"
+Description: "The indicators for Patient injury from the encounter."
+* extension contains 
+	PossibleInjury 0..1 and
+	WorkRelatedInjury 0..1 and
+	InjuryObservations 0..*
+* extension[PossibleInjury].value[x] only CodeableConcept
+* extension[PossibleInjury].valueCodeableConcept from http://hl7.org/fhir/ValueSet/encounter-status (example)
+* extension[WorkRelatedInjury].value[x] only CodeableConcept
+* extension[WorkRelatedInjury].valueCodeableConcept from http://hl7.org/fhir/ValueSet/encounter-status (example)
+* extension[InjuryObservations].value[x] only Reference(Observation)
 
 Extension: ProtocolsUsed 
 Id: ProtocolsUsed
