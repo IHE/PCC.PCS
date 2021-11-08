@@ -92,14 +92,14 @@ Description:      "composition of the FHIR elements that are used to build the F
 * section[sectionPhysicianCertificationStatement].code = $loinc#52016-3
 * section[sectionPhysicianCertificationStatement].code MS
 * section[sectionPhysicianCertificationStatement].entry ..1 MS
-* section[sectionPhysicianCertificationStatement].entry only Reference(DocumentRefernce)
+* section[sectionPhysicianCertificationStatement].entry only Reference(DocumentReference)
 * section[sectionPhysicianCertificationStatement].entry ^slicing.discriminator.type = #profile
 * section[sectionPhysicianCertificationStatement].entry ^slicing.discriminator.path = "resolve()"
 * section[sectionPhysicianCertificationStatement].entry ^slicing.rules = #open
 * section[sectionPhysicianCertificationStatement].entry ^short = "The documentarion of the medical necessity for the encounter."
 * section[sectionPhysicianCertificationStatement].entry ^definition = "Indication of whether a physician certification statement (PCS) is available documenting the medical necessity or the EMS encounter."
 * section[sectionPhysicianCertificationStatement].entry contains PhysicianCertificationStatement 0..1 MS
-* section[sectionPhysicianCertificationStatement].entry[PhysicianCertificationStatement] only Reference(DocumentRefernce)
+* section[sectionPhysicianCertificationStatement].entry[PhysicianCertificationStatement] only Reference(DocumentReference)
 
 * section[sectionTriage] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionTriage] ^extension.valueString = "Section"
@@ -108,14 +108,14 @@ Description:      "composition of the FHIR elements that are used to build the F
 * section[sectionTriage].code = $loinc#LG38818-7
 * section[sectionTriage].code MS
 * section[sectionTriage].entry ..1 MS
-* section[sectionTriage].entry only Reference(RiskAssesment)
+* section[sectionTriage].entry only Reference(RiskAssessment)
 * section[sectionTriage].entry ^slicing.discriminator.type = #profile
 * section[sectionTriage].entry ^slicing.discriminator.path = "resolve()"
 * section[sectionTriage].entry ^slicing.rules = #open
 * section[sectionTriage].entry ^short = "The documentarion of the triage criteria of the patient."
 * section[sectionTriage].entry ^definition = "The documentarion of the triage criteria of the patient."
 * section[sectionTriage].entry contains Exams 0..1 MS
-* section[sectionTriage].entry[Exams] only Reference(RiskAssesment|Observation)
+* section[sectionTriage].entry[Exams] only Reference(RiskAssessment|Observation)
 
 
 * section[sectionReviewOfSystems] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
@@ -148,7 +148,7 @@ Description:      "composition of the FHIR elements that are used to build the F
 * section[sectionEMSProtocols].entry ^short = "The EMS protocols used to direct the clinical care of the patient."
 * section[sectionEMSProtocols].entry ^definition = "The EMS protocols used to direct the clinical care of the patient."
 * section[sectionEMSProtocols].entry contains 
-	ProtocolsUsed 1..* MS and
+	ProtocolsUsed 0..* MS and
 	ProtocolAgeCategory 0..1 
 * section[sectionEMSProtocols].entry[ProtocolsUsed] only Reference(Observation)
 * section[ProtocolAgeCategory].entry[ProtocolsUsed] only Reference(Observation)
