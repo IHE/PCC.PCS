@@ -60,7 +60,7 @@ Id: StatusHistoryObservation
 Description: "OdomoterReadings for an ambulance aligning with status history times"
 Title: "OdomoterReadings"
 * extension contains StatusHistoryObservation 0..*
-* extension[StatusHistoryObservation].value[x] only valueQuantity
+* extension[StatusHistoryObservation].value[x] only value
 
 Extension: priorityDescriptors
 Id: priorityDescriptors
@@ -75,7 +75,7 @@ Title: "Priority Descriptors"
 Extension: BarriersToPatientCare
 Id: BarriersToPatientCare
 Description: "Indication of whether or not there were any patient specific barriers to serving the patient."
-Title: Barriers To Patient Care"
+Title: "Barriers To Patient Care"
 * extension contains 
 	Barriers 0..* 
 * extension[Barriers].value[x] only CodeableConcept
