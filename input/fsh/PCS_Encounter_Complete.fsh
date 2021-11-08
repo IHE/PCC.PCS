@@ -32,6 +32,8 @@ An encounter resource used to deffine the full emergency medical transport encou
 * status 1..1
 * status = #finished
 * statusHistory 1..*
+* extension contains StatusSubType named StatusSubType 0..*
+* extension [StatusSubType].valueCodeableConcept = http://hl7.org/fhir/encounter-status (example)
 * class 1..1
 * priority 1..1 
 * subject 1..1
@@ -49,7 +51,7 @@ Extension: StatusSubType
 Id: StatusSubType
 Title: "PCS Encounter status history sub-type"
 Description: "Refinement of the Encounter Status History for steps within EMS"
-* value[x].valueCodeableConcept from http://hl7.org/fhir/encounter-status (example)
+* value[x] only CodeableConcept
 //insert value set when ready (valueCodeableConcept from Encounter.statusHistorySubTypes.VS (example))
 
 Extension: StatusHistoryObservation
