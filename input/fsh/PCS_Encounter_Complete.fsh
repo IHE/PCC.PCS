@@ -117,7 +117,7 @@ Description: "The information for the Patient incident"
 	IncidentObservations 0..*
 * extension[MassCasualtyIncident].value[x] only CodeableConcept 
 * extension[MassCasualtyIncident].valueCodeableConcept from http://hl7.org/fhir/ValueSet/encounter-status (example)
-* extension[NumberofPatients].value[x] only only Quantity
+* extension[NumberofPatients].value[x] only Quantity
 * extension[TriageClassification].value[x] only CodeableConcept
 * extension[TriageClassification].valueCodeableConcept from http://hl7.org/fhir/ValueSet/encounter-status (example) 
 * extension[IncidentLocation].value[x] only Reference(Location)
