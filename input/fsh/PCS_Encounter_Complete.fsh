@@ -24,7 +24,6 @@ An encounter resource used to deffine the full emergency medical transport encou
 - SHALL have serviceProvider. serviceProvider SHALL be expressed using the Organization Reference. The Organization SHALL express the organizaiotn Identifiers AND the Organization name. 
 - SHALL have Location. The Location SHALL contain the Scene location where the patient was taken from and SHALL use the us-core-location reference. The Location SHALL Contain the Destination location where the patient is transfered to at the completion of the Encounter and SHALL use the us-core-location reference.  
 - SHALL Contain Transport Extension
-- SHALL have Encounter.text to express the Patient Care Report Narrative
 """
 
 
