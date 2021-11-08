@@ -47,12 +47,10 @@ An encounter resource used to deffine the full emergency medical transport encou
 
 Extension: StatusSubType
 Id: StatusSubType
-Description: "Refinement of the Encounter Status History for steps within EMS"
 Title: "PCS Encounter status history sub-type"
-* extension contains 
-	StatusSubType 0..* 
-* extension[StatusSubType].value[x] only CodeableConcept
-* extension[StatusSubType].value[x].valueCodeableConcept from http://hl7.org/fhir/encounter-status (example)
+Description: "Refinement of the Encounter Status History for steps within EMS"
+* value[x] only CodeableConcept
+* value[x].valueCodeableConcept from http://hl7.org/fhir/encounter-status (example)
 //insert value set when ready (valueCodeableConcept from Encounter.statusHistorySubTypes.VS (example))
 
 Extension: StatusHistoryObservation
@@ -61,7 +59,6 @@ Title: "OdomoterReadings"
 Description: "OdomoterReadings for an ambulance aligning with status history times"
 * value[x] only Quantity
 * value[x].valueQuantity 0..*
-* extension contains StatusHistoryObservation 0..*
 
 Extension: priorityDescriptors
 Id: priorityDescriptors
