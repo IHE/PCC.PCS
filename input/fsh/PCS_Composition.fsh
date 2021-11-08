@@ -39,7 +39,7 @@ Description:      "composition of the FHIR elements that are used to build the F
 * section contains
     sectionCoverage 1..1 MS and
 	sectionCareTeam 1..1 MS and 
-	sectionParamedicineNote
+	sectionParamedicineNote 1..1 MS
 
 * section[sectionCoverage] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionCoverage] ^extension.valueString = "Section"
