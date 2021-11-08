@@ -63,7 +63,7 @@ Description:      "composition of the FHIR elements that are used to build the F
 * section[sectionCareTeam].code = $loinc#86744-0
 * section[sectionCareTeam].code MS
 * section[sectionCareTeam].entry ..1 MS
-* section[sectionCareTeam].entry only Reference(CareTeam | Provider | ProviderRole)
+* section[sectionCareTeam].entry only Reference(CareTeam)
 * section[sectionCareTeam].entry ^slicing.discriminator.type = #profile
 * section[sectionCareTeam].entry ^slicing.discriminator.path = "resolve()"
 * section[sectionCareTeam].entry ^slicing.rules = #open

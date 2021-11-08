@@ -55,7 +55,7 @@ Id: StatusSubType
 Title: "PCS Encounter status history sub-type"
 Description: "Refinement of the Encounter Status History for steps within EMS"
 * value[x] only CodeableConcept
-* value[x].valueCodeableConcept from http://hl7.org/fhir/ValueSet/encounter-status (example)
+* valueCodeableConcept from http://hl7.org/fhir/ValueSet/encounter-status (example)
 //insert value set when ready (valueCodeableConcept from Encounter.statusHistorySubTypes.VS (example))
 
 Extension: StatusHistoryObservation
@@ -69,7 +69,7 @@ Id: priorityDescriptors
 Title: "Priority Descriptors"
 Description: "The documentation of response mode techniques used for this EMS response."
 * value[x] only CodeableConcept
-* value[x].valueCodeableConcept from http://hl7.org/fhir/ValueSet/encounter-status (example)
+* valueCodeableConcept from http://hl7.org/fhir/ValueSet/encounter-status (example)
 //insert value set when ready (valueCodeableConcept from Encounter.statusHistorySubTypes.VS (example))
 
 Extension: BarriersToPatientCare
@@ -77,8 +77,7 @@ Id: BarriersToPatientCare
 Title: "Barriers To Patient Care"
 Description: "Indication of whether or not there were any patient specific barriers to serving the patient."
 * value[x] only CodeableConcept 
-* value[x].valueCodeableConcept from http://hl7.org/fhir/ValueSet/encounter-status (example)
-* vvalue[x].valueCodeableConcept 0..* 
+* valueCodeableConcept from http://hl7.org/fhir/ValueSet/encounter-status (example)
 //insert value set when ready (valueCodeableConcept from Encounter.statusHistorySubTypes.VS (example))
 
 Extension: protocolsUsed
