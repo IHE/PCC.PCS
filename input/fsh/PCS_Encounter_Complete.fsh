@@ -130,12 +130,14 @@ Description: "The indicators for Patient injury from the encounter."
 * extension contains 
 	PossibleInjury 0..1 and
 	WorkRelatedInjury 0..1 and
-	InjuryObservations 0..*
+	CauseOfInjury 1..* and
+	MechanismOfInjury 1..*
 * extension[PossibleInjury].value[x] only CodeableConcept
 * extension[PossibleInjury].valueCodeableConcept from http://hl7.org/fhir/ValueSet/encounter-status (example)
 * extension[WorkRelatedInjury].value[x] only CodeableConcept
 * extension[WorkRelatedInjury].valueCodeableConcept from http://hl7.org/fhir/ValueSet/encounter-status (example)
-* extension[InjuryObservations].value[x] only Reference(Observation)
+* extension[CauseOfInjury].value[x] only Reference(Observation)
+* extension[MechanismOfInjury].value[x] only Reference(Observation)
 
 Extension: ProtocolsUsed 
 Id: ProtocolsUsed
