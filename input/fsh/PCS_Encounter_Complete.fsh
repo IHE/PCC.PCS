@@ -80,7 +80,7 @@ Description: "Indication of whether or not there were any patient specific barri
 * valueCodeableConcept from http://hl7.org/fhir/ValueSet/encounter-status (example)
 //insert value set when ready (valueCodeableConcept from Encounter.statusHistorySubTypes.VS (example))
 
-Extension: protocolsUsed
+Extension: protocolsUsed 
 Id: protocolsUsed
 Title: "Protocols Used"
 Description: "The protocol used by provider personnel to direct the clinical care of the patient."
