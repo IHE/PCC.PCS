@@ -1,4 +1,4 @@
-Profile:   IHE-PCS-Encounter-CompleteReport
+Profile:   IHE_PCS_Encounter_CompleteReport
 Parent: Encounter
 Id:             IHE.PCC.PCS.Encounter.CompleteReport
 Title: "IHE PCS Encounter Complete Report"
