@@ -48,7 +48,7 @@ An encounter resource used to deffine the full emergency medical transport encou
 //condition.category will = encounter-diagnosis and primary and scondary impressions should be indicated with the Diagnosis rank Number
 * serviceProvider 1..1
 * extension contains BarriersToPatientCare named Barriers 0..*
-* extension contains protocolsUsed named protocolsUsed 0..*
+* extension contains ProtocolsUsed named ProtocolsUsed 0..*
 
 Extension: StatusSubType
 Id: StatusSubType
@@ -80,8 +80,8 @@ Description: "Indication of whether or not there were any patient specific barri
 * valueCodeableConcept from http://hl7.org/fhir/ValueSet/encounter-status (example)
 //insert value set when ready (valueCodeableConcept from Encounter.statusHistorySubTypes.VS (example))
 
-Extension: protocolsUsed 
-Id: protocolsUsed
+Extension: ProtocolsUsed 
+Id: ProtocolsUsed
 Title: "Protocols Used"
 Description: "The protocol used by provider personnel to direct the clinical care of the patient."
 * extension contains 
