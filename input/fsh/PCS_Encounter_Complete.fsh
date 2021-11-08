@@ -89,10 +89,10 @@ Description: "The protocol used by provider personnel to direct the clinical car
 	Category 0..1 and 
 	dataAbsentReason 0..1
 * extension[Protocols].value[x] only CodeableConcept
-* extension[Protocols].value[x].valueCodeableConcept from http://hl7.org/fhir/ValueSet/encounter-status (example)
+* extension[Protocols].valueCodeableConcept from http://hl7.org/fhir/ValueSet/encounter-status (example)
 * extension[Category].value[x] only CodeableConcept
-* extension[Category].value[x].valueCodeableConcept from http://hl7.org/fhir/ValueSet/encounter-status (example)
+* extension[Category].valueCodeableConcept from http://hl7.org/fhir/ValueSet/encounter-status (example)
 * extension[dataAbsentReason].value[x] only CodeableConcept
-* extension[dataAbsentReason].value[x].valueCodeableConcept from http://hl7.org/fhir/ValueSet/encounter-status (example)
+* extension[dataAbsentReason].valueCodeableConcept from http://hl7.org/fhir/ValueSet/encounter-status (example)
 //insert value set when ready (valueCodeableConcept from Encounter.statusHistorySubTypes.VS (example))
 
