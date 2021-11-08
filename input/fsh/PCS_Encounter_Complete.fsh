@@ -33,8 +33,10 @@ An encounter resource used to deffine the full emergency medical transport encou
 * status = #finished
 * statusHistory 1..*
 * extension contains StatusSubType named StatusSubType 0..*
+* extension contains StatusHistoryObservation named OdomoterReadings 0..*
 * class 1..1
 * priority 1..1 
+* extension contains priorityDescriptors named priorityDescriptors 0..*
 * subject 1..1
 * episodeOfCare 1..1
 * basedOn 1..1
@@ -45,6 +47,8 @@ An encounter resource used to deffine the full emergency medical transport encou
 * diagnosis 1..*
 //condition.category will = encounter-diagnosis and primary and scondary impressions should be indicated with the Diagnosis rank Number
 * serviceProvider 1..1
+* extension contains BarriersToPatientCare named Barriers 0..*
+* extension contains protocolsUsed named protocolsUsed 0..*
 
 Extension: StatusSubType
 Id: StatusSubType
