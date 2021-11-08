@@ -57,8 +57,7 @@ Extension: StatusHistoryObservation
 Id: StatusHistoryObservation
 Title: "OdomoterReadings"
 Description: "OdomoterReadings for an ambulance aligning with status history times"
-* value[x] only Quantity
-* value[x].valueQuantity 0..*
+* value[x] only Quantity 0..*
 
 Extension: priorityDescriptors
 Id: priorityDescriptors
