@@ -108,7 +108,7 @@ Description:      "composition of the FHIR elements that are used to build the F
 * section[sectionTriage].code = $loinc#LG38818-7
 * section[sectionTriage].code MS
 * section[sectionTriage].entry ..1 MS
-* section[sectionTriage].entry only Reference(RiskAssessment)
+* section[sectionTriage].entry only Reference(RiskAssessment or Observation)
 * section[sectionTriage].entry ^slicing.discriminator.type = #profile
 * section[sectionTriage].entry ^slicing.discriminator.path = "resolve()"
 * section[sectionTriage].entry ^slicing.rules = #open
