@@ -115,7 +115,7 @@ Description:      "composition of the FHIR elements that are used to build the F
 * section[sectionTriage].entry ^short = "The documentarion of the triage criteria of the patient."
 * section[sectionTriage].entry ^definition = "The documentarion of the triage criteria of the patient."
 * section[sectionTriage].entry contains Exams 0..1 MS
-* section[sectionTriage].entry[Exams].value[x] only Reference(RiskAssessment or Observation)
+* section[sectionTriage].entry[Exams] only Reference(RiskAssessment or Observation)
 
 
 * section[sectionReviewOfSystems] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
