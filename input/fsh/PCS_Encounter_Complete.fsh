@@ -36,7 +36,7 @@ An encounter resource used to deffine the full emergency medical transport encou
 * extension contains StatusHistoryObservation named OdomoterReadings 0..*
 * class 1..1
 * priority 1..1 
-* extension contains priorityDescriptors named priorityDescriptors 0..*
+* extension contains PriorityDescriptors named PriorityDescriptors 0..*
 * subject 1..1
 * episodeOfCare 1..1
 * basedOn 1..1
@@ -64,8 +64,8 @@ Title: "OdomoterReadings"
 Description: "OdomoterReadings for an ambulance aligning with status history times"
 * value[x] only Quantity
 
-Extension: priorityDescriptors
-Id: priorityDescriptors
+Extension: PriorityDescriptors
+Id: PriorityDescriptors
 Title: "Priority Descriptors"
 Description: "The documentation of response mode techniques used for this EMS response."
 * value[x] only CodeableConcept
