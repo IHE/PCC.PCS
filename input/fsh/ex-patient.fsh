@@ -9,6 +9,6 @@ Id: Race
 Title: "PCS patient Race extension"
 Description: "extending IPS patient Resource to inclue the patient's race and ethnicity"
 * value[x] only CodeableConcept 
-* value[x].valueCodeableConcept from http://terminology.hl7.org/CodeSystem/v3-Race (example) OR http://terminology.hl7.org/ValueSet/v2-0005 (example)
+* value[x].valueCodeableConcept from http://terminology.hl7.org/CodeSystem/v3-Race (example)
 
 
