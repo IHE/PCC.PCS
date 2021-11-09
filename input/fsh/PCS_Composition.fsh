@@ -13,9 +13,16 @@ Description:      "composition of the FHIR elements that are used to build the F
 * event.code 1..*
 * event.code = http://terminology.hl7.org/CodeSystem/v3-ActClass#ENC
 
+* section[sectionMedications].entry contains MedicationsAdministered 1..*
+* section[sectionMedications].entry[MedicationsAdministered] only Reference(MedicationAdministration)
+
 * section[sectionFunctionalStatus] 1..1
 //Note: Functional Status entry:disability is where the eHistory.01 - Barriers to Patient Care conditions can be represented, such as Speech Impaired, Sight Impaired, and Hearing Impaired
 //Note: entry:functionalAssessment.. use clinical imporession for the Neurological Assessment, and Mental Status Assessment, 
+
+* section[sectionAdvanceDirectives] 1..1
+* section[sectionAdvanceDirectives].entry contains PresenceOfEmergencyInformationForm 0..1
+* section[sectionAdvanceDirectives].entry[PresenceOfEmergencyInformationForm] only Reference(Observation)
 
 //include medicaitons adminstered
 * section ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
@@ -36,6 +43,7 @@ Description:      "composition of the FHIR elements that are used to build the F
 * section.section ..0
 * section.section ^mustSupport = false
 * section contains
+	sectionProceduresPerformed 1..1 MS and
     sectionCoverage 1..1 MS and
 	sectionCareTeam 1..1 MS and 
 	sectionParamedicineNote 1..1 MS and 
@@ -43,7 +51,23 @@ Description:      "composition of the FHIR elements that are used to build the F
 	sectionTriage 0..1 and
 	sectionReviewOfSystems 1..1 MS and 
 	sectionEMSProtocols 0..* and 
-	sectionIntakeAndOutput 0..1 
+	sectionEMSCardiacArrestEvent 0..1 
+
+* section[sectionProceduresPerformed] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionProceduresPerformed] ^extension.valueString = "Section"
+* section[sectionProceduresPerformed] ^short = "Procedures Performed Section"
+* section[sectionProceduresPerformed] ^definition = "The procedures perfomred on the patient during the encounter."
+* section[sectionProceduresPerformed].code = $loinc#28570-0
+* section[sectionProceduresPerformed].code MS
+* section[sectionProceduresPerformed].entry ..1 MS
+* section[sectionProceduresPerformed].entry only Reference(Coverage)
+* section[sectionProceduresPerformed].entry ^slicing.discriminator.type = #profile
+* section[sectionProceduresPerformed].entry ^slicing.discriminator.path = "resolve()"
+* section[sectionProceduresPerformed].entry ^slicing.rules = #open
+* section[sectionProceduresPerformed].entry ^short = "Procedures Performed"
+* section[sectionProceduresPerformed].entry ^definition = "Contains the procedures performed on the patient during the period of the referenced encounter."
+* section[sectionProceduresPerformed].entry contains Procedures 0..* MS
+* section[sectionProceduresPerformed].entry[Procedures] only Reference(Procedures)
 
 * section[sectionCoverage] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionCoverage] ^extension.valueString = "Section"
@@ -151,25 +175,34 @@ Description:      "composition of the FHIR elements that are used to build the F
 	ProtocolsUsed 0..1 MS and
 	ProtocolAgeCategory 0..1 
 * section[sectionEMSProtocols].entry[ProtocolsUsed] only Reference(Observation)
-* section[ProtocolAgeCategory].entry[ProtocolsUsed] only Reference(Observation)
+* section[sectionEMSProtocols].entry[ProtocolAgeCategory] only Reference(Observation)
 
-* section[sectionIntakeAndOutput] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionIntakeAndOutput] ^extension.valueString = "Section"
-* section[sectionIntakeAndOutput] ^short = "Paramedicince Note Section"
-* section[sectionIntakeAndOutput] ^definition = "The last oral intake of the Patient."
-* section[sectionIntakeAndOutput].code = $loinc#45844-8
-* section[sectionIntakeAndOutput].text 1..1 MS
+* section[sectionEMSCardiacArrestEvent] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionEMSCardiacArrestEvent] ^extension.valueString = "Section"
+* section[sectionEMSCardiacArrestEvent] ^short = "EMS Protocols Section"
+* section[sectionEMSCardiacArrestEvent] ^definition = "The protocols used by EMS personnel to direct the clinical care of the patient."
+* section[sectionEMSCardiacArrestEvent].code = $loinc#67663-5
+* section[sectionEMSCardiacArrestEvent].code MS
+* section[sectionEMSCardiacArrestEvent].entry ..1 MS
+* section[sectionEMSCardiacArrestEvent].entry only Reference(Observation)
+* section[sectionEMSCardiacArrestEvent].entry ^slicing.discriminator.type = #profile
+* section[sectionEMSCardiacArrestEvent].entry ^slicing.discriminator.path = "resolve()"
+* section[sectionEMSCardiacArrestEvent].entry ^slicing.rules = #open
+* section[sectionEMSCardiacArrestEvent].entry ^short = "The EMS protocols used to direct the clinical care of the patient."
+* section[sectionEMSCardiacArrestEvent].entry ^definition = "The EMS protocols used to direct the clinical care of the patient."
+* section[sectionEMSCardiacArrestEvent].entry contains 
+	CardiacArrestIndication 0..1 MS and
+	CardiacArrestEvent 0..1 
+* section[sectionEMSCardiacArrestEvent].entry[CardiacArrestIndication] only Reference(Observation)
+* section[sectionEMSCardiacArrestEvent].entry[CardiacArrestEvent] only Reference(Condition and Procedure)
 
 
-//Alcohol/Drug use indicators 69757-3 ... review of systems??
 
-//Presence of Emergency Information Form  Advanced directives section.... 
+//Alcohol/Drug use indicators 69757-3 ... review of systems type is survey same for last known well, and last oral intake, patient acuity 
 
-//Delays 67480-4
-
-// loinc cod....needed last Known well exam obervation?? patient acuity  77941-3same??? somehow be used for intake and output observation?
+//Presence of Emergency Information Form  Advanced directives section.... splice Advanced directives to inclue, sae to be for medications, and procedures perfomed
 
 
-// Addtional Composition elements: transport observation?, odomotor readings? barriers to care??, incident observations?
+// Addtional Composition elements: maybe airway 
 
 

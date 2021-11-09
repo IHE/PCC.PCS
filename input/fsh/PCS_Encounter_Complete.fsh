@@ -33,7 +33,16 @@ An encounter resource used to deffine the full emergency medical transport encou
 * statusHistory 1..*
 * extension contains StatusSubType named StatusSubType 0..*
 * extension contains StatusHistoryObservation named OdomoterReadings 0..*
+//Encunter type should be Ambulance, Medflight, should be set as an extensible code set
 * class 1..1
+//extend Coding V3 Value SetActEncount	erCode (extend) to include:* EMER TR (Emergecny Trasnport) "A patient encounter that takes place with an Emergency Medical Service where the patient receives immediate evaluation, treatment, and trasnportation to a treatment facility , provided until the cancellation of treatment or responsibility for the patient's care is transferred elsewhere (for example, the patient care is transferred to another Organization or provider.)"
+// NON-EMER TR (Non-Emergecny Trasnport) ""A patient encounter that takes place with an Emergency Medical Service where the patient receives non-emergent evaluation, treatment, and trasnportation, provided until the cancellation of treatment, pateint is dropped off at destination, or responsibility for the patient's care is transferred elsewhere (for example, the patient care is transferred to another Organization or provider.)"
+// Informed by the NEMSIS_eResponse_ResponseMode_VS value set. If the value is 4217001 "Emergent (Immediate Response)" OR 4217007 "Non-Emergent Upgraded to Emergent" the Value SHALL be EMER TR. If the Value is 4217005 "Non-Emergent" OR 4217003 "Emergent Downgraded to Non-Emergent" the Value SHALL be NON-EMER TR////
+* classHistory 1..*
+//This is where urgency responce and the urgency of trasnport is indicated
+* type 1..*
+* serviceType 1..1
+//Should be have as main options $230 "Patient transport", $117 "Emergency Medical" or $465 "Trasnport", $225 "Air ambulance", $226 "Ambulance" 
 * priority 1..1 
 * extension contains PriorityDescriptors named PriorityDescriptors 0..*
 * subject 1..1
@@ -48,6 +57,10 @@ An encounter resource used to deffine the full emergency medical transport encou
 * serviceProvider 1..1
 * extension contains BarriersToPatientCare named Barriers 0..*
 * extension contains ProtocolsUsed named ProtocolsUsed 0..* 
+* extension contains Transport named Transport 1..1
+* extension contains Incident named Incident 1..1
+* extension contains Injury named Injury 0..1
+
 
 Extension: StatusSubType
 Id: StatusSubType
@@ -62,7 +75,7 @@ Id: StatusHistoryObservation
 Title: "OdomoterReadings"
 Description: "OdomoterReadings for an ambulance aligning with status history times"
 * value[x] only Quantity
-// can this also be used to indicate status history delay reasons??
+// can this also be used to indicate status history delay reasons?? add delays
 
 Extension: PriorityDescriptors
 Id: PriorityDescriptors
@@ -91,7 +104,7 @@ Description: "Transport Information for the encounter."
 	ReasonForRefusal 0..* and
 	TransportDisposition 0..1 and
 	TransportDestination 0..1 and
-	AdditonalTransportInformation 0..1 
+	AdditonalTransportInformation 0..* 
 * extension[NumberofPatients].value[x] only Quantity
 * extension[TransportMode].value[x] only CodeableConcept 
 * extension[TransportMode].valueCodeableConcept from http://hl7.org/fhir/ValueSet/encounter-status (example)
@@ -138,20 +151,4 @@ Description: "The indicators for Patient injury from the encounter."
 * extension[WorkRelatedInjury].valueCodeableConcept from http://hl7.org/fhir/ValueSet/encounter-status (example)
 * extension[CauseOfInjury].value[x] only Reference(Observation)
 * extension[MechanismOfInjury].value[x] only Reference(Observation)
-
-Extension: ProtocolsUsed 
-Id: ProtocolsUsed
-Title: "Protocols Used"
-Description: "The protocol used by provider personnel to direct the clinical care of the patient."
-* extension contains 
-	Protocols 0..* and 
-	Category 0..1 and 
-	dataAbsentReason 0..1
-* extension[Protocols].value[x] only CodeableConcept
-* extension[Protocols].valueCodeableConcept from http://hl7.org/fhir/ValueSet/encounter-status (example)
-* extension[Category].value[x] only CodeableConcept
-* extension[Category].valueCodeableConcept from http://hl7.org/fhir/ValueSet/encounter-status (example)
-* extension[dataAbsentReason].value[x] only CodeableConcept
-* extension[dataAbsentReason].valueCodeableConcept from http://hl7.org/fhir/ValueSet/encounter-status (example)
-//insert value set when ready (valueCodeableConcept from Encounter.statusHistorySubTypes.VS (example))
 
