@@ -66,8 +66,8 @@ Description:      "composition of the FHIR elements that are used to build the F
 * section[sectionProceduresPerformed].entry ^slicing.rules = #open
 * section[sectionProceduresPerformed].entry ^short = "Procedures Performed"
 * section[sectionProceduresPerformed].entry ^definition = "Contains the procedures performed on the patient during the period of the referenced encounter."
-* section[sectionProceduresPerformed].entry contains Procedures 0..* MS
-* section[sectionProceduresPerformed].entry[Procedures] only Reference(Procedures)
+* section[sectionProceduresPerformed].entry contains Procedures 0..1 MS
+* section[sectionProceduresPerformed].entry[Procedures] only Reference(Procedure)
 
 * section[sectionCoverage] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionCoverage] ^extension.valueString = "Section"
@@ -184,7 +184,7 @@ Description:      "composition of the FHIR elements that are used to build the F
 * section[sectionEMSCardiacArrestEvent].code = $loinc#67663-5
 * section[sectionEMSCardiacArrestEvent].code MS
 * section[sectionEMSCardiacArrestEvent].entry ..1 MS
-* section[sectionEMSCardiacArrestEvent].entry only Reference(Observation)
+* section[sectionEMSCardiacArrestEvent].entry only Reference(Observation or Condition or Procedure)
 * section[sectionEMSCardiacArrestEvent].entry ^slicing.discriminator.type = #profile
 * section[sectionEMSCardiacArrestEvent].entry ^slicing.discriminator.path = "resolve()"
 * section[sectionEMSCardiacArrestEvent].entry ^slicing.rules = #open
@@ -194,7 +194,7 @@ Description:      "composition of the FHIR elements that are used to build the F
 	CardiacArrestIndication 0..1 MS and
 	CardiacArrestEvent 0..1 
 * section[sectionEMSCardiacArrestEvent].entry[CardiacArrestIndication] only Reference(Observation)
-* section[sectionEMSCardiacArrestEvent].entry[CardiacArrestEvent] only Reference(Condition and Procedure)
+* section[sectionEMSCardiacArrestEvent].entry[CardiacArrestEvent] only Reference(Condition or Procedure)
 
 
 
