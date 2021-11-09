@@ -55,8 +55,7 @@ An encounter resource used to deffine the full emergency medical transport encou
 * diagnosis 1..*
 //condition.category will = encounter-diagnosis and primary and scondary impressions should be indicated with the Diagnosis rank Number
 * serviceProvider 1..1
-* extension contains BarriersToPatientCare named Barriers 0..*
-* extension contains ProtocolsUsed named ProtocolsUsed 0..* 
+* extension contains BarriersToPatientCare named Barriers 0..* 
 * extension contains Transport named Transport 1..1
 * extension contains Incident named Incident 1..1
 * extension contains Injury named Injury 0..1

@@ -174,8 +174,8 @@ Description:      "composition of the FHIR elements that are used to build the F
 * section[sectionEMSProtocols].entry contains 
 	ProtocolsUsed 0..1 MS and
 	ProtocolAgeCategory 0..1 
-* section[sectionEMSProtocols].entry[ProtocolsUsed].value[x] only Reference(Observation)
-* section[sectionEMSProtocols].entry[ProtocolAgeCategory].value[x] only Reference(Observation)
+* section[sectionEMSProtocols].entry[ProtocolsUsed] only Reference(Observation)
+* section[sectionEMSProtocols].entry[ProtocolAgeCategory] only Reference(Observation)
 
 * section[sectionEMSCardiacArrestEvent] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionEMSCardiacArrestEvent] ^extension.valueString = "Section"
