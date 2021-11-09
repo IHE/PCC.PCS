@@ -60,7 +60,7 @@ Description:      "composition of the FHIR elements that are used to build the F
 * section[sectionProceduresPerformed].code = $loinc#28570-0
 * section[sectionProceduresPerformed].code MS
 * section[sectionProceduresPerformed].entry ..1 MS
-* section[sectionProceduresPerformed].entry only Reference(Coverage)
+* section[sectionProceduresPerformed].entry only Reference(Procedure)
 * section[sectionProceduresPerformed].entry ^slicing.discriminator.type = #profile
 * section[sectionProceduresPerformed].entry ^slicing.discriminator.path = "resolve()"
 * section[sectionProceduresPerformed].entry ^slicing.rules = #open
