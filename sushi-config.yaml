@@ -1,6 +1,6 @@
 # sushi-config.yaml is documented https://fshschool.org/docs/sushi/configuration/
 # ───────────────────────────────────────────────────
-id: IHE.PCC.PCS
+id: ihe.pcc.pcs
 canonical: https://profiles.ihe.net/PCC/PCS
 version: 0.1.0
 name: IHE_PCC_PCS
