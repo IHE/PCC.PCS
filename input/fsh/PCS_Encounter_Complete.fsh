@@ -107,8 +107,8 @@ Description: "Transport Information for the encounter."
 	Priority 0..1 and 
 	PriorityDescriptors 0..* and
 	TrasnportReasonCode 0..* and
-	 Justification for Transfer or Encounter
-	 Reason for Interfacility Transfer/Medical Transport
+	Justification for Transfer or Encounter and 
+	Reason for Interfacility Transfer/Medical Transport and 
 	Refusal 0..* and  
 	// NOTE: Refused (qualifier value) (443390004) 
 	TransportDisposition 0..1 and
@@ -124,11 +124,11 @@ Description: "Transport Information for the encounter."
 * extension[TrasnportReasonCode].valueCodeableConcept from http://hl7.org/fhir/ValueSet/encounter-status (example)
 // also include ePayment.47 - Ambulance Conditions Indicator
 * extension[ReasonForRefusal] contains
-	Reason 0..*and
+	Reason 0..* and
 	InstructionsProvided 0..* 
 	// eDisposition.26 - Disposition Instructions Provided should be in the plan of care section... 
 
-.value[x] only CodeableConcept 
+* extension[ReasonForRefusal].value[x] only CodeableConcept 
 * extension[ReasonForRefusal].valueCodeableConcept from http://hl7.org/fhir/ValueSet/encounter-status (example)
 
 * extension[TransportAuthorization] contains 
@@ -137,7 +137,7 @@ Description: "Transport Information for the encounter."
 * extension[TransportDisposition] contains 
 	disposition
 	RoundTripReason
-.value[x] only CodeableConcept 
+* extension[TransportDisposition].value[x] only CodeableConcept 
 * extension[TransportDisposition].valueCodeableConcept from http://hl7.org/fhir/ValueSet/encounter-status (example)
 * extension[TransportDestination] contains
 	DestinationReason 1..* and 
@@ -145,11 +145,11 @@ Description: "Transport Information for the encounter."
 	HospitalCapability 0..* and
 	HospitalInPatientDestination 0..1 and 
 	Pre-ArrivalAlertorActivation 0..1 and
-.value[x] only Reference(Location)
+* extension[TransportDestination].value[x] only Reference(Location)
 * extension[PatientMovedMethod] contains 
 	ToAmbulance 0..* and 
 	FromAmbulance 0..* and
-	Stretcher Purpose Description 0..1
+	StretcherPurposeDescription 0..1
 * extension[AdditonalTransportInformation].value[x] only Reference(Observation)
 //insert value set when ready (valueCodeableConcept from Encounter.statusHistorySubTypes.VS (example)) 
 
@@ -158,8 +158,8 @@ Id: Incident
 Title: "Incident Observations"
 Description: "The information for the Patient incident"
 * extension contains
-	FirstOnScene 0..1
-	OtherParticipants 
+	FirstOnScene 0..1 and
+	OtherParticipants 0..1 and
 	MassCasualtyIncident 0..1 and 
 	NumberofPatients 0..1 and
 	TriageClassification 0..1 and
@@ -167,7 +167,7 @@ Description: "The information for the Patient incident"
 	PatientContact 0..1 and 
 	Patient Evaluation/care 0..1 and 
 	CareDisposition 0..1 and 
-// eDisposition.29 - Crew Disposition
+//Note: eDisposition.29 - Crew Disposition
 	IncidentObservations 0..*
 * extension[MassCasualtyIncident].value[x] only CodeableConcept 
 * extension[MassCasualtyIncident].valueCodeableConcept from https://fhir.loinc.org/ValueSet/?url=http://loinc.org/vs/LL365-8 (recommended)
@@ -189,8 +189,8 @@ Description: "The indicators for Patient injury from the encounter."
 	PossibleInjury 0..1 and
 	WorkRelatedInjury 0..1 and
 	CauseOfInjury 1..* and
-	MechanismOfInjury 1..*
-	VehicalCrashObservations 0..*
+	MechanismOfInjury 1..* and 
+	VehicalCrashObservations 0..* and 
 	FallObservations 0..*
 	Personal Protective Equipment Used(by patient)
 * extension[PossibleInjury].value[x] only CodeableConcept
@@ -206,8 +206,8 @@ Description: "The indicators for Patient injury from the encounter."
 ValueSet: PCS_Encounter_BarriersToCare_vs
 Description:  "Indication of whether or not there were any patient specific barriers to serving the patient."
 Id: PCS.Encounter.BarriersToCare.vs
-*
-Spiritual or religious belief   1400009
+// Note: potential vlaue set
+///Spiritual or religious belief   1400009
 Cultural belief conflict   704301008
 Religious belief and healthcare recommendation conflict   714668003
 Spiritual beliefs conflicting with healthcare plan   422930008
@@ -233,7 +233,7 @@ Physical restraint 386423001
 
 
 Mental distress   271596009
-Emotional upset   309838005
+Emotional upset   309838005///
 
 ValueSet: PCS_NEMSIS_BarriersToCare_vs
 Description:  "Indication of whether or not there were any patient specific barriers to serving the patient."
@@ -260,28 +260,28 @@ Id: PCS.NEMSIS.BarriersToCare.vs
 ValueSet: PCS_Encounter_Priority_vs
 Description:  "The types of EMS events that the encounter covers."
 Id: PCS.Encounter.Priority.vs
-http://terminology.hl7.org/CodeSystem/v3-ActPriority 
+//Note: from = http://terminology.hl7.org/CodeSystem/v3-ActPriority 
 * #UR	"urgent"
 * #EM	"emergency"
 * #R	"routine"
 * #A	"ASAP"
-SNOMEDCT
+//Note: from  = SNOMEDCT
 #88694003	"Immediate"
 #25876001	"Emergency"
 #394849002	"High priority"
 #394848005	"Normal priority"
 #50811001	"Routine"
 #49499008	"Stat"
-
+/// Note : from NEMSIS
 	4217001	Emergent (Immediate Response)
 	4217003	Emergent Downgraded to Non-Emergent
 	4217005	Non-Emergent
-	4217007	Non-Emergent Upgraded to Emergent
+	4217007	Non-Emergent Upgraded to Emergent///
 
 ValueSet: PCS_Encounter_serviceType_vs
 Description:  "The values for ther service type of an EMS Encounter."
 Id: PCS.Encounter.serviceType.vs
-All codes from system http://terminology.hl7.org/CodeSystem/service-type
+codes from system http://terminology.hl7.org/CodeSystem/service-type
 * #230	"Patient transport"
 * #117	"Emergency Medical"
 * #465	"Trasnport"
