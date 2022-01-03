@@ -205,4 +205,6 @@ Description:      "composition of the FHIR elements that are used to build the F
 
 // Addtional Composition elements: maybe airway 
 
+// Add Supply items used section optional.. contains ePayment.55 - Supply Item Used Name and ePayment.56 - Number of Supply Item(s) Used
+
 
