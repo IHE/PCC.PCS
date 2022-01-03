@@ -4,3 +4,8 @@ template
 output
 input-cache
 fsh-generated
+/_gencontinuous.sh
+/_genonce.bat
+/_genonce.sh
+/_updatePublisher.sh
+/_gencontinuous.bat
