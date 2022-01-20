@@ -26,9 +26,9 @@ Description:      "composition of the FHIR elements that are used to build the F
 	
 * section[sectionMedications].entry contains 
 	medicationStatement 1..* and
-	medicationAdministered 0..*
-* entry[medicationAdministration] = reference(MedicationStatementIPS)
-//Note: MedicationStatementIPS.partOf Reference SAHLL be MedicationAdministration
+	medicationsAdministered 0..*
+* entry[medicationsAdministered] = reference(MedicationStatementIPS)
+//Note: In the medicationsAdministered slice MedicationStatementIPS.partOf Reference SAHLL be MedicationAdministration
 
 
 * section[sectionFunctionalStatus] 1..1
@@ -42,21 +42,6 @@ Description:      "composition of the FHIR elements that are used to build the F
 * section[sectionProceduresHx].entry contains
 	procedure 1..* and 
 	proceduresPerformed 0..*
-Slice: procedure
-* section[sectionProceduresHx].entry ^slicing.discriminator.type = #pattern
-* section[sectionProceduresHx].entry ^slicing.discriminator.path = "resolve()" 
-* section[sectionProceduresHx].entry ^slicing.rules = #open
-* section[sectionProceduresHx].entry ^slicing.ordered = true
-* section[sectionProceduresHx].entry ^slicing.description = The procedure section entry that holds the patient's procedure history. 
-* section[sectionProceduresHx].entry.MedicationAdministered = reference(ProcedureUvIps)
-
-Slice: procedurePerformed
-* section[sectionProceduresPerformed].entry ^slicing.discriminator.type = #pattern
-* section[sectionProceduresPerformed].entry ^slicing.discriminator.path = "resolve()" 
-* section[sectionProceduresPerformed].entry ^slicing.rules = #open
-* section[sectionProceduresPerformed].entry ^slicing.ordered = true
-* section[sectionProceduresPerformed].entry ^slicing.description = The procedure hsitroy section entry that holds the procedures perfomed on the patient during the care event. 
-* section[sectionProceduresPerformed].entry.MedicationAdministered = reference(ProcedureUvIps) 
 
 
 * section[sectionCoverage] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
