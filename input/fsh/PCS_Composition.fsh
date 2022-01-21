@@ -1,47 +1,73 @@
-Profile:   IHE_PCS_Composition
+Profile:   IHE_PCS_Composition_CR
 Parent: http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips
-Id:             IHE.PCC.PCS.Composition
-Title: "Paramedicince Care Summary Composition"
+Id:             IHE.PCC.PCS.Composition.CR
+Title: "Paramedicince Care Summary Composition CompleteReport"
 Description:      "composition of the FHIR elements that are used to build the FHIR Document for the Paramedicine Care Summary"
 
 * subject 1..1
 * encounter 1..1
 * encounter = Reference(IHE.PCC.PCS.Encounter.CompleteReport) 
-// TODO: encounter = Reference(IHE-PCS-Encounter-ClinicalSubset)
 
 
 * event.code 1..*
 * event.code = http://terminology.hl7.org/CodeSystem/v3-ActClass#ENC
 * section contains
 	sectionProceduresPerformed 1..1 MS and
-    sectionCoverage 1..1 MS and
+    sectionCoverage 0..1 MS and
 	sectionServiceRequest 1..1 and
-	sectionCareTeam 1..1 MS and 
+	sectionCareTeam 0..1 MS and 
 	sectionParamedicineNote 1..1 MS and 
 	sectionPhysicianCertificationStatement 0..1 and 
-	sectionTriage 0..1 and
 	sectionReviewOfSystems 1..1 MS and 
-	sectionEMSProtocols 0..* and 
+	sectionProtocols 0..* and 
 	sectionEMSCardiacArrestEvent 0..1 
-	
+	sectionInjuryEvent 0..1 
+	sectionTransportEvent 0..1 
+
 * section[sectionMedications].entry contains 
-	medicationStatement 1..* and
 	medicationsAdministered 0..*
-* entry[medicationsAdministered] = reference(MedicationStatementIPS)
+//Note Required if Known
 //Note: In the medicationsAdministered slice MedicationStatementIPS.partOf Reference SAHLL be MedicationAdministration
 
-
 * section[sectionFunctionalStatus] 1..1
+* section[sectionFunctionalStatus] contains
+	Neurological Assessment 0..* and
+	Mental Status Assessment 0..*
 //Note: Functional Status entry:disability is where the eHistory.01 - Barriers to Patient Care conditions can be represented, such as Speech Impaired, Sight Impaired, and Hearing Impaired
-//Note: entry:functionalAssessment.. use clinical imporession for the Neurological Assessment, and Mental Status Assessmens 
 
+* section[sectionSocialHistory].entry contains PastOrPresentJob 0..*
+* entry[PastOrPresentJob] Reference(https://hl7.org/fhir/us/odh/StructureDefinition-odh-PastOrPresentJob.html#root)
 
-* section[sectionAdvanceDirectives] 1..1
+* section[sectionAdvanceDirectives] 0..1
+//Note: required if Known
+* section[sectionAdvanceDirectives].entry contains Presence of Emergency Information Form 0..1 
 
+* section[sectionPastIllnessHx] 0..1
+Note// Required if Known 
 
-* section[sectionProceduresHx].entry contains
-	procedure 1..* and 
-	proceduresPerformed 0..*
+* section[sectionProceduresHx] 0..1
+Note// Required if Known 
+
+* section[sectionVitalSigns] 0..1
+Note// Required if Known 
+
+* section[sectionPregnancyHx] 0..1
+Note// Required if Known
+
+* section[ProceduresPerformed] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[ProceduresPerformed] ^extension.valueString = "Section"
+* section[ProceduresPerformed] ^short = "Procedures Performed"
+* section[ProceduresPerformed] ^definition = "This section contains the procedures that were performed during the PCS encounter"
+* section[ProceduresPerformed].code = $loinc#67803-7
+* section[ProceduresPerformed].code MS
+* section[ProceduresPerformed].entry ..1 MS
+* section[ProceduresPerformed].entry only Reference(ProcedureUvIps)
+* section[ProceduresPerformed].entry ^slicing.discriminator.type = #profile
+* section[ProceduresPerformed].entry ^slicing.discriminator.path = "resolve()"
+* section[ProceduresPerformed].entry ^slicing.rules = #open
+* section[ProceduresPerformed].entry ^short = "the procedures performed"
+* section[ProceduresPerformed].entry ^definition = "This section contains the procedures that were performed during the PCS encounter"
+* section[ProceduresPerformed].entry only Reference(ProcedureUvIps)
 
 
 * section[sectionCoverage] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
@@ -79,47 +105,29 @@ Description:      "composition of the FHIR elements that are used to build the F
 * section[sectionParamedicineNote] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionParamedicineNote] ^extension.valueString = "Section"
 * section[sectionParamedicineNote] ^short = "Paramedicince Note Section"
-* section[sectionParamedicineNote] ^definition = "The narrative Summary ."
+* section[sectionParamedicineNote] ^definition = "The narrative Summary for an Emergency Medical service Encounter."
 * section[sectionParamedicineNote].code = $loinc#28563-5
 * section[sectionParamedicineNote].text 1..1 MS
-//This is where the Paramedicince Note is in the FHIR Build 
+//This is where the Paramedicince Note is in the FHIR Build
+
 
 * section[sectionPhysicianCertificationStatement] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionPhysicianCertificationStatement] ^extension.valueString = "Section"
 * section[sectionPhysicianCertificationStatement] ^short = "Physician Certification Statement Section"
-* section[sectionPhysicianCertificationStatement] ^definition = "Indication of whether a physician certification statement (PCS) is available documenting the medical necessity or the EMS encounter."
+* section[sectionPhysicianCertificationStatement] ^definition = "Indication of whether a physician certification statement is available documenting the medical necessity or the EMS encounter."
 * section[sectionPhysicianCertificationStatement].code = $loinc#52016-3
 * section[sectionPhysicianCertificationStatement].code MS
 * section[sectionPhysicianCertificationStatement].entry ..1 MS
-* section[sectionPhysicianCertificationStatement].entry only Reference(DocumentReference)
-* section[sectionPhysicianCertificationStatement].entry ^slicing.discriminator.type = #profile
-* section[sectionPhysicianCertificationStatement].entry ^slicing.discriminator.path = "resolve()"
-* section[sectionPhysicianCertificationStatement].entry ^slicing.rules = #open
-* section[sectionPhysicianCertificationStatement].entry ^short = "The documentarion of the medical necessity for the encounter."
-* section[sectionPhysicianCertificationStatement].entry ^definition = "Indication of whether a physician certification statement (PCS) is available documenting the medical necessity or the EMS encounter."
-* section[sectionPhysicianCertificationStatement].entry contains PhysicianCertificationStatement 0..1 MS
-* section[sectionPhysicianCertificationStatement].entry[PhysicianCertificationStatement] only Reference(DocumentReference)
-
-* section[sectionTriage] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionTriage] ^extension.valueString = "Section"
-* section[sectionTriage] ^short = "Triage Section"
-* section[sectionTriage] ^definition = "Triage of the Patient during the encounter."
-* section[sectionTriage].code = $loinc#LG38818-7
-* section[sectionTriage].code MS
-* section[sectionTriage].entry ..1 MS
-* section[sectionTriage].entry only Reference(RiskAssessment or Observation)
-* section[sectionTriage].entry ^slicing.discriminator.type = #profile
-* section[sectionTriage].entry ^slicing.discriminator.path = "resolve()"
-* section[sectionTriage].entry ^slicing.rules = #open
-* section[sectionTriage].entry ^short = "The documentarion of the triage criteria of the patient."
-* section[sectionTriage].entry ^definition = "The documentarion of the triage criteria of the patient."
-* section[sectionTriage].entry contains Exams 0..1 MS
-* section[sectionTriage].entry[Exams] only Reference(RiskAssessment or Observation) 
+* section[sectionPhysicianCertificationStatement].entry contains
+	 PhysicianCertificationStatementIndicator 0..1 and
+	 MedicalNecessity 0..*
+* entry[PhysicianCertificationStatementIndicator].valueCodeableConcept from http://terminology.hl7.org/ValueSet/v2-0136
+* entry[MedicalNecessity] Reference (Observation) 
 
 
 * section[sectionReviewOfSystems] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionReviewOfSystems] ^extension.valueString = "Section"
-* section[sectionReviewOfSystems] ^short = "Review of Systems Section"
+* section[sectionReviewOfSystems] ^short = "Review of Systems"
 * section[sectionReviewOfSystems] ^definition = "The Review of systems section contains a relevant collection of symptoms and functions systematically gathered by a clinician. It includes symptoms the patient is currently experiencing, some of which were not elicited during the history of present illness, as well as a potentially large number of pertinent negatives, for example, symptoms that the patient denied experiencing."
 * section[sectionReviewOfSystems].code = $loinc#10187-3
 * section[sectionReviewOfSystems].code MS
@@ -128,69 +136,127 @@ Description:      "composition of the FHIR elements that are used to build the F
 * section[sectionReviewOfSystems].entry ^slicing.discriminator.type = #profile
 * section[sectionReviewOfSystems].entry ^slicing.discriminator.path = "resolve()"
 * section[sectionReviewOfSystems].entry ^slicing.rules = #open
-* section[sectionReviewOfSystems].entry ^short = "The documentarion of the medical necessity for the encounter."
+* section[sectionReviewOfSystems].entry ^short = "The documentarion of the patient exames and assesemtns during the PCS encounter."
 * section[sectionReviewOfSystems].entry ^definition = "The coded Review of systems section contains a relevant collection of symptoms and functions systematically gathered by a clinician. It includes symptoms the patient is currently experiencing, some of which were not elicited during the history of present illness, as well as a potentially large number of pertinent negatives, for example, symptoms that the patient denied experiencing."
-* section[sectionReviewOfSystems].entry contains Exams 0..1 MS
-* section[sectionReviewOfSystems].entry[Exams] = Reference(Observation)
-//Note TBD add references for Observation profiles for last known well, and last oral intake, and patient acuity
-
-* section[sectionEMSProtocols] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionEMSProtocols] ^extension.valueString = "Section"
-* section[sectionEMSProtocols] ^short = "EMS Protocols Section"
-* section[sectionEMSProtocols] ^definition = "The protocols used by EMS personnel to direct the clinical care of the patient."
-* section[sectionEMSProtocols].code = $loinc#67663-5
-* section[sectionEMSProtocols].code MS
-* section[sectionEMSProtocols].entry ..1
-* section[sectionEMSProtocols].entry only Reference(Observation)
-* section[sectionEMSProtocols].entry ^slicing.discriminator.type = #profile
-* section[sectionEMSProtocols].entry ^slicing.discriminator.path = "resolve()"
-* section[sectionEMSProtocols].entry ^slicing.rules = #open
-* section[sectionEMSProtocols].entry ^short = "The EMS protocols used to direct the clinical care of the patient."
-* section[sectionEMSProtocols].entry ^definition = "The EMS protocols used to direct the clinical care of the patient."
-* section[sectionEMSProtocols].entry contains 
-	ProtocolsUsed 0..1 MS and
-	ProtocolAgeCategory 0..1 
-* section[sectionEMSProtocols].entry[ProtocolsUsed] only Reference(Observation)
-* section[sectionEMSProtocols].entry[ProtocolAgeCategory] only Reference(Observation)
-
-* section[sectionEMSCardiacArrestEvent] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionEMSCardiacArrestEvent] ^extension.valueString = "Section"
-* section[sectionEMSCardiacArrestEvent] ^short = "EMS Cardiac Arrest"
-* section[sectionEMSCardiacArrestEvent] ^definition = "The protocols used by EMS personnel to direct the clinical care of the patient."
-* section[sectionEMSCardiacArrestEvent].code = $loinc#67663-5
-* section[sectionEMSCardiacArrestEvent].code MS
-* section[sectionEMSCardiacArrestEvent].entry ..1 MS
-* section[sectionEMSCardiacArrestEvent].entry only Reference(Observation or Condition or Procedure)
-* section[sectionEMSCardiacArrestEvent].entry ^slicing.discriminator.type = #profile
-* section[sectionEMSCardiacArrestEvent].entry ^slicing.discriminator.path = "resolve()"
-* section[sectionEMSCardiacArrestEvent].entry ^slicing.rules = #open
-* section[sectionEMSCardiacArrestEvent].entry ^short = "The EMS protocols used to direct the clinical care of the patient."
-* section[sectionEMSCardiacArrestEvent].entry ^definition = "The EMS protocols used to direct the clinical care of the patient."
-* section[sectionEMSCardiacArrestEvent].entry contains 
-	CardiacArrestIndication 0..1 MS and
-	CardiacArrestEvent 0..1 
-* section[sectionEMSCardiacArrestEvent].entry[CardiacArrestIndication] only Reference(Observation)
-* section[sectionEMSCardiacArrestEvent].entry[CardiacArrestEvent] only Reference(Condition or Procedure)
-
-* section[sectionBilling] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionBilling] ^extension.valueString = "Section"
-* section[sectionBilling] ^short = "EMS Cardiac Arrest"
-* section[sectionBilling] ^definition = "The protocols used by EMS personnel to direct the clinical care of the patient."
-* section[sectionBilling].code = $loinc#67663-5
-* section[sectionBilling].code MS
-* section[sectionBilling].entry ..* 
-* section[sectionBilling].entry only Reference(Observation or Condition or Procedure)
-* section[sectionBilling].entry ^slicing.discriminator.type = #profile
-* section[sectionBilling].entry ^slicing.discriminator.path = "resolve()"
-* section[sectionBilling].entry ^slicing.rules = #open
-* section[sectionBilling].entry ^short = "The EMS protocols used to direct the clinical care of the patient."
-* section[sectionBilling].entry ^definition = "The EMS protocols used to direct the clinical care of the patient."
-* section[sectionBilling].entry Reference(Observation)
-// where Supply items used elemens will be found
-
-// Addtional Composition elements: maybe airway
+* section[sectionReviewOfSystems].entry contains 
+	PhysicalExams 0..* and
+	PatientAcuity 0..* and
+	LastKnownWell 0..1 and
+	LastOralIntake 0..1 and
+	AlcoholDrug Use Indicators 0..*
+* entry[PhysicalExams] Reference(Observation)
+* entry[PatientAcuity] Reference(Observation)
+* entry[PatientAcuity] contains
+	InitialPatientAcuity 0..1 and
+	FinalPatientAcuity 0..1
+* entry[LastKnownWell] Reference(Observation)
+* entry[LastOralIntake] Reference(Observation)
+//Note: Acuity Assessment - 11283-9 for observation example 
 
 
+* section[sectionProtocols] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionProtocols] ^extension.valueString = "Section"
+* section[sectionProtocols] ^short = "EMS Protocols Section"
+* section[sectionProtocols] ^definition = "The Protocols Used section describes the protocol used to direct the clinical care of the patient."
+* section[sectionProtocols].code = $loinc#67537-1
+* section[sectionProtocols].code MS
+* section[sectionProtocols].entry ..* 
+* section[sectionProtocols].entry only Reference(Observation)
+* section[sectionProtocols].entry ^slicing.discriminator.type = #profile
+* section[sectionProtocols].entry ^slicing.discriminator.path = "resolve()"
+* section[sectionProtocols].entry ^slicing.rules = #open
+* section[sectionProtocols].entry ^short = "The EMS protocols used to direct the clinical care of the patient."
+* section[sectionProtocols].entry ^definition = "The EMS protocols used to direct the clinical care of the patient."
+* section[sectionProtocols].entry.code = oid:2.16.840.1.113883.3.2898.10.23
+* section[sectionProtocols].entry contains 
+	ProtocolsUsed 0..* MS and
+	ProtocolCategory 0..* 
+* section[sectionProtocols].entry[ProtocolsUsed].valueCodeableConcept from NEMSIS.Protocols.Used.VS (Example)
+* section[sectionProtocols].entry[ProtocolCategory].valueCodeableConcept from NEMSIS.Age.Category.VS (Example)
 
 
+* section[sectionInjuryEvent] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionInjuryEvent] ^extension.valueString = "Section"
+* section[sectionInjuryEvent] ^short = "Injury event summary"
+* section[sectionInjuryEvent] ^definition = "The injury event summary contains observations pertaining to a trauma event, including the severity, location and causes (e.g. primary and supplemental causes, whether or not work-related) of the injury."
+* section[sectionInjuryEvent].code = $loinc#74209-8
+* section[sectionInjuryEvent].code MS
+* section[sectionInjuryEvent].entry ..* 
+//Note: Required if Known
+* section[sectionInjuryEvent].entry only Reference(Observation)
+* section[sectionInjuryEvent].entry ^slicing.discriminator.type = #profile
+* section[sectionInjuryEvent].entry ^slicing.discriminator.path = "resolve()"
+* section[sectionInjuryEvent].entry ^slicing.rules = #open
+* section[sectionInjuryEvent].entry ^short = "The EMS protocols used to direct the clinical care of the patient."
+* section[sectionInjuryEvent].entry ^definition = "The EMS protocols used to direct the clinical care of the patient."
+* section[sectionInjuryEvent].entry contains
+	Trauma Injury Observation
+	Injury Cause Observation
+	Injury Vehical Observation
+	Safety Equipment Observation
+///Note: for observation development
+* entry[Trauma Injury Observation Organizer Entry] contains 
+* entry[Injury Cause Observation Organizer] contains
+	Primary Injury Cause Observation
+	Supplemental Injury Cause Observation
+//Note: eInjury.02 - Mechanism of Injury
+//Note: eInjury.09 - Height of Fall (feet)
+	Work Related Injury Observation
+* entry[Injury Vehical organizer] contains
+	Main Area of the Vehicle Impacted by the Collision 
+	Location of Patient in Vehicle
+	Seat Occupied
+	Automated Collision Notification Data
+* entry[VehicalAccident] contains 
+	Location of Patient in Vehicle
+	Seat Occupied
+	Main Area of the Vehicle Impacted by the Collision
+* entry[Safety Equipment Observation Organizer] contains
+	Airbag Deployment Observation
+	Safety Equipment Used Observation
+	Use of Occupant Safety Equipment
+http://www.hl7.org/documentcenter/private/standards/cda/CDAR2_IG_TRAUMAREG_R1_2016AUG.pdf pg 5.2 Injury Event for reference 
+///
+//Update: this is the section with optional contect related to the Trauma opton in the Actor options table 
 
+* section[sectionTransportEvent] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionTransportEvent] ^extension.valueString = "Section"
+* section[sectionTransportEvent] ^short = "Paramedicine Transport Event"
+* section[sectionTransportEvent] ^definition = "The observations related to a Paramedicine Encounter Transport."
+* section[sectionTransportEvent].code = $loinc#55169-7  
+* section[sectionTransportEvent].code MS
+* section[sectionTransportEvent].entry ..* 
+* section[sectionTransportEvent].entry only Reference(Observation)
+* section[sectionTransportEvent].entry ^slicing.discriminator.type = #profile
+* section[sectionTransportEvent].entry ^slicing.discriminator.path = "resolve()"
+* section[sectionTransportEvent].entry ^slicing.rules = #open
+* section[sectionTransportEvent].entry ^short = "The observations related to a Paramedicine Encounter Transport."
+* section[sectionTransportEvent].entry ^definition = "The observations related to a Paramedicine Encounter Transport."
+* section[sectionTransportEvent].entry contains 
+	TransportIndicator 0..* MS and
+	TrasnportEventEntries 0..* 
+* entry[TransportIndicator].valueCodeableConcept from http://terminology.hl7.org/ValueSet/v2-0136
+* entry[TrasnportEventObservations] Reference(Observation)
+//TODO: Transport event orgaizer
+
+
+* section[sectionCariacArrestEvent] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionCariacArrestEvent] ^extension.valueString = "Section"
+* section[sectionCariacArrestEvent] ^short = "Paramedicine Cariac Arrest Event"
+* section[sectionCariacArrestEvent] ^definition = "The EMS cardiac arrest event reportable observations."
+* section[sectionCariacArrestEvent].code = $loinc#67799-7 
+* section[sectionCariacArrestEvent].code MS
+* section[sectionCariacArrestEvent].entry ..* 
+* section[sectionCariacArrestEvent].entry only Reference(Observation and Procedure and Condition)
+* section[sectionCariacArrestEvent].entry ^slicing.discriminator.type = #profile
+* section[sectionCariacArrestEvent].entry ^slicing.discriminator.path = "resolve()"
+* section[sectionCariacArrestEvent].entry ^slicing.rules = #open
+* section[sectionCariacArrestEvent].entry ^short = "Paramedicine Cariac Arrest Event observations
+."
+* section[sectionCariacArrestEvent].entry ^definition = "The observations related to a Paramedicine Cariac Arrest Event."
+* section[sectionCariacArrestEvent].entry contains 
+	CardiacArrestIndicator 0..* MS and
+	CariacArrestEventObservations 0..* 
+* entry[CardiacArrestIndicator].valueCodeableConcept from NEMSIS.Cardiac.Arrest.VS (example)
+* entry[CariacArrestEventObservations] Reference(Observation and Procedure and Condition)
+//TODO: Cariac Arrest Event orgaizer
