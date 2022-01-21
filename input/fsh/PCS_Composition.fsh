@@ -30,13 +30,13 @@ Description:      "composition of the FHIR elements that are used to build the F
 //Note: In the medicationsAdministered slice MedicationStatementIPS.partOf Reference SAHLL be MedicationAdministration
 
 * section[sectionFunctionalStatus] 1..1
-* section[sectionFunctionalStatus] contains
+* entry[functionalAssessment] contains
 	NeurologicalAssessment 0..* and
 	MentalStatusAssessment 0..*
 //Note: Functional Status entry:disability is where the eHistory.01 - Barriers to Patient Care conditions can be represented, such as Speech Impaired, Sight Impaired, and Hearing Impaired
 
 * section[sectionSocialHistory].entry contains PastOrPresentJob 0..*
-* entry[PastOrPresentJob] Reference(https://hl7.org/fhir/us/odh/StructureDefinition-odh-PastOrPresentJob.html#root)
+* entry[PastOrPresentJob] Reference(http://hl7.org/fhir/us/odh/StructureDefinition/odh-PastOrPresentJob)
 
 * section[sectionAdvanceDirectives] 0..1
 //Note: required if Known
