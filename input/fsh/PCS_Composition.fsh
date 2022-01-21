@@ -20,8 +20,8 @@ Description:      "composition of the FHIR elements that are used to build the F
 	sectionPhysicianCertificationStatement 0..1 and 
 	sectionReviewOfSystems 1..1 MS and 
 	sectionProtocols 0..* and 
-	sectionEMSCardiacArrestEvent 0..1 
-	sectionInjuryEvent 0..1 
+	sectionCariacArrestEvent 0..1 and
+	sectionInjuryEvent 0..1 and
 	sectionTransportEvent 0..1 
 
 * section[sectionMedications].entry contains 
@@ -251,8 +251,7 @@ http://www.hl7.org/documentcenter/private/standards/cda/CDAR2_IG_TRAUMAREG_R1_20
 * section[sectionCariacArrestEvent].entry ^slicing.discriminator.type = #profile
 * section[sectionCariacArrestEvent].entry ^slicing.discriminator.path = "resolve()"
 * section[sectionCariacArrestEvent].entry ^slicing.rules = #open
-* section[sectionCariacArrestEvent].entry ^short = "Paramedicine Cariac Arrest Event observations
-."
+* section[sectionCariacArrestEvent].entry ^short = "Paramedicine Cariac Arrest Event observations."
 * section[sectionCariacArrestEvent].entry ^definition = "The observations related to a Paramedicine Cariac Arrest Event."
 * section[sectionCariacArrestEvent].entry contains 
 	CardiacArrestIndicator 0..* MS and

@@ -2,10 +2,6 @@ CodeSystem:  NEMSIS
 Title: "NEMSIS"
 Description: "The codede Values used in the NEMSIS Standard"
 Id: NEMSIS
-* #2223001	"Emergent (Immediate Response)"
-* #2223003	"Emergent Downgraded to Non-Emergent"
-* #2223005	"Non-Emergent"
-* #2223007	"Non-Emergent Upgraded to Emergent"
 * #8801001	"Contraindication Noted"
 * #8801003	"Denied By Order"
 * #8801005	"Exam Finding Not Present"

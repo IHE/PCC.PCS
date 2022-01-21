@@ -32,13 +32,13 @@ An IHE PCS Encounter Complete Report resource is used to deffine the full emerge
 * extension contains StatusHistoryObservation named StatusHistoryObservation 0..*
 //Note: Encunter type should be Ambulance, Medflight, should be set as an extensible code set
 * class 1..1
-* class CodeableConcept from NEMSIS.Type.of.Service.Requested.VS (example)
+* class from NEMSIS.Type.of.Service.Requested.VS (example)
 * type 1..*
 //Note: Should have as main options $230 "Patient transport", $117 "Emergency Medical" or $465 "Trasnport", $225 "Air ambulance", $226 "Ambulance" 
 * serviceType 1..1
-* serviceType CodeableConcept from NEMSIS.Level.of.Care.Provided.per.Protocol.VS (example)
+* serviceType from NEMSIS.Level.of.Care.Provided.per.Protocol.VS (example)
 * priority 1..1 
-* priority CodeableConcept from NEMSIS.Response.Mode.to.Scene.VS (example)
+* priority from NEMSIS.Response.Mode.to.Scene.VS (example)
 * extension contains PriorityDescriptors named PriorityDescriptors 0..*
 * subject 1..1
 * basedOn 1..1
@@ -81,7 +81,7 @@ Extension: StatusHistoryObservation
 Id: StatusHistoryObservation
 Title: "Status History Observations"
 Description: "Observatons related to the encounter status"
-* extension[StatusHistoryObservation] reference(Observation)
+* value[x] = reference(Observation)
 
 Extension: PriorityDescriptors
 Id: PriorityDescriptors
@@ -94,7 +94,7 @@ Extension: Barriers
 Id: BarriersToCare
 Title: "Barriers To Patient Care"
 Description: "Indication of whether or not there were any patient specific barriers to serving the patient."
-* extension[BarriersToPatientCare].valueCodeableConcept fromfrom NEMSIS.Barriers.to.Patient.Care.VS (example)
+* extension[BarriersToPatientCare].valueCodeableConcept from NEMSIS.Barriers.to.Patient.Care.VS (example)
 
 Extension: Transport
 Id: Transport
@@ -111,7 +111,7 @@ Description: "Transport Information for the encounter."
 * extension[Priority].valueCodeableConcept from NEMSIS.Transport.Mode.from.Scene.VS (example)
 * extension[PriorityDescriptors].valueCodeableConcept from NEMSIS.Additional.Transport.Mode.Descriptors.VS (example)  
 * extension[NumberofPatients].value[x] 
-* extension[TansportReasonCode].valueCodeableConcept from (example) 
+* extension[TansportReasonCode].valueCodeableConcept
 * extension[Disposition].valueCodeableConcept from NEMSIS.Transport.Disposition.VS (example) 
 * extension[DestinationReason].valueCodeableConcept from NEMSIS.Reason.for.Choosing.Destination.VS (example) 
 * extension[RefusalReason].valueCodeableConcept from NEMSIS.Reason.for.Refusal.Release.VS (example) 

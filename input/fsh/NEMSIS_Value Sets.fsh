@@ -17,19 +17,6 @@ Id: NEMSIS.Pertinent.Negatives.VS
 * NEMSIS#8801029	"Approximate"
 * NEMSIS#8801031	"Symptom Not Present"
 
-ValueSet: NEMSIS_Ambulance_Transport_Reason_Code_VS
-Description: "The CMS Ambulance Transport Reason Code for the transport."
-Id: NEMSIS.Ambulance.Transport.Reason.Code.VS
-* #A
-* #B
-* #C
-* #D
-* #E
-
-
-
-
-
 ValueSet: NEMSIS_Type_of_Service_Requested_VS
 Description: "The type of service or category of service requested of the EMS Agency responding for this specific EMS event."
 Id: NEMSIS.Type.of.Service.Requested.VS
