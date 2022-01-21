@@ -31,8 +31,8 @@ Description:      "composition of the FHIR elements that are used to build the F
 
 * section[sectionFunctionalStatus] 1..1
 * section[sectionFunctionalStatus] contains
-	Neurological Assessment 0..* and
-	Mental Status Assessment 0..*
+	NeurologicalAssessment 0..* and
+	MentalStatusAssessment 0..*
 //Note: Functional Status entry:disability is where the eHistory.01 - Barriers to Patient Care conditions can be represented, such as Speech Impaired, Sight Impaired, and Hearing Impaired
 
 * section[sectionSocialHistory].entry contains PastOrPresentJob 0..*
@@ -143,7 +143,7 @@ Note// Required if Known
 	PatientAcuity 0..* and
 	LastKnownWell 0..1 and
 	LastOralIntake 0..1 and
-	AlcoholDrug Use Indicators 0..*
+	AlcoholDrugUseIndicators 0..*
 * entry[PhysicalExams] Reference(Observation)
 * entry[PatientAcuity] Reference(Observation)
 * entry[PatientAcuity] contains
@@ -190,13 +190,13 @@ Note// Required if Known
 * section[sectionInjuryEvent].entry ^short = "The EMS protocols used to direct the clinical care of the patient."
 * section[sectionInjuryEvent].entry ^definition = "The EMS protocols used to direct the clinical care of the patient."
 * section[sectionInjuryEvent].entry contains
-	Trauma Injury Observation
-	Injury Cause Observation
-	Injury Vehical Observation
-	Safety Equipment Observation
+	TraumaInjuryObservation
+	InjuryCauseObservation
+	InjuryVehicalObservation
+	SafetyEquipmentObservation
 ///Note: for observation development
-* entry[Trauma Injury Observation Organizer Entry] contains 
-* entry[Injury Cause Observation Organizer] contains
+* entry[TraumaInjuryObservation] contains 
+* entry[InjuryCauseObservation] contains
 	Primary Injury Cause Observation
 	Supplemental Injury Cause Observation
 //Note: eInjury.02 - Mechanism of Injury
@@ -207,11 +207,11 @@ Note// Required if Known
 	Location of Patient in Vehicle
 	Seat Occupied
 	Automated Collision Notification Data
-* entry[VehicalAccident] contains 
+* entry[InjuryVehicalObservation] contains 
 	Location of Patient in Vehicle
 	Seat Occupied
 	Main Area of the Vehicle Impacted by the Collision
-* entry[Safety Equipment Observation Organizer] contains
+* entry[SafetyEquipmentObservation] contains
 	Airbag Deployment Observation
 	Safety Equipment Used Observation
 	Use of Occupant Safety Equipment
