@@ -32,8 +32,8 @@ An IHE PCS Encounter Complete Report resource is used to deffine the full emerge
 * extension contains StatusHistoryObservation named StatusHistoryObservation 0..*
 //Note: Encunter type should be Ambulance, Medflight, should be set as an extensible code set
 * class 1..1
-* class from NEMSIS.Type.of.Service.Requested.VS (example)
 * type 1..*
+* type from NEMSIS.Type.of.Service.Requested.VS (example)
 //Note: Should have as main options $230 "Patient transport", $117 "Emergency Medical" or $465 "Trasnport", $225 "Air ambulance", $226 "Ambulance" 
 * serviceType 1..1
 * serviceType from NEMSIS.Level.of.Care.Provided.per.Protocol.VS (example)
@@ -81,7 +81,11 @@ Extension: StatusHistoryObservation
 Id: StatusHistoryObservation
 Title: "Status History Observations"
 Description: "Observatons related to the encounter status"
-* value[x] = reference(Observation)
+* extension contains
+	Delays 0..*
+	OdometerReadings 0..*
+* entry[Delays].valueCodeableConcept
+* entry[OdometerReadings].valueQuantity
 
 Extension: PriorityDescriptors
 Id: PriorityDescriptors
