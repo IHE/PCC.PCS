@@ -8,7 +8,7 @@ Description:      "holding typical values for PCS Trasnport event entries."
 * code = $loinc#67549-6
 * value[x] = $NEMSIS#4216005
 
-Instance:   ex-PCS-TransportEventEntries-CMS Transportation Indicator-Cardiac
+Instance:   ex-PCS-TransportEventEntries-CMS-Transportation-Indicator-Cardiac
 InstanceOf: Observation
 Title: "Example of a Trasnport event entries observation"
 Description:      "holding typical values for PCS Trasnport event entries."

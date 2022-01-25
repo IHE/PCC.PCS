@@ -24,13 +24,13 @@ Usage: #inline
 * identifier.value = "UHC"
 * identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#NIIP
 * name = "United Healthcare"
-* address.line [+] = "1 E Washington St"
-* address.line [=] = "Ste 1700"
-* address.city [+] = "Phoenix"
-* address.state [+] = "Arizona"
-* address.postalCode [+] = "85004"
-* address.Country [+] = "US"
-* telecom [+] = "866-414-1959"
-* telecom.system [=] = http://hl7.org/fhir/contact-point-system#work
-* telecom [+] = "877-844-4999"
-* telecom.system [=] = http://hl7.org/fhir/contact-point-system#work
+* address.line[+] = "1 E Washington St"
+* address.line[=] = "Ste 1700"
+* address.city[+] = "Phoenix"
+* address.state[+] = "Arizona"
+* address.postalCode[+] = "85004"
+* address.Country[+] = "US"
+* telecom[+] = "866-414-1959"
+* telecom.system[=] = http://hl7.org/fhir/contact-point-system#work
+* telecom[+] = "877-844-4999"
+* telecom.system[=] = http://hl7.org/fhir/contact-point-system#work

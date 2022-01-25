@@ -26,7 +26,7 @@ Usage: #inline
 * name.family = "Sparrow"
 * name.given[+] = "Henry"
 * name.given[+] = "I."
-* qualification.code = http://snomed.info/sct#397897005
+* qualification.code = $SCT#397897005
 // 397897005 = Paramedic
 
 Instance: Inline-Instance-for-PCS-Cardiac-Encounter-Practitioner-2
@@ -37,7 +37,7 @@ Usage: #inline
 * identifier.type = http://terminology.hl7.org/ValueSet/v2-0203#LN
 * name.family = "Valencia"
 * name.given = "Dani"
-* qualification.code = http://snomed.info/sct#397897005
+* qualification.code = $SCT#397897005
 // 397897005 = Paramedic
 
 Instance: Inline-Instance-for-PCS-Cardiac-Encounter-Practitioner-3
@@ -55,7 +55,7 @@ InstanceOf: Practitioner
 Usage: #inline
 * id = a3222aec-38e8-11ec-8d3d-0242ac130003
 * practitioner = Reference(Practitioner/21a78dce-38e6-11ec-8d3d-0242ac130003)
-* code = $397897005  "Paramedic"
+* code = $SCT#397897005  "Paramedic"
 * organization = Reference(Organization/b861aba6-38e0-11ec-8d3d-0242ac130003)
 
 Instance: Inline-Instance-for-Practitioner-2-level
@@ -63,7 +63,7 @@ InstanceOf: Practitioner
 Usage: #inline
 * id = a76cdf98-38e8-11ec-8d3d-0242ac130003
 * practitioner = Reference(Practitioner/26aa91b8-38e6-11ec-8d3d-0242ac130003)
-* code = $397897005  "Paramedic"
+* code = $SCT#397897005  "Paramedic"
 * organization = Reference(Organization/b861aba6-38e0-11ec-8d3d-0242ac130003)
 
 Instance: Inline-Instance-for-Practitioner-3-level
