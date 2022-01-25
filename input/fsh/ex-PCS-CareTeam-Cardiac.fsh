@@ -1,4 +1,4 @@
-Instance:   ex-PCS-CareTeam
+Instance:   ex-PCS-CareTeam-Cardiac
 InstanceOf: CareTeam
 Title: "Example of a PCS Care Team, otherwise known as the Crew members of the vehical."
 Description:      "holding typical values for a PCS Care Team, otherwise known as the Crew members of the vehical, for the Cardiac patient."
@@ -48,5 +48,29 @@ Usage: #inline
 * identifier.type = http://terminology.hl7.org/ValueSet/v2-0203#LN
 * name.family = "Guerra"
 * name.given = "Mariyah"
-* qualification.code = "TBD"
-// 	Emergency Medical Technician
+* qualification.code = $NEMSIS#9925005
+
+Instance: Inline-Instance-for-Practitioner-Practitioner-1-level
+InstanceOf: Practitioner
+Usage: #inline
+* id = a3222aec-38e8-11ec-8d3d-0242ac130003
+* practitioner = Reference(Practitioner/21a78dce-38e6-11ec-8d3d-0242ac130003)
+* code = $397897005  "Paramedic"
+* organization = Reference(Organization/b861aba6-38e0-11ec-8d3d-0242ac130003)
+
+Instance: Inline-Instance-for-Practitioner-2-level
+InstanceOf: Practitioner
+Usage: #inline
+* id = a76cdf98-38e8-11ec-8d3d-0242ac130003
+* practitioner = Reference(Practitioner/26aa91b8-38e6-11ec-8d3d-0242ac130003)
+* code = $397897005  "Paramedic"
+* organization = Reference(Organization/b861aba6-38e0-11ec-8d3d-0242ac130003)
+
+Instance: Inline-Instance-for-Practitioner-3-level
+InstanceOf: Practitioner
+Usage: #inline
+* id = ac48610e-38e8-11ec-8d3d-0242ac130003
+* practitioner = Reference(Practitioner/29eabcea-38e6-11ec-8d3d-0242ac130003)
+* code = $NEMSIS#9925005
+* organization = Reference(Organization/b861aba6-38e0-11ec-8d3d-0242ac130003)
+

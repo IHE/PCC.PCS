@@ -5,7 +5,7 @@ Description:      "holding typical values for a Cardiac Encounter in the PCS Com
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 * status = #finished
-
+* id = "fa51192c-c36a-4b0a-84c1-9dc6fded7c2c"
 * identifier.value = "350-2021100700394"
 //NEMSIS eResponse.03 - Incident Number --- VERIFY
 
@@ -144,41 +144,17 @@ Description:      "holding typical values for a Cardiac Encounter in the PCS Com
 * BarriersToCare = $NEMSIS#3101027
 //NEMSIS eHistory.01 - Barriers to Patient Care
 
+* Transport.Priority = $NEMSIS#4217001
+* Transport.PriorityDescriptors [+] = $NEMSIS#4218001 
+* Transport.PriorityDescriptors [+] = $NEMSIS#4218007
+* Transport.PriorityDescriptors [+] = $NEMSIS#4218013
+* Transport.NumberofPatients = 1
+* Transport.TansportReasonCode [+] = $HARQ#A
+* Transport.TansportReasonCode [+] = $HARQ#D
+* Transport.Disposition = $NEMSIS#4230001
+* Transport.DestinationReason [+] = $NEMSIS#4220001
+* Transport.DestinationReason [+] = $NEMSIS#4220005
 
-Instance: Inline-Instance-for-Location-EMSVehical
-InstanceOf: Location
-Usage: #inline
-* id = 6ff401d4-4191-11ec-81d3-0242ac130003
-* status = #active
-* mode = http://hl7.org/fhir/ValueSet/location-mode#instance
-
-* identifier.value = "058-263"
-* identifier.type = http://terminology.hl7.org/ValueSet/v2-0203#
-//NEMSIS eResponse.13 - EMS Vehicle (Unit) Number
-//NEMSIS dVehicle.01 - Unit/Vehicle Number
-* identifier.value = "123456"
-* identifier.type = http://terminology.hl7.org/ValueSet/v2-0203#
-//NEMSIS dVehicle.02 - Vehicle Identification Number --VIN standard ISO-3779 and ISO-3780.
-* identifier.value = "350-20211007M200394"
-* identifier.type = http://terminology.hl7.org/ValueSet/v2-0203#
-//NEMSIS eResponse.04 - EMS Response Number
-
-* name = "Yuma 1090"
-//NEMSIS eResponse.14 - EMS Unit Call Sign
-//NEMSIS dVehicle.03 - EMS Unit Call Sign
-
-* type = http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType#AMB
-//NEMSIS dVehicle.04 - Vehicle Type
-* type = http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType#
-//NEMSIS eResponse.07 - Unit Transport and Equipment Capability
-//TODO: Complete
-
-//NEMSIS dVehicle.10 - Vehicle Model Year
-
-//NEMSIS dVehicle.05 - Crew State Certification/Licensure Levels
-//NEMSIS dVehicle.06 - Number of Each EMS Personnel Level on Normal 911 Ambulance Response
-//NEMSIS dVehicle.07 - Number of Each EMS Personnel Level on Normal 911 Response (Non-Transport) Vehicle
-//NEMSIS dVehicle.08 - Number of Each EMS Personnel Level on Normal Medical (Non-911) Transport Ambulance
 
 Instance: Inline-Instance-for-serviceProvider-Organization
 InstanceOf: Location
@@ -203,83 +179,8 @@ Usage: #inline
 //TODO: complete, possibly open issue
 
 * address.state = "Arizona"
- 
 * type = $EMS "Emergency Medical Service"  
-//TODO: Complete
 
-Instance: Inline-Instance-for-serviceProvider-assigner-Organization
-InstanceOf: Location
-Usage: #inline
-* id = 1a2364d6-418f-11ec-81d3-0242ac130003
-* identifier.value = ""
-* identifier.type = 	http://terminology.hl7.org/ValueSet/v2-0203#
-//NEMSIS dAgency.04 - EMS Agency State
-//TODO: complete
-
-
-
-Instance: Inline-Instance-for-Practitioner-1
-InstanceOf: Practitioner
-Usage: #inline
-* id = 21a78dce-38e6-11ec-8d3d-0242ac130003
-* identifier.value = 3265325 
-* identifier.type = $LN "License number"
-* name.family = "Sparrow"
-* name.given[+] = "Henry"
-* name.given[+] = "I."
-
-Instance: Inline-Instance-for-Practitioner-2
-InstanceOf: Practitioner
-Usage: #inline
-* id = 26aa91b8-38e6-11ec-8d3d-0242ac130003
-* identifier.value = 3278054 
-* identifier.type = $LN "License number"
-* name.family = "Valencia"
-* name.given = "Dani"
-
-Instance: Inline-Instance-for-Practitioner-3
-InstanceOf: Practitioner
-Usage: #inline
-* id = 29eabcea-38e6-11ec-8d3d-0242ac130003
-* identifier.value = 5583451 
-* identifier.type = $LN "License number"
-* name.family = "Guerra"
-* name.given = "Mariyah"
-
-Instance: Inline-Instance-for-Practitioner-Practitioner-1-level
-InstanceOf: Practitioner
-Usage: #inline
-* id = a3222aec-38e8-11ec-8d3d-0242ac130003
-* practitioner = Reference(Practitioner/21a78dce-38e6-11ec-8d3d-0242ac130003)
-* code = $397897005  "Paramedic"
-* organization = Reference(Organization/b861aba6-38e0-11ec-8d3d-0242ac130003)
-
-Instance: Inline-Instance-for-Practitioner-2-level
-InstanceOf: Practitioner
-Usage: #inline
-* id = a76cdf98-38e8-11ec-8d3d-0242ac130003
-* practitioner = Reference(Practitioner/26aa91b8-38e6-11ec-8d3d-0242ac130003)
-* code = $397897005  "Paramedic"
-* organization = Reference(Organization/b861aba6-38e0-11ec-8d3d-0242ac130003)
-
-Instance: Inline-Instance-for-Practitioner-3-level
-InstanceOf: Practitioner
-Usage: #inline
-* id = ac48610e-38e8-11ec-8d3d-0242ac130003
-* practitioner = Reference(Practitioner/29eabcea-38e6-11ec-8d3d-0242ac130003)
-* code = $ ""
-[//TODO ]
-* organization = Reference(Organization/b861aba6-38e0-11ec-8d3d-0242ac130003)
-
-
-
-Instance: Inline-Instance-for-EMS-ex-patient-Cardiac-Ambulance-Trasnport-ServiceRequest
-InstanceOf: ServiceRequest
-Usage: #inline
-* id = e375b384-38d9-11ec-8d3d-0242ac130003
-* priority = http://terminology.hl7.org/CodeSystem/v3-ActPriority#UR
-* encounter = Reference(Encounter/8da1a2e0-38c2-11ec-8d3d-0242ac130003)
-* code = $2205001 "911 response (scene)"
 
 Instance: Inline-Instance-for-EMS-ex-patient-Cardiac-Ambulance-Trasnport-ChiefComplaint
 InstanceOf: ConditionUvIps
@@ -315,69 +216,3 @@ Usage: #inline
 * evidence.code[+] = $R09.2 "Respiratory arrest"
 * evidence.code[+] = $R11.10 "Vomiting, unspecified"
 
-Instance: Inline-Instance-for-IncidentLocation
-InstanceOf: Location
-Usage: #inline
-* id = "73c870bc-418a-11ec-81d3-0242ac130003"
-* name = "Saint Francis of Assisi Catholic Church"
-//NEMSIS eScene.13 - Incident Facility or Location Name
-* type = $Y92.22 "Religious institution as the place of occurrence of the external cause"
-//NEMSIS eScene.09 - Incident Location Type
-[// NOte: ICD-10 [2.16.840.1.113883.6.3] refernce]
-* address.line[+] = "1815 S 8th Ave"
-* address.line[=] = "Room 114"
-//NEMSIS eScene.15 - Incident Street Address
-* address.city = "City of Yuma"
-//NEMSIS eScene.17 - Incident City
-* address.district = "Yuma County"
-//NEMSIS eScene.21 - Incident County
-* address.state = "Arizona"
-//NEMSIS eScene.18 - Incident State
-* address.postalCode = "85364"
-//NEMSIS eScene.19 - Incident ZIP Code
-* address.country = "US"
-//NEMSIS eScene.22 - Incident Country
-* mode = http://hl7.org/fhir/location-mode#kind
-* type = http://terminology.hl7.org/CodeSystem/v3-RoleCode#ER
-* position.longitude = "-114.628"
-* position.latitude = "32.694"
-//NEMSIS eScene.11 - Scene GPS Location
-
-Instance: Inline-Instance-for-DestinationLocation
-InstanceOf: Location
-Usage: #inline
-* id = e2bb641e-418c-11ec-81d3-0242ac130003
-* identifier.value = "MED0262"
-* identifier.type = http://hl7.org/fhir/ValueSet/identifier-type#FI
-//NEMSIS eDisposition.02 - Destination/Transferred To, Code
-
-* mode = http://hl7.org/fhir/location-mode#kind
-* type = http://terminology.hl7.org/CodeSystem/v3-RoleCode#ER
-
-Instance: Inline-Instance-for-Dispatch-Location
-InstanceOf: Location
-Usage: #inline
-* id = "10dba0e4-41a5-11ec-81d3-0242ac130003"
-* name = "Main Station"
-//NEMSIS eResponse.16 - Vehicle Dispatch Location
-* type = $Y92.22 "Religious institution as the place of occurrence of the external cause"
-//NEMSIS eScene.09 - Incident Location Type
-[// NOte: ICD-10 [2.16.840.1.113883.6.3] refernce]
-* address.line[+] = "1815 S 8th Ave"
-* address.line[=] = "Room 114"
-//NEMSIS eScene.15 - Incident Street Address
-* address.city = "City of Yuma"
-//NEMSIS eScene.17 - Incident City
-* address.district = "Yuma County"
-//NEMSIS eScene.21 - Incident County
-* address.state = "Arizona"
-//NEMSIS eScene.18 - Incident State
-* address.postalCode = "85364"
-//NEMSIS eScene.19 - Incident ZIP Code
-* address.country = "US"
-//NEMSIS eScene.22 - Incident Country
-* mode = http://hl7.org/fhir/location-mode#kind
-* type = http://terminology.hl7.org/CodeSystem/v3-RoleCode#ER
-* position.longitude = "-114.628"
-* position.latitude = "32.687"
-//NEMSIS eResponse.17 - Vehicle Dispatch GPS Location

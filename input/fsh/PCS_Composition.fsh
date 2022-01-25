@@ -40,7 +40,7 @@ Description:      "composition of the FHIR elements that are used to build the F
 
 * section[sectionAdvanceDirectives] 0..1
 //Note: required if Known
-* section[sectionAdvanceDirectives].entry contains Presence of Emergency Information Form 0..1 
+* section[sectionAdvanceDirectives].entry contains PresenceofEmergencyInformationForm 0..1 
 
 * section[sectionPastIllnessHx] 0..1
 Note// Required if Known 
@@ -232,9 +232,7 @@ http://www.hl7.org/documentcenter/private/standards/cda/CDAR2_IG_TRAUMAREG_R1_20
 * section[sectionTransportEvent].entry ^slicing.rules = #open
 * section[sectionTransportEvent].entry ^short = "The observations related to a Paramedicine Encounter Transport."
 * section[sectionTransportEvent].entry ^definition = "The observations related to a Paramedicine Encounter Transport."
-* section[sectionTransportEvent].entry contains 
-	TransportIndicator 0..* MS and
-	TrasnportEventEntries 0..* 
+* section[sectionTransportEvent].entry contains TrasnportEventEntries 0..* 
 * entry[TransportIndicator].valueCodeableConcept from http://terminology.hl7.org/ValueSet/v2-0136
 * entry[TrasnportEventObservations] Reference(Observation)
 //TODO: Transport event orgaizer

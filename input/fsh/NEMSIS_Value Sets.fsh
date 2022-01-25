@@ -17,6 +17,54 @@ Id: NEMSIS.Pertinent.Negatives.VS
 * NEMSIS#8801029	"Approximate"
 * NEMSIS#8801031	"Symptom Not Present"
 
+ValueSet: NEMSIS_NOT_Values_VS
+Description: "NOT Values (NV) associated with the custom element."
+Id: NEMSIS.NOT.Values.VS
+* NEMSIS#7701001	"Not Applicable"
+* NEMSIS#7701003	"Not Recorded"
+* NEMSIS#7701005	"Not Reporting"
+
+ValueSet: NEMSIS_Method_of_Heart_RateMMeasurement_VS
+Description: "The method in which the Heart Rate was measured. Values include auscultated, palpated, electronic monitor."
+Id: NEMSIS.Method.of.Heart.Rate.Measurement.VS
+* #3311001	"Auscultated"
+* #3311003	"Doppler"
+* #3311005	"Electronic Monitor - Cardiac"
+* #3311007	"Electronic Monitor - Pulse Oximeter"
+* #3311009	"Electronic Monitor (Other)"
+* #3311011	"Palpated"
+
+ValueSet: NEMSIS_The_Patient_Type_of_Immunization_VS
+Description: "The immunization type of the patient."
+Id: NEMSIS.The.Patient.Type.of.Immunization.VS
+* NEMSIS#9910001	"Anthrax"
+* NEMSIS#9910003	"Cholera"
+* NEMSIS#9910005	"DPT / TDaP (Diphtheria, Pertussis, Tetanus)"
+* NEMSIS#9910007	"Hemophilus Influenza B"
+* NEMSIS#9910009	"Hepatitis A"
+* NEMSIS#9910011	"Hepatitis B"
+* NEMSIS#9910013	"Human Papilloma Virus (HPV)"
+* NEMSIS#9910015	"Influenza-H1N1"
+* NEMSIS#9910017	"Influenza-Other"
+* NEMSIS#9910019	"Influenza-Seasonal (In past 12 months)"
+* NEMSIS#9910021	"Lyme Disease"
+* NEMSIS#9910023	"Meningococcus"
+* NEMSIS#9910025	"MMR (Measles, Mumps, Rubella)"
+* NEMSIS#9910027	"Other-Not Listed"
+* NEMSIS#9910029	"Plague"
+* NEMSIS#9910031	"Pneumococcal (Pneumonia"
+* NEMSIS#9910033	"Polio"
+* NEMSIS#9910035	"Rabies"
+* NEMSIS#9910037	"Rotavirus"
+* NEMSIS#9910039	"Shingles"
+* NEMSIS#9910041	"Small Pox"
+* NEMSIS#9910043	"Tetanus"
+* NEMSIS#9910045	"Tuberculosis"
+* NEMSIS#9910047	"Typhoid"
+* NEMSIS#9910049	"Varicella (Chickenpox)"
+* NEMSIS#9910051	"Yellow Fev
+
+
 
 ValueSet: NEMSIS_Current_Medication_Administration_Route_VS
 Description: "The administration route (po, SQ, etc.) of the patient's current medication."

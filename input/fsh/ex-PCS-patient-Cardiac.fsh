@@ -76,7 +76,7 @@ Usage: #inline
 Instance: Inline-Instance-for-EMS-ex-Cardiac-patient-Patient-RelatedPerson
 InstanceOf: RelatedPerson
 Usage: #inline
-* id = c70c8063-85b0-4346-8fc7-1ca1966ca4ed
+* id = "c70c8063-85b0-4346-8fc7-1ca1966ca4ed"
 * patient = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 * relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#SPS
 //NEMSIS ePayment.32 - Closest Relative/ Guardian Relationship
