@@ -111,7 +111,7 @@ Id: NEMSIS.Current.Medication.Administration.Route.VS
 
 
 
-ValueSet: NEMSIS_Crew_Member_Response Role_VS
+ValueSet: NEMSIS_Crew_Member_Response_Role_VS
 Description: "The role(s) of the crew member during response, at scene treatment, and/or transport."
 Id: NEMSIS.Crew.Member.Response.Role.VS
 * NEMSIS#2403001	"Driver/Pilot-Response"
