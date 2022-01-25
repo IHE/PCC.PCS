@@ -27,12 +27,12 @@ Id: NEMSIS.NOT.Values.VS
 ValueSet: NEMSIS_Method_of_Heart_RateMMeasurement_VS
 Description: "The method in which the Heart Rate was measured. Values include auscultated, palpated, electronic monitor."
 Id: NEMSIS.Method.of.Heart.Rate.Measurement.VS
-* #3311001	"Auscultated"
-* #3311003	"Doppler"
-* #3311005	"Electronic Monitor - Cardiac"
-* #3311007	"Electronic Monitor - Pulse Oximeter"
-* #3311009	"Electronic Monitor (Other)"
-* #3311011	"Palpated"
+* NEMSIS#3311001	"Auscultated"
+* NEMSIS#3311003	"Doppler"
+* NEMSIS#3311005	"Electronic Monitor - Cardiac"
+* NEMSIS#3311007	"Electronic Monitor - Pulse Oximeter"
+* NEMSIS#3311009	"Electronic Monitor (Other)"
+* NEMSIS#3311011	"Palpated"
 
 ValueSet: NEMSIS_The_Patient_Type_of_Immunization_VS
 Description: "The immunization type of the patient."
@@ -62,12 +62,12 @@ Id: NEMSIS.The.Patient.Type.of.Immunization.VS
 * NEMSIS#9910045	"Tuberculosis"
 * NEMSIS#9910047	"Typhoid"
 * NEMSIS#9910049	"Varicella (Chickenpox)"
-* NEMSIS#9910051	"Yellow Fev
+* NEMSIS#9910051	"Yellow Fev"
 
 
 
 ValueSet: NEMSIS_Current_Medication_Administration_Route_VS
-Description: "The administration route (po, SQ, etc.) of the patient's current medication."
+Description: "The administration route (po, SQ, etc.) of the patient current medication."
 Id: NEMSIS.Current.Medication.Administration.Route.VS
 * NEMSIS#9927001	"Blow-By"
 * NEMSIS#9927003	"Buccal"

@@ -54,16 +54,17 @@ An IHE PCS Encounter Complete Report resource is used to deffine the full emerge
 * extension contains Incident named Incident 1..1
 * extension contains MassCasualtyIncident named MassCasualtyIncident 0..1
 
-* location.entry ^slicing.discriminator.type = ##pattern
-* location.entry ^slicing.discriminator.path = "encounter.location"
-* location.entry ^slicing.rules = #open
-* location.entry ^slicing.ordered = false
-* location.entry ^slicing.description = "Slicing to accomodate the different locations that take place during a Paramedicine Encounter"
-* entry contains
-	Ambulance 1..1 and
-	VehicalDispatch 0..1 and
-	Scene 1..1 and
-	Destination 0..1 and
+//TODO: JFM removed this slice definition because it does not define the slices it contains
+//* location.entry ^slicing.discriminator.type = ##pattern
+//* location.entry ^slicing.discriminator.path = "encounter.location"
+//* location.entry ^slicing.rules = #open
+//* location.entry ^slicing.ordered = false
+//* location.entry ^slicing.description = "Slicing to accomodate the different locations that take place during a Paramedicine Encounter"
+//* entry contains
+//	Ambulance 1..1 and
+//	VehicalDispatch 0..1 and
+//	Scene 1..1 and
+//	Destination 0..1 and
 
 Extension: StatusSubType
 Id: StatusSubType
@@ -82,7 +83,7 @@ Id: StatusHistoryObservation
 Title: "Status History Observations"
 Description: "Observatons related to the encounter status"
 * extension contains
-	Delays 0..*
+	Delays 0..* and
 	OdometerReadings 0..*
 * entry[Delays].valueCodeableConcept
 * entry[OdometerReadings].valueQuantity
@@ -95,10 +96,11 @@ Description: "The documentation of response mode techniques used for this EMS re
 * valueCodeableConcept from NEMSIS.Additional.Response.Mode.Descriptors.VS (example)
 
 Extension: Barriers
-Id: BarriersToCare
+Id: BarriersToPatientCare
 Title: "Barriers To Patient Care"
 Description: "Indication of whether or not there were any patient specific barriers to serving the patient."
-* extension[BarriersToPatientCare].valueCodeableConcept from NEMSIS.Barriers.to.Patient.Care.VS (example)
+* value[x] only CodeableConcept
+* valueCodeableConcept from NEMSIS.Barriers.to.Patient.Care.VS (example)
 
 Extension: Transport
 Id: Transport

@@ -20,7 +20,7 @@ Usage: #inline
 * id = "082413b5-c9f9-4178-9ffb-821665a28cfe"
 * status = #active
 * category = #food
-* code = $SNOMEDCT#425525006
+* code = $SCT#425525006
 
 Instance: Inline-Instance-for-AllergyIntolerance-Gluten
 InstanceOf: AllergyIntoleranceUvIps
@@ -28,5 +28,5 @@ Usage: #inline
 * id = "a46082d2-e29a-450f-a8b7-d7fe57257ff7"
 * status = #active
 * category = #food
-* code = $SNOMEDCT#441831003
+* code = $SCT#441831003
 

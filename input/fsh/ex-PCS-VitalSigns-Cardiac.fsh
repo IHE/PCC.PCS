@@ -205,7 +205,7 @@ Usage: #inline
 * code = $loinc#8884-9 "Heart rate rhythm"
 * subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 * effectiveDateTime = "2021-10-06T10:53:18-07:00"
-* valueCodeableConcept = $427.41 "Ventricular fibrillation" 
+* valueCodeableConcept = $loinc#427.41 "Ventricular fibrillation" 
 // Note: ICD10 code translation. Origional NEMSIS Code is 	9901067 "Ventricular Fibrillation"]
 * encounter = Reference(Encounter/8da1a2e0-38c2-11ec-8d3d-0242ac130003)
 * device = Reference(Device/752ca98e-38c8-11ec-8d3d-0242ac130003)
@@ -399,12 +399,12 @@ Usage: #inline
 * code = $loinc#8884-9 "Heart rate rhythm"
 * subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 * effectiveDateTime = "2021-10-06T11:07:04-07:00"
-* valueCodeableConcept[+] = $9901009 "Atrial Flutter" 
-* valueCodeableConcept[+] = $9901069 "Ventricular Tachycardia (With Pulse)"
+* valueCodeableConcept[+] = $SCT#9901009 "Atrial Flutter" 
+* valueCodeableConcept[+] = $SCT#9901069 "Ventricular Tachycardia (With Pulse)"
 // [Note: NEMSIS Values]
 * encounter = Reference(Encounter/8da1a2e0-38c2-11ec-8d3d-0242ac130003)
 * device = Reference(Device/752ca98e-38c8-11ec-8d3d-0242ac130003)
-* method[+] = $258181008 "Electrocardiogram analysis"
+* method[+] = $SCT#258181008 "Electrocardiogram analysis"
 //Note: Verify, translated from NEMSIS]
 * method[+] = $SCT#3304007 "12 Lead-Left Sided (Normal)"
 // [Note: NEMSIS Values]

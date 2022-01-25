@@ -4,7 +4,7 @@ Id:             IHE.FooBar.bloodPressure
 Title:          "IHE FooBar Blood Pressure Observation"
 Description:    "A profile on the Observation that declares how FooBar will Create/Update blood pressure measurements.
 * must have vital-signs category
-* must have LOINC#55284-4 code AND LOINC#8716-3
+* must have $loinc#55284-4 code AND $loinc#8716-3
 * must have effectiveDateTime
 * must not have a value[x]
 * must have two components
@@ -26,8 +26,8 @@ Description:    "A profile on the Observation that declares how FooBar will Crea
 * code.coding ^slicing.rules = #closed
 * code.coding 2..2
 * code.coding contains loincCode1 1..1 and loincCode2 1..1
-* code.coding[loincCode1] = LOINC#55284-4
-* code.coding[loincCode2] = LOINC#8716-3
+* code.coding[loincCode1] = $loinc#55284-4
+* code.coding[loincCode2] = $loinc#8716-3
 * effectiveDateTime 1..1
 * value[x] 0..0
 * component 2..4
@@ -44,26 +44,26 @@ Description:    "A profile on the Observation that declares how FooBar will Crea
 	bodyContextStanding 0..1 and 
 	bodyContextSupine 0..1 and 
 	bodyContextResting 0..1
-* component[systolicBP].code = LOINC#8480-6 // Systolic blood pressure
+* component[systolicBP].code = $loinc#8480-6 // Systolic blood pressure
 * component[systolicBP].value[x] only Quantity
-* component[systolicBP].valueQuantity = UCUM#mm[Hg] // "mmHg"
-* component[diastolicBP].code = LOINC#8462-4 // Diastolic blood pressure
+* component[systolicBP].valueQuantity = $UCUM#mm[Hg] // "mmHg"
+* component[diastolicBP].code = $loinc#8462-4 // Diastolic blood pressure
 * component[diastolicBP].value[x] only Quantity
-* component[diastolicBP].valueQuantity = UCUM#mm[Hg] // "mmHg"
-* component[heartRate].code = LOINC#8867-4 // heart rate
+* component[diastolicBP].valueQuantity = $UCUM#mm[Hg] // "mmHg"
+* component[heartRate].code = $loinc#8867-4 // heart rate
 * component[heartRate].value[x] only Quantity
-* component[heartRate].valueQuantity = UCUM#/min "beats/minute"
+* component[heartRate].valueQuantity = $UCUM#/min "beats/minute"
 // This is odd, but showing it for sushi learning - TODO should leverage the valueset below
-* component[bodyContextSitting].code = LOINC#69000-8
+* component[bodyContextSitting].code = $loinc#69000-8
 * component[bodyContextSitting].value[x] only string
 * component[bodyContextSitting].valueString = "Sitting"
-* component[bodyContextStanding].code = LOINC#69001-6
+* component[bodyContextStanding].code = $loinc#69001-6
 * component[bodyContextStanding].value[x] only string
 * component[bodyContextStanding].valueString = "Standing"
-* component[bodyContextSupine].code = LOINC#68999-2
+* component[bodyContextSupine].code = $loinc#68999-2
 * component[bodyContextSupine].value[x] only string
 * component[bodyContextSupine].valueString = "Supine"
-* component[bodyContextResting].code = LOINC#40443-4
+* component[bodyContextResting].code = $loinc#40443-4
 * component[bodyContextResting].value[x] only string
 * component[bodyContextResting].valueString = "Resting"
 * status = #final
@@ -106,7 +106,7 @@ ValueSet: IheFooBarBloodPressurePositions
 Id: ihe-foobar-blood-pressure-positions
 Title: "The methods of measurement for blood pressure"
 Description: "These are the loinc body positions that IHE FooBar supports on blood pressure."
-* LOINC#69000-8 "Heart rate - sitting"
-* LOINC#69001-6 "Heart rate - standing"
-* LOINC#68999-2 "Heart rate - supine"
-* LOINC#40443-4 "Heart rate - resting"
+* $loinc#69000-8 "Heart rate - sitting"
+* $loinc#69001-6 "Heart rate - standing"
+* $loinc#68999-2 "Heart rate - supine"
+* $loinc#40443-4 "Heart rate - resting"

@@ -3,7 +3,7 @@ InstanceOf: DeviceUseStatementUvIps
 Usage: #inline
 * id = "37561dc9-42de-499e-aab8-b061c56bfd82"
 * status = #completed 
-* code = $SNOMEDCT#89666000
+* code = $SCT#89666000
 * timingDateTime = "2021-10-06T10:53:18-07:00"
 * subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 //Note: where it would refference wave form... document reference 
