@@ -1,9 +1,9 @@
 Instance: Inline-Instance-for-Location-EMSVehical
 InstanceOf: Location
 Usage: #inline
-* id = 6ff401d4-4191-11ec-81d3-0242ac130003
+* id = "6ff401d4-4191-11ec-81d3-0242ac130003"
 * status = #active
-* mode = http://hl7.org/fhir/ValueSet/location-mode#instance
+* mode = http://hl7.org/fhir/location-mode#instance
 
 * identifier.value = "058-263"
 * identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#PRN
@@ -20,9 +20,9 @@ Usage: #inline
 //NEMSIS eResponse.14 - EMS Unit Call Sign
 //NEMSIS dVehicle.03 - EMS Unit Call Sign
 
-* type = http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType#AMB
+* type = http://terminology.hl7.org/CodeSystem/v3-RoleCode#AMB
 //NEMSIS dVehicle.04 - Vehicle Type
-* type = http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType#NPI
+* type = http://terminology.hl7.org/CodeSystem/v3-RoleCode#NPI
 //NEMSIS eResponse.07 - Unit Transport and Equipment Capability
 
 Instance: Inline-Instance-for-Location-Scene-Cardiac
@@ -49,16 +49,16 @@ Usage: #inline
 //NEMSIS eScene.22 - Incident Country
 * mode = http://hl7.org/fhir/location-mode#kind
 * type = http://terminology.hl7.org/CodeSystem/v3-RoleCode#ER
-* position.longitude = "-114.628"
-* position.latitude = "32.694"
+* position.longitude = -114.628
+* position.latitude = 32.694
 //NEMSIS eScene.11 - Scene GPS Location
 
 Instance: Inline-Instance-for-Location-Destination-Cardiac
 InstanceOf: Location
 Usage: #inline
-* id = e2bb641e-418c-11ec-81d3-0242ac130003
+* id = "e2bb641e-418c-11ec-81d3-0242ac130003"
 * identifier.value = "MED0262"
-* identifier.type = http://hl7.org/fhir/ValueSet/identifier-type#FI
+* identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#FI
 //NEMSIS eDisposition.02 - Destination/Transferred To, Code
 
 * mode = http://hl7.org/fhir/location-mode#kind
@@ -88,8 +88,8 @@ Usage: #inline
 //NEMSIS eScene.22 - Incident Country
 * mode = http://hl7.org/fhir/location-mode#kind
 * type = http://terminology.hl7.org/CodeSystem/v3-RoleCode#ER
-* position.longitude = "-114.628"
-* position.latitude = "32.687"
+* position.longitude = -114.628
+* position.latitude = 32.687
 //NEMSIS eResponse.17 - Vehicle Dispatch GPS Location
 
 

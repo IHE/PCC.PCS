@@ -6,7 +6,7 @@ Description:      "holding typical values for PCS Review of systems entries."
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * status = #final
 * code = $loinc#11283-9
-* value[x] = $NEMSIS#4219001
+* valueCodeableConcept = $NEMSIS#4219001
 * subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 
 Instance:   ex-PCS-ReviewOfSystems-FinalPatientAcuity-Cardiac
@@ -17,7 +17,7 @@ Description:      "holding typical values for PCS Review of systems entries."
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * status = #final
 * code = $loinc#11283-9
-* value[x] = $NEMSIS#4219001
+* valueCodeableConcept = $NEMSIS#4219001
 * subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 
 Instance:   ex-PCS-ReviewOfSystems-LastKnownWell-Cardiac
@@ -29,6 +29,7 @@ Description:      "holding typical values for PCS Review of systems entries."
 * status = #final
 * valueDateTime = "2021-10-06T10:45:58-07:00"
 * subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
+* code = $NEMSIS#todo1
 
 Instance:   ex-PCS-ReviewOfSystems-LastOralIntake-Cardiac
 InstanceOf: Observation
@@ -49,5 +50,5 @@ Description:      "holding typical values for PCS Review of systems entries."
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * status = #final
 * code = $loinc#69757-3
-* value[x] = $NEMSIS#8801015
+* valueCodeableConcept = $NEMSIS#8801015
 * subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)

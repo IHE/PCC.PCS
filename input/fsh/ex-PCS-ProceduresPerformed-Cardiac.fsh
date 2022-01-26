@@ -7,7 +7,7 @@ Usage: #inline
 * performedDateTime = "2021-10-06T10:52:30-07:00"
 * subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 * encounter = Reference(Encounter/8da1a2e0-38c2-11ec-8d3d-0242ac130003)
-* performer = Reference(Practitioner/21a78dce-38e6-11ec-8d3d-0242ac130003)
+* performer.actor = Reference(Practitioner/21a78dce-38e6-11ec-8d3d-0242ac130003)
 * outcome = $NEMSIS#9916001
 * complication = $NEMSIS#3907033
 
@@ -20,7 +20,7 @@ Usage: #inline
 * performedDateTime = "2021-10-06T10:53:00-07:00"
 * subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 * encounter = Reference(Encounter/8da1a2e0-38c2-11ec-8d3d-0242ac130003)
-* performer = Reference(Practitioner/26aa91b8-38e6-11ec-8d3d-0242ac130003)
+* performer.actor = Reference(Practitioner/26aa91b8-38e6-11ec-8d3d-0242ac130003)
 //* usedReference = 
 //Note: equipment size
 * outcome = $NEMSIS#9916003
@@ -35,7 +35,7 @@ Usage: #inline
 * performedDateTime = "2021-10-06T10:53:30-07:00"
 * subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 * encounter = Reference(Encounter/8da1a2e0-38c2-11ec-8d3d-0242ac130003)
-* performer = Reference(Practitioner/29eabcea-38e6-11ec-8d3d-0242ac130003)
+* performer.actor = Reference(Practitioner/29eabcea-38e6-11ec-8d3d-0242ac130003)
 * outcome = $NEMSIS#9916003
 * complication = $NEMSIS#3907033
 
@@ -49,7 +49,7 @@ Usage: #inline
 * performedDateTime = "2021-10-06T10:55:00-07:00"
 * subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 * encounter = Reference(Encounter/8da1a2e0-38c2-11ec-8d3d-0242ac130003)
-* performer = Reference(Practitioner/26aa91b8-38e6-11ec-8d3d-0242ac130003)
+* performer.actor = Reference(Practitioner/26aa91b8-38e6-11ec-8d3d-0242ac130003)
 //* usedReference = 
 //Note: equipment size
 * bodySite = $NEMSIS#3913019
@@ -65,7 +65,7 @@ Usage: #inline
 * performedDateTime = "2021-10-06T10:57:23-07:00"
 * subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 * encounter = Reference(Encounter/8da1a2e0-38c2-11ec-8d3d-0242ac130003)
-* performer = Reference(Practitioner/26aa91b8-38e6-11ec-8d3d-0242ac130003)
+* performer.actor = Reference(Practitioner/26aa91b8-38e6-11ec-8d3d-0242ac130003)
 * outcome = $NEMSIS#9916003
 * complication = $NEMSIS#3907033
 
@@ -78,7 +78,7 @@ Usage: #inline
 * performedDateTime = "2021-10-06T11:06:00-07:00"
 * subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 * encounter = Reference(Encounter/8da1a2e0-38c2-11ec-8d3d-0242ac130003)
-* performer = Reference(Practitioner/26aa91b8-38e6-11ec-8d3d-0242ac130003)
+* performer.actor = Reference(Practitioner/26aa91b8-38e6-11ec-8d3d-0242ac130003)
 * outcome = $NEMSIS#9916001
 * complication = $NEMSIS#3907033
 
@@ -91,6 +91,6 @@ Usage: #inline
 * performedDateTime = "2021-10-06T11:00:00-07:00"
 * subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 * encounter = Reference(Encounter/8da1a2e0-38c2-11ec-8d3d-0242ac130003)
-* performer = Reference(Practitioner/29eabcea-38e6-11ec-8d3d-0242ac130003)
+* performer.actor = Reference(Practitioner/29eabcea-38e6-11ec-8d3d-0242ac130003)
 * outcome = $NEMSIS#9916001
 * complication = $NEMSIS#3907033

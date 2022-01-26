@@ -5,4 +5,5 @@ Usage: #inline
 * vaccineCode = $NEMSIS#9910019
 * occurrenceDateTime = "2021"
 * reportOrigin = #recall
-* subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
+* patient = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
+* status = #complete

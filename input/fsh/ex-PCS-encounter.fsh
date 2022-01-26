@@ -169,7 +169,7 @@ Description:      "holding typical values for a Cardiac Encounter in the PCS Com
 Instance: Inline-Instance-for-serviceProvider-Location
 InstanceOf: Location
 Usage: #inline
-* id = b861aba6-38e0-11ec-8d3d-0242ac130003
+* id = "b861aba6-38e0-11ec-8d3d-0242ac130003"
 * identifier.value = "340-TGCON058"
 * identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#PRN
 //NEMSIS eResponse.01 - EMS Agency Number
@@ -195,7 +195,7 @@ Usage: #inline
 Instance: Inline-EMS-ex-patient-Cardiac-Ambulance-ChiefComplaint
 InstanceOf: ConditionUvIps
 Usage: #inline
-* id = 6392f114-3b62-11ec-8d3d-0242ac130003
+* id = "6392f114-3b62-11ec-8d3d-0242ac130003"
 //* text = "Cardiac arrest"
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#provisional // Note: Verify
 * category = http://terminology.hl7.org/CodeSystem/condition-category#encounter-diagnosis
@@ -208,8 +208,11 @@ Usage: #inline
 * recorder = Reference(Practitioner/26aa91b8-38e6-11ec-8d3d-0242ac130003)
 * evidence[+].code = $loinc#I46.9 "Cardiac arrest, cause unspecified"
 * evidence[+].code = $loinc#R09.2 "Respiratory arrest"
-* evidence{+].code = $loinc#R11.10 "Vomiting, unspecified"
+* evidence[+].code = $loinc#R11.10 "Vomiting, unspecified"
 // Note: TODO figure out how duration can be incorperated 
+* clinicalStatus = #active
+* code = $loinc#I46.9 "Cardiac arrest, cause unspecified"
+
 
 Instance: Inline-Instance-for-EMS-ex-patient-Cardiac-Ambulance-Trasnport-Primary-Impression
 InstanceOf: ConditionUvIps
@@ -226,4 +229,5 @@ Usage: #inline
 * evidence[+].code = $loinc#I46.9 "Cardiac arrest, cause unspecified"
 * evidence[+].code = $loinc#R09.2 "Respiratory arrest"
 * evidence[+].code = $loinc#R11.10 "Vomiting, unspecified"
+* clinicalStatus = #active
 
