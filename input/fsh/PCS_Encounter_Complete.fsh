@@ -51,7 +51,7 @@ An IHE PCS Encounter Complete Report resource is used to deffine the full emerge
 * serviceProvider 1..1
 * extension contains BarriersToPatientCare named Barriers 0..* 
 * extension contains Transport named Transport 1..1
-* extension contains Incident named Incident 1..1
+//* extension contains Incident named Incident 1..1
 * extension contains MassCasualtyIncident named MassCasualtyIncident 0..1
 
 //TODO: JFM removed this slice definition because it does not define the slices it contains
@@ -116,7 +116,7 @@ Description: "Transport Information for the encounter."
 	RefusalReason 0..*
 * extension[Priority].valueCodeableConcept from NEMSIS.Transport.Mode.from.Scene.VS (example)
 * extension[PriorityDescriptors].valueCodeableConcept from NEMSIS.Additional.Transport.Mode.Descriptors.VS (example)  
-* extension[NumberofPatients].value[x] 
+* extension[NumberofPatients].valueInteger
 * extension[TansportReasonCode].valueCodeableConcept
 * extension[Disposition].valueCodeableConcept from NEMSIS.Transport.Disposition.VS (example) 
 * extension[DestinationReason].valueCodeableConcept from NEMSIS.Reason.for.Choosing.Destination.VS (example) 
@@ -135,5 +135,5 @@ Description: "The information reatlated to Paramedicine encounters for mass casu
 * extension[MassCasualtyIncidentIndicator].valueCodeableConcept from http://terminology.hl7.org/ValueSet/v2-0136
 * extension[NumberofPatients].value[x]
 * extension[TriageClassification].valueCodeableConcept from NEMSIS.Triage.Classification.for.MCI.Patient.VS (example)
-* extension[DisasterType].valueCodeableConcept from NEMSIS.Natural.Suspected.Intentional.or.Unintentional.Disaster.VS (example)
+* extension[DisasterType].valueCodeableConcept from NEMSIS.Natural.Suspected.Disaster.VS (example)
 

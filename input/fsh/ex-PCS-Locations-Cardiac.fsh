@@ -6,14 +6,14 @@ Usage: #inline
 * mode = http://hl7.org/fhir/ValueSet/location-mode#instance
 
 * identifier.value = "058-263"
-* identifier.type = http://terminology.hl7.org/ValueSet/v2-0203#
+* identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#PRN
 //NEMSIS eResponse.13 - EMS Vehicle (Unit) Number
 //NEMSIS dVehicle.01 - Unit/Vehicle Number
 * identifier.value = "123456"
-* identifier.type = http://terminology.hl7.org/ValueSet/v2-0203#
+* identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#SR
 //NEMSIS dVehicle.02 - Vehicle Identification Number --VIN standard ISO-3779 and ISO-3780.
 * identifier.value = "350-20211007M200394"
-* identifier.type = http://terminology.hl7.org/ValueSet/v2-0203#
+* identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#NPI
 //NEMSIS eResponse.04 - EMS Response Number
 
 * name = "Yuma 1090"
@@ -22,7 +22,7 @@ Usage: #inline
 
 * type = http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType#AMB
 //NEMSIS dVehicle.04 - Vehicle Type
-* type = http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType#
+* type = http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType#NPI
 //NEMSIS eResponse.07 - Unit Transport and Equipment Capability
 
 Instance: Inline-Instance-for-Location-Scene-Cardiac

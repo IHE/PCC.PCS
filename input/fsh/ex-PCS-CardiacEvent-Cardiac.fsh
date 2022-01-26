@@ -7,7 +7,7 @@ Description:      "holding typical values for Cardiac arrest event"
 * id = "c099d17e-b0fa-4a89-bd75-ee9c7d855d76"
 * code = $loinc#67502-5
 * valueCodeableConcept = $NEMSIS#3001003
-
+* subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 
 Instance:   ex-PCS-CardiacEvent-cause-Cardiac
 InstanceOf: Observation
@@ -18,6 +18,7 @@ Description:      "holding typical values for Cardiac arrest event"
 * id = "9160055d-5aa5-4a53-908e-ae79476b44a1"
 * code = $loinc#67503-3
 * valueCodeableConcept = $loinc#LA17056-5
+* subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 
 Instance:   ex-PCS-CardiacEvent-Resuscitation-Attempted-Cardiac
 InstanceOf: Observation
@@ -30,6 +31,7 @@ Description:      "holding typical values for Cardiac arrest event"
 * valueCodeableConcept.coding[+] = $loinc#LA17060-7
 * valueCodeableConcept.coding[+] = $loinc#LA17061-5
 * valueCodeableConcept.coding[+] = $loinc#LA17062-3
+* subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 
 Instance:   ex-PCS-CardiacEvent-Witness-Cardiac
 InstanceOf: Observation
@@ -41,7 +43,7 @@ Description:      "holding typical values for Cardiac arrest event"
 * code = $loinc#67505-8
 * valueCodeableConcept.coding[+] = $loinc#LA18020-0
 * valueCodeableConcept.coding[+] = $loinc#LA18022-6
-
+* subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 
 
 Instance:   ex-PCS-CardiacEvent-AED-Use-Prior-to-EMS-Cardiac
@@ -53,7 +55,7 @@ Description:      "holding typical values for Cardiac arrest event"
 * id = "162de700-0f66-495f-a806-6dc8f8143ee3"
 * code = $loinc#67508-2
 * valueCodeableConcept.coding[+] = $loinc#LA17067-2
-
+* subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
  
 Instance:   ex-PCS-CardiacEvent-CPR-Type-Cardiac
 InstanceOf: Observation
@@ -67,6 +69,7 @@ Description:      "holding typical values for Cardiac arrest event"
 * valueCodeableConcept.coding[+] = $loinc#LA17753-7
 * valueCodeableConcept.coding[+] = $loinc#LA17755-2
 * valueCodeableConcept.coding[+] = $NEMSIS#3009001
+* subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 
 Instance:   ex-PCS-CardiacEvent-Therapeutic-Hypothermia-Cardiac
 InstanceOf: Observation
@@ -77,6 +80,7 @@ Description:      "holding typical values for Cardiac arrest event"
 * id = "427b1401-a57d-468a-8551-0b9940bca460"
 * code = $loinc#67511-6
 * valueCodeableConcept.coding[+] = $loinc#LA32-8
+* subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 
 Instance:   ex-PCS-CardiacEvent-Return-of-Spontaneous-Circulation-Cardiac
 InstanceOf: Observation
@@ -87,7 +91,7 @@ Description:      "holding typical values for Cardiac arrest event"
 * id = "2642911d-4428-436f-9401-648b2febd401"
 * code = $loinc#88670-5
 * valueCodeableConcept.coding[+] = $loinc#LA17076-3
-
+* subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 
 Instance:   ex-PCS-CardiacEvent-Return-of-Initial-CPR-DateTime-Cardiac
 InstanceOf: Observation
@@ -98,6 +102,7 @@ Description:      "holding typical values for Cardiac arrest event"
 * id = "f9d13f32-a36d-47ae-8f72-29f3d4ec507d"
 * code = $loinc#88438-7
 * valueDateTime = "2021-10-06T10:46:30-07:00"
+* subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 
 Instance:   ex-PCS-CardiacEvent-Return-of-Initial-Resuscitation-Discontinued-Cardiac
 InstanceOf: Observation
@@ -108,6 +113,7 @@ Description:      "holding typical values for Cardiac arrest event"
 * id = "6347f352-d981-408f-8cf4-a823ec54cd4c"
 * code = $loinc#88101-1
 * valueDateTime = "2021-10-06T11:06:23-07:00"
+* subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 
 Instance:   ex-PCS-CardiacEvent-Return-of-Initial-Resuscitation-Discontinued-Reason-Cardiac
 InstanceOf: Observation
@@ -118,6 +124,7 @@ Description:      "holding typical values for Cardiac arrest event"
 * id = "640ae474-f95e-47cd-9789-570c3c2210fb"
 * code = $loinc#67574-4
 * valueCodeableConcept.coding[+] = $loinc#LA17082-1
+* subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 
 Instance:   ex-PCS-CardiacEvent-Return-of-End-of-EMS-Cardiac-Arrest-Event-Cardiac
 InstanceOf: Observation
@@ -128,6 +135,7 @@ Description:      "holding typical values for Cardiac arrest event"
 * id = "d94ca4fd-7586-44fd-868a-835908866cfe"
 * code = $loinc#77152-7
 * valueCodeableConcept.coding[+] = $loinc#LA22795-1
+* subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 
 Instance:   ex-PCS-CardiacEvent-Provider-of-CPR-prior-to-EMS-arrival-Cardiac
 InstanceOf: Observation
@@ -138,6 +146,7 @@ Description:      "holding typical values for Cardiac arrest event"
 * id = "015c019e-8628-4899-8bc5-a20d6136798d"
 * code = $loinc#67507-4
 * valueCodeableConcept.coding[+] = $loinc#LA9277-0
+* subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 
 Instance:   ex-PCS-CardiacEvent-Provider-of-AED-prior-to-EMS-arrival-Cardiac
 InstanceOf: Observation
@@ -148,7 +157,7 @@ Description:      "holding typical values for Cardiac arrest event"
 * id = "a4056446-d791-4113-9aa1-31a447ec1277"
 * code = $loinc#67509-0
 * valueCodeableConcept.coding[+] = $loinc#LA18018-4
-
+* subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 
 Instance:   ex-PCS-CardiacEvent-Who-First-Defibrillated-the-Patient-Cardiac
 InstanceOf: Observation
@@ -159,5 +168,5 @@ Description:      "holding typical values for Cardiac arrest event"
 * id = "4beb996c-07bc-4cf7-b576-2b9589250c42"
 * code = $loinc#67509-0
 * valueCodeableConcept.coding[+] = $loinc#LA18018-4
-
+* subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 

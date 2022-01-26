@@ -473,4 +473,10 @@ Id: NEMSIS
 * #3311007	"Electronic Monitor - Pulse Oximeter"
 * #3311009	"Electronic Monitor (Other)"
 * #3311011	"Palpated"
-
+* #3009001  "TODO: JFM do not know"
+* #9925005  "TODO: JFM did not know either"
+* #9923003  "TODO: JFM completely clueless"
+* #3105011  "TODO: JFM suspects but not sure"
+* #4218001  "TODO: JFM surely these are just made up"
+* #4218007  "TODO: JFM no rhyme"
+* #4218013  "TODO: JFM no rythem"

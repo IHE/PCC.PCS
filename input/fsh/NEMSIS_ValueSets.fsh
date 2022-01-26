@@ -436,7 +436,8 @@ Id: NEMSIS.Reason.for.Choosing.Destination.VS
 
 ValueSet: NEMSIS_Natural_Suspected_Intentional_or_Unintentional_Disaster_VS
 Description: "Event caused by natural forces or Suspected and Intentional/Unintentional Disasters (terrorism)."
-Id: NEMSIS.Natural.Suspected.Intentional.or.Unintentional.Disaster.VS
+// JFM: shortened as this was too long
+Id: NEMSIS.Natural.Suspected.Disaster.VS
 * NEMSIS#4507001	"Biologic Agent"
 * NEMSIS#4507003	"Building Failure"
 * NEMSIS#4507005	"Chemical Agent"

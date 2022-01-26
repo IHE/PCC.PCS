@@ -15,7 +15,7 @@ Description:      "holding typical values for coverage in the PCS complete repor
 * class.value = "1080"
 * class.name = "Family"
 * payor = Reference(Organization/60593cfa-123e-4ca0-b763-dfd70ff81cc8)
-
+* beneficiary = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 
 Instance: Inline-Instance-for-Coverage-Organization
 InstanceOf: Organization
@@ -26,11 +26,11 @@ Usage: #inline
 * name = "United Healthcare"
 * address.line[+] = "1 E Washington St"
 * address.line[=] = "Ste 1700"
-* address.city[+] = "Phoenix"
-* address.state[+] = "Arizona"
-* address.postalCode[+] = "85004"
-* address.Country[+] = "US"
-* telecom[+] = "866-414-1959"
-* telecom.system[=] = http://hl7.org/fhir/contact-point-system#work
-* telecom[+] = "877-844-4999"
-* telecom.system[=] = http://hl7.org/fhir/contact-point-system#work
+* address.city = "Phoenix"
+* address.state = "Arizona"
+* address.postalCode = "85004"
+* address.country = "US"
+* telecom[+].value = "866-414-1959"
+* telecom[=].system = http://hl7.org/fhir/contact-point-system#work
+* telecom[+].value = "877-844-4999"
+* telecom[=].system = http://hl7.org/fhir/contact-point-system#work

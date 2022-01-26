@@ -8,17 +8,18 @@ Description:      "holding typical values for a Cardiac Encounter in the PCS Com
 * id = "fa51192c-c36a-4b0a-84c1-9dc6fded7c2c"
 * identifier.value = "350-2021100700394"
 //NEMSIS eResponse.03 - Incident Number --- VERIFY
+* type = NEMSIS#2205001
 
-* statusHistory[+].StatusSubType = $NEMSIS#eTimes.01
-* statusHistory[=].period = 2021-10-06T10:47:53-07:00
+* statusHistory[+].status = $NEMSIS#eTimes.01
+* statusHistory[=].period.start = 2021-10-06T10:47:53-07:00
 //NEMSIS eTimes.01 - PSAP Call Date/Time
 
 * statusHistory[+].status = $NEMSIS#eTimes.02
-* statusHistory[=].period = 2021-10-06T10:47:53-07:00
+* statusHistory[=].period.start = 2021-10-06T10:47:53-07:00
 //NEMSIS eTimes.02 - Dispatch Notified Date/Time
 
 * statusHistory[+].status = #planned
-* statusHistory[=].period = 2021-10-06T10:48:40-07:00
+* statusHistory[=].period.start = 2021-10-06T10:48:40-07:00
 //eTimes.03 - Unit Notified by Dispatch Date/Time
 
 //TODO: JFM commented out all of the StatusHistoryObservation stuff as there is no such thing
@@ -35,17 +36,17 @@ Description:      "holding typical values for a Cardiac Encounter in the PCS Com
 //* statusHistory.StatusHistoryObservation.OdometerReadings[+] = 89526.4
 
 * statusHistory[+].status = $NEMSIS#eTimes.04
-* statusHistory[=].period = 2021-10-06T10:48:58-07:00
+* statusHistory[=].period.start = 2021-10-06T10:48:58-07:00
 //NEMSIS eTimes.04 - Dispatch Acknowledged Date/Time
 
 * statusHistory[+].status = $NEMSIS#eTimes.05
-* statusHistory[=].period = 2021-10-06T10:49:45-07:00
+* statusHistory[=].period.start = 2021-10-06T10:49:45-07:00
 //NEMSIS eTimes.05 - Unit En Route Date/Time
 //* statusHistory.StatusHistoryObservation.OdomoterReadings[=] = 89524.2
 //NEMSIS eResponse.19 - Beginning Odometer Reading of Responding Vehicle
 
 * statusHistory[+].status = #arrived
-* statusHistory[=].period = 2021-10-06T10:50:53-07:00
+* statusHistory[=].period.start = 2021-10-06T10:50:53-07:00
 //NEMSIS eTimes.06 - Unit Arrived on Scene Date/Time
 //* statusHistory.StatusHistoryObservation.OdomoterReadings[=] = 89524.7
 //NEMSIS eResponse.20 - On-Scene Odometer Reading of Responding Vehicle
@@ -54,18 +55,18 @@ Description:      "holding typical values for a Cardiac Encounter in the PCS Com
 //TODO: complete (None 260413007 SNOMED)
 
 * statusHistory[+].status = $NEMSIS#eTimes.07
-* statusHistory[=].period = 2021-10-06T10:51:38-07:00
+* statusHistory[=].period.start = 2021-10-06T10:51:38-07:00
 //NEMSIS eTimes.07 - Arrived at Patient Date/Time
 
 * statusHistory[+].status = $NEMSIS#eTimes.09
-* statusHistory[=].period = 2021-10-06T11:03:52-07:00
+* statusHistory[=].period.start = 2021-10-06T11:03:52-07:00
 //NEMSIS eTimes.09 - Unit Left Scene Date/Time
 //* statusHistory.StatusHistoryObservation.Delays[=] = #260413007
 //NEMSIS eResponse.10 - Type of Scene Delay
 //TODO: complete (None 260413007 SNOMED)
 
 * statusHistory[+].status = $NEMSIS#eTimes.11
-* statusHistory[=].period = 2021-10-06T11:09:43-07:00
+* statusHistory[=].period.start = 2021-10-06T11:09:43-07:00
 //NEMSIS eTimes.11 - Patient Arrived at Destination Date/Time
 //* statusHistory.StatusHistoryObservation.OdomoterReadings[=] = 89525.3
 //NEMSIS eResponse.21 - Patient Destination Odometer Reading of Responding Vehicle
@@ -74,11 +75,11 @@ Description:      "holding typical values for a Cardiac Encounter in the PCS Com
 //TODO: complete (None 260413007 SNOMED)
 
 * statusHistory[+].status = $NEMSIS#eTimes.12
-* statusHistory[=].period = 2021-10-06T11:12:20-07:00
+* statusHistory[=].period.start = 2021-10-06T11:12:20-07:00
 //NEMSIS eTimes.12 - Destination Patient Transfer of Care Date/Time
 
 * statusHistory[+].status = $NEMSIS#eTimes.13
-* statusHistory[=].period = 2021-10-06T11:31:01-07:00
+* statusHistory[=].period.start = 2021-10-06T11:31:01-07:00
 //NEMSIS eTimes.13 - Unit Back in Service Date/Time
 //* statusHistory.StatusHistoryObservation.OdomoterReadings[=] = 89526.4
 //NEMSIS eResponse.22 - Ending Odometer Reading of Responding Vehicle
@@ -88,11 +89,11 @@ Description:      "holding typical values for a Cardiac Encounter in the PCS Com
 //TODO: complete delays: Equipment/Supply Replenishment, EMS Crew Accompanies Patient for Facility Procedure
 
 * statusHistory[+].status = $NEMSIS#eTimes.15
-* statusHistory[=].period = 2021-10-06T11:36:20-07:00
+* statusHistory[=].period.start = 2021-10-06T11:36:20-07:00
 //NEMSIS eTimes.15 - Unit Back at Home Location Date/Time
 
 * statusHistory[+].status = #finished
-* statusHistory[=].period = 2021-10-06T11:52:02-07:00
+* statusHistory[=].period.start = 2021-10-06T11:52:02-07:00
 //NEMSIS eTimes.16 - EMS Call Completed Date/Time
 
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#EMER
@@ -129,43 +130,48 @@ Description:      "holding typical values for a Cardiac Encounter in the PCS Com
 //Note: eDispatch.01 - Dispatch Reason
 
 * diagnosis[+].condition = Reference(Condition/6392f114-3b62-11ec-8d3d-0242ac130003)
-* diagnosis[=].use = http://hl7.org/fhir/ValueSet/diagnosis-role#CC
+* diagnosis[=].use = http://terminology.hl7.org/CodeSystem/diagnosis-role#CC
 * diagnosis[+].condition = Reference(Condition/225ccd48-3b6a-11ec-8d3d-0242ac130003)
 * diagnosis[=].rank = 1
 //NEMSIS eSituation.11 - Provider's Primary Impression
 
 * location[+].location = Reference(Location/6ff401d4-4191-11ec-81d3-0242ac130003)
-* location[=].physicalType = http://hl7.org/fhir/ValueSet/location-physical-type#ve
+* location[=].physicalType = http://terminology.hl7.org/CodeSystem/location-physical-type#ve
 * location[+].location = Reference(Location/10dba0e4-41a5-11ec-81d3-0242ac130003)
 * location[+].location = Reference(Location/73c870bc-418a-11ec-81d3-0242ac130003)
 * location[+].location = Reference(Location/e2bb641e-418c-11ec-81d3-0242ac130003)
 
 
-* serviceProvider = Reference(Organization/b861aba6-38e0-11ec-8d3d-0242ac130003)
+* serviceProvider = Reference(Organization/1a2364d6-418f-11ec-81d3-0242ac130003)
 
 //TODO: JFM commented next line out
 //* BarriersToCare = $NEMSIS#3101027
 //NEMSIS eHistory.01 - Barriers to Patient Care
 
-//TODO: JFM commented out the Transport. stuff as there is no Transport element
-//* Transport.Priority = $NEMSIS#4217001
-//* Transport.PriorityDescriptors[+] = $NEMSIS#4218001 
-//* Transport.PriorityDescriptors[+] = $NEMSIS#4218007
-//* Transport.PriorityDescriptors[+] = $NEMSIS#4218013
-//* Transport.NumberofPatients = 1
-//* Transport.TansportReasonCode[+] = $HARQ#A
-//* Transport.TansportReasonCode[+] = $HARQ#D
-//* Transport.Disposition = $NEMSIS#4230001
-//* Transport.DestinationReason[+] = $NEMSIS#4220001
-//* Transport.DestinationReason[+] = $NEMSIS#4220005
+* extension[Transport].extension[Priority].valueCodeableConcept = $NEMSIS#4217001
+* extension[Transport].extension[PriorityDescriptors][+].valueCodeableConcept = $NEMSIS#4218001 
+* extension[Transport].extension[PriorityDescriptors][+].valueCodeableConcept = $NEMSIS#4218007
+* extension[Transport].extension[PriorityDescriptors][+].valueCodeableConcept = $NEMSIS#4218013
+* extension[Transport].extension[NumberofPatients].valueInteger = 1
+//* extension[Transport].extension[TansportReasonCode][+].valueCodeableConcept = $HARQ#A
+//* extension[Transport].extension[TansportReasonCode][+].valueCodeableConcept = $HARQ#D
+* extension[Transport].extension[Disposition].valueCodeableConcept = $NEMSIS#4230001
+* extension[Transport].extension[DestinationReason][+].valueCodeableConcept = $NEMSIS#4220001
+* extension[Transport].extension[DestinationReason][+].valueCodeableConcept = $NEMSIS#4220005
 
 
-Instance: Inline-Instance-for-serviceProvider-Organization
+
+
+
+
+
+
+Instance: Inline-Instance-for-serviceProvider-Location
 InstanceOf: Location
 Usage: #inline
 * id = b861aba6-38e0-11ec-8d3d-0242ac130003
 * identifier.value = "340-TGCON058"
-* identifier.type = http://terminology.hl7.org/ValueSet/v2-0203#PRN
+* identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#PRN
 //NEMSIS eResponse.01 - EMS Agency Number
 //NEMSIS dAgency.02 - EMS Agency Number
 * name = "IHETackTrust"
@@ -173,12 +179,12 @@ Usage: #inline
 //NEMSIS dAgency.03 - EMS Agency Name
 
 * identifier.value = "058"
-* identifier.type = http://terminology.hl7.org/ValueSet/v2-0203#SR
+* identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#SR
 //NEMSIS dAgency.01 - EMS Agency Unique State ID
 * identifier.assigner = Reference(Organization/1a2364d6-418f-11ec-81d3-0242ac130003)
-* identifier.type = http://terminology.hl7.org/ValueSet/v2-0203#NPI
+* identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#NPI
 //NEMSIS dAgency.25 - National Provider Identifier
-* identifier.type = http://terminology.hl7.org/ValueSet/v2-0203#
+//* identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#
 //NEMSIS dAgency.26 - Fire Department ID Number
 //TODO: complete, possibly open issue
 
@@ -186,12 +192,11 @@ Usage: #inline
 //TODO: JFM commented the following line out as it is missing a real code
 //* type = $EMS "Emergency Medical Service"  
 
-
-Instance: Inline-Instance-for-EMS-ex-patient-Cardiac-Ambulance-Trasnport-ChiefComplaint
+Instance: Inline-EMS-ex-patient-Cardiac-Ambulance-ChiefComplaint
 InstanceOf: ConditionUvIps
 Usage: #inline
 * id = 6392f114-3b62-11ec-8d3d-0242ac130003
-* text = "Cardiac arrest"
+//* text = "Cardiac arrest"
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#provisional // Note: Verify
 * category = http://terminology.hl7.org/CodeSystem/condition-category#encounter-diagnosis
 * bodySite[+] = $loinc#LA18114-1 "General/global" 

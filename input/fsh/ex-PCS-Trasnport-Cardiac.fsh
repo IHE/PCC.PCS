@@ -7,6 +7,7 @@ Description:      "holding typical values for PCS Trasnport event entries."
 * status = #final
 * code = $loinc#67549-6
 * value[x] = $NEMSIS#4216005
+* subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 
 Instance:   ex-PCS-TransportEventEntries-CMS-Transportation-Indicator-Cardiac
 InstanceOf: Observation
@@ -16,6 +17,7 @@ Description:      "holding typical values for PCS Trasnport event entries."
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * status = #final
 * value[x] = $NEMSIS#C7
+* subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 
 Instance:   ex-PCS-TransportEventEntries-PositionOfPatientDuringTransport-Cardiac
 InstanceOf: Observation
@@ -26,5 +28,5 @@ Description:      "holding typical values for PCS Trasnport event entries."
 * status = #final
 * code = $loinc#88671-3
 * value[x] = $NEMSIS#4214017
-
+* subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 

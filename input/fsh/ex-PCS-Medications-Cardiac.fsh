@@ -8,6 +8,7 @@ Usage: #inline
 * doseQuantity.unit = "Milligrams (mg)"
 * route = $NEMSIS#9927035
 * timing.code = http://hl7.org/fhir/ValueSet/timing-abbreviation#QD
+* subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 
 Instance: Inline-Instance-for-Medication-warfarin
 InstanceOf: MedicationIPS
@@ -15,6 +16,7 @@ Usage: #inline
 * id = "ba2837b7-bdf5-4178-b422-a808631b2197"
 * status = #active
 * code = $RxNorm#11289 
+* subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 
 Instance: Inline-Instance-for-MedicationStatementIPS-minoxidil
 InstanceOf: MedicationStatementIPS
@@ -26,6 +28,7 @@ Usage: #inline
 * doseQuantity.unit = "Milligrams (mg)"
 * route = $NEMSIS#9927035
 * timing.code = http://hl7.org/fhir/ValueSet/timing-abbreviation#BID
+* subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 
 Instance: Inline-Instance-for-Medication-minoxidil
 InstanceOf: MedicationIPS
@@ -33,7 +36,7 @@ Usage: #inline
 * id = "25935fdd-f880-4a67-9b6d-25158fabe165"
 * status = #active
 * code = $RxNorm#6984  
-
+* subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 
 
 
@@ -47,6 +50,7 @@ Usage: #inline
 * doseQuantity.value = 12
 * doseQuantity.unit = "Liters Per Minute (LPM [gas])"
 * route = $NEMSIS#9927065
+* subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 
 Instance: Inline-Instance-for-MedicationAdministration-oxygen
 InstanceOf: MedicationAdministration
@@ -58,13 +62,14 @@ Usage: #inline
 * performer = Reference(Practitioner/29eabcea-38e6-11ec-8d3d-0242ac130003)
 * route = $NEMSIS#9927065
 //Note: how to represent the Imporvement of patient status after medication Administration
+* subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 
 Instance: Inline-Instance-for-Medication-oxygen
 InstanceOf: MedicationIPS
 Usage: #inline
 * id = "1ba55a0b-671d-4c98-9b79-97edcd6e7697"
 * code = $RxNorm#7806
-
+* subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 
 
 Instance: Inline-Instance-for-medicationsAdministered-epinephrine
@@ -77,6 +82,7 @@ Usage: #inline
 * doseQuantity.value = 1
 * doseQuantity.unit = "Milligrams (mg)"
 * route = $NEMSIS#9927023
+* subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 
 Instance: Inline-Instance-for-MedicationAdministration-epinephrine
 InstanceOf: MedicationAdministration
@@ -88,13 +94,14 @@ Usage: #inline
 * performer = Reference(Practitioner/26aa91b8-38e6-11ec-8d3d-0242ac130003)
 * route = $NEMSIS#99270235
 //Note: how to represent the Imporvement of patient status after medication Administration
+* subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 
 Instance: Inline-Instance-for-Medication-epinephrine
 InstanceOf: MedicationIPS
 Usage: #inline
 * id = "06af537f-8ead-4b0d-85ee-6c0da2ada4b2"
 * code = $RxNorm#317361
-
+* subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 
 
 
@@ -108,6 +115,7 @@ Usage: #inline
 * doseQuantity.value = 5
 * doseQuantity.unit = "Milligrams per Kilogram (mg/kg)"
 * route = $NEMSIS#9927023
+* subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 
 Instance: Inline-Instance-for-MedicationAdministration-amiodarone
 InstanceOf: MedicationAdministration
@@ -120,9 +128,11 @@ Usage: #inline
 * route = $NEMSIS#99270235
 //Note: how to represent the Imporvement of patient status after medication Administration
 //Note: how to represent medication medication authorization type
+* subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 
 Instance: Inline-Instance-for-Medication-amiodarone
 InstanceOf: MedicationIPS
 Usage: #inline
 * id = "955427a5-3d44-4dfe-82a4-da83c234e7d4"
 * code = $RxNorm#703
+* subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)

@@ -53,7 +53,7 @@ Usage: #inline
 * effectiveDateTime = "2021-10-06T10:52:03-07:00"
 * subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 
-Instance: ex-EMS-Cardiac-Patient-Vitals-End-Tidal-Carbon-Dioxide-(ETCO2)-1
+Instance: ex-EMS-Cardiac-Patient-Vitals-End-Tidal-Carbon-Dioxide-ETCO2-1
 InstanceOf: http://hl7.org/fhir/StructureDefinition/vitalsigns
 Usage: #inline
 * id = 381975fa-3be7-11ec-8d3d-0242ac130003
@@ -63,7 +63,7 @@ Usage: #inline
 * effectiveDateTime = "2021-10-06T10:52:03-07:00"
 * subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 
-Instance: ex-EMS-Cardiac-Patient-Vitals-Carbon-Monoxide-(CO)-1
+Instance: ex-EMS-Cardiac-Patient-Vitals-Carbon-Monoxide-CO-1
 InstanceOf: http://hl7.org/fhir/StructureDefinition/vitalsigns
 Usage: #inline
 * id = 64b3acd4-3be7-11ec-8d3d-0242ac130003
@@ -246,7 +246,7 @@ Usage: #inline
 * effectiveDateTime = "2021-10-06T10:53:18-07:00"
 * subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 
-Instance: ex-EMS-Cardiac-Patient-Vitals-End-Tidal-Carbon-Dioxide-(ETCO2)-2
+Instance: ex-EMS-Cardiac-Patient-Vitals-End-Tidal-Carbon-Dioxide-ETCO2-2
 InstanceOf: http://hl7.org/fhir/StructureDefinition/vitalsigns
 Usage: #inline
 * id = 4757a8f6-5765-4333-b5de-ca31a25553c2
@@ -257,7 +257,7 @@ Usage: #inline
 * effectiveDateTime = "2021-10-06T10:53:18-07:00"
 * subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 
-Instance: ex-EMS-Cardiac-Patient-Vitals-Carbon-Monoxide-(CO)-2
+Instance: ex-EMS-Cardiac-Patient-Vitals-Carbon-Monoxide-CO-2
 InstanceOf: http://hl7.org/fhir/StructureDefinition/vitalsigns
 Usage: #inline
 * id = ba7139e1-9064-4293-94e6-4f5e9ccc972a
@@ -452,7 +452,7 @@ Usage: #inline
 * effectiveDateTime = "2021-10-06T11:07:04-07:00"
 * subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 
-Instance: ex-EMS-Cardiac-Patient-Vitals-End-Tidal-Carbon-Dioxide-(ETCO2)-3
+Instance: ex-EMS-Cardiac-Patient-Vitals-End-Tidal-Carbon-Dioxide-ETCO2-3
 InstanceOf: http://hl7.org/fhir/StructureDefinition/vitalsigns
 Usage: #inline
 * id = "caf96813-eada-4b1e-a4e6-99e446834bbc"
@@ -463,7 +463,7 @@ Usage: #inline
 * effectiveDateTime = "2021-10-06T11:07:04-07:00"
 * subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 
-Instance: ex-EMS-Cardiac-Patient-Vitals-Carbon-Monoxide-(CO)-3
+Instance: ex-EMS-Cardiac-Patient-Vitals-Carbon-Monoxide-CO-3
 InstanceOf: http://hl7.org/fhir/StructureDefinition/vitalsigns
 Usage: #inline
 * id = 0e4e5415-8a8b-470e-9ce2-05a79f7f48ae

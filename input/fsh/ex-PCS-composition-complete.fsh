@@ -1,4 +1,4 @@
-Instance:   ex-PCS-Composition-CompleteReport_Cardiac
+Instance:   ex-PCS-Composition-CompleteReport-Cardiac
 InstanceOf: IHE.PCC.PCS.Composition.CR
 Title: "Example of a Paramedicine Care Summary Complete Report Composition"
 Description:      "holding typical values for PCS Complete Report"
@@ -7,7 +7,13 @@ Description:      "holding typical values for PCS Complete Report"
 * subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 * encounter = Reference(Encounter/fa51192c-c36a-4b0a-84c1-9dc6fded7c2c)
 * event.code = http://terminology.hl7.org/CodeSystem/v3-ActClass#ENC
+* date = "2022-01-25"
+* author = Reference(Organization/1a2364d6-418f-11ec-81d3-0242ac130003)
+* title = "TODO: JFM not sure what the title should be"
 
+* section[sectionMedications].title = "TODO: JFM some medication title"
+* section[sectionMedications].text.status = #additional
+* section[sectionMedications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO: JFM some medicaitons text</div>"
 * section[sectionMedications].entry[+] = Reference(MedicationStatementIPS/ba2837b7-bdf5-4178-b422-a808631b2197)
 * section[sectionMedications].entry[+] = Reference(MedicationStatementIPS/48991823-f1ca-4a59-95cd-5d0a9bf88ac3)
 * section[sectionMedications].entry[+] = Reference(MedicationStatementIPS/cb66a3b4-e5fe-4176-860d-eab731b2dae3)
@@ -15,26 +21,47 @@ Description:      "holding typical values for PCS Complete Report"
 * section[sectionMedications].entry[+] = Reference(MedicationStatementIPS/b05f68a2-1922-4fca-a94a-03acc1731044)
 //Note: how to indicate information was indicated by family on scene
 
+* section[sectionAllergies].title = "TODO: JFM some allergies section title"
+* section[sectionAllergies].text.status = #additional
+* section[sectionAllergies].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO: JFM some allergies section text</div>"
 * section[sectionAllergies].entry[+] = Reference(AllergyIntoleranceUvIps/5ff3b0f9-ec3a-4513-898c-b3eb9c506383)
 * section[sectionAllergies].entry[+] = Reference(AllergyIntoleranceUvIps/03974696-97cc-4a76-ba0a-d790c79fc07d)
 * section[sectionAllergies].entry[+] = Reference(AllergyIntoleranceUvIps/082413b5-c9f9-4178-9ffb-821665a28cfe)
 * section[sectionAllergies].entry[+] = Reference(AllergyIntoleranceUvIps/a46082d2-e29a-450f-a8b7-d7fe57257ff7)
 //Note: how to indicate information was indicated by family on scene
 
+* section[sectionProblems].title = "TODO: JFM some problems section title"
+* section[sectionProblems].text.status = #additional
+* section[sectionProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO: JFM some problems section text</div>"
 * section[sectionProblems].entry[+] = Reference(ConditionUvIps/8c5f6d03-ec3c-412f-aa81-13690942a94a)
 
+* section[sectionProceduresHx].title = "TODO: JFM some Hx section title"
+* section[sectionProceduresHx].text.status = #additional
+* section[sectionProceduresHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO: JFM some Hx section text</div>"
 * section[sectionProceduresHx].entry[+] = Reference(ProcedureUvIps/2e26fa83-b94e-437a-8d3d-0dd4c3772bdf)
 //Note: how to indicate information was indicated by family on scene
 
+* section[sectionImmunizations].title = "TODO: JFM some sectionImmunizations section title"
+* section[sectionImmunizations].text.status = #additional
+* section[sectionImmunizations].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO: JFM some sectionImmunizations section text</div>"
 * section[sectionImmunizations].entry[+] = Reference(ImmunizationUvIps/2202687e-d56a-4b99-a750-9d976f848b08)
 //Note: how to indicate information was indicated by family on scene, current reportOrigin is recall but may need to be something else to indicate patent family recall
 
+* section[sectionPastIllnessHx].title = "TODO: JFM some sectionPastIllnessHx section title"
+* section[sectionPastIllnessHx].text.status = #additional
+* section[sectionPastIllnessHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO: JFM some sectionPastIllnessHx section text</div>"
 * section[sectionPastIllnessHx].entry[+] = Reference(ConditionUvIps/122ae414-ca52-4e54-812b-a885eb65ee7a)
 //Note: how to indicate information was indicated by family on scene
 
+* section[sectionPregnancyHx].title = "TODO: JFM some sectionPregnancyHx section title"
+* section[sectionPregnancyHx].text.status = #additional
+* section[sectionPregnancyHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO: JFM some sectionPregnancyHx section text</div>"
 * section[sectionPregnancyHx].entry[+] = Reference(ObservationPregnancyStatusUvIps/754e0c73-f094-494b-90e6-9c170a00dd99)
 
 
+* section[sectionVitalSigns].title = "TODO: JFM some sectionVitalSigns section title"
+* section[sectionVitalSigns].text.status = #additional
+* section[sectionVitalSigns].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO: JFM some sectionVitalSigns section text</div>"
 * section[sectionVitalSigns].entry[+] = Reference(VitalSigns/f37d99c2-3be5-11ec-8d3d-0242ac130003)
 * section[sectionVitalSigns].entry[+] = Reference(VitalSigns/e13e79e2-3be6-11ec-8d3d-0242ac130003)
 * section[sectionVitalSigns].entry[+] = Reference(VitalSigns/964b6a8e-cf0a-4441-9e11-4a864c3cfa29)
@@ -70,6 +97,9 @@ Description:      "holding typical values for PCS Complete Report"
 * section[sectionVitalSigns].entry[+] = Reference(VitalSigns/72e8c109-c43b-4fe0-b4d8-36d74612f9ea)
 //Note: vitals here are not including the unable to comlete vitals
 
+* section[ProceduresPerformed].title = "TODO: JFM some ProceduresPerformed section title"
+* section[ProceduresPerformed].text.status = #additional
+* section[ProceduresPerformed].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO: JFM some ProceduresPerformed section text</div>"
 * section[ProceduresPerformed].entry[+] = Reference(ProcedureUvIps/4b412a0b-6702-43a4-8d15-8fdfffba5aca)
 * section[ProceduresPerformed].entry[+] = Reference(ProcedureUvIps/1019697f-2e35-46fe-a11e-354e23114299)
 * section[ProceduresPerformed].entry[+] = Reference(ProcedureUvIps/981cc0ff-b310-442a-bbfd-881dc288cb97)
@@ -78,21 +108,36 @@ Description:      "holding typical values for PCS Complete Report"
 * section[ProceduresPerformed].entry[+] = Reference(ProcedureUvIps/9a7d674d-c4ef-4983-9c40-f05696072ae9)
 * section[ProceduresPerformed].entry[+] = Reference(ProcedureUvIps/cca8791c-f577-4abd-82fe-0daae1333d58)
 
+* section[sectionMedicalDevices].title = "TODO: JFM some sectionMedicalDevices section title"
+* section[sectionMedicalDevices].text.status = #additional
+* section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO: JFM some sectionMedicalDevices section text</div>"
 * section[sectionMedicalDevices].entry[+] = Reference(DeviceUseStatementUvIps/37561dc9-42de-499e-aab8-b061c56bfd82)
 
+* section[sectionAdvanceDirectives].title = "TODO: JFM some sectionAdvanceDirectives section title"
+* section[sectionAdvanceDirectives].text.status = #additional
+* section[sectionAdvanceDirectives].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO: JFM some sectionAdvanceDirectives section text</div>"
 * section[sectionAdvanceDirectives].entry[+] = Reference(Consent/d4fb1852-6f33-4117-8fb6-8539f5cd0a18)
-* section[sectionAdvanceDirectives].code = $NEMSIS#9923003
+* section[sectionAdvanceDirectives].code.coding[+] = $NEMSIS#9923003
 
+* section[sectionReviewOfSystems].title = "TODO: JFM some sectionReviewOfSystems section title"
+* section[sectionReviewOfSystems].text.status = #additional
+* section[sectionReviewOfSystems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO: JFM some sectionReviewOfSystems section text</div>"
 * section[sectionReviewOfSystems].entry[+] = Reference(Observation/a4548e60-a780-4a19-9dbb-cf8e00f59813)
 * section[sectionReviewOfSystems].entry[+] = Reference(Observation/ad95c3dc-cd77-48bd-99d1-7bcfe4821bff)
 * section[sectionReviewOfSystems].entry[+] = Reference(Observation/411b16a7-c842-43cc-bd74-738db7205a62)
 * section[sectionReviewOfSystems].entry[+] = Reference(Observation/18a9ce4a-8ff8-4f4e-a7e9-3a13d3f13828)
 * section[sectionReviewOfSystems].entry[+] = Reference(Observation/716b6ce0-d94d-43e0-be3e-95301b4f25e0)
 
+* section[sectionTransportEvent].title = "TODO: JFM some sectionTransportEvent section title"
+* section[sectionTransportEvent].text.status = #additional
+* section[sectionTransportEvent].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO: JFM some sectionTransportEvent section text</div>"
 * section[sectionTransportEvent].entry[+] = Reference(Observation/143b2438-21d1-4b61-bea1-6217332b6afc)
 * section[sectionTransportEvent].entry[+] = Reference(Observation/22cae49a-49da-43aa-95f8-cf4b54a3f5fe)
 * section[sectionTransportEvent].entry[+] = Reference(Observation/8a410888-4ee0-466c-87a8-a09a2d3fc987)
 
+* section[sectionCariacArrestEvent].title = "TODO: JFM some sectionCariacArrestEvent section title"
+* section[sectionCariacArrestEvent].text.status = #additional
+* section[sectionCariacArrestEvent].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO: JFM some sectionCariacArrestEvent section text</div>"
 * section[sectionCariacArrestEvent].entry[+] = Reference(Observation/c099d17e-b0fa-4a89-bd75-ee9c7d855d76)
 * section[sectionCariacArrestEvent].entry[+] = Reference(Observation/9160055d-5aa5-4a53-908e-ae79476b44a1)
 * section[sectionCariacArrestEvent].entry[+] = Reference(Observation/35fc4ee1-fe35-4b68-903e-505085f676fe)
@@ -115,9 +160,15 @@ Description:      "holding typical values for PCS Complete Report"
 //*section[sectionProtocols].entry[ProtocolsUsed][+] = $NEMSIS#9914075
 //*section[sectionProtocols].entry[ProtocolCategory] [=] = $NEMSIS#3602003
 
+* section[sectionCoverage].title = "TODO: JFM some sectionCoverage section title"
+* section[sectionCoverage].text.status = #additional
+* section[sectionCoverage].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO: JFM some sectionCoverage section text</div>"
 * section[sectionCoverage].entry[+] = Reference(Coverage/e84a6e0b-7607-4529-8afc-40a02ebf4d24)
 
 // Note: todo - sectionCareTeamsectionPhysicianCertificationStatement
 
+* section[sectionParamedicineNote].title = "TODO: JFM some sectionParamedicineNote section title"
+* section[sectionParamedicineNote].text.status = #additional
+* section[sectionParamedicineNote].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO: JFM some sectionParamedicineNote section text</div>"
 * section[sectionParamedicineNote].entry = "Pt passed out while at church. Pt's husband initiated CPR while others applied an AED that was in the church. ROSC during transport."
 

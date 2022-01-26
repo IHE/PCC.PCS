@@ -5,10 +5,10 @@ Description: "The patient from which all the Cardiac example resources relate"
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * id = "ea25ec4c-38bd-11ec-8d3d-0242ac130003"
 * identifier.value[+] = "78HU-3D7D"
-* identifier.type[=] = 	http://terminology.hl7.org/ValueSet/v2-0203#PI
+* identifier.type[=] = 	http://terminology.hl7.org/CodeSystem/v2-0203#PI
 //NEMSIS ePatient.01 - EMS Patient ID
 * identifier.value[+] = "S14957440"
-* identifier.type[=] = http://terminology.hl7.org/ValueSet/v2-0203#DL
+* identifier.type[=] = http://terminology.hl7.org/CodeSystem/v2-0203#DL
 //NEMSIS ePatient.21 - Driver's License Number
 * identifier.assigner[=] = Reference(Organization/....)
 //NEMSIS ePatient.20 - State Issuing Driver's License

@@ -18,7 +18,7 @@ Instance:   Inline-Instance-of-ServiceRequest-DispatchCenter
 InstanceOf: Organization
 * id = "09dbf2dd-49bf-4be4-b972-0f6e0bbf4618"
 * identifier.value = "189434"
-* identifier.type = http://terminology.hl7.org/ValueSet/v2-0203#
+* identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#NPI
 //NEMSIS dAgency.04 - EMS Agency State
 * name = "Yuma Police Department"
 
