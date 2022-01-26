@@ -97,16 +97,16 @@ Description:      "holding typical values for PCS Complete Report"
 * section[sectionVitalSigns].entry[+] = Reference(VitalSigns/72e8c109-c43b-4fe0-b4d8-36d74612f9ea)
 //Note: vitals here are not including the unable to comlete vitals
 
-* section[ProceduresPerformed].title = "TODO: JFM some ProceduresPerformed section title"
-* section[ProceduresPerformed].text.status = #additional
-* section[ProceduresPerformed].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO: JFM some ProceduresPerformed section text</div>"
-* section[ProceduresPerformed].entry[+] = Reference(ProcedureUvIps/4b412a0b-6702-43a4-8d15-8fdfffba5aca)
-* section[ProceduresPerformed].entry[+] = Reference(ProcedureUvIps/1019697f-2e35-46fe-a11e-354e23114299)
-* section[ProceduresPerformed].entry[+] = Reference(ProcedureUvIps/981cc0ff-b310-442a-bbfd-881dc288cb97)
-* section[ProceduresPerformed].entry[+] = Reference(ProcedureUvIps/263175c1-e0a7-4ffe-bae0-48a05a0a160a)
-* section[ProceduresPerformed].entry[+] = Reference(ProcedureUvIps/154261bd-e96d-456b-912d-8a8e1f889952)
-* section[ProceduresPerformed].entry[+] = Reference(ProcedureUvIps/9a7d674d-c4ef-4983-9c40-f05696072ae9)
-* section[ProceduresPerformed].entry[+] = Reference(ProcedureUvIps/cca8791c-f577-4abd-82fe-0daae1333d58)
+* section[sectionProceduresPerformed].title = "TODO: JFM some sectionProceduresPerformed section title"
+* section[sectionProceduresPerformed].text.status = #additional
+* section[sectionProceduresPerformed].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO: JFM some sectionProceduresPerformed section text</div>"
+* section[sectionProceduresPerformed].entry[+] = Reference(ProcedureUvIps/4b412a0b-6702-43a4-8d15-8fdfffba5aca)
+* section[sectionProceduresPerformed].entry[+] = Reference(ProcedureUvIps/1019697f-2e35-46fe-a11e-354e23114299)
+* section[sectionProceduresPerformed].entry[+] = Reference(ProcedureUvIps/981cc0ff-b310-442a-bbfd-881dc288cb97)
+* section[sectionProceduresPerformed].entry[+] = Reference(ProcedureUvIps/263175c1-e0a7-4ffe-bae0-48a05a0a160a)
+* section[sectionProceduresPerformed].entry[+] = Reference(ProcedureUvIps/154261bd-e96d-456b-912d-8a8e1f889952)
+* section[sectionProceduresPerformed].entry[+] = Reference(ProcedureUvIps/9a7d674d-c4ef-4983-9c40-f05696072ae9)
+* section[sectionProceduresPerformed].entry[+] = Reference(ProcedureUvIps/cca8791c-f577-4abd-82fe-0daae1333d58)
 
 * section[sectionMedicalDevices].title = "TODO: JFM some sectionMedicalDevices section title"
 * section[sectionMedicalDevices].text.status = #additional
@@ -169,6 +169,5 @@ Description:      "holding typical values for PCS Complete Report"
 
 * section[sectionParamedicineNote].title = "TODO: JFM some sectionParamedicineNote section title"
 * section[sectionParamedicineNote].text.status = #additional
-* section[sectionParamedicineNote].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">TODO: JFM some sectionParamedicineNote section text</div>"
-* section[sectionParamedicineNote].entry = "Pt passed out while at church. Pt's husband initiated CPR while others applied an AED that was in the church. ROSC during transport."
+* section[sectionParamedicineNote].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pt passed out while at church. Pt's husband initiated CPR while others applied an AED that was in the church. ROSC during transport.</div>"
 
