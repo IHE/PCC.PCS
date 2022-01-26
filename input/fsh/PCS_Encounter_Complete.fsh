@@ -1,3 +1,5 @@
+//TODO: Should this be modeled on https://loinc.org/67796-3/ ?
+
 Profile:   IHE_PCS_Encounter_CompleteReport
 Parent: Encounter
 Id:             IHE.PCC.PCS.Encounter.CompleteReport

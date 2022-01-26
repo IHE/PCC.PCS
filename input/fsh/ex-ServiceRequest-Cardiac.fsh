@@ -12,7 +12,7 @@ Description:      "holding typical values for a PCS service request"
 * performer = Reference(Organization/09dbf2dd-49bf-4be4-b972-0f6e0bbf4618)
 * reasonCode = $NEMSIS#2301019
 //Note: eDispatch.01 - Dispatch Reason
-
+* intent = #option
 
 Instance:   Inline-Instance-of-ServiceRequest-DispatchCenter
 InstanceOf: Organization

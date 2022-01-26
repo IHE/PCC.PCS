@@ -1,5 +1,5 @@
 Instance:   example-PCS-Encounter-Complete-Cardiac
-InstanceOf: IHE.PCC.PCS.Encounter.CompleteReport
+InstanceOf: IHE_PCS_Encounter_CompleteReport
 Title: "Example of PCS CompleteReport for a Cardiac Encounter"
 Description:      "holding typical values for a Cardiac Encounter in the PCS CompleteReport"
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
