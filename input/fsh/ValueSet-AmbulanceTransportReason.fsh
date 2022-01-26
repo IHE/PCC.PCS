@@ -13,10 +13,10 @@ Id: NEMSIS.Ambulance.Transport.Reason.Code.VS
 
 
 CodeSystem:  HARQ
-Name: "Accredited Standards Committee X12"
-Organization Type: 	"Standards Development"
-Abbreviation: 	ASC X12
-URL: 	"Accredited Standards Committee X12 Exit Disclaimer [www.x12.org]"
+//Name: "Accredited Standards Committee X12"
+//Organization Type: 	"Standards Development"
+//Abbreviation: 	ASC X12
+//URL: 	"Accredited Standards Committee X12 Exit Disclaimer [www.x12.org]"
 Title: "Agency for Healthcare Reasearch and Quality"
 Id: HARQ
 * #A "Patient was transported to nearest facility for care of symptoms, complaints, or both "

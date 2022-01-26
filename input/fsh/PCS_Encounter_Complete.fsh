@@ -1,3 +1,5 @@
+//TODO: Should this be modeled on https://loinc.org/67796-3/ ?
+
 Profile:   IHE_PCS_Encounter_CompleteReport
 Parent: Encounter
 Id:             IHE.PCC.PCS.Encounter.CompleteReport
@@ -51,19 +53,20 @@ An IHE PCS Encounter Complete Report resource is used to deffine the full emerge
 * serviceProvider 1..1
 * extension contains BarriersToPatientCare named Barriers 0..* 
 * extension contains Transport named Transport 1..1
-* extension contains Incident named Incident 1..1
+//* extension contains Incident named Incident 1..1
 * extension contains MassCasualtyIncident named MassCasualtyIncident 0..1
 
-* location.entry ^slicing.discriminator.type = ##pattern
-* location.entry ^slicing.discriminator.path = "encounter.location"
-* location.entry ^slicing.rules = #open
-* location.entry ^slicing.ordered = false
-* location.entry ^slicing.description = "Slicing to accomodate the different locations that take place during a Paramedicine Encounter"
-* entry contains
-	Ambulance 1..1 and
-	VehicalDispatch 0..1 and
-	Scene 1..1 and
-	Destination 0..1 and
+//TODO: JFM removed this slice definition because it does not define the slices it contains
+//* location.entry ^slicing.discriminator.type = ##pattern
+//* location.entry ^slicing.discriminator.path = "encounter.location"
+//* location.entry ^slicing.rules = #open
+//* location.entry ^slicing.ordered = false
+//* location.entry ^slicing.description = "Slicing to accomodate the different locations that take place during a Paramedicine Encounter"
+//* entry contains
+//	Ambulance 1..1 and
+//	VehicalDispatch 0..1 and
+//	Scene 1..1 and
+//	Destination 0..1 and
 
 Extension: StatusSubType
 Id: StatusSubType
@@ -82,7 +85,7 @@ Id: StatusHistoryObservation
 Title: "Status History Observations"
 Description: "Observatons related to the encounter status"
 * extension contains
-	Delays 0..*
+	Delays 0..* and
 	OdometerReadings 0..*
 * entry[Delays].valueCodeableConcept
 * entry[OdometerReadings].valueQuantity
@@ -95,10 +98,11 @@ Description: "The documentation of response mode techniques used for this EMS re
 * valueCodeableConcept from NEMSIS.Additional.Response.Mode.Descriptors.VS (example)
 
 Extension: Barriers
-Id: BarriersToCare
+Id: BarriersToPatientCare
 Title: "Barriers To Patient Care"
 Description: "Indication of whether or not there were any patient specific barriers to serving the patient."
-* extension[BarriersToPatientCare].valueCodeableConcept from NEMSIS.Barriers.to.Patient.Care.VS (example)
+* value[x] only CodeableConcept
+* valueCodeableConcept from NEMSIS.Barriers.to.Patient.Care.VS (example)
 
 Extension: Transport
 Id: Transport
@@ -114,7 +118,7 @@ Description: "Transport Information for the encounter."
 	RefusalReason 0..*
 * extension[Priority].valueCodeableConcept from NEMSIS.Transport.Mode.from.Scene.VS (example)
 * extension[PriorityDescriptors].valueCodeableConcept from NEMSIS.Additional.Transport.Mode.Descriptors.VS (example)  
-* extension[NumberofPatients].value[x] 
+* extension[NumberofPatients].valueInteger
 * extension[TansportReasonCode].valueCodeableConcept
 * extension[Disposition].valueCodeableConcept from NEMSIS.Transport.Disposition.VS (example) 
 * extension[DestinationReason].valueCodeableConcept from NEMSIS.Reason.for.Choosing.Destination.VS (example) 
@@ -133,5 +137,5 @@ Description: "The information reatlated to Paramedicine encounters for mass casu
 * extension[MassCasualtyIncidentIndicator].valueCodeableConcept from http://terminology.hl7.org/ValueSet/v2-0136
 * extension[NumberofPatients].value[x]
 * extension[TriageClassification].valueCodeableConcept from NEMSIS.Triage.Classification.for.MCI.Patient.VS (example)
-* extension[DisasterType].valueCodeableConcept from NEMSIS.Natural.Suspected.Intentional.or.Unintentional.Disaster.VS (example)
+* extension[DisasterType].valueCodeableConcept from NEMSIS.Natural.Suspected.Disaster.VS (example)
 
