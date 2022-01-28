@@ -56,7 +56,11 @@ Extension: StatusHistoryObservation
 Id: StatusHistoryObservation
 Title: "Status History Observations"
 Description: "Observatons related to the encounter status"
-* entry only Reference(Observation)
+* extension contains
+	Delays 0..* and
+	OdometerReadings 0..*
+* entry[Delays].valueCodeableConcept
+* entry[OdometerReadings].valueQuantity
 
 Extension: Barriers
 Id: BarriersToPatientCare
