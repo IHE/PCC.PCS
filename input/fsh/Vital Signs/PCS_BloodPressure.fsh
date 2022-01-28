@@ -8,7 +8,7 @@ Description:    "A profile on the Observation that declares how FooBar will Crea
 * category = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs
 // This shows how to slice to force two values
 * code.coding ^slicing.discriminator.type = #value
-* code.coding ^slicing.discriminator.path = "$this"
+* code.coding ^slicing.discriminator.path = "resolve()"
 * code.coding ^slicing.rules = #closed
 * code.coding 2..2
 * code.coding contains loincCode1 1..1 and loincCode2 1..1
