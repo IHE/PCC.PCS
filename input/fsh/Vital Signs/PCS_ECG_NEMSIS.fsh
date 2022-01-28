@@ -13,9 +13,11 @@ Description:    "The type of ECG associated with the cardiac rhythm."
 * note 0..1
 
 Instance:   ex-PCS_ECG_Type_NEMSIS
-InstanceOf: PCS_ECG_Type_NEMSIS
+InstanceOf: PCS.ECG.Type.NEMSIS
 Title: "Example of PCS ECG Type NEMSIS"
 Description:      "holding typical values for a NEMSIS ECG Vital Sign"
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * status = #final
+* subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
+* effectiveDateTime = 2022-01-17T07:18:53-07:00
 * valueCodeableConcept = $loinc#LA18667-8
