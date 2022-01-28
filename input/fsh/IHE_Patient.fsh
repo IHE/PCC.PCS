@@ -21,7 +21,7 @@ Description:      "The IHE Patient Resource to include additional Patient elemen
 Extension: Race
 Id: Race
 Description: "Race(s) that best describes what the patient considers himself/herself to be."
-* extension[Race].valueCodeableConcept from (example)
+* extension[Race].valueCodeableConcept from OmbRaceCategories (example)
 //Note: In some jurisdictions, it is prohibited to send race and/or ethnicity. Use of this option may be constrained by national extension.  
 
 Extension: Ethnicity
@@ -71,6 +71,6 @@ Description:      "The IHE Patient US Extension incorperates the requirements fr
 Extension: HomeCensusTract
 Id: address.HomeCensusTract
 Description: "The census tract in which the patient lives."
-* extension [HomeCensusTract].value[x] = valueString
+* extension value[x] = valueString
 
 
