@@ -22,15 +22,13 @@ Extension: Race
 Id: Race
 Description: "Race(s) that best describes what the patient considers himself/herself to be."
 * extension[Race].value[x] = valueCodeableConcept
-//Note: In some jurisdictions, it is prohibited to send race and/or ethnicity. Use of this option may be 
-constrained by national extension.  
+//Note: In some jurisdictions, it is prohibited to send race and/or ethnicity. Use of this option may be constrained by national extension.  
 
 Extension: Ethnicity
 Id: Ethnicity
 Description: "Patient’s ethnicity"
 * extension[Ethnicity].value[x] = valueCodeableConcept
-//Note: In some jurisdictions, it is prohibited to send race and/or ethnicity. Use of this option may be 
-constrained by national extension.  
+//Note: In some jurisdictions, it is prohibited to send race and/or ethnicity. Use of this option may be constrained by national extension.  
 
 Extension: Age 
 Id: Age
@@ -39,7 +37,7 @@ Description: "The Patient age that is documented when exact BirthDate is unknown
 
 
 Extension: AlternativeResidence
-ID: AlternativeResidence
+Id: AlternativeResidence
 Description: "The Patient Address informaton that indicates patient address when it cannot be that is documented when exact address, such as homelessness, or migrant worker status."
 * extension[AlternativeResidence].CodableConcept from IHE.Patient.Alternative.Residence.VS (extensible)
 
@@ -57,8 +55,8 @@ Title: "IHE Patient US Extension"
 Description:      "The IHE Patient US Extension incorperates the requirements from both of hl7's International patient Summary, US-core-Patient, and IHE's patient resources."
 
 
-* extension Race contains http://hl7.org/fhir/us/core/StructureDefinition/us-core-race
-* extension Ethnicity contains http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity
+* extension contains http://hl7.org/fhir/us/core/StructureDefinition/us-core-race
+* extension contains http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity
 * extension contains http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex
 //Note: Exension UC core race ethnicity what to do , replace, profile on top of ??
 
