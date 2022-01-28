@@ -23,7 +23,6 @@ OPEN ISSUE: How to properly represent location type in relation to the encounter
 
 * identifier 1..*
 * status 1..1
-* status = #in-progress
 * statusHistory 0..*
 * extension contains StatusSubType named StatusSubType 0..*
 * extension contains StatusHistoryObservation named StatusHistoryObservation 0..*
@@ -57,7 +56,7 @@ Extension: StatusHistoryObservation
 Id: StatusHistoryObservation
 Title: "Status History Observations"
 Description: "Observatons related to the encounter status"
-* extension only Reference(Observation)
+* entry only Reference(Observation)
 
 Extension: Barriers
 Id: BarriersToPatientCare

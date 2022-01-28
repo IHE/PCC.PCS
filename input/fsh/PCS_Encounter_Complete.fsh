@@ -46,5 +46,11 @@ An IHE PCS Encounter Complete Report resource is used to deffine the full emerge
 //condition.category will = encounter-diagnosis and primary and scondary impressions should be indicated with the Diagnosis rank Number
 * serviceProvider 1..1
 * extension contains Transport named Transport 1..1
-* extension contains MassCasualtyIncident named MassCasualtyIncident 0..1
+
+Extension: PriorityDescriptors
+Id: PriorityDescriptors
+Title: "Priority Descriptors"
+Description: "The documentation of response mode techniques used for this EMS response."
+* value[x] only CodeableConcept
+* valueCodeableConcept from NEMSIS.Additional.Response.Mode.Descriptors.VS (example)
 
