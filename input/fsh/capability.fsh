@@ -1,11 +1,11 @@
-Instance: IHE.FooBar.client
+Instance: IHE.PCS.Client
 InstanceOf: CapabilityStatement
 Usage: #definition
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\t\tCapabilityStatement for Client Actor in the IHE IT Infrastructure Technical Framework Supplement\r\n\t\t\t<a href=\"https://profiles.ihe.net/ITI/TF/Volume1/ch-38.html\">FooBar</a>\r\n\t\tThe IHE Profile text is Normative, this conformance resource is Informative.</div>"
-* url = "http://ihe.net/fhir/CapabilityStatement/capabilitystatement-IHE.FooBar.client"
-* name = "IHE_FooBar_client"
-* title = "IHE FooBar client"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\t\tCapabilityStatement for Client Actor in the IHE IT Infrastructure Technical Framework Supplement\r\n\t\t\t<a href=\"https://profiles.ihe.net/ITI/TF/Volume1/ch-38.html\">PCS</a>\r\n\t\tThe IHE Profile text is Normative, this conformance resource is Informative.</div>"
+* url = "http://ihe.net/fhir/CapabilityStatement/capabilitystatement-IHE.PCS.client"
+* name = "IHE_PCS_Client"
+* title = "IHE PCS Client"
 * status = #active
 * experimental = false
 * date = "2018-04-13"
@@ -16,14 +16,14 @@ Usage: #definition
 * contact[+].name = "John Moehrke"
 * contact[=].telecom.system = #email
 * contact[=].telecom.value = "JohnMoehrke@gmail.com"
-* description = "CapabilityStatement for Client Actor in the IHE IT Infrastructure Technical Framework Supplement IHE FooBar. See https://profiles.ihe.net/ITI/TF/Volume1/ch-38.html. The IHE Profile text is Normative, this conformance resource is Informative."
+* description = "CapabilityStatement for Client Actor in the IHE IT Infrastructure Technical Framework Supplement IHE PCS Client. See https://profiles.ihe.net/ITI/TF/Volume1/ch-38.html. The IHE Profile text is Normative, this conformance resource is Informative."
 * copyright = "IHE http://www.ihe.net/Governance/#Intellectual_Property"
 * kind = #requirements
 * fhirVersion = #4.0.1
 * format[0] = #application/fhir+xml
 * format[+] = #application/fhir+json
 * rest.mode = #client
-* rest.documentation = "FooBar client will query for Patient resources matching a sub-set of the FHIR core Patient resource query parameters"
+* rest.documentation = "IHE PCS client will query for Patient resources matching a sub-set of the FHIR core Patient resource query parameters"
 * rest.security.cors = false
 * rest.security.description = "None mandated by IHE, encouraged IHE-IUA or SMART-on-FHIR"
 * rest.resource.type = #Patient
@@ -83,14 +83,14 @@ Usage: #definition
 * rest.resource.searchParam[=].documentation = "When the resource version last changed"
 * rest.interaction.code = #search-system
 
-Instance: IHE.FooBar.server
+Instance: IHE.PCS.server
 InstanceOf: CapabilityStatement
 Usage: #definition
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\r\nCapabilityStatement for SERVER Actor in the IHE\r\n<a href=\"https://profiles.ihe.net/ITI/TF/Volume1/ch-38.html\">FooBar</a>.\r\nThe IHE Profile text is Normative, this conformance resource is Informative.</div>"
-* url = "http://ihe.net/fhir/CapabilityStatement/capabilitystatement-IHE.FooBar.server"
-* name = "IHE_FooBar_supplier"
-* title = "IHE FooBar Server"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\r\nCapabilityStatement for SERVER Actor in the IHE\r\n<a href=\"https://profiles.ihe.net/ITI/TF/Volume1/ch-38.html\">PCS</a>.\r\nThe IHE Profile text is Normative, this conformance resource is Informative.</div>"
+* url = "http://ihe.net/fhir/CapabilityStatement/capabilitystatement-IHE.PCS.server"
+* name = "IHE_PCS_supplier"
+* title = "IHE PCS Server"
 * status = #active
 * experimental = false
 * date = "2019-07-05"
@@ -101,14 +101,14 @@ Usage: #definition
 * contact[+].name = "John Moehrke"
 * contact[=].telecom.system = #email
 * contact[=].telecom.value = "JohnMoehrke@gmail.com"
-* description = "CapabilityStatement for Server Actor in the IHE IT Infrastructure Technical Framework Supplement IHE FooBar. See https://profiles.ihe.net/ITI/TF/Volume1/ch-38.html. The IHE Profile text is Normative, this conformance resource is Informative."
+* description = "CapabilityStatement for Server Actor in the IHE IT Infrastructure Technical Framework Supplement IHE PCS. See https://profiles.ihe.net/ITI/TF/Volume1/ch-38.html. The IHE Profile text is Normative, this conformance resource is Informative."
 * copyright = "IHE http://www.ihe.net/Governance/#Intellectual_Property"
 * kind = #requirements
 * fhirVersion = #4.0.1
 * format[0] = #application/fhir+xml
 * format[+] = #application/fhir+json
 * rest.mode = #server
-* rest.documentation = "FooBar server provides capability to query for Patient resources matching a sub-set of the FHIR core Patient resource query parameters"
+* rest.documentation = "PCS server provides capability to query for Patient resources matching a sub-set of the FHIR core Patient resource query parameters"
 * rest.security.cors = false
 * rest.security.description = "None mandated by IHE, encouraged IHE-IUA or SMART-on-FHIR"
 * rest.resource.type = #Patient
