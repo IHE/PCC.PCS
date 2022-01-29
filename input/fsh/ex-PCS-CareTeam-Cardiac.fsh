@@ -6,7 +6,7 @@ Description:      "holding typical values for a PCS Care Team, otherwise known a
 * status = #active 
 * category = $loinc#LA27976-2
 * name = "EMS Crew"
-* encounter = Reference(encounter/)
+* encounter = Reference(example-PCS-Encounter-Complete-Cardiac)
 * participant[+].role = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#PPRF
 * participant[=].member = Reference(Practitioner/21a78dce-38e6-11ec-8d3d-0242ac130003)
 * participant[+].role = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#SPRF
