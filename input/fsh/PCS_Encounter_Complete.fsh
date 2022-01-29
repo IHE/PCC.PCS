@@ -44,9 +44,7 @@ An IHE PCS Encounter Complete Report resource is used to deffine the full emerge
 * period 1..1
 * diagnosis 1..*
 //condition.category will = encounter-diagnosis and primary and scondary impressions should be indicated with the Diagnosis rank Number
-* serviceProvider 1..1
-* Transport.Priority 1..1
-* Transport.NumberofPatients 1..1
+
 
 Extension: PriorityDescriptors
 Id: PriorityDescriptors
