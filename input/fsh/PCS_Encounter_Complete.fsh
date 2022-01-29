@@ -45,7 +45,7 @@ An IHE PCS Encounter Complete Report resource is used to deffine the full emerge
 * diagnosis 1..*
 //condition.category will = encounter-diagnosis and primary and scondary impressions should be indicated with the Diagnosis rank Number
 * serviceProvider 1..1
-* extension contains Transport named Transport 1..1
+* Transport 1..1
 
 Extension: PriorityDescriptors
 Id: PriorityDescriptors
@@ -53,23 +53,3 @@ Title: "Priority Descriptors"
 Description: "The documentation of response mode techniques used for this EMS response."
 * value[x] only CodeableConcept
 * valueCodeableConcept from NEMSIS.Additional.Response.Mode.Descriptors.VS (example)
-
-Extension: Transport
-Id: Transport
-Title: "Transport"
-Description: "Transport Information for the encounter."
-* extension contains
-	Priority 1..1 and
-	PriorityDescriptors 1..* and
-	NumberofPatients 0..1 and 
-	TansportReasonCode 1..* and 
-	Disposition 1..1 and 
-	DestinationReason 1..* and
-	RefusalReason 0..*
-* extension[Priority].valueCodeableConcept from NEMSIS.Transport.Mode.from.Scene.VS (example)
-* extension[PriorityDescriptors].valueCodeableConcept from NEMSIS.Additional.Transport.Mode.Descriptors.VS (example)  
-* extension[NumberofPatients].valueInteger
-* extension[TansportReasonCode].valueCodeableConcept
-* extension[Disposition].valueCodeableConcept from NEMSIS.Transport.Disposition.VS (example) 
-* extension[DestinationReason].valueCodeableConcept from NEMSIS.Reason.for.Choosing.Destination.VS (example) 
-* extension[RefusalReason].valueCodeableConcept from NEMSIS.Reason.for.Refusal.Release.VS (example)
