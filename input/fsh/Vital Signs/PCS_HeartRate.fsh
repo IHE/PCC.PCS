@@ -16,7 +16,7 @@ Description:    "The heart rate vital sign compliant with NEMSIS documentation."
 * note 0..1
 
 
-Instance:   PCS_Heart_Rate_NEMSIS_Example
+Instance:   PCS-Heart-Rate-NEMSIS-Example
 InstanceOf: PCS.Heart.Rate.NEMSIS
 Title: "Example of PCS ECG Type NEMSIS"
 Description:      "holding typical values for a NEMSIS ECG Vital Sign"
@@ -24,12 +24,11 @@ Description:      "holding typical values for a NEMSIS ECG Vital Sign"
 * status = #final
 * subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 * effectiveDateTime = 2022-01-17T07:23:53-07:00
-* valueQuantity = 82
-* valueQuantity.unit = "{beats}/min;{counts/min}"
+* valueQuantity = 82.0 '/min'
 * method = $NEMSIS#3311007
 
 
-Instance:   PCS_Heart_Rate_NEMSIS_Example_NOT_Values
+Instance:   PCS-Heart-Rate-NEMSIS-Example-NOT-Values
 InstanceOf: PCS.Heart.Rate.NEMSIS
 Title: "Example of PCS Heart Rate NEMSIS Example with NOT Values."
 Description:      "Example of PCS ECG Type NEMSIS when there are Not Values Present."
@@ -38,9 +37,9 @@ Description:      "Example of PCS ECG Type NEMSIS when there are Not Values Pres
 * subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 * effectiveDateTime = 2022-01-17T07:23:53-07:00
 * dataAbsentReason = $NEMSIS#7701003
+* method = $NEMSIS#3311007
 
-
-Instance:   PCS_Heart_Rate_NEMSIS_Example_Pertinent_Negatives
+Instance:   PCS-Heart-Rate-NEMSIS-Example-Pertinent-Negatives
 InstanceOf: PCS.Heart.Rate.NEMSIS
 Title: "Example of PCS Heart Rate NEMSIS Example with Pertinent Negatives."
 Description:      "Example of PCS ECG Type NEMSIS when there are Pertinent Negatives Present."
@@ -49,3 +48,4 @@ Description:      "Example of PCS ECG Type NEMSIS when there are Pertinent Negat
 * subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 * effectiveDateTime = 2022-01-17T07:23:53-07:00
 * dataAbsentReason = $NEMSIS#8801023
+* method = $NEMSIS#3311007
