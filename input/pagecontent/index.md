@@ -6,7 +6,7 @@
 This guide is organized into four main sections:
 
 1. Volume I:
-   1. [Paramedicine Care Summary (PCS) Profile](volume-1.md)
+   1. [Paramedicine Care Summary (PCS) Profile](volume-1.html)
 
 2. Volume II: Transaction Detail
    1. [Document Sharing [PCC-1]](PCC-1.html)
@@ -15,11 +15,11 @@ This guide is organized into four main sections:
    1. **TODO: point to your content profiles if you have them**
 
 4. National Extensions
-    4.I [**National Extensions for IHE USA**](volume-4.md)
+    4.I [**National Extensions for IHE USA**](volume-4.html)
 	
 5. Appendix
 	1. **PCS FHIR Composition**
-	[Paramedicine Care Summary International Composition Complete Report](PCS_Composition.fsh)
+	[Paramedicine Care Summary International Composition Complete Report](StructureDefinition-IHE.PCC.PCS.Composition.CR.html)
 	(TODO)[Paramedicine Care Summary International Composition Clinical Subset](PCS_Composition.fsh)
 	(TODO)[Paramedicine Care Summary US-Realm Composition Complete Report](PCS_Composition.fsh)
 	(TODO)[Paramedicine Care Summary US-Realm Composition Clinical Subset](PCS_Composition.fsh)

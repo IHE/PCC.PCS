@@ -65,7 +65,10 @@ pages:
   issues.md:
     title: Open and Closed issues
     generation: markdown
-
+  volume-4.md:
+    title: Z National Extensions
+    generation: markdown
+    
 menu:
   PCS Home: index.html
   Volume 1:
@@ -78,5 +81,7 @@ menu:
     Cross-Profile Considerations: volume-1.html#grouping
   Volume 3:
     "NEMSIS Mapping": NEMSIS-Mapping.html
+  Volume 4:
+    "National Extensions": volume-4.html
   Test Plan: testplan.html
   Artifacts: artifacts.html
