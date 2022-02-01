@@ -5,7 +5,7 @@ Title: "Primary Injury Cause Observation"
 Description:      "contains primary injury cause observations for the patient."
 * code = $loinc#69543-7
 * value[X] 1..1
-* valueCodeableConcept from http://hl7.org/fhir/sid/icd-10 (Recomended) 
+* valueCodeableConcept from http://hl7.org/fhir/sid/icd-10 (recommended) 
 //TODO Value set verify it is the correct reference  
 
 
@@ -16,24 +16,24 @@ Title: "Supplemental Injury Cause"
 Description:      "contains supplemental injury cause observations for the patient."
 * code = $loinc#74292-4
 * value[X] 1..1
-* valueCodeableConcept from http://hl7.org/fhir/sid/icd-10 (Recomended)
+* valueCodeableConcept from http://hl7.org/fhir/sid/icd-10 (recommended)
 
 
-Profile:   PCS_Work Related_Injury_Observation
+Profile:   PCS_Work_Related_Injury_Observation
 Parent: Observation
-Id:             PCS.Work Related.Injury.Observation
+Id:             PCS.Work.Related.Injury.Observation
 Title: "Work Related Injury Observation"
 Description:      "contains work related injury indicator observations for the patient."
 * code = $loinc#67554-6
 * value[X] 1..1
-* valueCodeableConcept from PCS.Yes.No.Unknown.VS (recomended) 
+* valueCodeableConcept from PCS.Yes.No.Unknown.VS (recommended) 
 //TODO verify value set 
 
 ValueSet: PCS_Yes_No_Unknown_VS
 Description: "The values to indicate the Yes, No, Unknown responces."
 Id: PCS.Yes.No.Unknown.VS
-http://terminology.hl7.org/CodeSystem/v2-0532
-http://terminology.hl7.org/CodeSystem/v3-NullFlavor
+* codes from http://terminology.hl7.org/CodeSystem/v2-0532
+* codes from http://terminology.hl7.org/CodeSystem/v3-NullFlavor
 * #Y	"Yes"
 * #N	"No"
 * #UNK	"unknown"
@@ -45,8 +45,8 @@ Id: NEMSIS.Yes.No.Unknown.VS
 * NEMSIS#9922003	"Unknown"
 * NEMSIS#9922005	"Yes"
 
-http://terminology.hl7.org/CodeSystem/v2-0532 
-UNK	unknown
+// http://terminology.hl7.org/CodeSystem/v2-0532 
+// UNK	unknown
 
 
 
@@ -59,7 +59,7 @@ Title: "Height of Fall Observation"
 Description:      "contains supplemental injury cause observations for the patient, specific to fall height."
 * code = $loinc#67501-7
 * value[X] 1..1
-* Value [X] only valueInteger
+* Value[X] only valueInteger
 
  
 
