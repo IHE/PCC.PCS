@@ -490,4 +490,7 @@ Id: NEMSIS
 * #todo1    "TODO: JFM missing code"
 * #4216005  "TODO: JFM sooo"
 * #4214017  "TODO: JFM soooo"
+* #2522001	"Homeless"
+* #2522003	"Migrant Worker"
+* #2522005	"Foreign Visitor"
 

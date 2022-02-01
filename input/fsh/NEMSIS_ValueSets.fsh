@@ -24,6 +24,14 @@ Id: NEMSIS.NOT.Values.VS
 * NEMSIS#7701003	"Not Recorded"
 * NEMSIS#7701005	"Not Reporting"
 
+
+ValueSet: NEMSIS_Alternate_Home_Residence_VS
+Description: "Documentation of the type of patient without a home ZIP/Postal Code."
+Id: NEMSIS.Alternate.Home.Residence.VS
+* NEMSIS#2522001	"Homeless"
+* NEMSIS#2522003	"Migrant Worker"
+* NEMSIS#2522005	"Foreign Visitor"
+
 ValueSet: NEMSIS_Method_of_Heart_RateMMeasurement_VS
 Description: "The method in which the Heart Rate was measured. Values include auscultated, palpated, electronic monitor."
 Id: NEMSIS.Method.of.Heart.Rate.Measurement.VS

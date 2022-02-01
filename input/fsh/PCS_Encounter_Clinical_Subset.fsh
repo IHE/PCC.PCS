@@ -76,7 +76,7 @@ Description: "Transport Information for the encounter."
 * extension contains
 	Priority 0..1 and
 	PriorityDescriptors 0..* and
-	NumberofPatients 0..1 and 
+	NumberofPatients 0..1 and  
 	TansportReasonCode 0..* and 
 	Disposition 0..1 and 
 	DestinationReason 0..* and
