@@ -26,7 +26,7 @@ Description:    "The Abbreviated Injury Scale (AIS©) predot code [LOINC:75890-4
 * subject 1..1
 * subject only Reference(Patient)
 * encounter 1..1
-* hasMember reference(AIS-version and AIS-predot-code)
+* hasMember Reference(AIS_version and AIS_predot_code)
 
 
 
