@@ -41,7 +41,8 @@ the following cardinalities follow the documentation in the PCS profile:
     sectionCoverage 0..1 MS and
 	sectionReviewOfSystems 1..1 MS and 
 	sectionCariacArrestEvent 0..1 and
-	sectionInjuryEvent 0..1
+	sectionInjuryEvent 0..1 and 
+	sectionDispatchSection 0..1
 
 * section[sectionMedicationsAdministered] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionMedicationsAdministered] ^extension.valueString = "Section"
@@ -89,7 +90,16 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionCoverage].entry contains Coverage 0..1 MS
 * section[sectionCoverage].entry[Coverage] only Reference(Coverage)
 
-// TODO define sectionServiceRequest
+
+* section[sectionDispatchSection] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionDispatchSection] ^extension.valueString = "Section"
+* section[sectionDispatchSection] ^short = "Dispatch Section"
+* section[sectionDispatchSection] ^definition = "Information regarding the dispatch process."
+* section[sectionDispatchSection].code = $loinc#67660-1
+* section[sectionDispatchSection].code MS
+* section[sectionDispatchSection].entry ..* MS
+* section[sectionDispatchSection].entry only Reference(ServiceRequest)
+* section[sectionDispatchSection].entry ^definition = "Information related to dispatch instructions"
 
 
 * section[sectionReviewOfSystems] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
