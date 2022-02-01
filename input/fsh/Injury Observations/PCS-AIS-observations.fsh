@@ -10,7 +10,7 @@ Description:    "Contains the observations for the Abbreviated Injury Scale (AIS
 * subject 1..1
 * subject only Reference(Patient)
 * encounter 1..1
-* hasMember Reference(Abbreviated_Injury_Scale_severity_score_AAAM and AIS_predot_code and AIS_version)
+//* hasMember Reference(Abbreviated_Injury_Scale_severity_score_AAAM and AIS_predot_code and AIS_version)
 //Note: verify if this is the right method for doing an observation panel
 
 
