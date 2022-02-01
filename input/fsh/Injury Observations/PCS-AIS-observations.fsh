@@ -10,11 +10,11 @@ Description:    "Contains the observations for the Abbreviated Injury Scale (AIS
 * subject 1..1
 * subject only Reference(Patient)
 * encounter 1..1
-* hasMember reference(Abbreviated.Injury.Scale.severity.score.AAAM and AIS.Predot.Code and AIS.Version)
+* hasMember Reference(Abbreviated_Injury_Scale_severity_score_AAAM and AIS_predot_code and AIS_version)
 //Note: verify if this is the right method for doing an observation panel
 
 
-Profile:        Abbreviated-Injury-Scale-severity-score-AAAM
+Profile:        Abbreviated_Injury_Scale_severity_score_AAAM
 Parent:         Observation
 Id:             Abbreviated.Injury.Scale.severity.score.AAAM
 Title:          "Abbreviated Injury Scale severity score AAAM"
@@ -30,7 +30,7 @@ Description:    "The Abbreviated Injury Scale (AIS©) predot code [LOINC:75890-4
 
 
 
-Profile:        AIS-predot-code
+Profile:        AIS_predot_code
 Parent:         Observation
 Id:             AIS.Predot.Code
 Title:          "AIS Predot Code"
@@ -44,7 +44,7 @@ Description:    "The Abbreviated Injury Scale (AIS©) predot code that reflects 
 * encounter 1..1
 
 
-Profile:        AIS-version
+Profile:        AIS_version
 Parent:         Observation
 Id:             AIS.Version
 Title:          "AIS version"

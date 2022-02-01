@@ -5,7 +5,7 @@ Title: "Primary Injury Cause Observation"
 Description:      "contains primary injury cause observations for the patient."
 * code = $loinc#69543-7
 * value[X] 1..1
-* valueCodeableConcept from http://hl7.org/fhir/sid/icd-10 (recommended) 
+* valueCodeableConcept from http://hl7.org/fhir/sid/icd-10 (preferred) 
 //TODO Value set verify it is the correct reference  
 
 
@@ -16,7 +16,7 @@ Title: "Supplemental Injury Cause"
 Description:      "contains supplemental injury cause observations for the patient."
 * code = $loinc#74292-4
 * value[X] 1..1
-* valueCodeableConcept from http://hl7.org/fhir/sid/icd-10 (recommended)
+* valueCodeableConcept from http://hl7.org/fhir/sid/icd-10 (preferred)
 
 
 Profile:   PCS_Work_Related_Injury_Observation
@@ -26,17 +26,13 @@ Title: "Work Related Injury Observation"
 Description:      "contains work related injury indicator observations for the patient."
 * code = $loinc#67554-6
 * value[X] 1..1
-* valueCodeableConcept from PCS.Yes.No.Unknown.VS (recommended) 
+* valueCodeableConcept from PCS.Yes.No.Unknown.VS (preferred) 
 //TODO verify value set 
 
 ValueSet: PCS_Yes_No_Unknown_VS
 Description: "The values to indicate the Yes, No, Unknown responces."
 Id: PCS.Yes.No.Unknown.VS
-* codes from http://terminology.hl7.org/CodeSystem/v2-0532
-* codes from http://terminology.hl7.org/CodeSystem/v3-NullFlavor
-* #Y	"Yes"
-* #N	"No"
-* #UNK	"unknown"
+* codes from system expandedYes-NoIndicator
 
 ValueSet: NEMSIS_Yes_No_Unknown_VS
 Description: "The NEMSIS Specific Values to indicate the Yes, No, Unknown responces. "
@@ -112,7 +108,7 @@ Description:      "contains Location of impact on the vehicle observations."
 //Description:      "contains the seat the Patient was in a Vehicle injury event observations."
 //* code = $loinc#
 //* value[X] 1..1
-//* value[X] only valueCodeableConcept from (Recomended) 
+//* value[X] only valueCodeableConcept from (preferred) 
 //TODO Identify value set and loinc code 
 
 Profile:   PCS_Use_of_Vehical_Occupant_Safety_Equipment_Observation 
