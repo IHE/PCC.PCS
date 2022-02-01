@@ -19,24 +19,21 @@ Description:      "The IHE Patient Resource to include additional Patient elemen
 Extension: Race
 Id: Race
 Description: "Race(s) that best describes what the patient considers himself/herself to be."
-* extension contains
-	CodeableConcept 0..* MS
-	text 0..1 MS
 * extension[Race].valueCodeableConcept from OmbRaceCategories (example)
 //Note: In some jurisdictions, it is prohibited to send race and/or ethnicity. Use of this option may be constrained by national extension.  
 
 Extension: Ethnicity
 Id: Ethnicity
 Description: "Patient’s ethnicity"
-	CodeableConcept 0..* MS
-	text 0..1 MS
 * extension[Ethnicity].valueCodeableConcept from DetailedEthnicity (example)
 //Note: In some jurisdictions, it is prohibited to send race and/or ethnicity. Use of this option may be constrained by national extension.  
 
-Extension: AlternativeResidence
-Id: AlternativeResidence
-Description: "The Patient Address informaton that indicates patient address when it cannot be that is documented when exact address, such as homelessness, or migrant worker status."
-* extension[AlternativeResidence].CodableConcept from NEMSIS.Alternate.Home.Residence.VS (example)
+
+//Note: waiting on responce to build this into the document
+//Extension: AlternativeResidence
+//Id: AlternativeResidence
+//Description: "The Patient Address informaton that indicates patient address when it cannot be that is documented when exact address, such as homelessness, or migrant worker status."
+//* extension[AlternativeResidence].CodableConcept from NEMSIS.Alternate.Home.Residence.VS (example)
 
 
 
