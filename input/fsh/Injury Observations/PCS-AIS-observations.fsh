@@ -17,7 +17,7 @@ Profile:        Abbreviated_Injury_Scale_severity_score_AAAM
 Parent:         Observation
 Id:             Abbreviated.Injury.Scale.severity.score.AAAM
 Title:          "Abbreviated Injury Scale severity score AAAM"
-Description:    "The Abbreviated Injury Scale (AIS©) predot code is used to determine the AIS severity score, a 6 point ordinal scale where 1 = minor, 2 = moderate, 3 = serious, 4 = severe, 5 = critical, and 6 = maximal (injury is currently untreatable). The AIS severity score indicates the relative risk of /"threat to life"/ in an average person who sustains the AIS coded injury as his or her only injury."
+Description:    "The Abbreviated Injury Scale (AIS©) predot code is used to determine the AIS severity score, a 6 point ordinal scale where 1 is minor, 2 is moderate, 3 is serious, 4 is severe, 5 is critical, and 6 is maximal (injury is currently untreatable). The AIS severity score indicates the relative risk of /"threat to life"/ in an average person who sustains the AIS coded injury as his or her only injury."
 * category 1..1
 * category = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs
 * code = http://loinc.org#75891-2
@@ -33,7 +33,7 @@ Profile:        AIS_predot_code
 Parent:         Observation
 Id:             AIS.Predot.Code
 Title:          "AIS Predot Code"
-Description:    "The Abbreviated Injury Scale (AIS©) predot code that reflects the patient's injuries. The predot code is the six digits preceding the decimal point of an associated AIS severity code, shown as 12(34)(56).7 where 1 = body region, 2 = type of anatomical structure, 3,4 = specific anatomical structure, 5,6 = level of injury and 7 = severity score based on predot code. For example, a femoral shaft fracture may be coded as 851814.3 where 851814 if the numerical identifier (predot code) and 3 is the AIS severity score [LOINC:75891-2]. The predot code is further defined as 8 = Body Region: Lower Extremity, 5 = Type of Anatomic Structure: Skeletal, 18 = Specific Anatomic Structure: Femur, and 14 = Level of injury: Shaft."
+Description:    "The Abbreviated Injury Scale (AIS©) predot code that reflects the patient's injuries. The predot code is the six digits preceding the decimal point of an associated AIS severity code, shown as 12(34)(56).7 where 1  body region, 2 = type of anatomical structure, 3,4 = specific anatomical structure, 5,6 = level of injury and 7 = severity score based on predot code. For example, a femoral shaft fracture may be coded as 851814.3 where 851814 if the numerical identifier (predot code) and 3 is the AIS severity score [LOINC:75891-2]. The predot code is further defined as 8 = Body Region: Lower Extremity, 5 = Type of Anatomic Structure: Skeletal, 18 = Specific Anatomic Structure: Femur, and 14 = Level of injury: Shaft."
 * category 1..1
 * category = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs
 * code = http://loinc.org#75890-4
