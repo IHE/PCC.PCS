@@ -4,7 +4,7 @@ Id:             PCS.Primary.Injury.Cause.Observation
 Title: "Primary Injury Cause Observation"
 Description:      "contains primary injury cause observations for the patient."
 * code = $loinc#69543-7
-* value[X] 1..1
+* value[x] 1..1
 * valueCodeableConcept from http://hl7.org/fhir/sid/icd-10 (preferred) 
 //TODO Value set verify it is the correct reference  
 
@@ -15,7 +15,7 @@ Id:             PCS.Supplemental.Injury.Cause.Observation
 Title: "Supplemental Injury Cause"
 Description:      "contains supplemental injury cause observations for the patient."
 * code = $loinc#74292-4
-* value[X] 1..1
+* value[x] 1..1
 * valueCodeableConcept from http://hl7.org/fhir/sid/icd-10 (preferred)
 
 
@@ -25,7 +25,7 @@ Id:             PCS.Work.Related.Injury.Observation
 Title: "Work Related Injury Observation"
 Description:      "contains work related injury indicator observations for the patient."
 * code = $loinc#67554-6
-* value[X] 1..1
+* value[x] 1..1
 * valueCodeableConcept from PCS.Yes.No.Unknown.VS (preferred) 
 //TODO verify value set 
 
@@ -54,8 +54,8 @@ Id:             PCS.Height.of.Fall.Observation
 Title: "Height of Fall Observation"
 Description:      "contains supplemental injury cause observations for the patient, specific to fall height."
 * code = $loinc#67501-7
-* value[X] 1..1
-* Value[X] only valueInteger
+* value[x] 1..1
+* value[x] only Quantity
 
  
 
@@ -67,8 +67,8 @@ Id:             PCS.Airbag.Deployment.Observation
 Title: "Airbag Deployment Observation"
 Description:      "contains airbag deployment observations for the patient."
 * code = $loinc#67500-9
-* value[X] 1..1
-* value[X] only valueCodeableConcept
+* value[x] 1..1
+* value[x] only CodeableConcept
 //TODO Value set verify it is the correct reference  
 
 
@@ -79,8 +79,8 @@ Id:             PCS.Safety.Equipment.Used.Observation
 Title: "Safety Equipment Used Observation"
 Description:      "contains safety equipment used observations for the patient."
 * code = $loinc#67499-4
-* value[X] 1..1
-* value[X] only valueCodeableConcept 
+* value[x] 1..1
+* value[x] only CodeableConcept 
 
 
 Profile:   PCS_Location_of_Patient_in_Vehicle_Observation 
@@ -89,8 +89,8 @@ Id:             PCS.Location.of.Patient.in.Vehicle.Observation
 Title: "Location of Patient in Vehicle Observation"
 Description:      "contains Location of the Patient in a Vehicle observations."
 * code = $loinc#67498-6
-* value[X] 1..1
-* value[X] only valueCodeableConcept
+* value[x] 1..1
+* value[x] only CodeableConcept
 
 Profile:   PCS_Location_of_Impact_on_the_Vehicle_Observation 
 Parent: Observation
@@ -98,8 +98,8 @@ Id:             PCS.Location.of.Impact.on.the.Vehicle.Observation
 Title: "Location of Impact on the Vehicle Observation"
 Description:      "contains Location of impact on the vehicle observations."
 * code = $loinc#67497-8
-* value[X] 1..1
-* value[X] only valueCodeableConcept
+* value[x] 1..1
+* value[x] only CodeableConcept
 
 //Profile:   PCS_Seat_Occupied_Observation 
 //Parent: Observation
@@ -107,8 +107,10 @@ Description:      "contains Location of impact on the vehicle observations."
 //Title: "Seat Occupied Observation"
 //Description:      "contains the seat the Patient was in a Vehicle injury event observations."
 //* code = $loinc#
-//* value[X] 1..1
-//* value[X] only valueCodeableConcept from (preferred) 
+//* value[x] 1..1
+//* value
+
+//[X] only CodeableConcept from (preferred) 
 //TODO Identify value set and loinc code 
 
 Profile:   PCS_Use_of_Vehical_Occupant_Safety_Equipment_Observation 
@@ -117,5 +119,5 @@ Id:             PCS.Use.of.Vehical.Occupant.Safety.Equipment.Observation
 Title: "Use of Vehical Occupant Safety Equipment Observation"
 Description:      "contains the Use of Occupant Safety Equipment observation in a vehical injury event."
 * code = $loinc#67499-4
-* value[X] 1..1
-* value[X] only valueCodeableConcept
+* value[x] 1..1
+* value[x] only CodeableConcept
