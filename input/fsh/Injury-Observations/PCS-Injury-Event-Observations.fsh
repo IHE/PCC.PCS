@@ -32,14 +32,14 @@ Description:      "contains work related injury indicator observations for the p
 ValueSet: PCS_Yes_No_Unknown_VS
 Description: "The values to indicate the Yes, No, Unknown responces."
 Id: PCS.Yes.No.Unknown.VS
-* codes from system expandedYes-NoIndicator 
+* codes from system http://terminology.hl7.org/CodeSystem/v2-0532 
 
 ValueSet: NEMSIS_Yes_No_Unknown_VS
 Description: "The NEMSIS Specific Values to indicate the Yes, No, Unknown responces. "
 Id: NEMSIS.Yes.No.Unknown.VS
-* NEMSIS#9922001	"No"
-* NEMSIS#9922003	"Unknown"
-* NEMSIS#9922005	"Yes"
+* $NEMSIS#9922001	"No"
+* $NEMSIS#9922003	"Unknown"
+* $NEMSIS#9922005	"Yes"
 
 // http://terminology.hl7.org/CodeSystem/v2-0532 
 // UNK	unknown

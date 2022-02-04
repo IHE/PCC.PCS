@@ -493,4 +493,7 @@ Id: NEMSIS
 * #2522001	"Homeless"
 * #2522003	"Migrant Worker"
 * #2522005	"Foreign Visitor"
+* #9922001  "TODO: JFM not sure"
+* #9922003  "TODO: JFM not sure again"
+* #9922005  "TODO: JFM not sure again again"
 
