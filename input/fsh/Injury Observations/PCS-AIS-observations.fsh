@@ -18,7 +18,7 @@ Profile:        Abbreviated_Injury_Scale_severity_score_AAAM
 Parent:         Observation
 Id:             Abbreviated.Injury.Scale.severity.score.AAAM
 Title:          "Abbreviated Injury Scale severity score AAAM"
-Description:    "The Abbreviated Injury Scale (AIS©) predot code [LOINC:75890-4] is used to determine the AIS severity score, a 6 point ordinal scale where 1 = minor, 2 = moderate, 3 = serious, 4 = severe, 5 = critical, and 6 = maximal (injury is currently untreatable). The AIS severity score indicates the relative risk of "threat to life" in an average person who sustains the AIS coded injury as his or her only injury."
+Description:    "The Abbreviated Injury Scale (AIS©) predot code [LOINC:75890-4] is used to determine the AIS severity score, a 6 point ordinal scale where 1 = minor, 2 = moderate, 3 = serious, 4 = severe, 5 = critical, and 6 = maximal (injury is currently untreatable). The AIS severity score indicates the relative risk of /"threat to life"/ in an average person who sustains the AIS coded injury as his or her only injury."
 * category 1..1
 * category = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs
 * code = http://loinc.org#75891-2
