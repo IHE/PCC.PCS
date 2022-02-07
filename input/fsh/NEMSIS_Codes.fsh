@@ -1,3 +1,41 @@
+CodeSystem: NEMSIS_dFacility_01
+Id: NEMSIS-dFacililty-01
+Title: "dFacility.01 - Type of Facility"
+Description: """
+The codes defined for dFacility.01 - Type of Facility
+
+For online view of the original publication this is based on visit [NEMSIS dFacility.01 - Type of Facility](https://nemsis.org/media/nemsis_v3/release-3.4.0/DataDictionary/PDFHTML/STATE/index.html)
+"""
+* ^url = "https://nemsis.org/media/nemsis_v3/release-3.4.0/DataDictionary/PDFHTML/STATE/index.html"
+* ^caseSensitive = true
+* ^date = "2015-10-02T20:11:11Z"
+* ^status = #active
+* ^experimental = false
+* ^publisher = "NEMSIS"
+* ^copyright = "TODO, some NEMSIS agreed to copyright statement"
+* ^compositional = false
+* ^content = #complete
+* #1701001	"Assisted Living Facility"
+* #1701003	"Clinic"
+* #1701005	"Hospital"
+* #1701007	"Nursing Home"
+* #1701009	"Other"
+* #1701011	"Urgent Care"
+* #1701013	"Rehabilitation Facility"
+* #1701015	"Mental Health Facility"
+* #1701017	"Dialysis Center"
+
+ValueSet: NEMSIS_dFacility_01_VS
+Id: NEMSIS-dFacaility-01-VS
+Title: "ValueSet dFacililty.01"
+Description: """
+The valueSet for the codes defined for dFacility.01 - Type of Facility
+
+For online view of the original publication this is based on visit [NEMSIS dFacility.01 - Type of Facility](https://nemsis.org/media/nemsis_v3/release-3.4.0/DataDictionary/PDFHTML/STATE/index.html)
+"""
+* codes from system NEMSIS_dFacility_01
+
+
 CodeSystem:  NEMSIS
 Title: "NEMSIS"
 Description: "The codede Values used in the NEMSIS Standard"
