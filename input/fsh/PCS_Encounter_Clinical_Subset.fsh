@@ -119,3 +119,4 @@ Description: "The information reatlated to Paramedicine encounters for mass casu
 * location[Scene].physicalType named #rd	
 * location[Ambulance].physicalType named #ve
 * location[Destination].physicalType named #bu
+
