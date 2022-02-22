@@ -1,6 +1,6 @@
 **This Content Profile Deinfes the Paramedicine Care Summary document requirement that can be shared with a reciving facility to convey pertinant patient infromation**
 
-[Open and Closed Issues](a_issues.html)
+[Open and Closed Issues](issues.html)
 
 ### Organization of This Guide
 This guide is organized into four main sections:

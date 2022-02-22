@@ -1,4 +1,4 @@
-# sushi-config.yaml is documented https://fshschool.org/docs/sushi/configuration/
+    # sushi-config.yaml is documented https://fshschool.org/docs/sushi/configuration/
 # ───────────────────────────────────────────────────
 id: ihe.pcc.pcs
 canonical: https://profiles.ihe.net/PCC/PCS
@@ -55,6 +55,9 @@ pages:
     generation: markdown
   volume-1.md:
     title: 1:XX. Profile Volume 1
+    generation: markdown
+  ActorsAndTransactions.md:
+    title: "Actors and Transactions"
     generation: markdown
   NEMSIS-Mapping.md:
     title: NEMSIS Mapping
