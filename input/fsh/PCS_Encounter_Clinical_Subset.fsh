@@ -115,8 +115,8 @@ Description: "The information reatlated to Paramedicine encounters for mass casu
 	Scene 0..1 MS and 
 	Ambulance 0..1 MS and
 	Destination 0..1 MS
-* location[Dispatch].physicalType named #rd
-* location[Scene].physicalType named #rd	
-* location[Ambulance].physicalType named #ve
-* location[Destination].physicalType named #bu
+* location[Dispatch].physicalType = #rd
+* location[Scene].physicalType = #ho	
+* location[Ambulance].physicalType = #ve
+* location[Destination].physicalType = #bu
 
