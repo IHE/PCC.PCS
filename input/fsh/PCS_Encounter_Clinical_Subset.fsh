@@ -39,6 +39,21 @@ OPEN ISSUE: How to properly represent location type in relation to the encounter
 * extension contains BarriersToPatientCare named Barriers 0..* 
 * extension contains Transport named Transport 0..1
 * extension contains MassCasualtyIncident named MassCasualtyIncident 0..1
+* location 1..*
+* location ^slicing.discriminator.type = #pattern
+* location ^slicing.discriminator.path = "$this"
+* location ^slicing.rules = #open
+* location ^slicing.ordered = false
+* location ^slicing.description = "TBD"
+* location contains 
+	Dispatch 0..1 MS and
+	Scene 0..1 MS and 
+	Ambulance 0..1 MS and
+	Destination 0..1 MS
+* location[Dispatch].physicalType = #rd
+* location[Scene].physicalType = #ho	
+* location[Ambulance].physicalType = #ve
+* location[Destination].physicalType = #bu
 
 Extension: StatusSubType
 Id: StatusSubType
@@ -104,19 +119,4 @@ Description: "The information reatlated to Paramedicine encounters for mass casu
 * extension[TriageClassification].valueCodeableConcept from NEMSIS.Triage.Classification.for.MCI.Patient.VS (example)
 * extension[DisasterType].valueCodeableConcept from NEMSIS.Natural.Suspected.Disaster.VS (example)
 
-* location ^slicing.discriminator.type = #pattern
-* location ^slicing.discriminator.path = "$this"
-* location ^slicing.rules = #open
-* location ^slicing.ordered = false
-* location ^slicing.description = "TBD"
-* location 1..4
-* location contains 
-	Dispatch 0..1 MS and
-	Scene 0..1 MS and 
-	Ambulance 0..1 MS and
-	Destination 0..1 MS
-* location[Dispatch].physicalType = #rd
-* location[Scene].physicalType = #ho	
-* location[Ambulance].physicalType = #ve
-* location[Destination].physicalType = #bu
 
