@@ -12,8 +12,8 @@ Description:    "The heart rate vital sign."
 * valueQuantity.unit = "{beats}/min;{counts/min}"
 * valueQuantity.system = http://unitsofmeasure.org
 * method 0..1 MS
-* method from https://loinc.org/LL3626-0 (preffered)
-* dataAbsentReason from PCS_Data_Absent_Reasons_VS (preffered)
+* method from https://loinc.org/LL3626-0 (preferred)
+* dataAbsentReason from PCS_Data_Absent_Reasons_VS (preferred)
 
 
 

@@ -6,7 +6,7 @@ Description:    "A profile on the Observation that declares how the PCS will Cre
 * category 1..1
 * category = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs
 * code = http://loinc.org#67670-0
-* value[x] only valueCodeableConcept from PCS_Length_Based_Tape_Measure_VS
+* value[x] only valueCodeableConcept from PCS_Length_Based_Tape_Measure_VS (preferred)
 //* dataAbsentReason from
 * status = #final
 * subject 1..1
