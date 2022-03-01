@@ -15,12 +15,12 @@ CodeSystem:  HARQ
 //URL: 	"Accredited Standards Committee X12 Exit Disclaimer [www.x12.org]"
 Title: "Agency for Healthcare Reasearch and Quality"
 Id: HARQ
-* SYSTEM#A "Patient was transported to nearest facility for care of symptoms, complaints, or both "
-* SYSTEM#B "Patient was transported for the benefit of a preferred physician "
-* SYSTEM#C "Patient was transported for the nearness of family members "
-* SYSTEM#D "Patient was transported for the care of a specialist or for availability of specialized equipment "
-* SYSTEM#E "Patient Transferred to Rehabilitation Facility "
-* SYSTEM#F "Patient Transferred to Residential Facility "
+* #A "Patient was transported to nearest facility for care of symptoms, complaints, or both "
+* #B "Patient was transported for the benefit of a preferred physician "
+* #C "Patient was transported for the nearness of family members "
+* #D "Patient was transported for the care of a specialist or for availability of specialized equipment "
+* #E "Patient Transferred to Rehabilitation Facility "
+* #F "Patient Transferred to Residential Facility "
 
 
 ValueSet: PCS_Data_Absent_Reasons_VS
