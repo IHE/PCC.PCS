@@ -34,6 +34,38 @@ the following cardinalities follow the documentation in the PCS profile:
 * event.code 1..*
 * event.code = http://terminology.hl7.org/CodeSystem/v3-ActClass#ENC
 
+* sectionVitalSigns.entry.vitalSign contains
+	SystolicBloodPressure 1..1 MS and
+	DiastolicBloodPressure 0..1 MS and
+	MeanArterialPressure 0..1 and 
+	CardiacRhythm 1..1 MS and
+	HeartRate 1..1 MS and
+	PulseOximetry 1..1 MS and
+	PulseRhythm 0..1 and 
+	RespiratoryRate 1..1 MS and
+	RespiratoryEffort 0..1 and 
+	EndTitleCarbonDioxide 1..1 MS and
+	CarbonMonoxide 0..1 MS and
+	BloodGlucoseLevel 1..1 MS and
+	GlasgowComaScoreEye 1..1 MS and
+	GlasgowComaScoreVerbal 1..1 MS and
+	GlasgowComaScoreMotor 1..1 MS and
+	GlasgowComaScoreQualifier 1..1 MS and
+	TotalGlasgowComaScore 0..1 MS and
+	Temperature 0..1 MS and 
+	TemperatureMethod 0..1 and
+	LevelOfResponsiveness 1..1 MS and 
+	PainScaleScore  1..1 MS and
+	PainScaleType 0..1 MS and
+	StrokeScaleScore  1..1 MS and
+	StrokeScaleType 1..1 MS and
+	ReperfusionChecklist 1..1 MS and
+	APGAR 0..1 and
+	RevisedTraumaScore 0..1  and
+	EstimatedBodyWeight 0..1 MS and
+	LengthBasedTapeMeasure 0..1 MS and
+
+
 // in addition to the sections defined in IPS...
 * section contains
 	sectionMedicationsAdministered 0..1 and 

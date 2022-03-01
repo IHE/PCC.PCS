@@ -104,6 +104,7 @@ Description: "Transport Information for the encounter."
 * extension[DestinationReason].valueCodeableConcept from NEMSIS.Reason.for.Choosing.Destination.VS (example) 
 * extension[RefusalReason].valueCodeableConcept from NEMSIS.Reason.for.Refusal.Release.VS (example) 
 
+
 Extension: MassCasualtyIncident
 Id: MassCasualtyIncident
 Title: "Mass Casualty Incident"

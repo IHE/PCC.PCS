@@ -1,19 +1,20 @@
-Profile:        PCS_Heart_Rate_NEMSIS
+Profile:        PCS_Heart_Rate
 Parent:         Observation
-Id:             PCS.Heart.Rate.NEMSIS
-Title:          "PCS Heart Rate NEMSIS"
-Description:    "The heart rate vital sign compliant with NEMSIS documentation."
+Id:             PCS.Heart.Rate
+Title:          "PCS Heart Rate"
+Description:    "The heart rate vital sign."
 * category 1..1
 * category = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs
 * code = http://loinc.org#8867-4
-* effectiveDateTime 1..1
 * status = #final
 * subject 1..1
 * subject only Reference(Patient)
 * valueQuantity.unit = "{beats}/min;{counts/min}"
-* method 1..1
-* method from NEMSIS.Method.of.Heart.Rate.Measurement.VS (example)
-* note 0..1
+* valueQuantity.system = http://unitsofmeasure.org
+* method 0..1 MS
+* method from https://loinc.org/LL3626-0 (preffered)
+* dataAbsentReason from PCS_Data_Absent_Reasons_VS (preffered)
+
 
 
 Instance:   PCS-Heart-Rate-NEMSIS-Example
@@ -25,7 +26,7 @@ Description:      "holding typical values for a NEMSIS ECG Vital Sign"
 * subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 * effectiveDateTime = 2022-01-17T07:23:53-07:00
 * valueQuantity = 82.0 '/min'
-* method = $NEMSIS#3311007
+* method = $loinc#LA24028-5
 
 
 Instance:   PCS-Heart-Rate-NEMSIS-Example-NOT-Values
@@ -36,8 +37,8 @@ Description:      "Example of PCS ECG Type NEMSIS when there are Not Values Pres
 * status = #final
 * subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 * effectiveDateTime = 2022-01-17T07:23:53-07:00
-* dataAbsentReason = $NEMSIS#7701003
-* method = $NEMSIS#3311007
+* dataAbsentReason = #not-applicable
+
 
 Instance:   PCS-Heart-Rate-NEMSIS-Example-Pertinent-Negatives
 InstanceOf: PCS.Heart.Rate.NEMSIS
@@ -47,5 +48,4 @@ Description:      "Example of PCS ECG Type NEMSIS when there are Pertinent Negat
 * status = #final
 * subject = Reference(Patient/ea25ec4c-38bd-11ec-8d3d-0242ac130003)
 * effectiveDateTime = 2022-01-17T07:23:53-07:00
-* dataAbsentReason = $NEMSIS#8801023
-* method = $NEMSIS#3311007
+* dataAbsentReason = #unable-to-complete
