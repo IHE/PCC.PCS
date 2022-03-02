@@ -49,7 +49,7 @@ An IHE PCS Encounter Complete Report resource is used to deffine the full emerge
 * extension[Transport].extension[NumberofPatients] 1..1
 * extension[Transport].extension[TansportReasonCode] 1..*
 
-
+  
 Extension: PriorityDescriptors
 Id: PriorityDescriptors
 Title: "Priority Descriptors"
