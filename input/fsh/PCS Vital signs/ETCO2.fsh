@@ -7,7 +7,7 @@ Description:    "A profile on the Observation that declares how FooBar will Crea
 * category = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs
 * code = http://loinc.org#19889-5
 * value[x] only Quantity
-* quantity.system from http://hl7.org/fhir/vs/ucum-vitals-common (Required)
+* quantity.system from http://hl7.org/fhir/vs/ucum-vitals-common (required)
 * quantity.code = $UCUM#%
 * status = #final
 * subject only Reference(Patient)

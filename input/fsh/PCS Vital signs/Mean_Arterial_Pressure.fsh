@@ -8,7 +8,7 @@ Description:    "A profile on the Observation that declares how FooBar will Crea
 * code = http://loinc.org#8478-0
 * value[x] only Quantity
 * value[x] only Quantity
-* quantity.system from http://hl7.org/fhir/vs/ucum-vitals-common (Required)
+* quantity.system from http://hl7.org/fhir/vs/ucum-vitals-common (required)
 * quantity.code = $UCUM#mm[Hg] 
 * status = #final
 * subject only Reference(Patient)
