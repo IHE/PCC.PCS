@@ -9,7 +9,7 @@ Description:    "A profile on the Observation that declares how FooBar will Crea
 * value[x] only Quantity
 * value[x] only Quantity
 * value[x].Quantity.system = $UCUM
-* value[x].Quantity.code = $UCUM#mm[Hg]
+* value[x].Quantity.code = $UCUM#mm[Hg] 
 * status = #final
 * subject only Reference(Patient)
 * note 0..1
