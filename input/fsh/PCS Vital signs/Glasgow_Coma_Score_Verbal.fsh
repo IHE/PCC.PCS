@@ -6,7 +6,8 @@ Description:    "A profile on the Observation that declares how FooBar will Crea
 * category 1..1
 * category = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs
 * code = http://loinc.org#9270-0 
-* value[x] only CodeableConcept	from http://loinc.org#LL356-7
+* value[x] only CodeableConcept	
+* value[x].CodeableConcept.coding = http://loinc.org#LL356-7
 * status = #final
 * subject only Reference(Patient)
 * note 0..1

@@ -7,8 +7,9 @@ Description:    "A profile on the Observation that declares how FooBar will Crea
 * category = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs
 * code = http://loinc.org#8478-0
 * value[x] only Quantity
-* value[x].Quantity.unit = "mm[Hg]"
-* value[x].Quantity.system = http://unitsofmeasure.org 
+* value[x] only Quantity
+* value[x].Quantity.system = $UCUM
+* value[x].Quantity.code = $UCUM#mm[Hg]
 * status = #final
 * subject only Reference(Patient)
 * note 0..1
