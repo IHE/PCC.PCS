@@ -8,7 +8,6 @@ Description:    "A profile on the Observation that declares how FooBar will Crea
 * code = http://loinc.org#67775-7
 * effectiveDateTime 1..1
 * value[x] only CodeableConcept	
-* value[x].CodeableConcept.coding = http://loinc.org#LL1845-8
 * status = #final
 * subject only Reference(Patient)
 * note 0..1

@@ -8,8 +8,8 @@ Description:    "A profile on the Observation that declares how FooBar will Crea
 * code = http://loinc.org#2339-0
 * effectiveDateTime 1..1
 * value[x] only Quantity
-* quantity.system from UCUM (required)
-* quantity.code = $UCUM#mg/dl
+* valueQuantity.system from http://unitsofmeasure.org (required)
+* valueQuantity.code = UCUM#mg/dl
 * status = #final
 * subject only Reference(Patient)
 * note 0..1
