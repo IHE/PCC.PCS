@@ -9,7 +9,7 @@ Description:    "A profile on the Observation that declares how FooBar will Crea
 * effectiveDateTime 1..1
 * value[x] only Quantity
 * valueQuantity.system from http://unitsofmeasure.org (required)
-* valueQuantity.code = UCUM#mg/dl
+* valueQuantity.code = $UCUM#mg/dl
 * status = #final
 * subject only Reference(Patient)
 * note 0..1
