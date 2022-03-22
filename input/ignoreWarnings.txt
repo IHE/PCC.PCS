@@ -1,6 +1,8 @@
-// Add warning and/or information messages here after you've confirmed that they aren't really a problem
-// (And include comments like this justifying why)
+== Suppressed Messages ==
+# Add warning and/or information messages here after you've confirmed that they aren't really a problem
+# instructions for ignoreWarnings.txt https://confluence.hl7.org/pages/viewpage.action?pageId=66938614#ImplementationGuideParameters-ManagingWarningsandHints
+# (And include comments like this justifying why)
 
-// We define the version on a global basis, so don't need it on the individual source definitions
+# We define the version on a global basis, so don't need it on the individual source definitions
 WARNING: http://hl7.org/fhir/uv/myig/StructureDefinition/ext-myExtension: Profiles SHOULD state their own version
 WARNING: http://hl7.org/fhir/uv/myig/StructureDefinition/somepatientprofile: Profiles SHOULD state their own version

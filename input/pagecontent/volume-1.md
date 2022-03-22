@@ -44,7 +44,7 @@ Figure X.1-1 shows the actors directly involved in the PCS Profile and the relev
 | Content Consumer  	| Document Sharing [PCC-1](ITI-65.html) | Responder				| R				| TBD		|
 Figure X.1-1 shows the actors directly involved in the PCS Profile and the direction that the content is exchanged. 
 
-A product implementation using this profile may group actors from this profile with actors from a workflow or transport profile to be functional. The grouping of the content module described in this profile to specific actors is described in more detail in [Required Actor Groupings]() or in [Cross Profile Considerations]().
+A product implementation using this profile may group actors from this profile with actors from a workflow or transport profile to be functional. The grouping of the content module described in this profile to specific actors is described in more detail in [Required Actor Groupings](volume-1.html#pcs-required-actor-groupings) or in [Cross Profile Considerations](volume-1.html#pcs-cross-profile-considerations).
 
 **Table X.1-2: PCS – Actors and Content Modules**
 | Actors 			    | Content Modules  										 | Optionality	| Reference	|
@@ -97,8 +97,8 @@ This option defines the processing requirements placed on the Content Creators f
 
 ### FHIR Option
 This option defines the processing requirements placed on the Content Creators for producing a FHIR document bundle version of the Paramedicine Care Summary documents. The FHIR details are defined in the:
-[Paramedicine Care Summary International Composition Complete Report](PCS_Composition_Complete.fsh)
-[Paramedicine Care Summary International Composition Clinical Subset](PCS_Composition_Clinical_Subset.fsh)
+[Paramedicine Care Summary International Composition Complete Report](StructureDefinition-IHE.PCC.PCS.Composition.CR.html)
+[Paramedicine Care Summary International Composition Clinical Subset](StructureDefinition-IHE.PCC.PCS.Composition.CS.html)
 
 ### Quality Data Import Option
 This option defines the processing requirements placed on the Content Consumers for providing access and importing quality data from selected sections of the Paramedicine Care Summary. 
@@ -116,10 +116,10 @@ This option defines the processing requirements placed on the Content Consumers 
 This option defines the processing requirements placed on the Content Consumers for providing access and importing Cardiac Event data from selected sections of the Paramedicine Care Summary. 
 **TODO: link option template information, FHIR and CDA**
 
-### PCS Required Actor Groupings 
+## PCS Required Actor Groupings 
 There are no required actor groupings for this profile. 
 
-### Concepts
+## PCS Overview
 
 When a hospital is receiving a patient arriving in an emergency ambulance transport, the main source of the patient information is the ambulance crew that performed the emergency transport. This information
 is not typically electronically transferred and therefore this relay of information is usually verbal. This can draw away from the treatment of the patient. The use of an interoperable transfer of patient 
