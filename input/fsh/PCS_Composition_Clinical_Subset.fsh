@@ -38,13 +38,22 @@ the following cardinalities follow the documentation in the PCS profile:
 
 // Note: in addition to the sections defined in IPS...
 * section contains
+  SectionCheifComplaint 0..1 MS and 
 	sectionMedicationsAdministered 0..1 and 
 	sectionProceduresPerformed 1..1 MS and
-    sectionCoverage 0..1 MS and
+  sectionCoverage 0..1 MS and
 	sectionReviewOfSystems 1..1 MS and 
 	sectionCariacArrestEvent 0..1 and
-	sectionInjuryEvent 0..1 and 
-	sectionDispatchSection 0..1
+	sectionInjuryEvent 0..1
+
+
+* section[SectionCheifComplaint] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[SectionCheifComplaint] ^extension.valueString = "Section"
+* section[SectionCheifComplaint] ^short = "Medications Administered"
+* section[SectionCheifComplaint] ^definition = "This section contains the Medicaitons Administered during the PCS encounter"
+* section[SectionCheifComplaint].code = $loinc#10154-3
+* section[SectionCheifComplaint].code MS
+
 
 * section[sectionMedicationsAdministered] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionMedicationsAdministered] ^extension.valueString = "Section"
@@ -92,23 +101,11 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionCoverage].entry contains Coverage 0..1 MS
 * section[sectionCoverage].entry[Coverage] only Reference(Coverage)
 
-
-* section[sectionDispatchSection] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionDispatchSection] ^extension.valueString = "Section"
-* section[sectionDispatchSection] ^short = "Dispatch Section"
-* section[sectionDispatchSection] ^definition = "Information regarding the dispatch process."
-* section[sectionDispatchSection].code = $loinc#67660-1
-* section[sectionDispatchSection].code MS
-* section[sectionDispatchSection].entry ..* MS
-* section[sectionDispatchSection].entry only Reference(ServiceRequest)
-* section[sectionDispatchSection].entry ^definition = "Information related to dispatch instructions"
-
-
 * section[sectionReviewOfSystems] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionReviewOfSystems] ^extension.valueString = "Section"
 * section[sectionReviewOfSystems] ^short = "Review of Systems"
 * section[sectionReviewOfSystems] ^definition = "The Review of systems section contains a relevant collection of symptoms and functions systematically gathered by a clinician. It includes symptoms the patient is currently experiencing, some of which were not elicited during the history of present illness, as well as a potentially large number of pertinent negatives, for example, symptoms that the patient denied experiencing."
-* section[sectionReviewOfSystems].code = $loinc#10187-3
+* section[sectionReviewOfSystems].code = $loinc#8687-6
 * section[sectionReviewOfSystems].code MS
 * section[sectionReviewOfSystems].entry ..* MS
 * section[sectionReviewOfSystems].entry only Reference(Observation)
