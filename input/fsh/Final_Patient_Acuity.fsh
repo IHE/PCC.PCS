@@ -1,15 +1,20 @@
-Profile:        Last_Oral_Ontake
+Profile:        Final_Patient_Acuity
 Parent:         Observation
-Id:             Last.Oral.Intake
-Title:          "Last oral intake Observation"
-Description:    "Date and Time of last oral intake."
+Id:             Final.Patient.Acuity
+Title:          "Final Patient Acuity"
+Description:    "The acuity of the patient's condition after EMS care."
+// eDisposition.19 - Final Patient Acuity
 
-* code = $loinc#67517-3
-* valueDateTime 0..1
+* code = $loinc##77941-3
+* valueCodeableConcept from https://loinc.org/LL1843-3
 * status = #final
 * encounter 1..1
 * subject 1..1
 * subject only Reference(Patient)
+
+// Note COntraints:
+// When Barriers to Patient Care observation value is empty, it SHALL have a Data Absent reason. 
+
 // this is making everything else in observation forbidden. 
 * category 0..0
 * implicitRules 0..0

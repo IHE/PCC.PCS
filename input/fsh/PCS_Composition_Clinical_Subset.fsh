@@ -55,8 +55,8 @@ the following cardinalities follow the documentation in the PCS profile:
 
 * section[SectionCheifComplaint] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[SectionCheifComplaint] ^extension.valueString = "Section"
-* section[SectionCheifComplaint] ^short = "Medications Administered"
-* section[SectionCheifComplaint] ^definition = "This section contains the Medicaitons Administered during the PCS encounter"
+* section[SectionCheifComplaint] ^short = "CHeif Complaint"
+* section[SectionCheifComplaint] ^definition = "TBD"
 * section[SectionCheifComplaint].code = $loinc#10154-3
 * section[SectionCheifComplaint].code MS
 
@@ -131,8 +131,9 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[LastKnownWell].code = $loinc#8687-6
 * section[LastKnownWell].code MS
 * section[LastKnownWell].entry ..* MS
-* section[LastKnownWell].entry only Reference(Observation)
+* section[LastKnownWell].entry only Reference(Last_Known_Well)
 * section[LastKnownWell].entry ^definition = "TBD"
+// Note: not sure if this needs to be a 
 
 * section[PatientAcuity] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[PatientAcuity] ^extension.valueString = "Section"
@@ -159,7 +160,7 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[LastOralIntake].code = $loinc#8687-6
 * section[LastOralIntake].code MS
 * section[LastOralIntake].entry ..* MS
-* section[LastOralIntake].entry only Reference(Observation)
+* section[LastOralIntake].entry only Reference(Last_Oral_Ontake)
 * section[LastOralIntake].entry ^definition = "TBD"
 
 
