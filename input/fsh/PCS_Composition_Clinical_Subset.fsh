@@ -44,6 +44,9 @@ the following cardinalities follow the documentation in the PCS profile:
 	  sectionProceduresPerformed 1..1 MS and
     sectionCoverage 0..1 MS and
     PhysicalExams 0..1 MS and 
+    LastKnownWell 0..1 MS and 
+    PatientAcuity 0..1 MS and 
+    LastOralIntake 0..1 MS and 
 	  sectionReviewOfSystems 1..1 MS and
     sectionMassCasualtyIncident 0..1 MS and 
 	  sectionCariacArrestEvent 0..1 and
@@ -156,24 +159,6 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[LastOralIntake].entry ^definition = "TBD"
 
 
-* section[sectionReviewOfSystems] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionReviewOfSystems] ^extension.valueString = "Section"
-* section[sectionReviewOfSystems] ^short = "Review of Systems"
-* section[sectionReviewOfSystems] ^definition = "The Review of systems section contains a relevant collection of symptoms and functions systematically gathered by a clinician. It includes symptoms the patient is currently experiencing, some of which were not elicited during the history of present illness, as well as a potentially large number of pertinent negatives, for example, symptoms that the patient denied experiencing."
-* section[sectionReviewOfSystems].code = $loinc#8687-6
-* section[sectionReviewOfSystems].code MS
-* section[sectionReviewOfSystems].entry ..* MS
-* section[sectionReviewOfSystems].entry only Reference(Observation)
-* section[sectionReviewOfSystems].entry ^definition = """
-The coded Review of systems section contains a relevant collection of symptoms and functions systematically gathered by a clinician. It includes symptoms the patient is currently experiencing, some of which were not elicited during the history of present illness, as well as a potentially large number of pertinent negatives, for example, symptoms that the patient denied experiencing.
-- PhysicalExams 0..* and
-- PatientAcuity 0..* and
-- LastKnownWell 0..1 and
-- LastOralIntake 0..1 and
-- AlcoholDrugUseIndicators 0..* and 
-- InitialPatientAcuity 0..1 and
-- FinalPatientAcuity 0..1
-"""
 //TODO: I changed this sliceing to just a definition as there was no distinction between the various Observations, without a distinction there is nothing for a slice to do.
 
 
