@@ -36,9 +36,7 @@ OPEN ISSUE: How to properly represent location type in relation to the encounter
 * diagnosis 0..*
 //condition.category will = encounter-diagnosis and primary and scondary impressions should be indicated with the Diagnosis rank Number
 * serviceProvider 1..1
-* extension contains BarriersToPatientCare named Barriers 0..* 
 * extension contains Transport named Transport 0..1
-* extension contains MassCasualtyIncident named MassCasualtyIncident 0..1
 * location 1..*
 * location ^slicing.discriminator.type = #pattern
 * location ^slicing.discriminator.path = "$this"

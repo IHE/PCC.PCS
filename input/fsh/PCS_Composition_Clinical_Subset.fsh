@@ -139,6 +139,9 @@ The coded Review of systems section contains a relevant collection of symptoms a
 * section[sectionMassCasualtyIncident].code = $loinc#67490-3
 * section[sectionMassCasualtyIncident].code MS
 * section[sectionMassCasualtyIncident].entry ..* 
+* section[sectionMassCasualtyIncident].entry ^slicing.discriminator.type = #pattern
+* section[sectionMassCasualtyIncident].entry ^slicing.discriminator.path = "resolve()"
+* section[sectionMassCasualtyIncident].entry ^slicing.rules = #open
 * section[sectionMassCasualtyIncident].entry ^short = "TBD"
 * section[sectionMassCasualtyIncident].entry ^definition = "TBD"
 * section[sectionMassCasualtyIncident].entry contains
