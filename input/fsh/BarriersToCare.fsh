@@ -4,11 +4,8 @@ Id:             IHE.Barriers.To.Care
 Title:          "IHE barriers to care observation"
 Description:    "Indication of whether or not there were any patient specific barriers to serving the patient."
 // NEMSIS eHistory.01 - Barriers to Patient Care
-
-
-* code = loinc#67515-7
-* encounter 1..1 
-* encounter Reference(IHE_PCS_Encounter_ClinicalSubset)
+* code = $loinc#67515-7
+* encounter 1..1
 * valueCodeableConcept from NEMSIS_Barriers_to_Patient_Care_VS (example)
 // Note Data absent reason codes need to be extended to include NEMSIS values 
 * status = #final
