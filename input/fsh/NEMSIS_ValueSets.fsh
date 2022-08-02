@@ -490,6 +490,13 @@ Id: NEMSIS.Age.Category.VS
 * NEMSIS#3602003	"General"
 * NEMSIS#3602005	"Pediatric Only"
 
+ValueSet: NEMSIS_Number_of_Pts_On_Scene_VS
+Description: "Indicator of how many total patients were at the scene."
+Id: NEMSIS.Number.of.Pts.On.Scene.VS
+* NEMSIS#2707001	"Multiple"
+* NEMSIS#2707003	"None"
+* NEMSIS#2707005	"Single"
+
 
 
 ValueSet: NEMSIS_Protocols_Used_VS

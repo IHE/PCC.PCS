@@ -534,4 +534,7 @@ Id: NEMSIS
 * #9922001  "TODO: JFM not sure"
 * #9922003  "TODO: JFM not sure again"
 * #9922005  "TODO: JFM not sure again again"
+* #2707001	"Multiple"
+* #2707003	"None"
+* #2707005	"Single"
 
