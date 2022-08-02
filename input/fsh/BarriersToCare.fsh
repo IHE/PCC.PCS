@@ -37,7 +37,6 @@ Description:    "Indication of whether or not there were any patient specific ba
 * basedOn 0..0
 * partOf 0..0
 * focus 0..0
-* encounter 0..0
 * issued 0..0
 * performer 0..0
 * interpretation 0..0
