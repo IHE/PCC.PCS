@@ -28,7 +28,7 @@ the following cardinalities follow the documentation in the PCS profile:
 
 * subject 1..1
 * encounter 1..1
-// already this  * encounter only Reference(Encounter) 
+* encounter only Reference(IHE_PCS_Encounter_ClinicalSubset) 
 
 
 * event.code 1..*
@@ -38,13 +38,13 @@ the following cardinalities follow the documentation in the PCS profile:
 
 // Note: in addition to the sections defined in IPS...
 * section contains
-  SectionCheifComplaint 0..1 MS and 
-	sectionMedicationsAdministered 0..1 and 
-	sectionProceduresPerformed 1..1 MS and
-  sectionCoverage 0..1 MS and
-	sectionReviewOfSystems 1..1 MS and 
-	sectionCariacArrestEvent 0..1 and
-	sectionInjuryEvent 0..1
+    SectionCheifComplaint 0..1 MS and 
+	  sectionMedicationsAdministered 0..1 and 
+	  sectionProceduresPerformed 1..1 MS and
+    sectionCoverage 0..1 MS and
+	  sectionReviewOfSystems 1..1 MS and 
+	  sectionCariacArrestEvent 0..1 and
+	  sectionInjuryEvent 0..1
 
 
 * section[SectionCheifComplaint] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
