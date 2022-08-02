@@ -43,6 +43,7 @@ the following cardinalities follow the documentation in the PCS profile:
 	  sectionMedicationsAdministered 0..1 and 
 	  sectionProceduresPerformed 1..1 MS and
     sectionCoverage 0..1 MS and
+    PhysicalExams 0..1 MS and 
 	  sectionReviewOfSystems 1..1 MS and
     sectionMassCasualtyIncident 0..1 MS and 
 	  sectionCariacArrestEvent 0..1 and
@@ -63,7 +64,6 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionBarriersToCare].code = $loinc#67515-7
 * section[sectionBarriersToCare].code MS
 * section[sectionBarriersToCare].entry only Reference(Observation)
-
 
 * section[sectionMedicationsAdministered] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionMedicationsAdministered] ^extension.valueString = "Section"
@@ -110,6 +110,51 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionCoverage].entry ^definition = "Contains data on the patient's payers, whether a 'third party' insurance, self-pay, other payer or guarantor, or some combination of payers, and is used to define which entity is the responsible fiduciary for the financial aspects of a patient's care"
 * section[sectionCoverage].entry contains Coverage 0..1 MS
 * section[sectionCoverage].entry[Coverage] only Reference(Coverage)
+
+* section[PhysicalExams] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[PhysicalExams] ^extension.valueString = "Section"
+* section[PhysicalExams] ^short = "Physical Exams"
+* section[PhysicalExams] ^definition = "TBD"
+* section[PhysicalExams].code = $loinc#8687-6
+* section[PhysicalExams].code MS
+* section[PhysicalExams].entry ..* MS
+* section[PhysicalExams].entry only Reference(Observation)
+* section[PhysicalExams].entry ^definition = "" ""
+
+* section[LastKnownWell] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[LastKnownWell] ^extension.valueString = "Section"
+* section[LastKnownWell] ^short = "Last Known Well"
+* section[LastKnownWell] ^definition = "TBD"
+* section[LastKnownWell].code = $loinc#8687-6
+* section[LastKnownWell].code MS
+* section[LastKnownWell].entry ..* MS
+* section[LastKnownWell].entry only Reference(Observation)
+* section[LastKnownWell].entry ^definition = """"
+
+* section[PatientAcuity] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[PatientAcuity] ^extension.valueString = "Section"
+* section[PatientAcuity] ^short = "Patient Acuity"
+* section[PatientAcuity] ^definition = "TBD"
+* section[PatientAcuity].code = $loinc#8687-6
+* section[PatientAcuity].code MS
+* section[PatientAcuity].entry ..* MS
+* section[PatientAcuity].entry only Reference(Observation)
+* section[PatientAcuity].entry ^definition = """"
+* section[PatientAcuity].entry contains
+  InitialPatientAcuity 0..1 and
+  FinalPatientAcuity 0..1
+
+
+* section[LastOralIntake] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[LastOralIntake] ^extension.valueString = "Section"
+* section[LastOralIntake] ^short = "Last Oral Intake"
+* section[LastOralIntake] ^definition = "TBD"
+* section[LastOralIntake].code = $loinc#8687-6
+* section[LastOralIntake].code MS
+* section[LastOralIntake].entry ..* MS
+* section[LastOralIntake].entry only Reference(Observation)
+* section[LastOralIntake].entry ^definition = """"
+
 
 * section[sectionReviewOfSystems] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionReviewOfSystems] ^extension.valueString = "Section"
