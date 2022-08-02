@@ -1,19 +1,17 @@
-Profile:        Final_Patient_Acuity
+Profile:        MassCasualty_Incident_Indicator
 Parent:         Observation
-Id:             Final.Patient.Acuity
-Title:          "Final Patient Acuity"
-Description:    "The acuity of the patient's condition after EMS care."
-// eDisposition.19 - Final Patient Acuity
+Id:             MassCasualty.Incident.Indicator
+Title:          "MassCasualty Incident Indicator"
+Description:    "TBD"
+// eScene.07 - Mass Casualty Incident
 
-* code = $loinc#77941-3
-* valueCodeableConcept from https://loinc.org/LL1843-3
+
+* code = http://loinc.org#67490-3
+* valueCodeableConcept from https://loinc.org/LL361-7
 * status = #final
-* encounter 1..1
 * subject 1..1
 * subject only Reference(Patient)
-
-// Note COntraints:
-// When Barriers to Patient Care observation value is empty, it SHALL have a Data Absent reason. 
+* encounter 1..1 
 
 // this is making everything else in observation forbidden. 
 * category 0..0
