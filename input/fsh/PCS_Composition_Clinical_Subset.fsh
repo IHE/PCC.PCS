@@ -119,7 +119,7 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[PhysicalExams].code MS
 * section[PhysicalExams].entry ..* MS
 * section[PhysicalExams].entry only Reference(Observation)
-* section[PhysicalExams].entry ^definition = "" ""
+* section[PhysicalExams].entry ^definition = "TBD"
 
 * section[LastKnownWell] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[LastKnownWell] ^extension.valueString = "Section"
@@ -129,7 +129,7 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[LastKnownWell].code MS
 * section[LastKnownWell].entry ..* MS
 * section[LastKnownWell].entry only Reference(Observation)
-* section[LastKnownWell].entry ^definition = """"
+* section[LastKnownWell].entry ^definition = "TBD"
 
 * section[PatientAcuity] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[PatientAcuity] ^extension.valueString = "Section"
@@ -139,7 +139,7 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[PatientAcuity].code MS
 * section[PatientAcuity].entry ..* MS
 * section[PatientAcuity].entry only Reference(Observation)
-* section[PatientAcuity].entry ^definition = """"
+* section[PatientAcuity].entry ^definition = "TBD"
 * section[PatientAcuity].entry contains
   InitialPatientAcuity 0..1 and
   FinalPatientAcuity 0..1
@@ -153,7 +153,7 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[LastOralIntake].code MS
 * section[LastOralIntake].entry ..* MS
 * section[LastOralIntake].entry only Reference(Observation)
-* section[LastOralIntake].entry ^definition = """"
+* section[LastOralIntake].entry ^definition = "TBD"
 
 
 * section[sectionReviewOfSystems] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
