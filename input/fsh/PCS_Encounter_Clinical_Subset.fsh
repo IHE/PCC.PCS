@@ -52,6 +52,7 @@ OPEN ISSUE: How to properly represent location type in relation to the encounter
 	Destination 0..1 MS
 * location[Dispatch].physicalType = #rd
 * location[Scene].physicalType = #ho	
+// Note: ho for scene is just an example, scene can be multiple location types may need to be resolved as an example 
 * location[Ambulance].physicalType = #ve
 * location[Destination].physicalType = #bu
 
@@ -77,13 +78,6 @@ Description: "Observatons related to the encounter status"
 * entry[Delays].valueCodeableConcept
 * entry[OdometerReadings].valueQuantity
 
-Extension: Barriers
-Id: BarriersToPatientCare
-Title: "Barriers To Patient Care"
-Description: "Indication of whether or not there were any patient specific barriers to serving the patient."
-* value[x] only CodeableConcept
-* valueCodeableConcept from NEMSIS.Barriers.to.Patient.Care.VS (example)
-
 Extension: Transport
 Id: Transport
 Title: "Transport"
@@ -104,20 +98,5 @@ Description: "Transport Information for the encounter."
 * extension[DestinationReason].valueCodeableConcept from NEMSIS.Reason.for.Choosing.Destination.VS (example) 
 * extension[RefusalReason].valueCodeableConcept from NEMSIS.Reason.for.Refusal.Release.VS (example) 
 
-
-Extension: MassCasualtyIncident
-Id: MassCasualtyIncident
-Title: "Mass Casualty Incident"
-Description: "The information reatlated to Paramedicine encounters for mass casualty incidents."
-* extension contains
-		MassCasualtyIncidentIndicator 0..1 and
-		NumberofPatients 0..1 and
-		TriageClassification 0..1 and 
-		DisasterType 0..1 
-//Note: eDisposition.29 - Crew Disposition
-* extension[MassCasualtyIncidentIndicator].valueCodeableConcept from http://terminology.hl7.org/ValueSet/v2-0136
-* extension[NumberofPatients].value[x]
-* extension[TriageClassification].valueCodeableConcept from NEMSIS.Triage.Classification.for.MCI.Patient.VS (example)
-* extension[DisasterType].valueCodeableConcept from NEMSIS.Natural.Suspected.Disaster.VS (example)
 
 

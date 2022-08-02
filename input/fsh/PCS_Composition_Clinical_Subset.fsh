@@ -38,11 +38,13 @@ the following cardinalities follow the documentation in the PCS profile:
 
 // Note: in addition to the sections defined in IPS...
 * section contains
+    sectionBarriersToCare 0..1 MS and 
     SectionCheifComplaint 0..1 MS and 
 	  sectionMedicationsAdministered 0..1 and 
 	  sectionProceduresPerformed 1..1 MS and
     sectionCoverage 0..1 MS and
-	  sectionReviewOfSystems 1..1 MS and 
+	  sectionReviewOfSystems 1..1 MS and
+    sectionMassCasualtyIncident 0..1 MS and 
 	  sectionCariacArrestEvent 0..1 and
 	  sectionInjuryEvent 0..1
 
@@ -53,6 +55,14 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[SectionCheifComplaint] ^definition = "This section contains the Medicaitons Administered during the PCS encounter"
 * section[SectionCheifComplaint].code = $loinc#10154-3
 * section[SectionCheifComplaint].code MS
+
+* section[sectionBarriersToCare] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionBarriersToCare] ^extension.valueString = "Section"
+* section[sectionBarriersToCare] ^short = "Barriers To Care "
+* section[sectionBarriersToCare] ^definition = "TBD"
+* section[sectionBarriersToCare].code = $loinc#67515-7
+* section[sectionBarriersToCare].code MS
+* section[sectionBarriersToCare].entry only Reference(Observation)
 
 
 * section[sectionMedicationsAdministered] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
@@ -120,6 +130,28 @@ The coded Review of systems section contains a relevant collection of symptoms a
 - FinalPatientAcuity 0..1
 """
 //TODO: I changed this sliceing to just a definition as there was no distinction between the various Observations, without a distinction there is nothing for a slice to do.
+
+
+* section[sectionMassCasualtyIncident] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionMassCasualtyIncident] ^extension.valueString = "Section"
+* section[sectionMassCasualtyIncident] ^short = "Mass Casulaty incident"
+* section[sectionMassCasualtyIncident] ^definition = "TBD"
+* section[sectionMassCasualtyIncident].code = $loinc#67490-3
+* section[sectionMassCasualtyIncident].code MS
+* section[sectionMassCasualtyIncident].entry ..* 
+* section[sectionMassCasualtyIncident].entry ^short = "TBD"
+* section[sectionMassCasualtyIncident].entry ^definition = "TBD"
+* section[sectionMassCasualtyIncident].entry contains
+  MassCasualtyIncidentIndicator 0..1 and
+	NumberofPatients 0..1 and
+	TriageClassification 0..1 and 
+	DisasterType 0..1 
+//Note: eDisposition.29 - Crew Disposition
+* section[sectionMassCasualtyIncident].entry[MassCasualtyIncidentIndicator].valueCodeableConcept from http://terminology.hl7.org/ValueSet/v2-0136
+* section[sectionMassCasualtyIncident].entry[NumberofPatients].value[x]
+* section[sectionMassCasualtyIncident].entry[TriageClassification].valueCodeableConcept from NEMSIS.Triage.Classification.for.MCI.Patient.VS (example)
+* section[sectionMassCasualtyIncident].entry[DisasterType].valueCodeableConcept from NEMSIS.Natural.Suspected.Disaster.VS (example)
+
 
 * section[sectionCariacArrestEvent] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionCariacArrestEvent] ^extension.valueString = "Section"
