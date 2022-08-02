@@ -3,16 +3,17 @@ Parent:         Observation
 Id:             IHE.Barriers.To.Care
 Title:          "IHE barriers to care observation"
 Description:    "Indication of whether or not there were any patient specific barriers to serving the patient."
-
+// NEMSIS eHistory.01 - Barriers to Patient Care
 
 
 * code = LOINC#67515-7
-* encounter only Reference(IHE_PCS_Encounter_ClinicalSubset)
+* encounter Reference(IHE_PCS_Encounter_ClinicalSubset)
 * valueCodeableConcept from NEMSIS_Barriers_to_Patient_Care_VS (example)
-* dataAbsentReason from NEMSIS_NOT_Values_VS (preferred)
+//Note Data absent reason codes need to be extended to include NEMSIS values 
 * status = #final
 * subject 1..1
 * subject only Reference(Patient)
+
 // Note COntraints:
 // When Barriers to Patient Care observation value is empty, it SHALL have a Data Absent reason. 
 
