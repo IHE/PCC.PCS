@@ -142,6 +142,10 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[PatientAcuity].code MS
 * section[PatientAcuity].entry ..* MS
 * section[PatientAcuity].entry only Reference(Observation)
+* section[PatientAcuity].entry ^slicing.discriminator.type = #pattern
+* section[PatientAcuity].entry ^slicing.discriminator.path = "resolve()"
+* section[PatientAcuity].entry ^slicing.rules = #open
+* section[PatientAcuity].entry ^short = "TBD"
 * section[PatientAcuity].entry ^definition = "TBD"
 * section[PatientAcuity].entry contains
   InitialPatientAcuity 0..1 and
