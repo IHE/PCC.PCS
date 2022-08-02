@@ -28,7 +28,7 @@ the following cardinalities follow the documentation in the PCS profile:
 
 * subject 1..1
 * encounter 1..1
-* encounter only Reference(encounter) 
+// already this  * encounter only Reference(Encounter) 
 
 
 * event.code 1..*
