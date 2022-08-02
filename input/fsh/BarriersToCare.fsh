@@ -6,10 +6,11 @@ Description:    "Indication of whether or not there were any patient specific ba
 // NEMSIS eHistory.01 - Barriers to Patient Care
 
 
-* code = LOINC#67515-7
+* code = loinc#67515-7
+* encounter 1..1 
 * encounter Reference(IHE_PCS_Encounter_ClinicalSubset)
 * valueCodeableConcept from NEMSIS_Barriers_to_Patient_Care_VS (example)
-//Note Data absent reason codes need to be extended to include NEMSIS values 
+// Note Data absent reason codes need to be extended to include NEMSIS values 
 * status = #final
 * subject 1..1
 * subject only Reference(Patient)
