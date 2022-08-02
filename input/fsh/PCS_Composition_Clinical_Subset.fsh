@@ -28,7 +28,7 @@ the following cardinalities follow the documentation in the PCS profile:
 
 * subject 1..1
 * encounter 1..1
-* encounter only Reference(encounter) 
+* encounter only Reference(IHE_PCS_Encounter_ClinicalSubset) 
 
 
 * event.code 1..*
@@ -130,7 +130,7 @@ The coded Review of systems section contains a relevant collection of symptoms a
 * section[sectionCariacArrestEvent].entry ..* 
 * section[sectionCariacArrestEvent].entry ^short = "Paramedicine Cariac Arrest Event observations."
 * section[sectionCariacArrestEvent].entry ^definition = "The observations related to a Paramedicine Cariac Arrest Event."
-* section[sectionCariacArrestEvent].entry only Reference(Observation or Procedure or Condition)
+//* section[sectionCariacArrestEvent].entry only Reference(Observation or Procedure or Condition)
 //TODO: Cariac Arrest Event orgaizer
 //TODO removed the slice as there is no profile to distinguish off of.
 
