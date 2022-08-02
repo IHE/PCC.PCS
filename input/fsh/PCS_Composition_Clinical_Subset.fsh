@@ -66,7 +66,7 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionBarriersToCare] ^definition = "TBD"
 * section[sectionBarriersToCare].code = $loinc#67515-7
 * section[sectionBarriersToCare].code MS
-* section[sectionBarriersToCare].entry only Reference(Observation)
+* section[sectionBarriersToCare].entry only Reference(Barriers_To_care)
 
 * section[sectionMedicationsAdministered] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionMedicationsAdministered] ^extension.valueString = "Section"
