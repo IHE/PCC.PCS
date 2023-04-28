@@ -21,7 +21,6 @@ the following cardinalities follow the documentation in the PCS profile:
 - O 0..1 IPS Plan of Care
 - O 0..1 Payor
 - RE 0..1 InjuryEvent seciton 
-- R 0..1 Chief Complaint
 - RE 0..1 EMS Protocol Section
 - R 1..1 Paramedicine Note
 - RE 0..1 eArrest Section 
@@ -112,7 +111,7 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionTransportEvent].entry ..* 
 * section[sectionTransportEvent].entry ^short = "The observations related to a Paramedicine Encounter Transport."
 * section[sectionTransportEvent].entry ^definition = "The observations related to a Paramedicine Encounter Transport."
-* section[sectionTransportEvent].entry only Reference(Observation)
+* section[sectionTransportEvent].entry only Reference(Transport)
 //TODO: Transport event orgaizer
 
 

@@ -7,13 +7,13 @@ The composition of the FHIR elements that are used to build the FHIR Document fo
 the following cardinalities follow the documentation in the PCS profile: 
 - RE 0..1 IPS Advance Directives 
 - R 1..1 IPS Allergies and Intolerances
-- R 1..1 IPS Medication Summary
+- R 1..1 IPS Medications
 - RE 0..1 Medications Administered Section
 - RE 0..1 IPS History of Past Illness
 - R 1..1 IPS Functional Status
 - RE 0..1 IPS History of Procedures
 - O 0..1 Immunizations
-- O 0..1IPS Medical Devices
+- O 0..1 IPS Medical Devices
 - R 0..1 IPS Problems
 - O 0..1 IPS Results
 - RE 0..1 IPS Vital Signs
@@ -21,9 +21,7 @@ the following cardinalities follow the documentation in the PCS profile:
 - O 0..1 IPS Plan of Care
 - O 0..1 Payor
 - RE 0..1 InjuryEvent seciton 
-- R 0..1 Chief Complaint
 - RE 0..1 eArrest Section 
-- RE 0..1 EMS Times Section 
 """
 
 * subject 1..1
@@ -35,30 +33,24 @@ the following cardinalities follow the documentation in the PCS profile:
 * event.code = http://terminology.hl7.org/CodeSystem/v3-ActClass#ENC
 
 
-
 // Note: in addition to the sections defined in IPS...
 * section contains
-    sectionBarriersToCare 0..1 MS and 
-    SectionCheifComplaint 0..1 MS and 
+    sectionBarriersToCare 0..1 MS and
 	  sectionMedicationsAdministered 0..1 and 
 	  sectionProceduresPerformed 1..1 MS and
     sectionCoverage 0..1 MS and
-    PhysicalExams 0..1 MS and 
-    LastKnownWell 0..1 MS and 
-    PatientAcuity 0..1 MS and 
     LastOralIntake 0..1 MS and 
-	  sectionReviewOfSystems 1..1 MS and
+//Note: should just be an observation, how do i include observations in this composition without having to make a section for it. OR is this an observation on the fucntional status?
+    LastKnownWell 0..1 MS and 
+//Note: should just be an observation, how do i include observations in this composition without having to make a section for it. OR is this an observation on the fucntional status?
+    //PatientAcuity 0..1 MS and 
+	  //sectionReviewOfSystems 1..1 MS and
+    //PhysicalExams 0..1 MS and 
+//Note: Open issue are Physical exams, review of systems, and patient acuity elements that are sub entries to functional status? commented out until confirmed 
     sectionMassCasualtyIncident 0..1 MS and 
 	  sectionCariacArrestEvent 0..1 and
 	  sectionInjuryEvent 0..1
 
-
-* section[SectionCheifComplaint] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[SectionCheifComplaint] ^extension.valueString = "Section"
-* section[SectionCheifComplaint] ^short = "CHeif Complaint"
-* section[SectionCheifComplaint] ^definition = "TBD"
-* section[SectionCheifComplaint].code = $loinc#10154-3
-* section[SectionCheifComplaint].code MS
 
 * section[sectionBarriersToCare] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionBarriersToCare] ^extension.valueString = "Section"
@@ -71,7 +63,7 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionMedicationsAdministered] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionMedicationsAdministered] ^extension.valueString = "Section"
 * section[sectionMedicationsAdministered] ^short = "Medications Administered"
-* section[sectionMedicationsAdministered] ^definition = "This section contains the Medicaitons Administered during the PCS encounter"
+* section[sectionMedicationsAdministered] ^definition = "This section contains the Medicaitons Administered during the a encounter"
 * section[sectionMedicationsAdministered].code = $loinc#87232-5
 * section[sectionMedicationsAdministered].code MS
 * section[sectionMedicationsAdministered].entry ..* MS
@@ -114,15 +106,15 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionCoverage].entry contains Coverage 0..1 MS
 * section[sectionCoverage].entry[Coverage] only Reference(Coverage)
 
-* section[PhysicalExams] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[PhysicalExams] ^extension.valueString = "Section"
-* section[PhysicalExams] ^short = "Physical Exams"
-* section[PhysicalExams] ^definition = "TBD"
-* section[PhysicalExams].code = $loinc#8687-6
-* section[PhysicalExams].code MS
-* section[PhysicalExams].entry ..* MS
-* section[PhysicalExams].entry only Reference(Observation)
-* section[PhysicalExams].entry ^definition = "TBD"
+//* section[PhysicalExams] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+//* section[PhysicalExams] ^extension.valueString = "Section"
+//* section[PhysicalExams] ^short = "Physical Exams"
+//* section[PhysicalExams] ^definition = "TBD"
+//* section[PhysicalExams].code = $loinc#8687-6
+//* section[PhysicalExams].code MS
+//* section[PhysicalExams].entry ..* MS
+//* section[PhysicalExams].entry only Reference(Observation)
+//* section[PhysicalExams].entry ^definition = "TBD"
 
 * section[LastKnownWell] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[LastKnownWell] ^extension.valueString = "Section"
@@ -135,22 +127,22 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[LastKnownWell].entry ^definition = "TBD"
 // Note: not sure if this needs to be a 
 
-* section[PatientAcuity] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[PatientAcuity] ^extension.valueString = "Section"
-* section[PatientAcuity] ^short = "Patient Acuity"
-* section[PatientAcuity] ^definition = "TBD"
-* section[PatientAcuity].code = $loinc#8687-6
-* section[PatientAcuity].code MS
-* section[PatientAcuity].entry ..* MS
-* section[PatientAcuity].entry only Reference(Observation)
-* section[PatientAcuity].entry ^slicing.discriminator.type = #pattern
-* section[PatientAcuity].entry ^slicing.discriminator.path = "resolve()"
-* section[PatientAcuity].entry ^slicing.rules = #open
-* section[PatientAcuity].entry ^short = "TBD"
-* section[PatientAcuity].entry ^definition = "TBD"
-* section[PatientAcuity].entry contains
-  InitialPatientAcuity 0..1 and
-  FinalPatientAcuity 0..1
+//* section[PatientAcuity] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+//* section[PatientAcuity] ^extension.valueString = "Section"
+//* section[PatientAcuity] ^short = "Patient Acuity"
+//* section[PatientAcuity] ^definition = "TBD"
+//* section[PatientAcuity].code = $loinc#8687-6
+//* section[PatientAcuity].code MS
+//* section[PatientAcuity].entry ..* MS
+//* section[PatientAcuity].entry only Reference(Observation)
+//* section[PatientAcuity].entry ^slicing.discriminator.type = #pattern
+//* section[PatientAcuity].entry ^slicing.discriminator.path = "resolve()"
+//* section[PatientAcuity].entry ^slicing.rules = #open
+//* section[PatientAcuity].entry ^short = "TBD"
+//* section[PatientAcuity].entry ^definition = "TBD"
+//* section[PatientAcuity].entry contains
+ // InitialPatientAcuity 0..1 and
+ // FinalPatientAcuity 0..1
 
 
 * section[LastOralIntake] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
@@ -232,4 +224,4 @@ The EMS protocols used to direct the clinical care of the patient.
   - Use of Occupant Safety Equipment
 http://www.hl7.org/documentcenter/private/standards/cda/CDAR2_IG_TRAUMAREG_R1_2016AUG.pdf pg 5.2 Injury Event for reference 
 """
-//Update: this is the section with optional contect related to the Trauma opton in the Actor options table
+//Update: this is the section with optional content related to the Trauma opton in the Actor options table

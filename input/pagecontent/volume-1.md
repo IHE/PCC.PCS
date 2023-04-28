@@ -4,7 +4,6 @@
 This content profiles defiines the Paramedicine Care Summary (PCS) document that should be passed to the hospital for the trasnport of a patient from emergency medical services systems.
 
 
-
 ## PCS Overview
 
 When a patient is transported for a medical emergency to a hospital, pertinant situational ifnformation, patient history, patient assessments, and interventions are only verbally available 
