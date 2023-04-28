@@ -9,7 +9,7 @@ Description:    "the number of patients at teh scene of a mass casualty incident
 
 * valueCodeableConcept from NEMSIS_Number_of_Pts_On_Scene_VS (example)
 * status = #final
-* subject 1..1
+* subject 1..1  
 * subject only Reference(Patient)
 * note 0..1
 // this is making everything else in observation forbidden. 
