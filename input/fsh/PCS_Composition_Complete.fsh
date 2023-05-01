@@ -111,7 +111,7 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionTransportEvent].entry ..* 
 * section[sectionTransportEvent].entry ^short = "The observations related to a Paramedicine Encounter Transport."
 * section[sectionTransportEvent].entry ^definition = "The observations related to a Paramedicine Encounter Transport."
-* section[sectionTransportEvent].entry only Reference(Transport)
+//* section[sectionTransportEvent].entry only Reference(Transport)
 //TODO: Transport event orgaizer
 
 

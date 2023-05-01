@@ -49,10 +49,7 @@ OPEN ISSUE: How to properly represent location type in relation to the encounter
 * period 1..1
 * diagnosis 1..*
 //condition.category will = encounter-diagnosis and primary and scondary impressions should be indicated with the Diagnosis rank Number
-* extension[Transport].extension[Priority] 1..1
-* extension[Transport].extension[PriorityDescriptors] 1..*
-* extension[Transport].extension[NumberofPatients] 1..1
-* extension[Transport].extension[TansportReasonCode] 1..*
+
 
 
 Extension: StatusSubType
@@ -66,6 +63,24 @@ Description: "Refinement of the Encounter Status History for steps within EMS"
 //FOR the in progress status there will be Sub types to deffine when the transport begins, arrival at destination time, and the trasnfer of care. includes rrived at destination/Landing Area
 //there WILL not be addtional SUb types for cancelled and Completed. 
 //THE "Unit Back at Home Location Date/Time" , and the "Back in service" will be subtypes of "other". 
+
+* location 1..*
+* location ^slicing.discriminator.type = #pattern
+* location ^slicing.discriminator.path = "$this"
+* location ^slicing.rules = #open
+* location ^slicing.ordered = false
+* location ^slicing.description = "TBD"
+* location contains 
+	Dispatch 0..1 MS and
+	Scene 0..1 MS and 
+	Ambulance 0..1 MS and
+	Destination 0..1 MS
+* location[Dispatch].physicalType = #rd
+* location[Scene].physicalType = #ho	
+// Note: ho for scene is just an example, scene can be multiple location types may need to be resolved as an example 
+* location[Ambulance].physicalType = #ve
+* location[Destination].physicalType = #bu
+
 
 Extension: StatusHistoryObservation
 Id: StatusHistoryObservation
@@ -84,19 +99,3 @@ Description: "The documentation of response mode techniques used for this EMS re
 * value[x] only CodeableConcept
 * valueCodeableConcept from NEMSIS.Additional.Response.Mode.Descriptors.VS (example)
 
-* location 1..*
-* location ^slicing.discriminator.type = #pattern
-* location ^slicing.discriminator.path = "$this"
-* location ^slicing.rules = #open
-* location ^slicing.ordered = false
-* location ^slicing.description = "TBD"
-* location contains 
-	Dispatch 0..1 MS and
-	Scene 0..1 MS and 
-	Ambulance 0..1 MS and
-	Destination 0..1 MS
-* location[Dispatch].physicalType = #rd
-* location[Scene].physicalType = #ho	
-// Note: ho for scene is just an example, scene can be multiple location types may need to be resolved as an example 
-* location[Ambulance].physicalType = #ve
-* location[Destination].physicalType = #bu
