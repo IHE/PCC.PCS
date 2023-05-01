@@ -22,6 +22,7 @@ the following cardinalities follow the documentation in the PCS profile:
 - O 0..1 Payor
 - RE 0..1 InjuryEvent seciton 
 - RE 0..1 eArrest Section 
+- mass casuality incident 
 """
 
 * subject 1..1
@@ -51,6 +52,9 @@ the following cardinalities follow the documentation in the PCS profile:
 	  sectionCariacArrestEvent 0..1 and
 	  sectionInjuryEvent 0..1
 
+//*note 
+
+//* section[sectionAdvanceDirectives] is required if known 
 
 * section[sectionBarriersToCare] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionBarriersToCare] ^extension.valueString = "Section"
