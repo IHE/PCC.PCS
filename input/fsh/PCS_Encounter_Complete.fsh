@@ -50,20 +50,6 @@ OPEN ISSUE: How to properly represent location type in relation to the encounter
 * diagnosis 1..*
 //condition.category will = encounter-diagnosis and primary and scondary impressions should be indicated with the Diagnosis rank Number
 
-
-
-Extension: StatusSubType
-Id: StatusSubType
-Title: "PCS Encounter status history sub-type"
-Description: "Refinement of the Encounter Status History for steps within EMS"
-* value[x] only CodeableConcept
-* valueCodeableConcept from NEMSIS.StatusHistorySubType.VS (example)
-//NOTE: Status sub-type is used to further defffine the steps used in EMS. For the Planned status there WILL be sub status types to have timestamps for the call for help, the Dispatch request, the Unit request, and start time of en route.
-//FOR the Arrived status there WILL be a sub status type to deffine the Arrival on scene/origin and the arrival at patient side/patient contact time. Includes Arrived at Staging Area
-//FOR the in progress status there will be Sub types to deffine when the transport begins, arrival at destination time, and the trasnfer of care. includes rrived at destination/Landing Area
-//there WILL not be addtional SUb types for cancelled and Completed. 
-//THE "Unit Back at Home Location Date/Time" , and the "Back in service" will be subtypes of "other". 
-
 * location 1..*
 * location ^slicing.discriminator.type = #pattern
 * location ^slicing.discriminator.path = "$this"
@@ -80,6 +66,18 @@ Description: "Refinement of the Encounter Status History for steps within EMS"
 // Note: ho for scene is just an example, scene can be multiple location types may need to be resolved as an example 
 * location[Ambulance].physicalType = #ve
 * location[Destination].physicalType = #bu
+
+Extension: StatusSubType
+Id: StatusSubType
+Title: "PCS Encounter status history sub-type"
+Description: "Refinement of the Encounter Status History for steps within EMS"
+* value[x] only CodeableConcept
+* valueCodeableConcept from NEMSIS.StatusHistorySubType.VS (example)
+//NOTE: Status sub-type is used to further defffine the steps used in EMS. For the Planned status there WILL be sub status types to have timestamps for the call for help, the Dispatch request, the Unit request, and start time of en route.
+//FOR the Arrived status there WILL be a sub status type to deffine the Arrival on scene/origin and the arrival at patient side/patient contact time. Includes Arrived at Staging Area
+//FOR the in progress status there will be Sub types to deffine when the transport begins, arrival at destination time, and the trasnfer of care. includes rrived at destination/Landing Area
+//there WILL not be addtional SUb types for cancelled and Completed. 
+//THE "Unit Back at Home Location Date/Time" , and the "Back in service" will be subtypes of "other". 
 
 
 Extension: StatusHistoryObservation
