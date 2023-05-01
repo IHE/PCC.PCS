@@ -41,7 +41,7 @@ the following cardinalities follow the documentation in the PCS profile:
 	sectionParamedicineNote 1..1 MS and 
 	sectionPhysicianCertificationStatement 0..1 and 
 	sectionProtocols 0..* and 
-	sectionTransportEvent 0..1 
+	sectionTransportEvent 0..1   
 
 // TODO define sectionServiceRequest
 
