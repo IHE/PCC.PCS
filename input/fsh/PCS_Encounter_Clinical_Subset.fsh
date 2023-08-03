@@ -34,6 +34,11 @@ An IHE PCS Encounter Complete Report resource is used to deffine the emergency m
 	PriamryImpression 0..1 MS and 
 	SecondaryImpression 0..1 MS
 * diagnosis[ChiefComplaint].use = #CC
+
+* location ^slicing.discriminator.type = #pattern
+* location ^slicing.discriminator.path = "$this"
+* location ^slicing.rules = #open
+* location ^slicing.ordered = false
 * location contains 
 	scene 0..1 MS and 
 	ambulance 0..1 MS and 

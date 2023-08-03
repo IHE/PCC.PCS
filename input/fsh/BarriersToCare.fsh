@@ -6,8 +6,8 @@ Description:    "Indication of whether or not there were any patient specific ba
 // NEMSIS eHistory.01 - Barriers to Patient Care
 * code = $loinc#67515-7
 * value[x] 1..1
-* value[x] only CodeableConcept from NEMSIS.Barriers.to.Patient.Care.VS (example)
-
+* value[x] only CodeableConcept 
+* value[x].coding from NEMSIS.Barriers.to.Patient.Care.VS (example)
 // Note Data absent reason codes need to be extended to include NEMSIS values 
 * status = #final
 // When Barriers to Patient Care observation value is empty, it SHALL have a Data Absent reason. 
@@ -34,7 +34,7 @@ InstanceOf: Barriers_To_care
 Usage: #inline
 
 * status  = http://hl7.org/fhir/observation-status#final
-* effective[x] = 2023-08-03T14:14:45-05:00
+* effective[x] = "2023-08-03T14:14:45-05:00"
 * value[x] = 3101027
 
 

@@ -88,17 +88,17 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[review_of_systems_section].code = $loinc#10187-3
 * section[review_of_systems_section].code MS
 * section[review_of_systems_section].entry only Reference(ClinicalImpression or Observation)
-* section[Payors].entry ^slicing.discriminator.type = #profile
-* section[Payors].entry ^slicing.discriminator.path = "resolve()"
-* section[Payors].entry ^slicing.rules = #open
-* section[Payors].entry ^short = "Review of Systems"
-* section[Payors].entry ^definition = "TBD"
+* section[review_of_systems_section].entry ^slicing.discriminator.type = #profile
+* section[review_of_systems_section].entry ^slicing.discriminator.path = "resolve()"
+* section[review_of_systems_section].entry ^slicing.rules = #open
+* section[review_of_systems_section].entry ^short = "Review of Systems"
+* section[review_of_systems_section].entry ^definition = "TBD"
 * section[review_of_systems_section].entry contains
 //  exams 0..* MS and 
   lastOralIntake 0..1 and 
   lastKnownWell 0..1 
 
-* section[review_of_systems_section].entry[lastOralIntake] only Reference(Last_Oral_Ontake)
+* section[review_of_systems_section].entry[lastOralIntake] only Reference(Last_Oral_Intake)
 * section[review_of_systems_section].entry[lastKnownWell] only Reference(Last_Known_Well)
 //* section[review_of_systems_section].entry[exams] only Reference()
 //Note: 
@@ -112,7 +112,7 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionBarriersToCare].code MS
 * section[sectionBarriersToCare].entry only Reference(BarriersTocare)
 
-* section[sectionMedications] contains medicationsAdministered 0..* MS 
+* section[sectionMedications].entry contains medicationsAdministered 0..* MS 
 
 * section[sectionProceduresPerformed] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionProceduresPerformed] ^extension.valueString = "Section"

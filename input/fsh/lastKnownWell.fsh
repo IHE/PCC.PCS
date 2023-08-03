@@ -30,5 +30,5 @@ InstanceOf: Last_Known_Well
 Usage: #inline
 
 * status  = http://hl7.org/fhir/observation-status#final
-* effective[x] = 2023-08-03T14:14:45-05:00
-* value[x] = 2023-08-03T13:50
+* effective[x] = "2023-08-03T14:14:45-05:00"
+* value[x] = "2023-08-03T13:50"
