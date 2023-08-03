@@ -27,7 +27,7 @@ Description:    "Date and Time of last oral intake."
 Instance: Ex-LastOralOntake
 InstanceOf: Last_Oral_Intake
 Usage: #inline
-
+* code = #67517-3
 * status  = http://hl7.org/fhir/observation-status#final
-* effective[x] = "2023-08-03T14:14:45-05:00"
-* value[x] = "2023-08-03T12:00"
+* effectiveDateTime = "2023-08-03T14:14:45-05:00"
+* valueDateTime = "2023-08-03T12:00"

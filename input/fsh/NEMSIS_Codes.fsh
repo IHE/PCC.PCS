@@ -540,7 +540,6 @@ Id: NEMSIS
 * #9925001  "Advanced Emergency Medical Technician (AEMT)"
 * #9925002	"Emergency Medical Technician - Intermediate"
 * #9925003	"Emergency Medical Responder (EMR)"
-* #9925005	"Emergency Medical Technician (EMT)"
 * #9925007	"Paramedic"
 * #9925023	"Other Healthcare Professional"
 * #9925025	"Other Non-Healthcare Professional"

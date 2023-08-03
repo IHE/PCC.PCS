@@ -30,11 +30,11 @@ Description:    "Indication of whether or not there were any patient specific ba
 * derivedFrom 0..0
 
 Instance: Ex-BarriersTocare
-InstanceOf: Barriers_To_care
+InstanceOf: BarriersTocare
 Usage: #inline
-
+* code = #67515-7
 * status  = http://hl7.org/fhir/observation-status#final
-* effective[x] = "2023-08-03T14:14:45-05:00"
-* value[x] = 3101027
+* effectiveDateTime = "2023-08-03T14:14:45-05:00"
+* valueCodeableConcept = 3101027
 
 
