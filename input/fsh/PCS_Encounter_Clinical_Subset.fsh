@@ -34,10 +34,14 @@ An IHE PCS Encounter Complete Report resource is used to deffine the emergency m
 	PriamryImpression 0..1 MS and 
 	SecondaryImpression 0..1 MS
 * diagnosis[ChiefComplaint].use = #CC
-* diagnosis[Scene].physicalType = #ho	
+* location contains 
+	scene 0..1 MS and 
+	ambulance 0..1 MS and 
+	destination 0..1 MS  
+* location[scene].physicalType = #ho	
 // Note: ho for scene is just an example, scene can be multiple location types may need to be resolved as an example 
-* diagnosis[Ambulance].physicalType = #ve
-* diagnosis[Destination].physicalType = #bu
+* location[ambulance].physicalType = #ve
+* location[destination].physicalType = #bu
 //Note SLicing for cheif complain vs impressions tbd for documentaiton 
 //condition.category will = encounter-diagnosis and primary and scondary impressions should be indicated with the Diagnosis rank Number
 * serviceProvider 1..1

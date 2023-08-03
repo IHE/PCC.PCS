@@ -1,4 +1,4 @@
-Profile:        Barriers_To_care
+Profile:        BarriersTocare
 Parent:         Observation
 Id:             IHE.Barriers.To.Care
 Title:          "IHE barriers to care observation"
@@ -6,7 +6,7 @@ Description:    "Indication of whether or not there were any patient specific ba
 // NEMSIS eHistory.01 - Barriers to Patient Care
 * code = $loinc#67515-7
 * value[x] 1..1
-* value[x] only CodeableConcept from NEMSIS_Barriers_to_Patient_Care_VS (example)
+* value[x] only CodeableConcept from NEMSIS.Barriers.to.Patient.Care.VS (example)
 
 // Note Data absent reason codes need to be extended to include NEMSIS values 
 * status = #final
@@ -29,12 +29,12 @@ Description:    "Indication of whether or not there were any patient specific ba
 * hasMember 0..0
 * derivedFrom 0..0
 
-Instance: ex-Barriers_To_care
+Instance: Ex-BarriersTocare
 InstanceOf: Barriers_To_care
 Usage: #inline
-* code = 67515-7
+
 * status  = http://hl7.org/fhir/observation-status#final
-* effective[x][+].dateTime = 2023-08-03T14:14:45-05:00
-* value[x][+].CodeableConcept = 3101027
+* effective[x] = 2023-08-03T14:14:45-05:00
+* value[x] = 3101027
 
 

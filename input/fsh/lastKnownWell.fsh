@@ -25,10 +25,10 @@ Description:    "The estimated date and time the patient was last known to be we
 * note 0..0
 
 
-Instance: ex-Last_Known_Well
+Instance: Ex-LastKnownWell
 InstanceOf: Last_Known_Well
 Usage: #inline
-* code = 67517-3
+
 * status  = http://hl7.org/fhir/observation-status#final
-* effective[x][+].dateTime = 2023-08-03T14:14:45-05:00
-* value[x][+].dateTime = 2023-08-03T13:50
+* effective[x] = 2023-08-03T14:14:45-05:00
+* value[x] = 2023-08-03T13:50
