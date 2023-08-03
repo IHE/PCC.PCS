@@ -5,27 +5,13 @@ Title:          "IHE barriers to care observation"
 Description:    "Indication of whether or not there were any patient specific barriers to serving the patient."
 // NEMSIS eHistory.01 - Barriers to Patient Care
 * code = $loinc#67515-7
-* encounter 1..1
-* valueCodeableConcept from NEMSIS_Barriers_to_Patient_Care_VS (example)
+* value[x] 1..1
+* value[x] only CodeableConcept from NEMSIS_Barriers_to_Patient_Care_VS (example)
+
 // Note Data absent reason codes need to be extended to include NEMSIS values 
 * status = #final
-* subject 1..1
-* subject only Reference(Patient)
-
-// Note COntraints:
 // When Barriers to Patient Care observation value is empty, it SHALL have a Data Absent reason. 
 
-// things that are not declared in the mapping table but likely are populated because they are normal REST processing
-//* id 0..1
-//* meta.versionId 0..1
-//* meta.lastUpdated 0..1
-//* meta.profile 0..1
-//* meta.source 0..0
-//* meta.security 0..0
-//* identifier 0..*
-//* text 0..0
-
-// this is making everything else in observation forbidden. If they show up, apps should not misbehave. IHE FooBar compliant apps shall not populate these in a Create or Update.
 
 * note 0..0
 * category 0..0
@@ -34,11 +20,6 @@ Description:    "Indication of whether or not there were any patient specific ba
 * contained 0..0
 * extension 0..0
 * modifierExtension 0..0
-* basedOn 0..0
-* partOf 0..0
-* focus 0..0
-* issued 0..0
-* performer 0..0
 * interpretation 0..0
 * bodySite 0..0
 * method 0..0
@@ -47,4 +28,13 @@ Description:    "Indication of whether or not there were any patient specific ba
 * referenceRange 0..0
 * hasMember 0..0
 * derivedFrom 0..0
+
+Instance: ex-Barriers_To_care
+InstanceOf: Barriers_To_care
+Usage: #inline
+* code = 67515-7
+* status  = http://hl7.org/fhir/observation-status#final
+* effective[x][+].dateTime = 2023-08-03T14:14:45-05:00
+* value[x][+].CodeableConcept = 3101027
+
 

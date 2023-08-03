@@ -15,7 +15,6 @@ An IHE PCS Encounter Complete Report resource is used to deffine the emergency m
 
 * identifier 1..*
 * status 1..1
-* statusHistory 0..*
 
 //Note: Encunter type should be Ambulance, Medflight, should be set as an extensible code set
 * class 1..1
@@ -24,7 +23,21 @@ An IHE PCS Encounter Complete Report resource is used to deffine the emergency m
 //Note: Should have as main options $230 "Patient transport", $117 "Emergency Medical" or $465 "Trasnport", $225 "Air ambulance", $226 "Ambulance" 
 * subject 1..1
 * reasonCode 1..*
-* diagnosis 0..*
+* diagnosis 1..*
+* diagnosis ^slicing.discriminator.type = #pattern
+* diagnosis ^slicing.discriminator.path = "$this"
+* diagnosis ^slicing.rules = #open
+* diagnosis ^slicing.ordered = false
+* diagnosis ^slicing.description = "TBD"
+* diagnosis contains 
+	ChiefComplaint 0..1 MS and
+	PriamryImpression 0..1 MS and 
+	SecondaryImpression 0..1 MS
+* diagnosis[ChiefComplaint].use = #CC
+* diagnosis[Scene].physicalType = #ho	
+// Note: ho for scene is just an example, scene can be multiple location types may need to be resolved as an example 
+* diagnosis[Ambulance].physicalType = #ve
+* diagnosis[Destination].physicalType = #bu
 //Note SLicing for cheif complain vs impressions tbd for documentaiton 
 //condition.category will = encounter-diagnosis and primary and scondary impressions should be indicated with the Diagnosis rank Number
 * serviceProvider 1..1

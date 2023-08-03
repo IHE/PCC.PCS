@@ -6,43 +6,61 @@ Description:      """
 The composition of the FHIR elements that are used to build the FHIR Document for the Paramedicine Care Summary Clinical Subset
 the following cardinalities follow the documentation in the PCS profile: 
 - RE 0..1 IPS Advance Directives 
+- RE 0..1 IPS History of Past Illness
+- RE 0..1 IPS History of Procedures
 - R 1..1 IPS Allergies and Intolerances
 - R 1..1 IPS Medications
-- RE 0..1 Medications Administered Section
-- RE 0..1 IPS History of Past Illness
+- R 0..1 IPS Problems (complaints?)
+--- review of systems 
 - R 1..1 IPS Functional Status
-- RE 0..1 IPS History of Procedures
+- RE 0..1 Medications Administered Section
+---- procedures performed 
+- RE 0..1 IPS Vital Signs
+- O 0..1 Payor
+
+- RE 0..1 IPS History of Pregnancy
 - O 0..1 Immunizations
 - O 0..1 IPS Medical Devices
-- R 0..1 IPS Problems
 - O 0..1 IPS Results
-- RE 0..1 IPS Vital Signs
-- RE 0..1 IPS History of Pregnancy
 - O 0..1 IPS Plan of Care
 - O 0..1 Payor
-- RE 0..1 InjuryEvent seciton 
-- RE 0..1 eArrest Section 
-- mass casuality incident 
+- O 0..1 InjuryEvent seciton 
+- O 0..1 eArrest Section 
+------- mass casuality incident 
 """
 
 * subject 1..1
 * encounter 1..1
 * encounter only Reference(IHE_PCS_Encounter_ClinicalSubset) 
 
+* category ^slicing.discriminator.type = #value
+* category ^slicing.discriminator.path = "$this"
+* category ^slicing.rules = #open
+* category 1..
+* category contains pregnancySummaryDocument 1..1
+* category[pregnancySummaryDocument] = $loinc#67796-3
 
 * event.code 1..*
 * event.code = http://terminology.hl7.org/CodeSystem/v3-ActClass#ENC
 
+* section[sectionPastIllnessHx] 1..1
+* section[sectionProceduresHx] 1..1
+
+* section[sectionAdvanceDirectives] 1..1
+// eHisotry.16 presence of emergency form
+* section[sectionVitalSigns] 1..1
 
 // Note: in addition to the sections defined in IPS...
 * section contains
     sectionBarriersToCare 0..1 MS and
-	  sectionMedicationsAdministered 0..1 and 
+// 	  sectionMedicationsAdministered 0..1 MS and 
 	  sectionProceduresPerformed 1..1 MS and
-    sectionCoverage 0..1 MS and
-    LastOralIntake 0..1 MS and 
+    review_of_systems_section 0..1 MS and
+    PhysicalExams 1..1 MS and 
+    Payors 0..1 and 
+//    LastOralIntake 0..1 MS and 
 //Note: should just be an observation, how do i include observations in this composition without having to make a section for it. OR is this an observation on the fucntional status?
-    LastKnownWell 0..1 MS and 
+//    LastKnownWell 0..1 MS and 
 //Note: should just be an observation, how do i include observations in this composition without having to make a section for it. OR is this an observation on the fucntional status?
     //PatientAcuity 0..1 MS and 
 	  //sectionReviewOfSystems 1..1 MS and
@@ -54,7 +72,32 @@ the following cardinalities follow the documentation in the PCS profile:
 
 //*note 
 
-//* section[sectionAdvanceDirectives] is required if known 
+
+
+* section[sectionProblems].entry MS 
+* extension contains ProblemType named ProblemType 0..1
+//* extension contains LastKnownWell named LastKnownWell 0..1
+//* extension contains LastOralIntake named LastOralIntake 0..*
+
+
+
+* section[review_of_systems_section] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[review_of_systems_section] ^extension.valueString = "Section"
+* section[review_of_systems_section] ^short = "Review of Systems"
+* section[review_of_systems_section] ^definition = "TBD"
+* section[review_of_systems_section].code = $loinc#10187-3
+* section[review_of_systems_section].code MS
+* section[review_of_systems_section].entry only Reference(ClinicalImpression or Observation)
+* section[review_of_systems_section].entry contains
+//  exams 0..* MS and 
+  lastOralIntake 0..1 and 
+  lastKnownWell 0..1 
+
+* section[review_of_systems_section].entry[lastOralIntake] only Reference(Last_Oral_Ontake)
+* section[review_of_systems_section].entry[lastKnownWell] only Reference(Last_Known_Well)
+//* section[review_of_systems_section].entry[exams] only Reference()
+//Note: 
+
 
 * section[sectionBarriersToCare] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionBarriersToCare] ^extension.valueString = "Section"
@@ -64,20 +107,7 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionBarriersToCare].code MS
 * section[sectionBarriersToCare].entry only Reference(Barriers_To_care)
 
-* section[sectionMedicationsAdministered] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionMedicationsAdministered] ^extension.valueString = "Section"
-* section[sectionMedicationsAdministered] ^short = "Medications Administered"
-* section[sectionMedicationsAdministered] ^definition = "This section contains the Medicaitons Administered during the a encounter"
-* section[sectionMedicationsAdministered].code = $loinc#87232-5
-* section[sectionMedicationsAdministered].code MS
-* section[sectionMedicationsAdministered].entry ..* MS
-* section[sectionMedicationsAdministered].entry only Reference(MedicationAdministration)
-* section[sectionMedicationsAdministered].entry ^slicing.discriminator.type = #profile
-* section[sectionMedicationsAdministered].entry ^slicing.discriminator.path = "resolve()"
-* section[sectionMedicationsAdministered].entry ^slicing.rules = #open
-* section[sectionMedicationsAdministered].entry ^short = "Medications Administered"
-* section[sectionMedicationsAdministered].entry ^definition = "This section contains the medications administered during PCS encounter"
-* section[sectionMedicationsAdministered].entry only Reference(MedicationAdministration)
+* section[sectionMedications] contains medicationsAdministered 0..* MS 
 
 * section[sectionProceduresPerformed] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionProceduresPerformed] ^extension.valueString = "Section"
@@ -94,42 +124,29 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionProceduresPerformed].entry ^definition = "This section contains the procedures that were performed during the PCS encounter"
 * section[sectionProceduresPerformed].entry only Reference(ProcedureUvIps)
 
-* section[sectionCoverage] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionCoverage] ^extension.valueString = "Section"
-* section[sectionCoverage] ^short = "Insurance Section"
-* section[sectionCoverage] ^definition = "The insurance information for the patient to cover the encounter event."
-* section[sectionCoverage].code = $loinc#48768-6
-* section[sectionCoverage].code MS
-* section[sectionCoverage].entry ..1 MS
-* section[sectionCoverage].entry only Reference(Coverage)
-* section[sectionCoverage].entry ^slicing.discriminator.type = #profile
-* section[sectionCoverage].entry ^slicing.discriminator.path = "resolve()"
-* section[sectionCoverage].entry ^slicing.rules = #open
-* section[sectionCoverage].entry ^short = "the Patient's insurance information"
-* section[sectionCoverage].entry ^definition = "Contains data on the patient's payers, whether a 'third party' insurance, self-pay, other payer or guarantor, or some combination of payers, and is used to define which entity is the responsible fiduciary for the financial aspects of a patient's care"
-* section[sectionCoverage].entry contains Coverage 0..1 MS
-* section[sectionCoverage].entry[Coverage] only Reference(Coverage)
+* section[Payors] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[Payors] ^extension.valueString = "Section"
+* section[Payors] ^short = "Payors"
+* section[Payors] ^definition = "The Payers section contains data on the patient’s payers, whether a ‘third party’ insurance, self-pay, other payer or guarantor, or some combination. ."
+* section[Payors].code = $loinc#48768-6
+* section[Payors].code MS
+* section[Payors].entry only Reference(Coverage)
+* section[Payors].entry ^slicing.discriminator.type = #profile
+* section[Payors].entry ^slicing.discriminator.path = "resolve()"
+* section[Payors].entry ^slicing.rules = #open
+* section[Payors].entry ^short = "the Patient's insurance information"
+* section[Payors].entry ^definition = "Contains data on the patient's payers, whether a 'third party' insurance, self-pay, other payer or guarantor, or some combination of payers, and is used to define which entity is the responsible fiduciary for the financial aspects of a patient's care"
+* section[Payors].entry contains Coverage 0..1 MS
+* section[Payors].entry[Coverage] only Reference(Coverage)
 
-//* section[PhysicalExams] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-//* section[PhysicalExams] ^extension.valueString = "Section"
-//* section[PhysicalExams] ^short = "Physical Exams"
-//* section[PhysicalExams] ^definition = "TBD"
-//* section[PhysicalExams].code = $loinc#8687-6
-//* section[PhysicalExams].code MS
-//* section[PhysicalExams].entry ..* MS
-//* section[PhysicalExams].entry only Reference(Observation)
-//* section[PhysicalExams].entry ^definition = "TBD"
-
-* section[LastKnownWell] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[LastKnownWell] ^extension.valueString = "Section"
-* section[LastKnownWell] ^short = "Last Known Well"
-* section[LastKnownWell] ^definition = "TBD"
-* section[LastKnownWell].code = $loinc#8687-6
-* section[LastKnownWell].code MS
-* section[LastKnownWell].entry ..* MS
-* section[LastKnownWell].entry only Reference(Last_Known_Well)
-* section[LastKnownWell].entry ^definition = "TBD"
-// Note: not sure if this needs to be a 
+* section[PhysicalExams] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[PhysicalExams] ^extension.valueString = "Section"
+* section[PhysicalExams] ^short = "Physical Exams"
+* section[PhysicalExams] ^definition = "The coded Detailed Physical Examination section shall contain only the required and optional subsections performed."
+* section[PhysicalExams].code = $loinc#29545-1
+* section[PhysicalExams].code MS
+* section[PhysicalExams].entry only Reference(Observation)
+// Note:If there is no entry available in this section then a data absent Reason SHALL be provided 
 
 //* section[PatientAcuity] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 //* section[PatientAcuity] ^extension.valueString = "Section"
@@ -148,19 +165,7 @@ the following cardinalities follow the documentation in the PCS profile:
  // InitialPatientAcuity 0..1 and
  // FinalPatientAcuity 0..1
 
-
-* section[LastOralIntake] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[LastOralIntake] ^extension.valueString = "Section"
-* section[LastOralIntake] ^short = "Last Oral Intake"
-* section[LastOralIntake] ^definition = "TBD"
-* section[LastOralIntake].code = $loinc#8687-6
-* section[LastOralIntake].code MS
-* section[LastOralIntake].entry ..* MS
-* section[LastOralIntake].entry only Reference(Last_Oral_Ontake)
-* section[LastOralIntake].entry ^definition = "TBD"
-
-
-//TODO: I changed this sliceing to just a definition as there was no distinction between the various Observations, without a distinction there is nothing for a slice to do.
+//Note: where would patient acuity be documented 
 
 
 * section[sectionMassCasualtyIncident] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
@@ -181,7 +186,9 @@ the following cardinalities follow the documentation in the PCS profile:
 	TriageClassification 0..1 and 
 	DisasterType 0..1 
 //Note: eDisposition.29 - Crew Disposition
+// make individual observations 
 //* section[sectionMassCasualtyIncident].entry[MassCasualtyIncidentIndicator].valueCodeableConcept from http://terminology.hl7.org/ValueSet/v2-0136
+// observation component if no components are used, if yes theyn the rest of them can be used as cpmpoents can make a section just for events such as mass acasulaity/ injury/ cardiac/ airway management  
 //* section[sectionMassCasualtyIncident].entry[NumberofPatients].value[x]
 //* section[sectionMassCasualtyIncident].entry[TriageClassification].valueCodeableConcept from NEMSIS.Triage.Classification.for.MCI.Patient.VS (example)
 //* section[sectionMassCasualtyIncident].entry[DisasterType].valueCodeableConcept from NEMSIS.Natural.Suspected.Disaster.VS (example)
@@ -189,7 +196,7 @@ the following cardinalities follow the documentation in the PCS profile:
 
 * section[sectionCariacArrestEvent] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionCariacArrestEvent] ^extension.valueString = "Section"
-* section[sectionCariacArrestEvent] ^short = "Paramedicine Cariac Arrest Event"
+* section[sectionCariacArrestEvent] ^short = "Paramedicine Cariac Arrest Event" 
 * section[sectionCariacArrestEvent] ^definition = "The EMS cardiac arrest event reportable observations."
 * section[sectionCariacArrestEvent].code = $loinc#67799-7 
 * section[sectionCariacArrestEvent].code MS

@@ -6,29 +6,29 @@ Description:    "The estimated date and time the patient was last known to be we
 
 //* code = $loinc#67517-3
 //Proper loinc code needs to be requested or found
-* valueDateTime 0..1
+* value[x] 1..1
+* value[x] only dateTime
 * status = #final
-* encounter 1..1
-* subject 1..1
-* subject only Reference(Patient)
-// this is making everything else in observation forbidden. 
-* category 0..0
+
 * implicitRules 0..0
 * language 0..0
 * contained 0..0
 * modifierExtension 0..0
-* basedOn 0..0
-* partOf 0..0
-* focus 0..0
 * issued 0..0
-* performer 0..0
 * interpretation 0..0
 * bodySite 0..0
 * method 0..0
 * specimen 0..0
 * device 0..0
 * referenceRange 0..0
-* hasMember 0..0
-* derivedFrom 0..0
 * component 0..0
 * note 0..0
+
+
+Instance: ex-Last_Known_Well
+InstanceOf: Last_Known_Well
+Usage: #inline
+* code = 67517-3
+* status  = http://hl7.org/fhir/observation-status#final
+* effective[x][+].dateTime = 2023-08-03T14:14:45-05:00
+* value[x][+].dateTime = 2023-08-03T13:50

@@ -117,7 +117,25 @@ Id: NEMSIS.Current.Medication.Administration.Route.VS
 * NEMSIS#9927075	"Umbilical Venous Catheter"
 
 
-
+ValueSet: NEMSIS_Crew_Member_Level_VS
+Description: "The functioning level of the crew member ID during this EMS patient encounter."
+Id: NEMSIS.Crew.Member.Level.VS
+* NEMSIS#9925001	"Advanced Emergency Medical Technician (AEMT)"
+* NEMSIS#9925002	"Emergency Medical Technician - Intermediate"
+* NEMSIS#9925003	"Emergency Medical Responder (EMR)"
+* NEMSIS#9925005	"Emergency Medical Technician (EMT)"
+* NEMSIS#9925007	"Paramedic"
+* NEMSIS#9925023	"Other Healthcare Professional"
+* NEMSIS#9925025	"Other Non-Healthcare Professional"
+* NEMSIS#9925027    "Physician"
+* NEMSIS#9925029    "Respiratory Therapist"
+* NEMSIS#9925031    "Student"
+* NEMSIS#9925033    "Critical Care Paramedic"
+* NEMSIS#9925035    "Community Paramedicine"
+* NEMSIS#9925037    "Nurse Practitioner"
+* NEMSIS#9925039    "Physician Assistant"
+* NEMSIS#9925041    "Licensed Practical Nurse (LPN)"
+* NEMSIS#9925043    "Registered Nurse"
 
 ValueSet: NEMSIS_Crew_Member_Response_Role_VS
 Description: "The role(s) of the crew member during response, at scene treatment, and/or transport."

@@ -24,8 +24,15 @@ the following cardinalities follow the documentation in the PCS profile:
 - RE 0..1 EMS Protocol Section
 - R 1..1 Paramedicine Note
 - RE 0..1 eArrest Section 
+-- dispatch (add EMS run report )
+-- disposition (add?? EMS run repot )
+-- personel adverse event section (add ems run report)
+-- ems scene (add?)
+-- ems situation?
+SE IPS social hisotry 
+	ems social history entry 
 - RE 0..1 EMS Response Section
-- RE 0..1 EMS Times Section
+- RE 0..1 EMS Times Sections
 - O 0..1 CareTeam 
 - O 0..1 Physician Certification Statement
 - RE 0..1  Transport Section 
@@ -39,7 +46,6 @@ the following cardinalities follow the documentation in the PCS profile:
 //	sectionServiceRequest 1..1 and
 	sectionCareTeam 0..1 MS and 
 	sectionParamedicineNote 1..1 MS and 
-	sectionPhysicianCertificationStatement 0..1 and 
 	sectionProtocols 0..* and 
 	sectionTransportEvent 0..1   
 
@@ -70,17 +76,6 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionParamedicineNote].code = $loinc#28563-5
 * section[sectionParamedicineNote].text 1..1 MS
 //This is where the Paramedicince Note is in the FHIR Build
-
-* section[sectionPhysicianCertificationStatement] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionPhysicianCertificationStatement] ^extension.valueString = "Section"
-* section[sectionPhysicianCertificationStatement] ^short = "Physician Certification Statement Section"
-* section[sectionPhysicianCertificationStatement] ^definition = "Indication of whether a physician certification statement is available documenting the medical necessity or the EMS encounter."
-* section[sectionPhysicianCertificationStatement].code = $loinc#52016-3
-* section[sectionPhysicianCertificationStatement].code MS
-* section[sectionPhysicianCertificationStatement].entry 0..1 MS
-* section[sectionPhysicianCertificationStatement].entry only Reference( Observation)
-// TODO: Andrea, there needs to be a mapping as emptyReason must come from the (preferred) valueset
-//* section[sectionPhysicianCertificationStatement].emptyReason only http://terminology.hl7.org/ValueSet/v2-0136
 
 
 * section[sectionProtocols] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
