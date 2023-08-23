@@ -29,7 +29,7 @@ OPEN ISSUE: How to properly represent location type in relation to the encounter
 - Location Scene is required 
 - Location Destination is Required 
 	- Location.type in the location resource directed to a value set 
-	- Location.type extension in the location section in the encounter
+	- Location.type extension in the location section in the encounter  
 """
 
 

@@ -32,9 +32,9 @@ Description:    "Indication of whether or not there were any patient specific ba
 Instance: Ex-BarriersTocare
 InstanceOf: BarriersTocare
 Usage: #inline
-* code = #67515-7
+* code = http://loinc.org#67515-7
 * status  = http://hl7.org/fhir/observation-status#final
 * effectiveDateTime = "2023-08-03T14:14:45-05:00"
-* valueCodeableConcept = 3101027
+* valueCodeableConcept = $NEMSIS#3101027
 
 
