@@ -5,7 +5,7 @@ Title:          "IHE PCS Profile ParamedicinceVitalSigns Observation"
 Description:    "A profile on the Observation that declares how FooBar will Create/Update for body weight measurements."
 * category 1..1
 * category = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs
-* code only from Paramedicine_VitalSigns_VS (extensible)
+* code = CodeableConcept only from Paramedicine_VitalSigns_VS (extensible)
 * effectiveDateTime 1..1
 * subject 1..1
 * subject only Reference(Patient)
@@ -170,8 +170,7 @@ Description:    """
 The Glasgow Coma Scale is reported as the combined score of each test (E for eye, V for Verbal, and M for Motor). """
 
 * code = $loinc#9269-2
-* value[x] only Quantity
-* value[x].code = $ucum#score
+* value[x] only integer
 
 Instance: ex-TotalGlasgowComaScore
 InstanceOf: TotalGlasgowComaScore
@@ -179,7 +178,7 @@ Usage: #example
 Description: "The Example instance for the Total Glasgow Coma Score vital sign observation"
 * status = http://hl7.org/fhir/observation-status#final
 * effectiveDateTime = "2021-10-06T10:52:30-07:00"
-* valueQuantity = 14
+* valueInteger = 14
 * performer = Reference(Practitioner/ex-Practitioner)
 * subject = Reference(Patient/ex-Patient)
 
@@ -212,7 +211,6 @@ Evaluation of the patient for the presence or absence of pain, and its severity 
 
 * code = $loinc#38208-5
 * value[x] only integer
-* method only from 
 //Note: 
 
 
@@ -254,8 +252,7 @@ Description:    """
 Used to gauge the severity of a stroke. Patients are given more points for greater deficiencies. A score of 0 indicates that the test is normal.  """
 
 * code = $loinc#72089-6 
-* value[x] only Quantity
-* value[x].code = $ucum#score
+* value[x] only integer
 
 Instance: ex-StrokeScaleScore
 InstanceOf: StrokeScaleScore
@@ -263,7 +260,7 @@ Usage: #example
 Description: "The Example instance for the Stroke Scale Score vital signs observation"
 * status = http://hl7.org/fhir/observation-status#final
 * effectiveDateTime = "2021-10-06T10:52:30-07:00"
-* valueQuantity = 15
+* valueInteger = 15
 * performer = Reference(Practitioner/ex-Practitioner)
 * subject = Reference(Patient/ex-Patient)
 
@@ -407,6 +404,6 @@ Usage: #example
 Description: "The Example instance for Level Of Responsiveness observation"
 * status = http://hl7.org/fhir/observation-status#final
 * effectiveDateTime = "2021-10-06T10:52:30-07:00"
-* valueCodeableConcept = 248234008
+* valueCodeableConcept = $sct#248234008
 * performer = Reference(Practitioner/ex-Practitioner)
 * subject = Reference(Patient/ex-Patient)

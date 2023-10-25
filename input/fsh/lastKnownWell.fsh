@@ -31,4 +31,4 @@ Usage: #inline
 * code = http://loinc.org#67517-3
 * status  = http://hl7.org/fhir/observation-status#final
 * effectiveDateTime = "2023-08-03T14:14:45-05:00"
-* valueDateTime = "2023-08-03T13:50"
+* valueDateTime = "2023-08-03T13:50:00"

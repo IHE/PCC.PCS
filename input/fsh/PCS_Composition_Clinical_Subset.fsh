@@ -38,7 +38,7 @@ the following cardinalities follow the documentation in the PCS profile:
 * category ^slicing.rules = #open
 * category 1..
 * category contains ParamedicineSummaryDocument  1..1
-* category[pregnancySummaryDocument] = $loinc#67796-3
+* category[ParamedicineSummaryDocument] = $loinc#67796-3
 
 * event.code 1..*
 * event.code = http://terminology.hl7.org/CodeSystem/v3-ActClass#ENC
@@ -49,7 +49,7 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionAdvanceDirectives] 1..1
 // eHisotry.16 presence of emergency form
 * section[sectionVitalSigns] 1..1
-* section[sectionVitalSigns].entry[entryvitalSign] only Reference (Observation or VitalSigns or ParamedicineVitalSigns)
+* section[sectionVitalSigns].entry only Reference (Observation or VitalSigns or ParamedicineVitalSigns)
 
 // Note: in addition to the sections defined in IPS...
 * section contains
