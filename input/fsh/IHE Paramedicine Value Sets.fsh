@@ -58,3 +58,31 @@ Id: Level.Of.Responsiveness.VS
 * $sct#288598006      "Ability to use verbal communication (observable entity)"
 * $sct#422768004      "Unresponsive (finding)"
 * $sct#450847001      "Responds to pain (finding)"
+
+
+ValueSet: Paramedicine_Incident_Type_VS
+Description: "The Stroke assesment used to identify a stroke"
+Id: Paramedicine.Incident.Type.VS
+* codes from system $sct 
+* $sct#773760007     "Traumatic event (event)"
+* $sct#443684005      "Disease outbreak (event)"
+* $sct#276746005      "Environmental event (event)"
+* $sct#49061008      "Landslide (event)"
+* $sct#111056004      "Flood (event)"
+* $sct#20936008      "Fire storm (event)"
+//Request code for "Wildfire"
+* $sct#8766005      "Earthquake (event)"
+* $sct#82145005      "Avalanche (event)"
+* $sct#35314007      "Hurricane (event)"
+* $sct#88644004      "Tornado (event)"
+* $sct#59262002      "Snowstorm (event)"
+* $sct#19224001      "Tidal wave (event)"
+* $sct#410429000      "Cardiac arrest (disorder)"
+* $sct#230713003      "Stroke of uncertain pathology (disorder)"
+* $sct#417746004      "Traumatic injury (disorder)"
+* $sct#371128008      "Occupational injury (disorder)"
+* $sct#1119219007      "Nontraumatic injury (disorder)"
+* $sct#418399005      "Motor vehicle accident (event)"
+// Request from snomed $sct#      "Mass Casulaty/multiple casualty event"
+
+

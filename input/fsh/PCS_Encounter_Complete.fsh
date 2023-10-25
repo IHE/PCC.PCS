@@ -44,6 +44,7 @@ OPEN ISSUE: How to properly represent location type in relation to the encounter
 * priority from NEMSIS.Response.Mode.to.Scene.VS (example)
 * extension contains PriorityDescriptors named PriorityDescriptors 0..*
 * basedOn 1..1
+* basedOn only Reference (ServiceRequest or ParamedicineDispatch)
 * participant 1..*
 * participant.type 1..*
 * period 1..1

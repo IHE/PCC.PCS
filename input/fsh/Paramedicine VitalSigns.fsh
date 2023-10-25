@@ -272,8 +272,8 @@ Description:    """
 The interpretation of the Stroke Scale score as positive, negative, or unconclusive.  """
 
 * code = $loinc#67520-7
-* value[x] only CodeableConcept from Stroke_Scale_Score_Interpretation_VS (preferred)
-
+* value[x] only CodeableConcept 
+* valueCodeableConcept from Stroke_Scale_Score_Interpretation_VS (preferred)
 
 Instance: ex-StrokeScaleScoreInterpretation
 InstanceOf: StrokeScaleScoreInterpretation

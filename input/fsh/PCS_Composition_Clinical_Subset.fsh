@@ -46,10 +46,16 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionPastIllnessHx] 1..1
 * section[sectionProceduresHx] 1..1
 
+* section[sectionPregnancyHx].entry contains 
+  estimatedDueDate 0..1 and 
+  estimatedGestationalAge 0..1
+* section[sectionPregnancyHx].entry[estimatedDueDate] only Reference(Observation)
+* section[sectionPregnancyHx].entry[estimatedGestationalAge] only Reference(Observation)
+
 * section[sectionAdvanceDirectives] 1..1
 // eHisotry.16 presence of emergency form
 * section[sectionVitalSigns] 1..1
-* section[sectionVitalSigns].entry Reference (Observation or VitalSigns or ParamedicineVitalSigns)
+* section[sectionVitalSigns].entry Reference (Observation or VitalSigns or IHE.pcs.paramedicinceVitalSigns)
 
 // Note: in addition to the sections defined in IPS...
 * section contains
@@ -67,6 +73,7 @@ the following cardinalities follow the documentation in the PCS profile:
 	  //sectionReviewOfSystems 1..1 MS and
     //PhysicalExams 0..1 MS and 
 //Note: Open issue are Physical exams, review of systems, and patient acuity elements that are sub entries to functional status? commented out until confirmed 
+    sectionIncident 1..1 and 
     sectionMassCasualtyIncident 0..1 MS and 
 	  sectionCariacArrestEvent 0..1 and
 	  sectionInjuryEvent 0..1
@@ -80,7 +87,20 @@ the following cardinalities follow the documentation in the PCS profile:
 //* extension contains LastKnownWell named LastKnownWell 0..1
 //* extension contains LastOralIntake named LastOralIntake 0..*
 
+* section[sectionIncident] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionIncident] ^extension.valueString = "Section"
+* section[sectionIncident] ^short = "Incident"
+* section[sectionIncident] ^definition = "The Incident section of the Paramedicine Summary that will hold the Incident date/time, incident type and any references that go with the incident type."
+* section[sectionIncident].code = $loinc#67800-3
+* section[sectionIncident].code MS
+* section[sectionIncident].entry contains 
+  incidentDateTime 0..1 and 
+  incidentType 0..* and 
+  incidentEventAdditionalReferences 0..*
 
+* section[sectionIncident].entry[incidentDateTime] only 	dateTime or Period or Timing
+* section[sectionIncident].entry[incidentDateTime] only CodeableConcept from Paramedicine_Incident_Type_VS (extensible) 
+* section[sectionIncident].entry[incidentEventAdditionalReferences] only Reference(Observation)
 
 * section[review_of_systems_section] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[review_of_systems_section] ^extension.valueString = "Section"
@@ -173,6 +193,13 @@ the following cardinalities follow the documentation in the PCS profile:
 
 //Note: where would patient acuity be documented 
 
+* section[ReasonForReferral] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[ReasonForReferral] ^extension.valueString = "Section"
+* section[ReasonForReferral] ^short = "Reason for Referral"
+* section[ReasonForReferral] ^definition = "The coded Detailed Physical Examination section shall contain only the required and optional subsections performed."
+* section[ReasonForReferral].code = $loinc#42349-1
+* section[ReasonForReferral].code MS
+* section[ReasonForReferral].entry only Reference(Observation or Condition)
 
 * section[sectionMassCasualtyIncident] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionMassCasualtyIncident] ^extension.valueString = "Section"

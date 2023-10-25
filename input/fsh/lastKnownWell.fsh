@@ -29,7 +29,7 @@ Instance: Ex-LastKnownWell
 InstanceOf: Last_Known_Well
 Usage: #example
 Description: "The Example instance for last known well observation"
-
+* code = http://loinc.org#67517-3
 * status  = http://hl7.org/fhir/observation-status#final
 * effectiveDateTime = "2023-08-03T14:14:45-05:00"
-* valueDateTime = "2023-08-03T13:50:45-05:00"
+* valueDateTime = "2023-08-03T12:00:00-05:00"
