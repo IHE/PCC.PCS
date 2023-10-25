@@ -5,7 +5,7 @@ Title:          "IHE PCS Profile ParamedicinceVitalSigns Observation"
 Description:    "A profile on the Observation that declares how FooBar will Create/Update for body weight measurements."
 * category 1..1
 * category = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs
-* code = CodeableConcept only from Paramedicine_VitalSigns_VS (extensible)
+* code = CodeableConcept from Paramedicine.VitalSigns.VS (extensible)
 * effectiveDateTime 1..1
 * subject 1..1
 * subject only Reference(Patient)
@@ -272,8 +272,7 @@ Description:    """
 The interpretation of the Stroke Scale score as positive, negative, or unconclusive.  """
 
 * code = $loinc#67520-7
-* value[x] only CodeableConcept 
-* valueCodeableConcept only from Stroke_Scale_Score_Interpretation_VS (preferred)
+* value[x] only CodeableConcept from Stroke.Scale.Score.Interpretation.VS (preferred)
 
 
 Instance: ex-StrokeScaleScoreInterpretation

@@ -6,23 +6,14 @@ This content profiles defiines the Paramedicine Care Summary (PCS) document that
 
 ## PCS Overview
 
-When a patient is transported for a medical emergency to a hospital, pertinant situational ifnformation, patient history, patient assessments, and interventions are only verbally available 
-to hospitals when the patient arrives. This results in inefficiencies and potential errors in the patient care process. This profile will map the flow of the patient
-information from the ambulance patient record, commonly known as the electronic Patient Care Record (ePCR), to the hospital system.
+When a patient is transported for a medical emergency to a hospital, scene information, transfer information, patient assessments, and interventions are only verbally available to hospitals when the patient arrives. This results in inefficiencies and potential errors in the patient care process. This profile will map the flow of the patient information from the ambulance patient record, commonly known as the electronic Patient Care Report (ePCR), to the hospital system. 
 
-Currently, patient interventions and assessments are written into an ambulance electronic Patient Care Record (ePCR), and are either manually updated by the Emergency Medical Services (EMS) crew, 
-or collected from electronic devices (e.g., hemodynamic monitor). The ePCR is updated with treatments and interventions that are administered during the transport.
-The hospital will not typically have access to paper or electronic versions of this patient information until the report is finished and signed in the ePCR and only if it is requested by the hospital. 
-
-In this content profile, the pertinant patient information are made available to the hospital/emergency room IT systemelectronically when the patient arrives, or in advance of patient arrival to the 
-hospital. This informs medical decision making during the hospital treatment to improve patient care and to save lives. Additional
-information in the form of the completed report can be shared with the hospital in an electronic and codable format. The information available can then be used to report to registries and utilized for 
-quality reporting.
+Currently, patient interventions and assessments are written into an ambulance electronic Patient Care Report (ePCR) and are either manually entered by the emergency medical services (EMS) crew or collected from electronic devices (e.g., hemodynamic monitor). The ePCR is updated with treatments and interventions that are administered during the EMS on-scene care and transport. The hospital will not typically have access to paper or electronic versions of this patient information until the report is finished and signed in the ePCR system and only if it is requested by the hospital. In this profile, the prehospital paramedicine interventions and patient assessments are made available to the hospital/emergency room IT system electronically when the patient arrives or in advance of patient arrival to the hospital. This informs medical decision making during the hospital treatment to improve patient care and to save lives. Additional information that can be found in the completed report can be shared with the hospital in electronic and codable form. The information available can then be used to report to registries and quality reporting.
 
 ## PCS Actors, and Transactions
 This section defines the actors, transactions, and/or content modules in this profile. General definitions of actors are given in the Technical Frameworks General Introduction Appendix A. IHE Transactions can be found in the Technical Frameworks General Introduction Appendix B. Both appendices are located at http://ihe.net/Technical_Frameworks/#GenIntro
  
- [Figure X.1-1: PCS Actor Diagram](PCS Actor Diagram.png)
+ [Figure X.1-1: PCS Actor Diagram](docSharing)
 Figure X.1-1 shows the actors directly involved in the PCS Profile and the relevant transactions between them. If needed for context, other actors that may be indirectly involved due to their participation in other related profiles are shown in dotted lines. Actors which have a required grouping are shown in conjoined boxes (see Section X.3).
 
 * Actors
@@ -59,9 +50,12 @@ Table X.1-2 lists the content module(s) defined in the PCS Profile. To claim sup
 Transactional requirements are documented in PCC TF-2 Transactions. This section documents any additional requirements on profile’s actors.
 Content module requirements are documented in PCC TF-2 Content Modules. This section documents any additional requirements on profile’s actors.
 
+
 #### Content Creator
-- The Content Creator shall be responsible for the creation of content and sharing of two documents that summarize the emergency transport encounter Paramedicine Care Summary – Clinical Subset (PCS-CS) containing the data elements defined in PCC TF-3: 6.3.1.D1 or, where the FHIR Option is used, containing the FHIR Composition bundle defined in PCC TF-3:6.6.x.2.1
-- Paramedicine Care Summary – Complete Report (PCS-CR) containing the data elements defined in PCC TF-3: 6.3.1.D2, or, where the FHIR Option is used, containing the FHIR Composition bundle defined in PCC TF-3:6.6.x.2.1
+The Content Creator shall be responsible for the creation of content and sharing of two documents that summarize the emergency transport encounter:
+•	Paramedicine Care Summary – Clinical Subset (PCS-CS) containing the data elements defined in PCC TF-3: 6.3.1.D1 or, where the FHIR Option is used, containing the FHIR Composition bundle defined (here)[http://build.fhir.org/ig/IHE/PCC.PCS/branches/master/StructureDefinition-IHE.PCC.PCS.Composition.CS.html]
+•	Paramedicine Care Summary – Complete Report (PCS-CR) containing the data elements defined in PCC TF-3: 6.3.1.D2, or, where the FHIR Option is used, containing the FHIR Composition bundle defined (here)[http://build.fhir.org/ig/IHE/PCC.PCS/branches/master/StructureDefinition-IHE.PCC.PCS.Composition.CS.html]
+
 
 
 #### Trigger Events

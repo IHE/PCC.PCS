@@ -59,6 +59,9 @@ pages:
   ActorsAndTransactions.md:
     title: "Actors and Transactions"
     generation: markdown
+  volume-3.md:
+    title: 1:XX. Content Module
+    generation: markdown
   NEMSIS-Mapping.md:
     title: NEMSIS Mapping
     generation: markdown

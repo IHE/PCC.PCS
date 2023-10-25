@@ -27,8 +27,9 @@ Description:    "The estimated date and time the patient was last known to be we
 
 Instance: Ex-LastKnownWell
 InstanceOf: Last_Known_Well
-Usage: #inline
-* code = http://loinc.org#67517-3
+Usage: #example
+Description: "The Example instance for last known well observation"
+
 * status  = http://hl7.org/fhir/observation-status#final
 * effectiveDateTime = "2023-08-03T14:14:45-05:00"
-* valueDateTime = "2023-08-03T13:50:00"
+* valueDateTime = "2023-08-03T13:50:45-05:00"

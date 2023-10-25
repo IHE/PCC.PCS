@@ -293,6 +293,11 @@
 
 33. 	Date/Time of Destination Prearrival Alert or Activation
 
+34. Seeking input - WE have modeled the Pain Severity score and the Pain Scale type as two separate observations. WIth investigetion we fould a LOINC Pain assesment panel: 38212-7. This panel includes a number of obsevations around apin assmeent including the codes we used for the observations. There is an additional approach that can be take in FHIR where we could deffine the Pain Scale type as a method with the reported pain score. We are looking to find the best way to model this concept. 
+
+35. LOINC 67521-5 Stroke scale type has a USA centric Normative Answer set bound to it. Either that needs to be edited in LOINC to decontrain the set or a new loinc code for this observation needs to be requested from LOINC 
+36. APGAR score modeling. seeking insite on how to model the Apgar score pannels
+
 #### Closed Issues
 
 1.  (2/12/2018) Committee decided to use both CDA and FHIR. This is the

@@ -24,10 +24,11 @@ Description:    "Date and Time of last oral intake."
 * note 0..0
 
 
-Instance: Ex-LastOralOntake
+Instance: Ex-LastOralIntake
 InstanceOf: Last_Oral_Intake
-Usage: #inline
-* code = http://loinc.org#67517-3
+Usage: #example
+Description: "The Example instance for Last Oral intake observation"
+
 * status  = http://hl7.org/fhir/observation-status#final
 * effectiveDateTime = "2023-08-03T14:14:45-05:00"
-* valueDateTime = "2023-08-03T12:00:00"
+* valueDateTime = "2023-08-03T12:00:00-05:00"
