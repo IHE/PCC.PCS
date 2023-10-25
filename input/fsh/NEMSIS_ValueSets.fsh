@@ -515,6 +515,14 @@ Id: NEMSIS.Number.of.Pts.On.Scene.VS
 * NEMSIS#2707003	"None"
 * NEMSIS#2707005	"Single"
 
+ValueSet: NEMSIS_GlasgowQualifier_VS
+Description: "The the NEMSIS Value set for Glasgow coma score special circumstances."
+Id: NEMSIS.GlasgowQualifier.VS
+* NEMSIS#3322003	"Initial GCS has legitimate values without interventions such as intubation and sedation"
+* NEMSIS#3322001	"Eye obstruction prevents eye assessment"
+* NEMSIS#3322007	"Patient chemically sedated"
+* NEMSIS#3322005	"Patient chemically paralyzed"
+* NEMSIS#3322009	"Patient intubated"
 
 
 ValueSet: NEMSIS_Protocols_Used_VS

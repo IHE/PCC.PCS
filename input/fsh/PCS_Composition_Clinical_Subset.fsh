@@ -37,7 +37,7 @@ the following cardinalities follow the documentation in the PCS profile:
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category 1..
-* category contains pregnancySummaryDocument 1..1
+* category contains ParamedicineSummaryDocument  1..1
 * category[pregnancySummaryDocument] = $loinc#67796-3
 
 * event.code 1..*
@@ -49,6 +49,7 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionAdvanceDirectives] 1..1
 // eHisotry.16 presence of emergency form
 * section[sectionVitalSigns] 1..1
+* section[sectionVitalSigns].entry[entryvitalSign] only Reference (Observation or VitalSigns or ParamedicineVitalSigns)
 
 // Note: in addition to the sections defined in IPS...
 * section contains

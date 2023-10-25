@@ -552,4 +552,8 @@ Id: NEMSIS
 * #9925039    "Physician Assistant"
 * #9925041    "Licensed Practical Nurse (LPN)"
 * #9925043    "Registered Nurse"
-
+* #3322003	"Initial GCS has legitimate values without interventions such as intubation and sedation"
+* #3322001	"Eye obstruction prevents eye assessment"
+* #3322007	"Patient chemically sedated"
+* #3322005	"Patient chemically paralyzed"
+* #3322009	"Patient intubated"
