@@ -29,7 +29,7 @@ the following cardinalities follow the documentation in the PCS profile:
 ------- mass casuality incident 
 """
 
-* subject 1..1
+
 * encounter 1..1
 * encounter only Reference(IHE_PCS_Encounter_ClinicalSubset) 
 
@@ -54,9 +54,8 @@ the following cardinalities follow the documentation in the PCS profile:
 
 * section[sectionAdvanceDirectives] 1..1
 // eHisotry.16 presence of emergency form
-* section[sectionVitalSigns] 1..1
-// JFM you can't further constrain by adding more vital signs. I recommend you just leave this as is, maybe add a comment that adds ParamedicineVitalSigns
-//* section[sectionVitalSigns].entry only Reference(Observation or VitalSigns or ParamedicineVitalSigns) 
+//* section[sectionVitalSigns] 1..1
+* section[sectionVitalSigns].entry[vitalSign] only Reference(http://hl7.org/fhir/StructureDefinition/vitalsigns or ParamedicineVitalSigns) 
 
 // Note: in addition to the sections defined in IPS...
 * section contains
@@ -75,6 +74,7 @@ the following cardinalities follow the documentation in the PCS profile:
     //PhysicalExams 0..1 MS and 
 //Note: Open issue are Physical exams, review of systems, and patient acuity elements that are sub entries to functional status? commented out until confirmed 
     sectionIncident 1..1 and 
+    ReasonForReferral 0..* and
     sectionMassCasualtyIncident 0..1 MS and 
 	  sectionCariacArrestEvent 0..1 and
 	  sectionInjuryEvent 0..1
@@ -82,12 +82,12 @@ the following cardinalities follow the documentation in the PCS profile:
 //*note 
 
 
-* section[sectionMedications]entry contains 
-  medicationsAdministered 0..* 
+//* section[sectionMedications]entry contains 
+//  medicationsAdministered 0..* 
 // current medications should go into the Medication statemnt section 
-
-* section[sectionMedications].entry[medicationsAdministered] only Reference(MedicationAdministration)
-* section[sectionMedications].entry[currentMedications] only Reference(MedicationAdministration)
+//
+//* section[sectionMedications].entry[medicationsAdministered] only Reference(MedicationAdministration)
+//* section[sectionMedications].entry[currentMedications] only Reference(MedicationAdministration)
 
 
 //* section[sectionProblems].entry MS 
@@ -98,25 +98,21 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionIncident] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionIncident] ^extension.valueString = "Section"
 * section[sectionIncident] ^short = "Incident"
-* section[sectionIncident] ^definition = "The Incident section of the Paramedicine Summary that will hold the Incident date/time, incident type and any references that go with the incident type."
+* section[sectionIncident] ^definition = "The Incident section of the Paramedicine Summary that will any references that go with the incident (e.g. Encounter, Observations)."
 * section[sectionIncident].code = $loinc#67800-3
-* section[sectionIncident].code MS
-* section[sectionIncident].entry contains 
-  incidentDateTime 0..1 and 
-  incidentType 0..* and 
-  incidentEventAdditionalReferences 0..*
-
-// JFM What are you trying to do here? You can't constrain to dateTime and also CodeableConcept
-//* section[sectionIncident].entry[incidentDateTime] only 	dateTime or Period or Timing
-//* section[sectionIncident].entry[incidentDateTime] only CodeableConcept from Paramedicine_Incident_Type_VS (extensible) 
-* section[sectionIncident].entry[incidentEventAdditionalReferences] only Reference(Observation)
+* section[sectionIncident].code 1..1
+* section[sectionIncident].title 1..1
+* section[sectionIncident].text MS
+* section[sectionIncident].text ^definition = "Text summary of the incident."
+* section[sectionIncident].entry ^definition = "Any Resources from the incident (e.g. Encounter, Observations)."
 
 * section[review_of_systems_section] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[review_of_systems_section] ^extension.valueString = "Section"
 * section[review_of_systems_section] ^short = "Review of Systems"
 * section[review_of_systems_section] ^definition = "TBD"
 * section[review_of_systems_section].code = $loinc#10187-3
-* section[review_of_systems_section].code MS
+* section[review_of_systems_section].code 1..1
+* section[review_of_systems_section].title 1..1
 * section[review_of_systems_section].entry only Reference(ClinicalImpression or Observation)
 * section[review_of_systems_section].entry ^slicing.discriminator.type = #profile
 * section[review_of_systems_section].entry ^slicing.discriminator.path = "resolve()"
@@ -139,7 +135,8 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionBarriersToCare] ^short = "Barriers To Care "
 * section[sectionBarriersToCare] ^definition = "TBD"
 * section[sectionBarriersToCare].code = $loinc#67515-7
-* section[sectionBarriersToCare].code MS
+* section[sectionBarriersToCare].code 1..1
+* section[sectionBarriersToCare].title 1..1
 * section[sectionBarriersToCare].entry only Reference(BarriersTocare)
 
 * section[sectionMedications].entry contains medicationsAdministered 0..* MS 
@@ -149,7 +146,8 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionProceduresPerformed] ^short = "Procedures Performed"
 * section[sectionProceduresPerformed] ^definition = "This section contains the procedures that were performed during the PCS encounter"
 * section[sectionProceduresPerformed].code = $loinc#67803-7
-* section[sectionProceduresPerformed].code MS
+* section[sectionProceduresPerformed].code 1..1
+* section[sectionProceduresPerformed].title 1..1
 * section[sectionProceduresPerformed].entry ..* MS
 * section[sectionProceduresPerformed].entry only Reference(ProcedureUvIps)
 * section[sectionProceduresPerformed].entry ^slicing.discriminator.type = #profile
@@ -164,7 +162,8 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[Payors] ^short = "Payors"
 * section[Payors] ^definition = "The Payers section contains data on the patient’s payers, whether a ‘third party’ insurance, self-pay, other payer or guarantor, or some combination. ."
 * section[Payors].code = $loinc#48768-6
-* section[Payors].code MS
+* section[Payors].code 1..1
+* section[Payors].title 1..1
 * section[Payors].entry only Reference(Coverage)
 * section[Payors].entry ^slicing.discriminator.type = #profile
 * section[Payors].entry ^slicing.discriminator.path = "resolve()"
@@ -179,7 +178,8 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[PhysicalExams] ^short = "Physical Exams"
 * section[PhysicalExams] ^definition = "The coded Detailed Physical Examination section shall contain only the required and optional subsections performed."
 * section[PhysicalExams].code = $loinc#29545-1
-* section[PhysicalExams].code MS
+* section[PhysicalExams].code 1..1
+* section[PhysicalExams].title 1..1
 * section[PhysicalExams].entry only Reference(Observation)
 // Note:If there is no entry available in this section then a data absent Reason SHALL be provided 
 
@@ -207,7 +207,8 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[ReasonForReferral] ^short = "Reason for Referral"
 * section[ReasonForReferral] ^definition = "The coded Detailed Physical Examination section shall contain only the required and optional subsections performed."
 * section[ReasonForReferral].code = $loinc#42349-1
-* section[ReasonForReferral].code MS
+* section[ReasonForReferral].code 1..1
+* section[ReasonForReferral].title 1..1
 * section[ReasonForReferral].entry only Reference(Observation or Condition)
 
 * section[sectionMassCasualtyIncident] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
@@ -215,7 +216,8 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionMassCasualtyIncident] ^short = "Mass Casulaty incident"
 * section[sectionMassCasualtyIncident] ^definition = "TBD"
 * section[sectionMassCasualtyIncident].code = $loinc#67490-3
-* section[sectionMassCasualtyIncident].code MS
+* section[sectionMassCasualtyIncident].code 1..1
+* section[sectionMassCasualtyIncident].title 1..1
 * section[sectionMassCasualtyIncident].entry ..* 
 * section[sectionMassCasualtyIncident].entry ^slicing.discriminator.type = #pattern
 * section[sectionMassCasualtyIncident].entry ^slicing.discriminator.path = "resolve()"
@@ -241,7 +243,8 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionCariacArrestEvent] ^short = "Paramedicine Cariac Arrest Event" 
 * section[sectionCariacArrestEvent] ^definition = "The EMS cardiac arrest event reportable observations."
 * section[sectionCariacArrestEvent].code = $loinc#67799-7 
-* section[sectionCariacArrestEvent].code MS
+* section[sectionCariacArrestEvent].code 1..1
+* section[sectionCariacArrestEvent].title 1..1
 * section[sectionCariacArrestEvent].entry ..* 
 * section[sectionCariacArrestEvent].entry ^short = "Paramedicine Cariac Arrest Event observations."
 * section[sectionCariacArrestEvent].entry ^definition = "The observations related to a Paramedicine Cariac Arrest Event."
@@ -254,7 +257,8 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionInjuryEvent] ^short = "Injury event summary"
 * section[sectionInjuryEvent] ^definition = "The injury event summary contains observations pertaining to a trauma event, including the severity, location and causes (e.g. primary and supplemental causes, whether or not work-related) of the injury."
 * section[sectionInjuryEvent].code = $loinc#74209-8
-* section[sectionInjuryEvent].code MS
+* section[sectionInjuryEvent].code 1..1
+* section[sectionInjuryEvent].title 1..1
 * section[sectionInjuryEvent].entry ..* 
 //Note: Required if Known
 * section[sectionInjuryEvent].entry only Reference(Observation)

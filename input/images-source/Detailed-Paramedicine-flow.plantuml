@@ -37,7 +37,7 @@ Ambulance -> State: Amulance organization Submits completed ePCR record to the s
 group alt 1: Subscribe
     Note right of Ambulance: could subscribe  if HIE supports XDS Subscribe
     Ambulance -> HIE: Subscribe for Discharge Summary document type on this patient using Document Metadata Subscribe [[https://profiles.ihe.net/ITI/TF/Volume2/ITI-52.html] ITI-52]
-    "Can you limit the subscription to just one time?"
+    Note right of Ambulance: Can you limit the subscription to just one time?
 
     Hospital -> Hospital: Discharges patient
     Hospital -> HIE: (Publish) Discharge Summary with Provide and Register Document Set-b [[https://profiles.ihe.net/ITI/TF/Volume2/ITI-41.html]

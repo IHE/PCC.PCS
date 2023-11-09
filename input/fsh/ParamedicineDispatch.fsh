@@ -9,7 +9,7 @@ Description:    "The Request information that is documented by the Paramedicine 
 * subject only Reference(PatientUvIps)
 * reasonCode 1..* 
 * extension contains ScheduledTimeOfArrivalAtDestination named ScheduledTimeOfArrivalAtDestination 0..1
-* extension contains DisptachNotification named DisptachNotificationDateTime 0..1
+* extension contains DisptachNotification named DisptachNotification 0..1
 
 //NOte: occurrence[x] should be used as the estimated time of crew arrival or planned pickup time 
 
@@ -22,8 +22,8 @@ Description: "additional Occurance/time stamp for planned transport service requ
 * value[x] only dateTime
 
 
-Extension: DisptachNotificationDateTime
-Id: DisptachNotificationDateTime
+Extension: DisptachNotification
+Id: disptachNotification
 Title: "Disptach Notification DateTime"
 Description: "The date/time that the service was requested from Paramedicine or Transport Services"
 * ^context[+].type = #element

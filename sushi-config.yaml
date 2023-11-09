@@ -23,7 +23,7 @@ jurisdiction: 'http://unstats.un.org/unsd/methods/m49/m49.htm#001'
 copyrightYear: 2023+
 releaseLabel: ci-build
 dependencies:
-  hl7.fhir.uv.ips: 1.0.0
+  hl7.fhir.uv.ips: 1.1.x
 
 parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
   path-resource:
