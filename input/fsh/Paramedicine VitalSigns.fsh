@@ -406,3 +406,45 @@ Description: "The Example instance for Level Of Responsiveness observation"
 * valueCodeableConcept = $sct#248234008
 * performer = Reference(Practitioner/ex-Practitioner)
 * subject = Reference(Patient/ex-Patient)
+
+
+Profile:        BodyweightEstimated
+Parent:         IHE.pcs.paramedicinceVitalSigns
+Id:             IHE.pcs.BodyweightEstimated
+Title:          "IHE PCS Body weight Estimated Observation"
+Description:    """
+The patient's body weight either measured or estimated. """
+
+* code = $loinc#8335-2  
+* value[x] only Quantity
+
+Instance: ex-BodyweightEstimated
+InstanceOf: BodyweightEstimated
+Usage: #example
+Description: "The Example instance forBody weight Estimated observation"
+* status = http://hl7.org/fhir/observation-status#final
+* effectiveDateTime = "2021-10-06T10:52:30-07:00"
+* valueQuantity = 50 'kg'
+* performer = Reference(Practitioner/ex-Practitioner)
+* subject = Reference(Patient/ex-Patient)
+
+Profile:        LengthBasedTapeMeasure
+Parent:         IHE.pcs.paramedicinceVitalSigns
+Id:             IHE.pcs.LengthBasedTapeMeasure
+Title:          "IHE PCS Length-based tape measureObservation"
+Description:    """
+The patient's body weight either measured or estimated. """
+
+* code = $loinc#67670-0  
+* value[x] only CodeableConcept 
+* valueCodeableConcept from Length_Based_Tape_Measure_VS (preferred) 
+
+Instance: ex-LengthBasedTapeMeasure
+InstanceOf: LengthBasedTapeMeasure
+Usage: #example
+Description: "The Example instance for Length-based tape measureobservation"
+* status = http://hl7.org/fhir/observation-status#final
+* effectiveDateTime = "2021-10-06T10:52:30-07:00"
+* valueCodeableConcept = $sct#444489001
+* performer = Reference(Practitioner/ex-Practitioner)
+* subject = Reference(Patient/ex-Patient)

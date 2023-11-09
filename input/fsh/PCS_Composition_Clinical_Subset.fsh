@@ -55,7 +55,7 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionAdvanceDirectives] 1..1
 // eHisotry.16 presence of emergency form
 * section[sectionVitalSigns] 1..1
-* section[sectionVitalSigns].entry Reference (Observation or VitalSigns or IHE.pcs.paramedicinceVitalSigns)
+* section[sectionVitalSigns].entry Reference (Observation or VitalSigns or ParamedicineVitalSigns)
 
 // Note: in addition to the sections defined in IPS...
 * section contains
@@ -80,6 +80,13 @@ the following cardinalities follow the documentation in the PCS profile:
 
 //*note 
 
+
+* section[sectionMedications]entry contains 
+  medicationsAdministered 0..* 
+// current medications should go into the Medication statemnt section 
+
+* section[sectionMedications].entry[medicationsAdministered] only Reference(MedicationAdministration)
+* section[sectionMedications].entry[currentMedications] only Reference(MedicationAdministration)
 
 
 //* section[sectionProblems].entry MS 

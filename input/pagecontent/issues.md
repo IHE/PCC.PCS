@@ -297,6 +297,9 @@
 
 35. LOINC 67521-5 Stroke scale type has a USA centric Normative Answer set bound to it. Either that needs to be edited in LOINC to decontrain the set or a new loinc code for this observation needs to be requested from LOINC 
 36. APGAR score modeling. seeking insite on how to model the Apgar score pannels
+37. Service request FHIR resource category element may need to have a deffined extensable value set of values in SNOMED to advise the types of service actegories that Paramedicine organizations may regulary provide 
+38. code element in the service request resource may need a deffined, extensible, value set 
+39 Inviting comment on service request quantity element from international point of view 
 
 #### Closed Issues
 

@@ -6,19 +6,19 @@ Description:    "The Request information that is documented by the Paramedicine 
 
 
 * priority 1..1
-* subject Reference(Patient-uv-ips) 
+* subject Reference(PatientUvIps) 
 * reasonCode 1..* 
-* extension contains scheduledTimeOfArrivalAtDestination named scheduledTimeOfArrivalAtDestination 0..1
+* extension contains ScheduledTimeOfArrivalAtDestination named ScheduledTimeOfArrivalAtDestination 0..1
 * extension contains DisptachNotification named DisptachNotificationDateTime 0..1
 
 //NOte: occurrence[x] should be used as the estimated time of crew arrival or planned pickup time 
 
-Extension: scheduledTimeOfArrivalAtDestination
+Extension: ScheduledTimeOfArrivalAtDestination
 Id: scheduledTimeOfArrivalAtDestination
 Title: "scheduled time of arrival at destination"
 Description: "additional Occurance/time stamp for planned transport service requests"
 * extension contains scheduledTimeOfArrivalAtDestination 0..1
-* entry[scheduledTimeOfArrivalAtDestination] only dateTime
+* entry[ScheduledTimeOfArrivalAtDestination] only dateTime
 
 Extension: DisptachNotificationDateTime
 Id: DisptachNotificationDateTime
