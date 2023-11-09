@@ -55,7 +55,8 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionAdvanceDirectives] 1..1
 // eHisotry.16 presence of emergency form
 * section[sectionVitalSigns] 1..1
-* section[sectionVitalSigns].entry Reference (Observation or VitalSigns or ParamedicineVitalSigns) 
+// JFM you can't further constrain by adding more vital signs. I recommend you just leave this as is, maybe add a comment that adds ParamedicineVitalSigns
+//* section[sectionVitalSigns].entry only Reference(Observation or VitalSigns or ParamedicineVitalSigns) 
 
 // Note: in addition to the sections defined in IPS...
 * section contains
@@ -105,8 +106,9 @@ the following cardinalities follow the documentation in the PCS profile:
   incidentType 0..* and 
   incidentEventAdditionalReferences 0..*
 
-* section[sectionIncident].entry[incidentDateTime] only 	dateTime or Period or Timing
-* section[sectionIncident].entry[incidentDateTime] only CodeableConcept from Paramedicine_Incident_Type_VS (extensible) 
+// JFM What are you trying to do here? You can't constrain to dateTime and also CodeableConcept
+//* section[sectionIncident].entry[incidentDateTime] only 	dateTime or Period or Timing
+//* section[sectionIncident].entry[incidentDateTime] only CodeableConcept from Paramedicine_Incident_Type_VS (extensible) 
 * section[sectionIncident].entry[incidentEventAdditionalReferences] only Reference(Observation)
 
 * section[review_of_systems_section] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"

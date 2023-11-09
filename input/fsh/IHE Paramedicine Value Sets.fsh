@@ -172,7 +172,7 @@ Id: Paramedicine.Assessment.Findings.VS
 ValueSet: Neck_Assessment_VS
 Description: "Physical findings of the Neck; exam."
 Id: Neck.Assessment.VS 
-* codes from Paramedicine.Assessment.Findings.VS
+* codes from valueset Paramedicine.Assessment.Findings.VS
 * $sct#110014005     "Decapitation"
 * $sct#449161000124101     "Distention of jugular vein"
 * $sct#70407001     "Stridor"
@@ -208,7 +208,7 @@ Id: Abdominal.Assessment.Finding.Location.VS
 ValueSet: Abdominal_Assessment_VS
 Description: "Physical findings of the Abdominal; exam."
 Id: Abdominal.Assessment.VS 
-* codes from Paramedicine.Assessment.Findings.VS
+* codes from valueset Paramedicine.Assessment.Findings.VS
 * $sct#162068007     "Abdominal distension symptom"
 * $sct#249545003     "Abdominal guarding"
 * $sct#2981001     "Pulsatile mass of abdomen"
@@ -220,7 +220,7 @@ Id: Abdominal.Assessment.VS
 ValueSet: Pelvis_Genitourinary_Assessment_VS
 Description: "Physical findings of the Pelvis Genitourinary system; exam."
 Id: Pelvis.Genitourinary.Assessment.VS 
-* codes from Paramedicine.Assessment.Findings.VS
+* codes from valueset Paramedicine.Assessment.Findings.VS
 * $sct#12063002     "Rectal hemorrhage"
 * $sct#249301002     "Bleeding from urethra"
 * $sct#289530006     "Bleeding from vagina"
@@ -244,7 +244,7 @@ Id: Back.Spine.Assessment.Finding.Location.VS
 ValueSet: Back_Spine_Assessment_VS
 Description: "Physical findings of the back and spine; exam."
 Id: Back.Spine.Assessment.VS 
-* codes from Paramedicine.Assessment.Findings.VS
+* codes from valueset Paramedicine.Assessment.Findings.VS
 //* $sct#     ""
 
 ValueSet: Extremity_Assessment_Finding_Location_VS
@@ -302,7 +302,7 @@ Id: Extremity.Assessment.Finding.Location.VS
 ValueSet: Extremity_Assessment__VS
 Description: "Physical findings body site; Extremity."
 Id: Extremity.Assessment.VS 
-* codes from Paramedicine.Assessment.Findings.VS
+* codes from valueset Paramedicine.Assessment.Findings.VS
 * $sct#262595009     "Traumatic amputation"
 * $sct#271396005     "History of limb amputation"
 * $sct#30760008     "Finger clubbing"
