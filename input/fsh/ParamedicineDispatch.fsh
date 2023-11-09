@@ -6,7 +6,7 @@ Description:    "The Request information that is documented by the Paramedicine 
 
 
 * priority 1..1
-* subject Reference(PatientUvIps) 
+* subject Reference(PatientUvIps)
 * reasonCode 1..* 
 * extension contains ScheduledTimeOfArrivalAtDestination named ScheduledTimeOfArrivalAtDestination 0..1
 * extension contains DisptachNotification named DisptachNotificationDateTime 0..1

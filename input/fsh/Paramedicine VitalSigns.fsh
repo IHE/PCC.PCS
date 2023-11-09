@@ -5,7 +5,7 @@ Title:          "IHE PCS Profile ParamedicinceVitalSigns Observation"
 Description:    "A profile on the Observation that declares how FooBar will Create/Update for body weight measurements."
 * category 1..1
 * category = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs
-* code from Paramedicine_VitalSigns_VS (extensible)
+* code from Paramedicine_VitalSigns_VS (extensible) 
 * effectiveDateTime 1..1
 * subject 1..1
 * subject only Reference(Patient)
