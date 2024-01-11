@@ -55,7 +55,8 @@ Description:    "TBD."
 * subject 1..1
 * subject only Reference(Patient)
 * performer 1..*
-* value[x] only CodeableConcept from Color_Of_Skin_VS(extesnible)
+* value[x] only CodeableConcept 
+* valueCodeableConcept from Color_Of_Skin_VS(extensible)
 
 Instance: ex-ColorOfSkin
 InstanceOf: ColorOfSkin
@@ -82,7 +83,8 @@ Description:    "TBD."
 * subject 1..1
 * subject only Reference(Patient)
 * performer 1..*
-* value[x] only CodeableConcept from Moisture_Of_Skin_VS(extesnible)
+* value[x] only CodeableConcept 
+* valueCodeableConcept from Moisture_Of_Skin_VS(extensible)
 
 Instance: ex-MoistureOfSkin
 InstanceOf: MoistureOfSkin
@@ -109,7 +111,8 @@ Description:    "TBD."
 * subject 1..1
 * subject only Reference(Patient)
 * performer 1..*
-* value[x] only CodeableConcept from Temperature_Of_Skin_VS(extesnible)
+* value[x] only CodeableConcept 
+* valueCodeableConcept from Temperature_Of_Skin_VS(extensible)
 
 Instance: ex-TemperatureOfSkin
 InstanceOf: TemperatureOfSkin
@@ -136,7 +139,8 @@ Description:    "TBD."
 * subject 1..1
 * subject only Reference(Patient)
 * performer 1..*
-* value[x] only CodeableConcept from Turgor_Of_Skin_VS(extesnible)
+* value[x] only CodeableConcept 
+* valueCodeableConcept from Turgor_Of_Skin_VS(extensible)
 
 Instance: ex-TurgorOfSkin
 InstanceOf: TurgorOfSkin
@@ -163,7 +167,8 @@ Description:    "TBD."
 * subject 1..1
 * subject only Reference(Patient)
 * performer 1..*
-* value[x] only CodeableConcept from Paramedicine_Assessment_Findings_VS(extesnible)
+* value[x] only CodeableConcept 
+* valueCodeableConcept from Paramedicine_Assessment_Findings_VS(extensible)
 * bodySite 1..1
 * bodySite = $sct#69536005
 
@@ -191,7 +196,8 @@ Description:    "TBD."
 * subject 1..1
 * subject only Reference(Patient)
 * performer 1..*
-* value[x] only CodeableConcept from Paramedicine_Assessment_Findings_VS(extesnible)
+* value[x] only CodeableConcept 
+* valueCodeableConcept from Paramedicine_Assessment_Findings_VS(extensible)
 * bodySite 1..1
 * bodySite = $sct#89545001
 
@@ -219,7 +225,8 @@ Description:    "TBD."
 * subject 1..1
 * subject only Reference(Patient)
 * performer 1..*
-* value[x] only CodeableConcept from Neck_Assessment_VS(extesnible)
+* value[x] only CodeableConcept 
+* valueCodeableConcept from Neck_Assessment_VS(extensible)
 * bodySite 1..1
 * bodySite = $sct#45048000
 
@@ -248,7 +255,8 @@ Description:    "TBD."
 * subject 1..1
 * subject only Reference(Patient)
 * performer 1..*
-* value[x] only CodeableConcept from Heart_Assessment_VS(extesnible)
+* value[x] only CodeableConcept 
+* valueCodeableConcept from Heart_Assessment_VS(extensible)
 * bodySite 1..1
 * bodySite = $sct#80891009
 
@@ -276,9 +284,10 @@ Description:    "TBD."
 * subject 1..1
 * subject only Reference(Patient)
 * performer 1..*
-* value[x] only CodeableConcept from Abdominal_Assessment_VS(extesnible)
+* value[x] only CodeableConcept 
+* valueCodeableConcept from Abdominal_Assessment_VS(extensible)
 * bodySite 1..1
-* bodySite from Abdominal_Assessment_Finding_Location_VS(extesnible)
+* bodySite from Abdominal_Assessment_Finding_Location_VS(extensible)
 
 Instance: ex-AbdominalAssessment
 InstanceOf: AbdominalAssessment
@@ -305,7 +314,8 @@ Description:    "TBD."
 * subject 1..1
 * subject only Reference(Patient)
 * performer 1..*
-* value[x] only CodeableConcept from Pelvis_Genitourinary_Assessment_VS(extesnible)
+* value[x] only CodeableConcept 
+* valueCodeableConcept from Pelvis_Genitourinary_Assessment_VS(extensible)
 * bodySite 1..1
 
 Instance: ex-PelvisGenitourinaryAssessment
@@ -334,9 +344,10 @@ Description:    "TBD."
 * subject 1..1
 * subject only Reference(Patient)
 * performer 1..*
-* value[x] only CodeableConcept from Back_Spine_Assessment_VS(extesnible)
+* value[x] only CodeableConcept 
+* valueCodeableConcept from Back_Spine_Assessment_VS(extensible)
 * bodySite 1..1
-* bodySite from Back_Spine_Assessment_Finding_Location_VS(extesnible)
+* bodySite from Back_Spine_Assessment_Finding_Location_VS(extensible)
 
 Instance: ex-BackandSpineAssessment
 InstanceOf: BackandSpineAssessment
@@ -349,62 +360,32 @@ Description: "The Example instance for the back and spine exam"
 * valueCodeableConcept = $sct#169564004
 
 
-Profile:        BackandSpineAssessment
-Parent:         Observation
-Id:             IHE.pcc.BackandSpineAssessment
-Title:          "IHE back and spine assesment exam"
-Description:    "TBD."
-* category 1..1
-* category = http://terminology.hl7.org/CodeSystem/observation-category#exam
-* code = http://loinc.org#32430-1
-* effectiveDateTime 1..1
-* dataAbsentReason MS
-* status = #final
-* subject 1..1
-* subject only Reference(Patient)
-* performer 1..*
-* value[x] only CodeableConcept from Back_Spine_Assessment_VS(extesnible)
-* bodySite 1..1
-* bodySite from Back_Spine_Assessment_Finding_Location_VS(extesnible)
+//eExam.ExtremityGroup
 
-Instance: ex-BackandSpineAssessment
-InstanceOf: BackandSpineAssessment
-Usage: #example
-Description: "The Example instance for the back and spine exam"
-* status = http://hl7.org/fhir/observation-status#final
-* effectiveDateTime = "2021-10-06T10:52:30-07:00"
-* performer = Reference(Practitioner/ex-Practitioner)
-* subject = Reference(Patient/ex-Patient)
-* valueCodeableConcept = $sct#169564004
+//eExam.15 - Extremity Assessment Finding Location
 
+//eExam.16 - Extremities Assessment
 
+//eExam.EyeGroup
 
-eExam.ExtremityGroup
+//eExam.17 - Eye Assessment Finding Location
 
-eExam.15 - Extremity Assessment Finding Location
+//eExam.18 - Eye Assessment
 
-eExam.16 - Extremities Assessment
+//eExam.LungGroup
 
-eExam.EyeGroup
+//eExam.22 - Lung Assessment Finding Location
 
-eExam.17 - Eye Assessment Finding Location
+//eExam.23 - Lung Assessment
 
-eExam.18 - Eye Assessment
+//eExam.ChestGroup
 
-eExam.LungGroup
+//eExam.24 - Chest Assessment Finding Location
 
-eExam.22 - Lung Assessment Finding Location
+//eExam.25 - Chest Assessment
 
-eExam.23 - Lung Assessment
+//eExam.19 - Mental Status Assessment
 
-eExam.ChestGroup
+//eExam.20 - Neurological Assessment
 
-eExam.24 - Chest Assessment Finding Location
-
-eExam.25 - Chest Assessment
-
-eExam.19 - Mental Status Assessment
-
-eExam.20 - Neurological Assessment
-
-eExam.21 - Stroke/CVA Symptoms Resolved
+//eExam.21 - Stroke/CVA Symptoms Resolved
