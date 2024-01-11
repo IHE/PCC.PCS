@@ -23,9 +23,9 @@ Description:    "TBD."
     temperature-of-skin 0..1 and 
     turgor-of-Skin 0..1
 * hasmember[color-of-skin] only Reference(ColorOfSkin)
-* hasmember[moisture-of-skin] only Reference()
-* hasmember[temperature-of-skin] only Reference()
-* hasmember[turgor-of-skin] only Reference()
+* hasmember[moisture-of-skin] only Reference(MoistureOfSkin)
+* hasmember[temperature-of-skin] only Reference(TemperatureOfSkin)
+* hasmember[turgor-of-skin] only Reference(TurgorOfSkin)
 
 Instance: ex-SkinAssesment
 InstanceOf: SkinAssesment
@@ -55,7 +55,7 @@ Description:    "TBD."
 * subject 1..1
 * subject only Reference(Patient)
 * performer 1..*
-* value[x] only CodeableConcept only from Color.Of.Skin.VS(extesnible)
+* value[x] only CodeableConcept from Color_Of_Skin_VS(extesnible)
 
 Instance: ex-ColorOfSkin
 InstanceOf: ColorOfSkin
@@ -82,7 +82,7 @@ Description:    "TBD."
 * subject 1..1
 * subject only Reference(Patient)
 * performer 1..*
-* value[x] only CodeableConcept only from Moisture_Of_Skin_VS (extesnible)
+* value[x] only CodeableConcept from Moisture_Of_Skin_VS(extesnible)
 
 Instance: ex-MoistureOfSkin
 InstanceOf: MoistureOfSkin
@@ -109,7 +109,7 @@ Description:    "TBD."
 * subject 1..1
 * subject only Reference(Patient)
 * performer 1..*
-* value[x] only CodeableConcept only from Temperature_Of_Skin_VS (extesnible)
+* value[x] only CodeableConcept from Temperature_Of_Skin_VS(extesnible)
 
 Instance: ex-TemperatureOfSkin
 InstanceOf: TemperatureOfSkin
@@ -136,7 +136,7 @@ Description:    "TBD."
 * subject 1..1
 * subject only Reference(Patient)
 * performer 1..*
-* value[x] only CodeableConcept only from Turgor_Of_Skin_VS (extesnible)
+* value[x] only CodeableConcept from Turgor_Of_Skin_VS(extesnible)
 
 Instance: ex-TurgorOfSkin
 InstanceOf: TurgorOfSkin
@@ -163,7 +163,7 @@ Description:    "TBD."
 * subject 1..1
 * subject only Reference(Patient)
 * performer 1..*
-* value[x] only CodeableConcept only from Paramedicine_Assessment_Findings_VS (extesnible)
+* value[x] only CodeableConcept from Paramedicine_Assessment_Findings_VS(extesnible)
 * bodySite 1..1
 * bodySite = $sct#69536005
 
@@ -191,7 +191,7 @@ Description:    "TBD."
 * subject 1..1
 * subject only Reference(Patient)
 * performer 1..*
-* value[x] only CodeableConcept only from Paramedicine_Assessment_Findings_VS (extesnible)
+* value[x] only CodeableConcept from Paramedicine_Assessment_Findings_VS(extesnible)
 * bodySite 1..1
 * bodySite = $sct#89545001
 
@@ -219,7 +219,7 @@ Description:    "TBD."
 * subject 1..1
 * subject only Reference(Patient)
 * performer 1..*
-* value[x] only CodeableConcept only from Neck_Assessment_VS (extesnible)
+* value[x] only CodeableConcept from Neck_Assessment_VS(extesnible)
 * bodySite 1..1
 * bodySite = $sct#45048000
 
@@ -248,7 +248,7 @@ Description:    "TBD."
 * subject 1..1
 * subject only Reference(Patient)
 * performer 1..*
-* value[x] only CodeableConcept only from Heart_Assessment_VS(extesnible)
+* value[x] only CodeableConcept from Heart_Assessment_VS(extesnible)
 * bodySite 1..1
 * bodySite = $sct#80891009
 
@@ -276,9 +276,9 @@ Description:    "TBD."
 * subject 1..1
 * subject only Reference(Patient)
 * performer 1..*
-* value[x] only CodeableConcept only from Abdominal_Assessment_VS (extesnible)
+* value[x] only CodeableConcept from Abdominal_Assessment_VS(extesnible)
 * bodySite 1..1
-* bodySite only from Abdominal_Assessment_Finding_Location_VS (extesnible)
+* bodySite from Abdominal_Assessment_Finding_Location_VS(extesnible)
 
 Instance: ex-AbdominalAssessment
 InstanceOf: AbdominalAssessment
@@ -305,7 +305,7 @@ Description:    "TBD."
 * subject 1..1
 * subject only Reference(Patient)
 * performer 1..*
-* value[x] only CodeableConcept only from Pelvis_Genitourinary_Assessment_VS (extesnible)
+* value[x] only CodeableConcept from Pelvis_Genitourinary_Assessment_VS(extesnible)
 * bodySite 1..1
 
 Instance: ex-PelvisGenitourinaryAssessment
@@ -334,9 +334,9 @@ Description:    "TBD."
 * subject 1..1
 * subject only Reference(Patient)
 * performer 1..*
-* value[x] only CodeableConcept only from Back_Spine_Assessment_VS (extesnible)
+* value[x] only CodeableConcept from Back_Spine_Assessment_VS(extesnible)
 * bodySite 1..1
-* bodySite only from Back_Spine_Assessment_Finding_Location_VS (extesnible)
+* bodySite from Back_Spine_Assessment_Finding_Location_VS(extesnible)
 
 Instance: ex-BackandSpineAssessment
 InstanceOf: BackandSpineAssessment
@@ -363,9 +363,9 @@ Description:    "TBD."
 * subject 1..1
 * subject only Reference(Patient)
 * performer 1..*
-* value[x] only CodeableConcept only from Back_Spine_Assessment_VS (extesnible)
+* value[x] only CodeableConcept from Back_Spine_Assessment_VS(extesnible)
 * bodySite 1..1
-* bodySite only from Back_Spine_Assessment_Finding_Location_VS (extesnible)
+* bodySite from Back_Spine_Assessment_Finding_Location_VS(extesnible)
 
 Instance: ex-BackandSpineAssessment
 InstanceOf: BackandSpineAssessment
