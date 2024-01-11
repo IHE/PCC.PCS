@@ -12,20 +12,7 @@ Description:    "TBD."
 * dataAbsentReason MS
 * subject only Reference(Patient)
 * performer 1..*
-* hasmember ^slicing.discriminator.type = #pattern
-* hasmember ^slicing.discriminator.path = "$this"
-* hasmember ^slicing.rules = #open
-* hasmember ^slicing.description = "TBD"
-* hasmember ^slicing.ordered = false
-* hasmember contains 
-    color-of-skin 0..1 and 
- 	moisture-of-skin 0..1 and 
-    temperature-of-skin 0..1 and 
-    turgor-of-Skin 0..1
-* hasmember[color-of-skin] only Reference(ColorOfSkin)
-* hasmember[moisture-of-skin] only Reference(MoistureOfSkin)
-* hasmember[temperature-of-skin] only Reference(TemperatureOfSkin)
-* hasmember[turgor-of-skin] only Reference(TurgorOfSkin)
+* hasmember only Reference(ColorOfSkin | MoistureOfSkin | TemperatureOfSkin | TurgorOfSkin)
 
 Instance: ex-SkinAssesment
 InstanceOf: SkinAssesment
