@@ -24,6 +24,9 @@ copyrightYear: 2023+
 releaseLabel: ci-build
 dependencies:
   hl7.fhir.uv.ips: 1.1.x
+  ihe.pcc.odh: 
+    id: ihepccodh
+    version: current
 
 parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
   path-resource:

@@ -1,5 +1,3 @@
-exams and assesments 
-
 Profile:        SkinAssesment
 Parent:         Observation
 Id:             IHE.pcc.SkinAssesment
