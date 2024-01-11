@@ -1,0 +1,52 @@
+@startuml
+skinparam svgDimensionStyle false
+title Detailed - Paramedicine Care Flow
+participant "Ambulance" as Ambulance
+participant "Health Information Exchange" as HIE [[https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html HIE-Whitepaper]]
+autonumber
+activate Ambulance
+activate HIE
+
+Note right of Ambulance: When the Paramedicine generate a new record for the encounter. that record will be populated with dempgraphic patient information gathered by whatever mechanism is available to the providers.
+Ambulance -> HIE: PIX Patient Identity Feed [[https://profiles.ihe.net/ITI/TF/Volume2/ITI-8.html] ITI-8]
+Ambulance -> HIE: PDQ Patient Demographics Query [[https://profiles.ihe.net/ITI/TF/Volume2/ITI-21.html] ITI-21]
+Note right of HIE: The HIE will provide the Domain identifier
+Ambulance -> HIE: using the Domain ID provided carry out the Registry Stored Query [[https://profiles.ihe.net/ITI/TF/Volume2/ITI-18.html] ITI-18]
+Note right of Ambulance: Query for typeCode=LOINC [[https://loinc.org/34133-9/ 34133-9]]\nLikely [[https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html#212-dynamic-documents OnDemand Document Entry]].
+Note right of HIE: This query will provide you with a list of documents  known to the registry
+Ambulance <-- HIE: Here is the list of possible Medical Summaries
+Note right of Ambulance: [[https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_TF_Vol1.pdf#nameddest=4_Exchange_of_Personal_Health_R CCD / IHE-XPHR]], [[https://www.hl7.org/ccdasearch/ C-CDA]] or [[https://hl7.org/fhir/uv/ips/ IPS]]
+Ambulance -> Ambulance: pick the freshest or best entry from available document entries
+Note right of Ambulance: The most recent summary document is the most likely the one with the most valuable information for the EMS providers. UI reccomendations would be similar to, showing the most recent published documetn with a filter on the document type of any summary document
+Ambulance -> HIE: Retrieve Document  [[https://profiles.ihe.net/ITI/TF/Volume2/ITI-43.html] ITI-43]
+Ambulance -> Ambulance: Utilize Medical Summary to treat patient
+Ambulance -> Ambulance: utilize the Descreet data import option to reduce data entry 
+Ambulance -> Ambulance: select the secure endpoint for the hospital from your locally managed "contact list"
+Note right of Ambulance: If the organization is setting up the initial connections the Organization can perform the [ITI-58] query to set up/ establisht their locally managed list if a provider directory is available within the connected exchange
+Ambulance -> HIE: Provider Information Query [ITI-58] for specific hospital system outside of locally managed list 
+activate Hospital
+Ambulance -> Hospital: send Referral Request [[https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_Suppl_360X.pdf]PCC-55] with Paramedicine Summary Clinical Subset 
+Hospital -> Ambulance: send Accept of Referral Request [[https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_Suppl_360X.pdf]PCC-55]
+Note right of Ambulance #orangered: figure out if the refferal accept would send back any temporary MRNs and encounter numbers
+Note right of Ambulance: [[https://www.ihe.net//uploadedFiles/Documents/PCC/IHE_PCC_Suppl_PCS.pdf IHE-Paramedicine Care Summary (PCS)]]
+
+Ambulance -> Hospital: Transfer care to Emergency Department
+Hospital -> Hospital: Admit patient
+
+Ambulance -> Ambulance: Complete the the ePCR record
+Ambulance -> HIE: Submits the Paramedicine Summary Complete Report with Provide and Register Document Set-b [[https://profiles.ihe.net/ITI/TF/Volume2/ITI-41.html] ITI-41]
+Ambulance -> State: Amulance organization Submits completed ePCR record to the state 
+
+Hospital -> Hospital: Discharges patient
+Hospital -> Ambulance: Send Referral Outcome (any CDA document) [[https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_Suppl_360X.pdf]]PCC-57]
+deactivate Hospital
+deactivate HIE
+
+Ambulance -> Ambulance: Extract some elements From the Discharge Summary 
+Ambulance -> Ambulance: Insert the received outcome data into the existing NEMSIS PCR
+Note right of Ambulance: [[https://nemsis.org/technical-resources NEMSIS PCR]]
+Ambulance -> State: Send NEMSIS PCR with apended outcome data to the state
+
+deactivate Ambulance
+
+@enduml

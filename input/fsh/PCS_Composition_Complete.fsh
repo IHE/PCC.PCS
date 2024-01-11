@@ -34,7 +34,7 @@ SE IPS social hisotry
 - RE 0..1 EMS Response Section
 - RE 0..1 EMS Times Sections
 - O 0..1 CareTeam 
-- O 0..1 Physician Certification Statement
+- O 0..1 Physician Certification Statement 
 - RE 0..1  Transport Section 
 """
 

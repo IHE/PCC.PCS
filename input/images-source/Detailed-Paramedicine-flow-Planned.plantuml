@@ -1,0 +1,24 @@
+@startuml
+skinparam svgDimensionStyle false
+title Scheduled Planned Ambulance Service (RIPT/360x)
+pparticipant "Ambulance" as Ambulance
+participant "Health Information Exchange" as HIE [[https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html HIE-Whitepaper]]
+autonumber
+activate Ambulance
+activate HIE
+activate ParamedicineOrganization1
+activate ParamedicineOrganization2
+ServiceRequestor -> ParamedicineOrganization1: Send Refferal Request [[https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_Suppl_360X.pdf] PCC-55]
+ParamedicineOrganization  -> ServiceRequestor: Send Refferal Request Decline [[https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_Suppl_360X.pdf] PCC-55]
+deactivate ParamedicineOrganization1
+ServiceRequestor -> ParamedicineOrganization2: Send Refferal Request [[https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_Suppl_360X.pdf] PCC-55]
+ParamedicineOrganization2  -> ServiceRequestor: Send Refferal Request Accept [[https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_Suppl_360X.pdf] PCC-55]
+ServiceRequestor -> ParamedicineOrganization2: Send RIPT Document [PCC-1]
+deactivate ServiceRequestor
+activate Ambulance
+ParamedicineOrganization2 -> Ambulance: Forward Service information and end RIPT Document [PCC-1]
+deactivate ParamedicineOrganization2
+Ambulance -> Ambulance: Utilize Medical Summary to treat patient
+Ambulance -> Ambulance: Requested Service Carried out, altered, or Canceled 
+Ambulance -> ServiceRequestor: Send Referral Outcome [[https://www.ihe.net//uploadedFiles/Documents/PCC/IHE_PCC_Suppl_PCS.pdf] PCS Complete Report] [[https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_Suppl_360X.pdf]]PCC-57]
+@enduml
