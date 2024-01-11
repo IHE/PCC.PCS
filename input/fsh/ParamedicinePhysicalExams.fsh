@@ -22,10 +22,7 @@ Description: "The Example instance for the SkinAssesment observation"
 * effectiveDateTime = "2021-10-06T10:52:30-07:00"
 * performer = Reference(Practitioner/ex-Practitioner)
 * subject = Reference(Patient/ex-Patient)
-* hasmember[+] = Reference(ex-ColorOfSkin)
-* hasmember[=] = Reference(ex-MoistureOfSkin)
-* hasmember[=] = Reference(ex-TemperatureOfSkin)
-* hasmember[=] = Reference(ex-TurgorOfSkin)
+* hasmember = Reference(ex-ColorOfSkin  | ex-MoistureOfSkin  | ex-TemperatureOfSkin  | ex-TurgorOfSkin)
 
 
 Profile:        ColorOfSkin
