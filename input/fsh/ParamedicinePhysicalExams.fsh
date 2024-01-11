@@ -12,10 +12,10 @@ Description:    "TBD."
 * dataAbsentReason MS
 * subject only Reference(Patient)
 * performer 1..*
-* hasmember ^slicing.discriminator.type = #value
-* hasmember ^slicing.discriminator.path = ""
+* hasmember ^slicing.discriminator.type = #pattern
+* hasmember ^slicing.discriminator.path = "$this"
 * hasmember ^slicing.rules = #open
-* hasmember ^slicing.description = ""
+* hasmember ^slicing.description = "TBD"
 * hasmember ^slicing.ordered = false
 * hasmember contains 
     color-of-skin 0..1 and 
@@ -56,7 +56,7 @@ Description:    "TBD."
 * subject only Reference(Patient)
 * performer 1..*
 * value[x] only CodeableConcept 
-* valueCodeableConcept from Color_Of_Skin_VS(extensible)
+* valueCodeableConcept from Color_Of_Skin_VS (extensible)
 
 Instance: ex-ColorOfSkin
 InstanceOf: ColorOfSkin
@@ -84,7 +84,7 @@ Description:    "TBD."
 * subject only Reference(Patient)
 * performer 1..*
 * value[x] only CodeableConcept 
-* valueCodeableConcept from Moisture_Of_Skin_VS(extensible)
+* valueCodeableConcept from Moisture_Of_Skin_VS (extensible)
 
 Instance: ex-MoistureOfSkin
 InstanceOf: MoistureOfSkin
@@ -112,7 +112,7 @@ Description:    "TBD."
 * subject only Reference(Patient)
 * performer 1..*
 * value[x] only CodeableConcept 
-* valueCodeableConcept from Temperature_Of_Skin_VS(extensible)
+* valueCodeableConcept from Temperature_Of_Skin_VS (extensible)
 
 Instance: ex-TemperatureOfSkin
 InstanceOf: TemperatureOfSkin
@@ -140,7 +140,7 @@ Description:    "TBD."
 * subject only Reference(Patient)
 * performer 1..*
 * value[x] only CodeableConcept 
-* valueCodeableConcept from Turgor_Of_Skin_VS(extensible)
+* valueCodeableConcept from Turgor_Of_Skin_VS (extensible)
 
 Instance: ex-TurgorOfSkin
 InstanceOf: TurgorOfSkin
@@ -168,7 +168,7 @@ Description:    "TBD."
 * subject only Reference(Patient)
 * performer 1..*
 * value[x] only CodeableConcept 
-* valueCodeableConcept from Paramedicine_Assessment_Findings_VS(extensible)
+* valueCodeableConcept from Paramedicine_Assessment_Findings_VS (extensible)
 * bodySite 1..1
 * bodySite = $sct#69536005
 
@@ -197,7 +197,7 @@ Description:    "TBD."
 * subject only Reference(Patient)
 * performer 1..*
 * value[x] only CodeableConcept 
-* valueCodeableConcept from Paramedicine_Assessment_Findings_VS(extensible)
+* valueCodeableConcept from Paramedicine_Assessment_Findings_VS (extensible)
 * bodySite 1..1
 * bodySite = $sct#89545001
 
@@ -226,7 +226,7 @@ Description:    "TBD."
 * subject only Reference(Patient)
 * performer 1..*
 * value[x] only CodeableConcept 
-* valueCodeableConcept from Neck_Assessment_VS(extensible)
+* valueCodeableConcept from Neck_Assessment_VS (extensible)
 * bodySite 1..1
 * bodySite = $sct#45048000
 
@@ -256,7 +256,7 @@ Description:    "TBD."
 * subject only Reference(Patient)
 * performer 1..*
 * value[x] only CodeableConcept 
-* valueCodeableConcept from Heart_Assessment_VS(extensible)
+* valueCodeableConcept from Heart_Assessment_VS (extensible)
 * bodySite 1..1
 * bodySite = $sct#80891009
 
@@ -285,9 +285,9 @@ Description:    "TBD."
 * subject only Reference(Patient)
 * performer 1..*
 * value[x] only CodeableConcept 
-* valueCodeableConcept from Abdominal_Assessment_VS(extensible)
+* valueCodeableConcept from Abdominal_Assessment_VS (extensible)
 * bodySite 1..1
-* bodySite from Abdominal_Assessment_Finding_Location_VS(extensible)
+* bodySite from Abdominal_Assessment_Finding_Location_VS (extensible)
 
 Instance: ex-AbdominalAssessment
 InstanceOf: AbdominalAssessment
@@ -298,7 +298,7 @@ Description: "The Example instance for the Abdominal exam"
 * performer = Reference(Practitioner/ex-Practitioner)
 * subject = Reference(Patient/ex-Patient)
 * valueCodeableConcept = $sct#169564004
-
+* bodySite = $sct#302553009
 
 Profile:        PelvisGenitourinaryAssessment
 Parent:         Observation
@@ -315,7 +315,7 @@ Description:    "TBD."
 * subject only Reference(Patient)
 * performer 1..*
 * value[x] only CodeableConcept 
-* valueCodeableConcept from Pelvis_Genitourinary_Assessment_VS(extensible)
+* valueCodeableConcept from Pelvis_Genitourinary_Assessment_VS (extensible)
 * bodySite 1..1
 
 Instance: ex-PelvisGenitourinaryAssessment
@@ -345,9 +345,9 @@ Description:    "TBD."
 * subject only Reference(Patient)
 * performer 1..*
 * value[x] only CodeableConcept 
-* valueCodeableConcept from Back_Spine_Assessment_VS(extensible)
+* valueCodeableConcept from Back_Spine_Assessment_VS (extensible)
 * bodySite 1..1
-* bodySite from Back_Spine_Assessment_Finding_Location_VS(extensible)
+* bodySite from Back_Spine_Assessment_Finding_Location_VS (extensible)
 
 Instance: ex-BackandSpineAssessment
 InstanceOf: BackandSpineAssessment
