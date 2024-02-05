@@ -60,7 +60,6 @@ the following cardinalities follow the documentation in the PCS profile:
 // Note: in addition to the sections defined in IPS...
 * section contains
     sectionBarriersToCare 0..1 MS and
-// 	  sectionMedicationsAdministered 0..1 MS and 
 	  sectionProceduresPerformed 1..1 MS and
     review_of_systems_section 0..1 MS and
     PhysicalExams 1..1 MS and 
@@ -80,20 +79,6 @@ the following cardinalities follow the documentation in the PCS profile:
 	  sectionInjuryEvent 0..1
 
 //*note 
-
-
-//* section[sectionMedications]entry contains 
-//  medicationsAdministered 0..* 
-// current medications should go into the Medication statemnt section 
-//
-//* section[sectionMedications].entry[medicationsAdministered] only Reference(MedicationAdministration)
-//* section[sectionMedications].entry[currentMedications] only Reference(MedicationAdministration)
-
-
-//* section[sectionProblems].entry MS 
-//* extension contains ProblemType named ProblemType 0..1
-//* extension contains LastKnownWell named LastKnownWell 0..1
-//* extension contains LastOralIntake named LastOralIntake 0..*
 
 * section[sectionIncident] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionIncident] ^extension.valueString = "Section"
@@ -120,14 +105,13 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[review_of_systems_section].entry ^short = "Review of Systems"
 * section[review_of_systems_section].entry ^definition = "TBD"
 * section[review_of_systems_section].entry contains
-//  exams 0..* MS and 
   lastOralIntake 0..1 and 
-  lastKnownWell 0..1 
+  lastKnownWell 0..1 and 
+  patientAcuity 0..* 
 
 * section[review_of_systems_section].entry[lastOralIntake] only Reference(Last_Oral_Intake)
 * section[review_of_systems_section].entry[lastKnownWell] only Reference(Last_Known_Well)
-//* section[review_of_systems_section].entry[exams] only Reference()
-//Note: 
+* section[review_of_systems_section].entry[patientAcuity] only Reference(Observation)
 
 
 * section[sectionBarriersToCare] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
@@ -183,24 +167,6 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[PhysicalExams].entry only Reference(Observation)
 // Note:If there is no entry available in this section then a data absent Reason SHALL be provided 
 
-//* section[PatientAcuity] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-//* section[PatientAcuity] ^extension.valueString = "Section"
-//* section[PatientAcuity] ^short = "Patient Acuity"
-//* section[PatientAcuity] ^definition = "TBD"
-//* section[PatientAcuity].code = $loinc#8687-6
-//* section[PatientAcuity].code MS
-//* section[PatientAcuity].entry ..* MS
-//* section[PatientAcuity].entry only Reference(Observation)
-//* section[PatientAcuity].entry ^slicing.discriminator.type = #pattern
-//* section[PatientAcuity].entry ^slicing.discriminator.path = "resolve()"
-//* section[PatientAcuity].entry ^slicing.rules = #open
-//* section[PatientAcuity].entry ^short = "TBD"
-//* section[PatientAcuity].entry ^definition = "TBD"
-//* section[PatientAcuity].entry contains
- // InitialPatientAcuity 0..1 and
- // FinalPatientAcuity 0..1
-
-//Note: where would patient acuity be documented 
 
 * section[ReasonForReferral] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[ReasonForReferral] ^extension.valueString = "Section"
