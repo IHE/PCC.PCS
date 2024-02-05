@@ -76,6 +76,7 @@ the following cardinalities follow the documentation in the PCS profile:
     ReasonForReferral 0..* and
     sectionMassCasualtyIncident 0..1 MS and 
 	  sectionCariacArrestEvent 0..1 and
+    sectionTransport 0..1 and
 	  sectionInjuryEvent 0..1
 
 //*note 
