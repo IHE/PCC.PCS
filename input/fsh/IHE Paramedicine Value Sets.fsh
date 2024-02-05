@@ -391,7 +391,6 @@ Id: Chest.Assessment.VS
 * $sct#283545005     "Gunshot wound"
 * $sct#65124004     "Swelling"
 * $sct#125667009     "Contusion"
-* $sct#247348008     "Tenderness"
 
 
 

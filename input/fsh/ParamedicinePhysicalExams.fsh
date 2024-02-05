@@ -12,7 +12,7 @@ Description:    "TBD."
 * dataAbsentReason MS
 * subject only Reference(Patient)
 * performer 1..*
-* hasmember only Reference(ColorOfSkin | MoistureOfSkin | TemperatureOfSkin | TurgorOfSkin)
+* hasmember only Reference(ColorOfSkin or MoistureOfSkin or TemperatureOfSkin or TurgorOfSkin)
 
 Instance: ex-SkinAssesment
 InstanceOf: SkinAssesment
@@ -22,7 +22,7 @@ Description: "The Example instance for the SkinAssesment observation"
 * effectiveDateTime = "2021-10-06T10:52:30-07:00"
 * performer = Reference(Practitioner/ex-Practitioner)
 * subject = Reference(Patient/ex-Patient)
-* hasmember = Reference(ex-ColorOfSkin  | ex-MoistureOfSkin  | ex-TemperatureOfSkin  | ex-TurgorOfSkin)
+* hasmember = Reference(ex-ColorOfSkin  or ex-MoistureOfSkin  or ex-TemperatureOfSkin  or ex-TurgorOfSkin)
 
 
 Profile:        ColorOfSkin
@@ -342,6 +342,7 @@ Description: "The Example instance for the back and spine exam"
 * performer = Reference(Practitioner/ex-Practitioner)
 * subject = Reference(Patient/ex-Patient)
 * valueCodeableConcept = $sct#169564004
+* bodySite = $sct#727234005
 
 
 //eExam.ExtremityGroup
