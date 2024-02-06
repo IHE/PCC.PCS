@@ -12,7 +12,7 @@ Description:    "TBD."
 * dataAbsentReason MS
 * subject only Reference(Patient)
 * performer 1..*
-* hasmember only Reference(ColorOfSkin or MoistureOfSkin or TemperatureOfSkin or TurgorOfSkin)
+* hasMember only Reference(ColorOfSkin or MoistureOfSkin or TemperatureOfSkin or TurgorOfSkin)
 
 Instance: ex-SkinAssesment
 InstanceOf: SkinAssesment
@@ -22,10 +22,10 @@ Description: "The Example instance for the SkinAssesment observation"
 * effectiveDateTime = "2021-10-06T10:52:30-07:00"
 * performer = Reference(Practitioner/ex-Practitioner)
 * subject = Reference(Patient/ex-Patient)
-* hasmember[+] = Reference(ex-ColorOfSkin) 
-* hasmember[=] = Reference(ex-MoistureOfSkin)
-* hasmember[=] = Reference(ex-TemperatureOfSkin)
-* hasmember[=] = Reference(ex-TurgorOfSkin)
+* hasMember[+] = Reference(ex-ColorOfSkin) 
+* hasMember[=] = Reference(ex-MoistureOfSkin)
+* hasMember[=] = Reference(ex-TemperatureOfSkin)
+* hasMember[=] = Reference(ex-TurgorOfSkin)
 
 
 Profile:        ColorOfSkin
