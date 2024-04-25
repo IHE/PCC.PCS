@@ -1,7 +1,7 @@
-Profile:   IHE_PCS_Composition_CS
-Parent: http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips
-Id:             IHE.PCC.PCS.Composition.CS
-Title: "Paramedicince Care Summary Composition Clinical Subset"
+Profile:   IHE_PCC_ParamedicineSummary_Composition_ClinicalSubset
+Parent: Composition
+Id:             IHE.PCC.ParamedicineSummary.Composition.ClinicalSubset
+Title: "Paramedicince Summary Composition Clinical Subset"
 Description:      """
 The composition of the FHIR elements that are used to build the FHIR Document for the Paramedicine Care Summary Clinical Subset
 the following cardinalities follow the documentation in the PCS profile: 
@@ -30,18 +30,97 @@ the following cardinalities follow the documentation in the PCS profile:
 """
 
 
-* encounter 1..1
-* encounter only Reference(IHE_PCS_Encounter_ClinicalSubset) 
+* text MS
+* identifier MS
+* status MS 
+* type 1..1 MS
+* insert requireAtLeastOneMatch(type.coding, summary, $loinc#77596-5)
+* category 1..* MS 
+* insert requireAtLeastOneMatch(category, pstat, $loinc#101135-2)
+* subject 1..1 MS 
+* subject only Reference(https://profiles.ihe.net/ITI/PDQm/StructureDefinition/IHE.PDQm.Patient or Paramedicine_Patient)
+* encounter MS only Reference(IHE_PCC_ParamedicineSummary_Encounter_ClinicalSubset)
+* date MS 
+* author MS 
+* title MS
+* title = "Paramedicine Summary Clinical Subset"
+* confidentiality MS 
+* attester MS 
+* attester.mode MS 
+* attester.time MS 
+* attester.party MS
+* custodian MS 
+// Language Code?
+// setId and versionNumber?
+* event MS 
+* insert requireAtLeastOneMatch(event.code, obs, http://terminology.hl7.org/CodeSystem/v3-ActCode#OBS)
+* event ^slicing.discriminator.type = ##pattern
+* event ^slicing.discriminator.path = "code"
+* event ^slicing.rules = #open
+* event ^slicing.description = "The care provisioning being documented"
+* event ^slicing.ordered = false
+* event contains careProvisioningEvent 0..1 
+* event[careProvisioningEvent].code = http://terminology.hl7.org/CodeSystem/v3-ActClass#ENC 
 
-* category ^slicing.discriminator.type = #value
-* category ^slicing.discriminator.path = "$this"
-* category ^slicing.rules = #open
-* category 1..
-* category contains ParamedicineSummaryDocument  1..1
-* category[ParamedicineSummaryDocument] = $loinc#67796-3
+* section.code 1..1 MS  
+* section.code ^type.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"
+* section.title 1..1 MS
+* section.text 1..1 MS 
+* section ^slicing.discriminator.type = #pattern
+* section ^slicing.discriminator.path = "code"
+* section ^slicing.rules = #open
+* section ^slicing.description = "Paramedicine Summary Composition ClinicalSubset"
+* section ^slicing.ordered = false
+* section contains
+  sectionDispatch 0..1 and   
+  sectionWIDControle 0..1 and 
+  sectionIncident 0..1 and 
+  //Note: add?sectionResponce/Drive section 0..1 and or keep in encounter?
+  sectionTreatment 0..1 MS and 
+  sectionPhysicalExams 0..1 MS and 
+  sectionReviewOfSystems 0..1 MS and 
+  //sectionMedical Condition Working Diagnosis/ Prelimimary Impressions 0..1 and
+  sectionInjury 0..1 and
+  sectionCardiacArrestEvent 0..1 and  
+  sectionAirwayManagement 0..1 and 
+  sectionTransportation 0..1 and 
+  // sectionPatient Position? or just put observations in trasnport? 
+  sectionConsultingExternalProfessional 0..1 and 
+  //SectionAgreements with patient? 0..1 and 
+  // sectionConsent 0..1 and
+  // section Comment 0..1 and
+  sectionMedications 1..1 MS and
+  sectionAllergies 1..1  MS and
+  sectionProblems 1..1  MS and 
+  sectionProceduresHx 0..1 MS and 
+  sectionImmunizations 0..1 MS and
+  sectionMedicalDevices 0..1 MS and 
+  sectionResults 0..1 MS and 
+  sectionVitalSigns 1..1  MS and
+  sectionPastIllnessHx 0..1 MS and 
+  sectionFunctionalStatus 0..1 MS and 
+  sectionPlanOfCare 0..1 and 
+  sectionSocialHistory 0..1 and 
+  sectionPregnancyHx 0..1 and 
+  sectionAdvanceDirectives 0..1 and 
+  secitonAdditionalDocumentation 0..1 MS and 
+  sectionProtocol and 
+  sectionPayor 0..1
 
-* event.code 1..*
-* event.code = http://terminology.hl7.org/CodeSystem/v3-ActClass#ENC
+
+* section[sectionDispatch] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionDispatch] ^extension.valueString = "Section"
+* section[sectionDispatch] ^short = "Dispatch Section"
+* section[sectionDispatch] ^definition = "TBD"
+* section[sectionDispatch].code = $loinc#67660-1
+* section[sectionDispatch].emptyReason MS 
+* section[sectionDispatch].entry ^short = "Information related to dispatch instructions"
+* section[sectionDispatch].entry 0..* MS 
+* section[sectionDispatch].entry contains 
+  emergencyServicesCalledDateTime
+
+_________________________________________________________________________________________________________________________
+
 
 * section[sectionPastIllnessHx] 1..1
 * section[sectionProceduresHx] 1..1

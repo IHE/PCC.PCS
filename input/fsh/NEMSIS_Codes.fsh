@@ -31,10 +31,43 @@ Title: "ValueSet dFacililty.01"
 Description: """
 The valueSet for the codes defined for dFacility.01 - Type of Facility
 
-For online view of the original publication this is based on visit [NEMSIS dFacility.01 - Type of Facility](https://nemsis.org/media/nemsis_v3/release-3.4.0/DataDictionary/PDFHTML/STATE/index.html)
+For online view of the original publication this is based on visit [NEMSIS dFacility.01 - Type of Facility](https://nemsis.org/media/nemsis_v3/release-3.5.0/DataDictionary/PDFHTML/EMSDEMSTATE/index.html)
 """
 * codes from system NEMSIS_dFacility_01
 
+CodeSystem: NEMSIS_dAgency_13
+Id: NEMSIS-dAgency-13
+Title: "dAgency.13 - Organizational Type"
+Description: """
+TThe organizational structure from which EMS services are delivered (fire, hospital, county, etc).
+
+For online view of the original publication this is based on visit [NEMSIS dAgency.13 - Organizational Type](https://nemsis.org/media/nemsis_v3/release-3.5.0/DataDictionary/PDFHTML/EMSDEMSTATE/index.html)
+"""
+* ^url = "https://nemsis.org/media/nemsis_v3/release-3.4.0/DataDictionary/PDFHTML/STATE/index.html"
+* ^caseSensitive = true
+* ^date = "2015-10-02T20:11:11Z"
+* ^status = #active
+* ^experimental = false
+* ^publisher = "NEMSIS"
+* ^copyright = "TODO, some NEMSIS agreed to copyright statement"
+* ^compositional = false
+* ^content = #complete
+* #9912001	"Fire Department"
+* #9912003	"Governmental, Non-Fire"
+* #9912005	"Hospital"
+* #9912007	"Private, Nonhospital"
+* #9912009	"Tribal"
+
+
+ValueSet: NEMSIS_dFacility_01_VS
+Id: NEMSIS-dFacaility-01-VS
+Title: "ValueSet dFacililty.01"
+Description: """
+The valueSet for the codes defined for dFacility.01 - Type of Facility
+
+For online view of the original publication this is based on visit [NEMSIS dFacility.01 - Type of Facility](https://nemsis.org/media/nemsis_v3/release-3.4.0/DataDictionary/PDFHTML/STATE/index.html)
+"""
+* codes from system NEMSIS_dFacility_01
 
 CodeSystem:  NEMSIS
 Title: "NEMSIS"
@@ -51,6 +84,7 @@ Id: NEMSIS
 * #8801019	"Refused"
 * #8801021	"Unresponsive"
 * #8801023	"Unable to Complete"
+* #8801005  "Exam Finding Not Present"
 * #8801025	"Not Immunized"
 * #8801027	"Order Criteria Not Met"
 * #8801029	"Approximate"
@@ -557,3 +591,6 @@ Id: NEMSIS
 * #3322007	"Patient chemically sedated"
 * #3322005	"Patient chemically paralyzed"
 * #3322009	"Patient intubated"
+* #3313005  "Regularly Irregular"
+* #3313003  "Regular"
+* #3313001  "Irregularly Irregular"

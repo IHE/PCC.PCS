@@ -2,13 +2,98 @@ Profile:        ParamedicineVitalSigns
 Parent:         http://hl7.org/fhir/StructureDefinition/vitalsigns
 Id:             IHE.pcs.paramedicinceVitalSigns
 Title:          "IHE PCS Profile ParamedicinceVitalSigns Observation"
-Description:    "A profile on the Observation that declares how FooBar will Create/Update for body weight measurements."
+Description:    "IHE PCS ParamedicinceVitalSigns Observation deffines the minimum requirements for all the vital signs observations supported in this IG."
 * category 1..1
 * category = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs
 * code from Paramedicine_VitalSigns_VS (extensible) 
 * effectiveDateTime 1..1
-* subject 1..1
-* subject only Reference(Patient)
+* dataAbsentReason MS from data.absent.reason.paramedicine.extension.VS (extensible)
+
+
+
+Profile:        ParamedicineVitalSigns-BodyWeight
+Parent:         http://hl7.org/fhir/StructureDefinition/bodyweight
+Id:             IHE.pcs.paramedicinceVitalSigns.BodyWeight
+Title:          "IHE PCS Profile ParamedicinceVitalSigns BodyWeight Observation"
+Description:    "IHE PCS ParamedicinceVitalSigns BodyWeight Observation."
+* code = $loinc#29463-7  
+* effectiveDateTime 1..1
+* dataAbsentReason MS from data.absent.reason.paramedicine.extension.VS (extensible)
+// NEMSIS Mapping eExam.01 - Estimated Body Weight in Kilograms
+
+Instance: ex-ParamedicineVitalSigns-BodyWeight-Kilograms
+InstanceOf: ParamedicineVitalSigns-BodyWeight
+Usage: #example
+Description: "The Example instance for the ParamedicinceVitalSigns BodyWeight observation"
+* status = http://hl7.org/fhir/observation-status#final
+* effectiveDateTime = "2021-10-06T10:52:30-07:00"
+* valueQuantity = 60 'kg'
+
+
+
+Profile:        ParamedicineVitalSigns-LengthBasedTapeMeasure
+Parent:         ParamedicineVitalSigns
+Id:             IHE.pcs.paramedicinceVitalSigns.LengthBasedTapeMeasure
+Title:          "IHE PCS Profile ParamedicinceVitalSigns Length Based Tape Measure Observation"
+Description:    "IHE PCS ParamedicinceVitalSigns Length Based Tape Measure Observation."
+* $loinc#67670-0 
+* effectiveDateTime 1..1
+* value[x] only CodeableConcept from Length_Based_Tape_Measure_VS (preferred)
+// NEMSIS Mapping eExam.02 - Length Based Tape Measure
+
+Instance: ex-ParamedicineVitalSigns-LengthBasedTapeMeasure
+InstanceOf: ParamedicineVitalSigns-LengthBasedTapeMeasure
+Usage: #example
+Description: "The Example instance for the ParamedicinceVitalSigns Length Based Tape Measure observation"
+* status = http://hl7.org/fhir/observation-status#final
+* effectiveDateTime = "2021-10-06T10:52:30-07:00"
+* valueCodeableConcept = $sct#444503000 "Broselow Luten pediatric weight estimation green zone"
+
+
+
+Profile:        ParamedicineVitalSigns-CardiacRhythm
+Parent:         ParamedicineVitalSigns
+Id:             IHE.pcs.paramedicinceVitalSigns.CardiacRhythm
+Title:          "IHE PCS Profile ParamedicinceVitalSigns Cardiac Rhythm Observation"
+Description:    "IHE PCS ParamedicinceVitalSigns Cardiac Rhythm Observation."
+* $loinc#67670-0 
+* effectiveDateTime 1..1
+* value[x] only CodeableConcept from Cardiac_Rhythm_VS (preferred)
+// NEMSIS Mapping eVitals.03 - Cardiac Rhythm / Electrocardiography (ECG)
+* device MS 
+* method MS
+
+Instance: ex-ParamedicineVitalSigns-CardiacRhythm
+InstanceOf: ParamedicineVitalSigns-CardiacRhythm
+Usage: #example
+Description: "The Example instance for the ParamedicinceVitalSigns Length Based Tape Measure observation"
+* status = http://hl7.org/fhir/observation-status#final
+* effectiveDateTime = "2021-10-06T10:52:30-07:00"
+* valueCodeableConcept = $sct#427485008 "Electrocardiographic asystole"
+* method = 
+
+
+
+Profile:        ParamedicineVitalSigns-CardiacRhythm
+Parent:         ParamedicineVitalSigns
+Id:             IHE.pcs.paramedicinceVitalSigns.CardiacRhythm
+Title:          "IHE PCS Profile ParamedicinceVitalSigns Cardiac Rhythm Observation"
+Description:    "IHE PCS ParamedicinceVitalSigns Cardiac Rhythm Observation."
+* $loinc#67670-0 
+* effectiveDateTime 1..1
+* value[x] only CodeableConcept from Cardiac_Rhythm_VS (preferred)
+// NEMSIS Mapping eVitals.03 - Cardiac Rhythm / Electrocardiography (ECG)
+* device MS 
+
+Instance: ex-ParamedicineVitalSigns-CardiacRhythm
+InstanceOf: ParamedicineVitalSigns-CardiacRhythm
+Usage: #example
+Description: "The Example instance for the ParamedicinceVitalSigns Length Based Tape Measure observation"
+* status = http://hl7.org/fhir/observation-status#final
+* effectiveDateTime = "2021-10-06T10:52:30-07:00"
+* valueCodeableConcept = $sct#427485008 "Electrocardiographic asystole"
+
+
 
 
 

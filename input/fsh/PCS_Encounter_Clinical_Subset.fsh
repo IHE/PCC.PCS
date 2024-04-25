@@ -1,6 +1,6 @@
-Profile:   IHE_PCS_Encounter_ClinicalSubset
+Profile:   IHE_PCC_ParamedicineSummary_Encounter_ClinicalSubset
 Parent: Encounter
-Id:             IHE.PCC.PCS.Encounter.ClinicalSubset
+Id:             IHE.PCC_.ParamedicineSummary.Encounter.ClinicalSubset
 Title: "IHE PCS Encounter Clinical Subset"
 Description:      """
 An IHE PCS Encounter Complete Report resource is used to deffine the emergency medical transport encounter of a patient,with only clinically relevant infromaiton.

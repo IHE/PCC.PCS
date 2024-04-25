@@ -24,6 +24,15 @@ Id: NEMSIS.NOT.Values.VS
 * NEMSIS#7701003	"Not Recorded"
 * NEMSIS#7701005	"Not Reporting"
 
+ValueSet: data-absent-reason-paramedicine-extension
+Description: "An expansion of the Data Absent Reason valueset to better allign with paramedicine data."
+Id: data.absent.reason.paramedicine.extension.VS
+* codes from http://hl7.org/fhir/ValueSet/data-absent-reason 
+* $sct#1220561009 "Not recorded"
+* $sct#422768004 "Unresponsive"
+* $NEMSIS#8801023 "Unable to Complete"
+* $NEMSIS#8801005 "Exam Finding Not Present"
+
 
 ValueSet: NEMSIS_Alternate_Home_Residence_VS
 Description: "Documentation of the type of patient without a home ZIP/Postal Code."

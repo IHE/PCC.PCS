@@ -1,9 +1,11 @@
-
-
 ValueSet: Paramedicine_VitalSigns_VS
 Description: "Vital signs that should be used in the Paramedicine Summary doucmentation"
 Id: Paramedicine.VitalSigns.VS
 * codes from system http://hl7.org/fhir/ValueSet/observation-vitalsignresult 
+* $loinc#29463-7       "Body Weight "
+* $loinc#67670-0       "Length-based tape measure category NEMSIS"
+* $loinc#            ""
+* $loinc#            ""
 * $loinc#19889-5      "End Title Carbon Dioxide (ETCO2)"
 * $loinc#19911-7      "Carbon Monoxide (CO)"
 * $loinc#2339-0       "Blood Glucose Level"
@@ -90,7 +92,7 @@ ValueSet: Length_Based_Tape_Measure_VS
 Description: "The colors show equipment sizes for emergency pediatric resuscitation. Pre-calculated medication dosages are related to each weight. "
 Id: Length.Based.Tape.Measure.VS
 
-* $sct#444474005       "Broselow Luten pediatric weight estimation blue zone (finding)"
+* $sct#444474005     "Broselow Luten pediatric weight estimation blue zone (finding)"
 * $sct#444503000     "Broselow Luten pediatric weight estimation green zone (finding)"
 * $sct#736023001     "Broselow Luten pediatric weight estimation gray zone (finding)"
 * $sct#444496004     "Broselow Luten pediatric weight estimation orange zone (finding)"
@@ -453,3 +455,53 @@ Id: Neurological.Assessment.VS
 * $sct#734757002     "Weakness of right facial muscle"
 * $sct#278287000     "Left hemiparesis "
 * $sct#278286009     "Right hemiparesis"
+
+ValueSet: Cardiac_Rhythm_VS
+Description: "The cardiac rhythm / ECG and other electrocardiography findings of the patient as interpreted by EMS personnel."
+Id: Cardiac.Rhythm.VS 
+
+* $sct#426151009        "Electrocardiogram: idioventricular rhythm"
+* $sct#427485008        "Electrocardiographic asystole"
+* $sct#251143007        "Electrocardiogram artifact"
+* $sct#164889003        "Electrocardiographic atrial fibrillation"
+* $sct#164890007        "Electrocardiographic atrial flutter "
+* $sct#270492004        "First degree atrioventricular block"
+* $sct#164905008        "Mobitz type I second degree atrioventricular block on electrocardiogram"
+* $sct#426183003        "Electrocardiographic Mobitz type II atrioventricular block"
+* $sct#164906009        "Electrocardiographic complete atrioventricular block"
+* $sct#426307007        "Electrocardiogram: junctional rhythm"
+* $sct#164909002        "Electrocardiographic left bundle branch block"
+* $sct#426434006        "Electrocardiographic anterior ischemia"
+* $sct#425419005        "Electrocardiographic inferior ischemia"
+* $sct#425623009        "Electrocardiographic lateral ischemia"
+* $sct#35581000087103   "Ischemia of posterior myocardium"
+* $sct#35481000087104   "Ischemia of myocardium of ventricular septum"
+* $sct#426453001        "Electrocardiogram: paced rhythm"
+* $sct#426975008        "Electrocardiogram: pulseless electrical activity"
+* $sct#164885009        "Electrocardiographic atrial ectopics"
+* $sct#427172004        "Electrocardiogram: premature ventricular contractions"
+* $sct#164907000        "Electrocardiographic right bundle branch block"
+* $sct#427393009        "Electrocardiogram: sinus arrhythmia"
+* $sct#426177001        "Electrocardiogram: sinus bradycardia"
+* $sct#426783006        "Electrocardiogram: sinus rhythm"
+* $sct#427084000        "Electrocardiogram: sinus tachycardia"
+* $sct#429731003        "Anterior myocardial infarction on electrocardiogram"
+* $sct#7326005          "Inferior myocardial infarction on electrocardiogram"
+* $sct#164871004        "Lateral infarction on electrocardiogram"
+* $sct#73999000         "Posterior myocardial infarction on electrocardiogram"
+* $sct#1077002          "Septal infarction by electrocardiogram"
+* $sct#426761007        "Electrocardiographic supraventricular tachycardia"
+* $sct#426882006        "Electrocardiographic torsades de pointes"
+* $sct#707799009        "Non-shockable heart rhythm detected by automated external defibrillator"
+* $sct#704130006        "Shockable heart rhythm detected by automated external defibrillator"
+* $sct#164896001        "Electrocardiographic ventricular fibrillation"
+* $sct#233905006        "Ventricular tachycardia with normal heart"
+// Note: This should be confirmed 
+* $sct#405806007        "Pulseless ventricular tachycardia"
+* $sct#66230004         "Reciprocal rhythm"
+* $sct#10370003         "Rhythm from artificial pacing"
+* $sct#81437007         "Normal atrial rhythm"
+* $sct#79525004         "Normal cardiac conduction"
+* $sct#423863005        "Electrical alternation of heart"
+
+

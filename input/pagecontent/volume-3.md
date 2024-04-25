@@ -32,7 +32,57 @@ This specification is fully deffined at this published URL (http://build.fhir.or
 
 
 Vital Signs 
-The following Vital signs Sshould be references within the Vital Signs section of the composition:
+The following Vital signs Should be references within the Vital Signs section of the composition:
+
+[Cardiac Rhythm]()
+[ECGType]()
+[ECGInterpretationMethod]()
+[SystolicBloodPressure]()
+[DiastolicBloodPressure]()
+[Mean Arterial Pressure]()
+[HeartRate](http://hl7.org/fhir/StructureDefinition/heartrate)
+[PulseOximetry](http://hl7.org/fhir/StructureDefinition/oxygensat)
+[HeartRateRhythm]()
+[RespiratoryRate](http://hl7.org/fhir/StructureDefinition/resprate)
+[Respiratory Effort]()
+[End Tidal Carbon Dioxide (ETCO2)]()
+[Carbon Monoxide (CO)]()
+[BloodGlucoseLevel]()
+[GlasgowComaScore-Eye]()
+[GlasgowComaScore-Verbal]()
+[GlasgowComaScore-Motor]()
+[GlasgowComaScore-Qualifier]()
+[GlasgowComaScore-Total]()
+[Temperature](http://hl7.org/fhir/StructureDefinition/bodytemp)
+[LevelOfResponsiveness]()
+[PainSeverity]()
+[Pain Scale Type]()
+[StrokeScaleScore]()
+[StrokeScaleType]()
+[ContraindicationForThrombolyticUse]()
+[APGAR 1 MINUTE]()
+[APGAR 5 MINUTE]()
+[APGAR 10 MINUTE]()
+[RevisedTraumaScore]()
+
+Exams
+The following Vital signs Should be references within the Physical Exams section of the composition:
+[Body Weight](http://hl7.org/fhir/StructureDefinition/bodyweight)
+[Length Based Tape Measure]()
+[Skin Assessment]()
+[Head Assessment]()
+[Face Assessment]()
+[Neck Assessment]()
+[Heart Assessment]()
+[Abdomen Assessment]()
+[Back and Spine Assessment]()
+[Extremities Assessment]()
+[Eye Assessment]()
+[Lung Assessment]()
+[Chest Assessment]()
+[Mental Status Assessment]()
+[Neurological Assessment]()
+[Stroke/CVA Symptoms Resolved]()
 
 ### 1:X.6.5 Conformance
 N/A
