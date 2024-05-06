@@ -27,6 +27,13 @@ dependencies:
   ihe.pcc.odh: 
     id: ihepccodh
     version: current
+  ihe.pcc.odh: 
+    id: ihepccodh
+    version: 1.0.0-comment
+  ihe.iti.pdqm: 
+    id: ihepdqm
+    uri: https://profiles.ihe.net/ITI/PDQm/ImplementationGuide/ihe.iti.pdqm
+    version: 3.0.x    
 
 parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
   path-resource:

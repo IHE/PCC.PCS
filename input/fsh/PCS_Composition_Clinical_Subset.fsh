@@ -36,7 +36,7 @@ the following cardinalities follow the documentation in the PCS profile:
 * insert requireAtLeastOneMatch(category, pstat, $loinc#34133-9)
 * confidentiality 1..1
 * language 1..1 MS
-* language only from http://hl7.org/fhir/R4/valueset-languages (preferred)
+* language only from CommonLanguages (preferred)
 * title MS 
 * date MS
 * text MS 

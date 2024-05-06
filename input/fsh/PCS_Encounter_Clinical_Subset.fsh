@@ -26,13 +26,13 @@ An IHE PCS Encounter Complete Report resource is used to deffine the emergency m
 * reasonCode 1..*
 * participant MS 
 * diagnosis 1..*
-* diagnosis ^slicing.discriminator.type = #pattern
-* diagnosis ^slicing.discriminator.path = "code"
-* diagnosis ^slicing.rules = #open
-* diagnosis ^slicing.ordered = false
-* diagnosis ^slicing.description = "TBD"
-* diagnosis contains chiefComplaint 0..1 MS 
-* diagnosis[ChiefComplaint].use = #CC
+//* diagnosis ^slicing.discriminator.type = #pattern
+//* diagnosis ^slicing.discriminator.path = "code"
+//* diagnosis ^slicing.rules = #open
+//* diagnosis ^slicing.ordered = false
+//* diagnosis ^slicing.description = "TBD"
+//* diagnosis contains chiefComplaint 0..1 MS 
+//* diagnosis[ChiefComplaint].use = #CC
 
 * location MS 
 

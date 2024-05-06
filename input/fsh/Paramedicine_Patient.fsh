@@ -27,4 +27,4 @@ Description: "The estimated age of a patient represented as a number quantity wh
 * ^context[+].type = #element
 * ^context[=].expression = "EstimatedAge"
 * estimatedAge only valueQuantity
-* valueQuantity only from https://hl7.org/fhir/valueset-age-units (required)
+* valueQuantity only from CommonUCUMCodesForAge (required)
