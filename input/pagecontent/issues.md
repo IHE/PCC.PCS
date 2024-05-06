@@ -2,7 +2,7 @@
 
 #### Open Issues
 
-1.  What are the implications to this profile of the current
+PCSOpenIssue_001: What are the implications to this profile of the current
     developments in HL7 related to supporting Document and/or Note
     sourcing, retrieval, creation, and consumption? There are ongoing
     conversations in the Patient Care Workgroup around coming up with a
@@ -11,41 +11,27 @@
     notes (i.e., metadata) whereas as other viewpoints desire to explore
     what content might actually be included in the documents and notes.
 
-2.  See HL7 patient care work group discussion:
-    > [*http://wiki.hl7.org/index.php?title=ClinicalNote\_FHIR\_Resource\_Proposal*](http://wiki.hl7.org/index.php?title=ClinicalNote_FHIR_Resource_Proposal)
-    > See Monday Q2 HL7 WGM discussion related to this topic:
-    > [*http://wiki.hl7.org/index.php?title=January\_2018\_WGM\_New\_Orleans;\_Jan\_27\_to\_Feb\_8*](http://wiki.hl7.org/index.php?title=January_2018_WGM_New_Orleans;_Jan_27_to_Feb_8)
+PCSOpenIssue_002: See HL7 patient care work group discussion: [*http://wiki.hl7.org/index.php?title=ClinicalNote\_FHIR\_Resource\_Proposal*](http://wiki.hl7.org/index.php?title=ClinicalNote_FHIR_Resource_Proposal)
+    See Monday Q2 HL7 WGM discussion related to this topic: [*http://wiki.hl7.org/index.php?title=January\_2018\_WGM\_New\_Orleans;\_Jan\_27\_to\_Feb\_8*](http://wiki.hl7.org/index.php?title=January_2018_WGM_New_Orleans;_Jan_27_to_Feb_8)
 
 
-3.  There are a number of issues relating to the FHIR mapping and
-    resources needed to support this profile:
+PCSOpenIssue_003: There are a number of issues relating to the FHIR mapping and resources needed to support this profile:
 
-4.  Investigate the FHIR process for defining the resources required to
-    > fulfill NEMSIS.
+PCSOpenIssue_004: Investigate the FHIR process for defining the resources required to fulfill NEMSIS.
 
-5.  The injury information may need to be more extensive modeling in
-    > FHIR.
+PCSOpenIssue_005: The injury information may need to have more extensive modeling in FHIR.
 
-6.  There is no value set in FHIR relating to the level of care of
-    > ambulance units.
+PCSOpenIssue_006: There is no value set in FHIR relating to the level of care of ambulance units.
 
-7.  Extensions in FHIR need to me made to help include some of the
-    > needed attributes.
+PCSOpenIssue_007: Extensions in FHIR need to me made to help include some of the needed attributes.
 
-8.  IHE has filed a ticket against the FHIR specification \#16237 to
-    > allow for EMS events to be recorded in a status history without
-    > the use of the extension
+PCSOpenIssue_008: IHE has filed a ticket against the FHIR specification \#16237 to allow for EMS events to be recorded in a status history without the use of the extension
 
-9.  IHE has filed a ticket against the FHIR specification \#16238 to
-    > allow for there to be an outcome element for the end of the
-    > encounter.
+PCSOpenIssue_009: IHE has filed a ticket against the FHIR specification \#16238 to allow for there to be an outcome element for the end of the encounter.
 
-10.  Document reference for Advanced Directives in the FHIR mapping table
-    > can support the use case as it exists today. Currently there are
-    > ongoing efforts within HL7 to make available the clauses of an
-    > advanced directives available in coded form.
+PCSOpenIssue_010: Document reference for Advanced Directives in the FHIR mapping table can support the use case as it exists today. Currently there are ongoing efforts within HL7 to make available the clauses of an advanced directives available in coded form.
 
-11.  Should there be a section which explicitly describes the differences
+PCSOpenIssue_011: Should there be a section which explicitly describes the differences
     in EMS PCR concepts as opposed to the IHE Medical Summary Sections.
     For example, the Advanced Directives Section in the Medical Summary
     allows for the inclusion of the Advanced Directive documentation (or
@@ -53,253 +39,144 @@
     type of Advanced Directives which the EMS knows exists. OR do we
     just create a new Section in 6.3.1.D.5x and discuss the content.
 
-12.  The EMS Situation Chief Complaint is used to populate the Reason for
+PCSOpenIssue_012: The EMS Situation Chief Complaint is used to populate the Reason for
     > Referral as well as the Primary Symptoms, Other Associated
     > Symptoms, and Provider’s Primary and Secondary Impressions.
 
-13.  The EMS Situation
+PCSOpenIssue_013: The EMS Situation
 
-14.  The EMS Medical Allergies and Environment/Food Allergies are used to
+PCSOpenIssue_014: The EMS Medical Allergies and Environment/Food Allergies are used to
     > populate the standard Allergies and Adverse Reactions Section.
 
-15.  The EMS Current Medications is used to populate the standard
-    > Medications Section.
+PCSOpenIssue_015: The EMS Current Medications is used to populate the standard Medications Section.
 
-16.  The EMS Vital Signs are used to populate the standard Vital Signs
+PCSOpenIssue_016: The EMS Vital Signs are used to populate the standard Vital Signs
     > Section. Note: This includes Body Weight which is documented in
     > the EMS Physical Assessment Section.
 
-17.  The EMS Physical Assessment us used to populate the standard
+PCSOpenIssue_017: The EMS Physical Assessment us used to populate the standard
     > Physical Examination Section.
 
-18.  The EMS Medications Administered is used to populate the standard
+PCSOpenIssue_018: The EMS Medications Administered is used to populate the standard
     > Medications Administered and Allergies and Adverse Reactions
     > Sections.
 
-19.  The Pregnancy Status, Last Oral Intake and Last Known Well data
+PCSOpenIssue_019: The Pregnancy Status, Last Oral Intake and Last Known Well data
     > elements have been populated to a new Review of Systems – EMS
     > Section.
 
-20.  In consideration of reusable vital sign concepts:
+PCSOpenIssue_020: In consideration of reusable vital sign concepts:
+	- 8884-9 Heart rate rhythm is used for the vital signs instead of 67519-9 Cardiac rhythm NEMSIS
+	- 72089-6 Total score \[NIH Stroke Scale\] is used for the vital signs instead of 67520-7 Stroke scale overall interpretation NEMSIS
+	- 11454-6 Responsiveness assessment at First encounter is used for the vital signs instead of 67775-7 Level of responsiveness NEMSIS
+	- 2710-2 Oxygen Saturation is used for the vital signs instead of 2708-6 Oxygen saturation in Arterial blood
+	- Also included in vital sign metrics is 80341-1 Respiratory effort, which is not in the EMS Run Report, but is part of the data dictionary for this specification
+	- The EMS VITAL SIGNS created a new Vital Signs Organizer to contain all of the additional Vital Signs collected. This has been modelled using the IHE PCC Vital Signs adding the additional vital sign observations
 
-<!-- -->
+PCSOpenIssue_021: The following vital signs are not included in the specification:
+	- Reperfusion check list - This is a checklist and does not appear to be a vital sign. If it is required, it needs to be modelled and additional information needs to be (what are the outputs that need to be captured).
+	- The Respiratory Effort is not currently included in the EMS Patient Care Report. Are there any constraints that should be placed on the Respiratory Effort vocabulary?
+	- Pulse Rhythm is not currently included in the EMS Patient Care Report. No definition exists in either the IHE or HL7 CDA specifications.
 
-1.  8884-9 Heart rate rhythm is used for the vital signs instead of
-    > 67519-9 Cardiac rhythm NEMSIS
+PCSOpenIssue_022: The following HL7 EMS Patient Care Report value sets are referenced, but no Value Sets have been defined. This information is needed so that the specification can be complete and decisions can be made on whether the value set needs to be internationalized.
+	- MedicationClinical Drug (2.16.840.1.113883.3.88.12.80.17)
+	- Medication omission reason (2.16.840.1.113883.17.3.5.42)
 
-2.  72089-6 Total score \[NIH Stroke Scale\] is used for the vital signs
-    > instead of 67520-7 Stroke scale overall interpretation NEMSIS
+PCSOpenIssue_023: The following attributes are not modeled in this specification because this use case focuses on communicating relevant information from EMS into the hospital:
+	- Medication Response Observation
+	- Medication Prior Administration Observation
+	- Patient age (can be computed from birthdate)
+	- Barrier to care
 
-3.  11454-6 Responsiveness assessment at First encounter is used for the
-    > vital signs instead of 67775-7 Level of responsiveness NEMSIS
+PCSOpenIssue_024: In order to use the standard Medications Section from the Medical Summary, a number of the EMS Current Medication concepts were transformed. Public Comment is requesting that these transformations be verified.,
+	- we have the ability to document Drug Treatment Unknown and No Drug Therapy Prescribed
+	- There are currently no codes to indicate the Patient is on Anticoagulants (without specifying the substance).
+	- What should the SNOMED CT parent be to specify allergen (This should be an existing international value set). Recommendation is to use the HL7 Allergen Type mapped to SNOMED CT.
 
-4.  2710-2 Oxygen Saturation is used for the vital signs instead of
-    > 2708-6 Oxygen saturation in Arterial blood
+PCSOpenIssue_025: In order to use the standard Medications Administered Section from the Medical Summary, a number of the EMS Medications Administered concepts were transformed (and other were not). Public Comment is requesting that these transformations be reviewed.
+	- Reason for not Administering the Medication was moved forward.
+	- Medication Complications were moved to the standard Allergies and Adverse Reactions Section.
+	- Medication Response Observation was not moved forward.
+	- Medications Prior to Administration was not moved forward.
 
-5.  Also included in vital sign metrics is 80341-1 Respiratory effort,
-    > which is not in the EMS Run Report, but is part of the data
-    > dictionary for this specification
-
-6.  The EMS VITAL SIGNS created a new Vital Signs Organizer to contain
-    > all of the additional Vital Signs collected. This has been
-    > modelled using the IHE PCC Vital Signs adding the additional vital
-    > sign observations
-
-
-21.  The following vital signs are not included in the specification:
-
-<!-- -->
-
-1.  Reperfusion check list - This is a checklist and does not appear to
-    > be a vital sign. If it is required, it needs to be modelled and
-    > additional information needs to be (what are the outputs that need
-    > to be captured).
-
-2.  The Respiratory Effort is not currently included in the EMS Patient
-    > Care Report. Are there any constraints that should be placed on
-    > the Respiratory Effort vocabulary?
-
-3.  Pulse Rhythm is not currently included in the EMS Patient Care
-    > Report. No definition exists in either the IHE or HL7 CDA
-    > specifications.
-
-<!-- -->
-
-22.  The following HL7 EMS Patient Care Report value sets are referenced,
-    but no Value Sets have been defined. This information is needed so
-    that the specification can be complete and decisions can be made on
-    whether the value set needs to be internationalized.
-
-<!-- -->
-
-1.  MedicationClinical Drug (2.16.840.1.113883.3.88.12.80.17)
-
-2.  Medication omission reason (2.16.840.1.113883.17.3.5.42)
-
-<!-- -->
-
-23.  The following attributes are not modeled in this specification
-    because this use case focuses on communicating relevant information
-    from EMS into the hospital:
-
-<!-- -->
-
-1.  Medication Response Observation
-
-2.  Medication Prior Administration Observation
-
-3.  Patient age (can be computed from birthdate)
-
-4.  Barrier to care
-
-<!-- -->
-
-24.  In order to use the standard Medications Section from the Medical
-    Summary, a number of the EMS Current Medication concepts were
-    transformed. Public Comment is requesting that these transformations
-    be verified.,
-
-<!-- -->
-
-1.  we have the ability to document Drug Treatment Unknown and No Drug
-    > Therapy Prescribed
-
-2.  There are currently no codes to indicate the Patient is on
-    > Anticoagulants (without specifying the substance).
-
-3.  What should the SNOMED CT parent be to specify allergen (This should
-    > be an existing international value set). Recommendation is to use
-    > the HL7 Allergen Type mapped to SNOMED CT.
-
-<!-- -->
-
-25.  In order to use the standard Medications Administered Section from
-    the Medical Summary, a number of the EMS Medications Administered
-    concepts were transformed (and other were not). Public Comment is
-    requesting that these transformations be reviewed.
-
-<!-- -->
-
-1.  Reason for not Administering the Medication was moved forward.
-
-2.  Medication Complications were moved to the standard Allergies and
-    > Adverse Reactions Section.
-
-3.  Medication Response Observation was not moved forward.
-
-4.  Medications Prior to Administration was not moved forward.
-
-<!-- -->
-
-26.  A new Review of Systems – EMS section has been created which
+PCSOpenIssue_026: A new Review of Systems – EMS section has been created which
     includes information related to Pregnancy Status, Last Oral Intake,
     and Time Last Known Well.
 
-27.  Public Comment input is requested to review the EMS Cardiac Arrest
+PCSOpenIssue_027: Public Comment input is requested to review the EMS Cardiac Arrest
     Event Section to ensure there aren’t any US Specific concepts.
 
-28.  Public Comment input is requested to review the transformation of
+PCSOpenIssue_028: Public Comment input is requested to review the transformation of
     the EMS Patient Care Report information for use in the Reason for
     Referral Section.
 
-29.  Public Comment input is requested to review whether the EMS
+PCSOpenIssue_029: Public Comment input is requested to review whether the EMS
     Situation Section should be moved forward since most of the
     information is transformed to other Sections within the EMS Patient
     Care Medical Summary.
 
-30.  Should there be a special section to “vital signs obtained prior to
-    EMS” that should be specially tagged?
+PCSOpenIssue_030: Should there be a special section to “vital signs obtained prior to EMS” that should be specially tagged?
 
-31.  Review the FHIR mapping for the Medications sections. There seem to
+PCSOpenIssue_031: Review the FHIR mapping for the Medications sections. There seem to
     have a combination of complex and simple uses for the FHIR
     structuring and we are unsure is it is appropriate to be mixing the
     two.
 
-32.  Review the FHIR mapping for the “protocol age category”.
+PCSOpenIssue_032: Review the FHIR mapping for the “protocol age category”.
 
-33.  A complete example of the Paramedicine Care Summary (PCS) Document
+PCSOpenIssue_033: A complete example of the Paramedicine Care Summary (PCS) Document
     Content Module should be made to be available on the IHE ftp server
     at: <ftp://ftp.ihe.net/TF_Implementation_Material/PCC/PCS/>.
 
-34.  The LOINC code more specific to the CDA documents will be requested.
+PCSOpenIssue_034: The LOINC code more specific to the CDA documents will be requested.
 
-10. The following data elements do not currently have FHIR resources
-    that they can be mapped to. When they are created they will be added
-    to the 6.6.X.3.2 FHIR Resource Data Specifications table.
+PCSOpenIssue_035: The following data elements do not currently have FHIR resources that they can be mapped to. When they are created they will be added to the 6.6.X.3.2 FHIR Resource Data Specifications table.
+	- eSoftware Creator
+	- eSoftware Name
+	- eSoftware Version
+	- Standby Purpose
+	- Primary Role of the Unit
+	- Type of dispatch delay
+	- Type of response delay
+	- Type of scene delay
+	- Type of transport delay
+	- Type of turn-around delay
+	- EMS vehicle (unit) number
+	- EMS unit call sign
+	- Vehicle Dispatch GPS Location
+	- EMD Performed
+	- EMD Card Number
+	- Dispatch Center Name or ID
+	- Unit Dispatched CAD Record ID
+	- Response Urgency
+	- First EMS Unit on Scene
+	- Date/Time Initial Responder Arrived on Scene
+	- Numbers of Patients on Scene
+	- Scene GPS Location
+	- Incident Facility or Location Name
+	- Incident Street Address
+	- Incident Apartment, Suite, or Room
+	- Time Units of Duration of Complaint
+	- Patient's Occupational Industry
+	- Patient's Occupation
+	- Presence of Emergency Information Form
+	- Destination GPS Location
+	- Type of Destination
+	- Hospital In-Patient Destination
+	- Date/Time of Destination Prearrival Alert or Activation
 
-1.  	eSoftware Creator
+PCSOpenIssue_036: Seeking input - WE have modeled the Pain Severity score and the Pain Scale type as two separate observations. WIth investigetion we fould a LOINC Pain assesment panel: 38212-7. This panel includes a number of obsevations around apin assmeent including the codes we used for the observations. There is an additional approach that can be take in FHIR where we could deffine the Pain Scale type as a method with the reported pain score. We are looking to find the best way to model this concept. 
+PCSOpenIssue_037: LOINC 67521-5 Stroke scale type has a USA centric Normative Answer set bound to it. Either that needs to be edited in LOINC to decontrain the set or a new loinc code for this observation needs to be requested from LOINC 
+PCSOpenIssue_038: APGAR score modeling. seeking insite on how to model the Apgar score pannels
+PCSOpenIssue_039: Service request FHIR resource category element may need to have a deffined extensable value set of values in SNOMED to advise the types of service actegories that Paramedicine organizations may regulary provide 
+PCSOpenIssue_040: code element in the service request resource may need a deffined, extensible, value set 
+PCSOpenIssue_041: Inviting comment on service request quantity element from international point of view 
 
-2.  	eSoftware Name
-
-3.  	eSoftware Version
-
-4.  	Standby Purpose
-
-5.  	Primary Role of the Unit
-
-6.  	Type of dispatch delay
-
-7.  	Type of response delay
-
-8.  	Type of scene delay
-
-9.  	Type of transport delay
-
-10. 	Type of turn-around delay
-
-11. 	EMS vehicle (unit) number
-
-12. 	EMS unit call sign
-
-13. 	Vehicle Dispatch GPS Location
-
-14. 	EMD Performed
-
-15. 	EMD Card Number
-
-16. 	Dispatch Center Name or ID
-
-17. 	Unit Dispatched CAD Record ID
-
-18. 	Response Urgency
-
-19. 	First EMS Unit on Scene
-
-20. 	Date/Time Initial Responder Arrived on Scene
-
-21. 	Numbers of Patients on Scene
-
-22. 	Scene GPS Location
-
-23. 	Incident Facility or Location Name
-
-24. 	Incident Street Address
-
-25. 	Incident Apartment, Suite, or Room
-
-26. 	Time Units of Duration of Complaint
-
-27. 	Patient's Occupational Industry
-
-28. 	Patient's Occupation
-
-29. 	Presence of Emergency Information Form
-
-30. 	Destination GPS Location
-
-31. 	Type of Destination
-
-32. 	Hospital In-Patient Destination
-
-33. 	Date/Time of Destination Prearrival Alert or Activation
-
-34. Seeking input - WE have modeled the Pain Severity score and the Pain Scale type as two separate observations. WIth investigetion we fould a LOINC Pain assesment panel: 38212-7. This panel includes a number of obsevations around apin assmeent including the codes we used for the observations. There is an additional approach that can be take in FHIR where we could deffine the Pain Scale type as a method with the reported pain score. We are looking to find the best way to model this concept. 
-
-35. LOINC 67521-5 Stroke scale type has a USA centric Normative Answer set bound to it. Either that needs to be edited in LOINC to decontrain the set or a new loinc code for this observation needs to be requested from LOINC 
-36. APGAR score modeling. seeking insite on how to model the Apgar score pannels
-37. Service request FHIR resource category element may need to have a deffined extensable value set of values in SNOMED to advise the types of service actegories that Paramedicine organizations may regulary provide 
-38. code element in the service request resource may need a deffined, extensible, value set 
-39 Inviting comment on service request quantity element from international point of view 
+PCSOpenIssue_042: the http://terminology.hl7.org/CodeSystem/data-absent-reason value set was extended to include more elements that are used in NEMSIS. SNOMED does not have all the atributes to have a 1-to-1 coorelation with NEMSIS codes. The follow codes are mapped to slightly different codes:
+	- Instead of using a "not reported" attribute, the SNOMED-CT 410534003 "Not indicated" code will be used instead.
+	- Instead of using a "Exam Finding Not Present" attribute, the SNOMED-CT 373572006 "Clinical finding absent" code will be used instead.  
+	- NEMSIS 8801009 Medication Already Taken cannot have a SNOMED-CT code due to post coordination. the SNOMED-CT 246488008 "Drug used" atribute used instead 
+	- Instead of using a "...." attribute, the SNOMED-CT .... "...." code will be used instead.  
 
 #### Closed Issues
 

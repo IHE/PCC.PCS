@@ -347,12 +347,93 @@ Description: "The Example instance for the back and spine exam"
 * valueCodeableConcept = $sct#169564004
 * bodySite = $sct#727234005
 
+Profile:        ExtremitiesAssessment
+Parent:         Observation
+Id:             IHE.pcc.ExtremitiesAssessment
+Title:          "IHE Extremities assesment exam"
+Description:    "TBD."
+* category 1..1
+* category = http://terminology.hl7.org/CodeSystem/observation-category#exam
+* code = http://loinc.org#67533-0
+* effectiveDateTime 1..1
+* dataAbsentReason MS
+* status = #final
+* subject 1..1
+* subject only Reference(Patient)
+* performer 1..*
+* value[x] only CodeableConcept 
+* valueCodeableConcept from Extremity_Assessment_VS (extensible)
+* bodySite 1..1
+* bodySite from Extremity_Assessment_Finding_Location_VS (extensible)
 
-//eExam.ExtremityGroup
+Instance: ex-ExtremitiesAssessment
+InstanceOf: ExtremitiesAssessment
+Usage: #example
+Description: "The Example instance for the Extremities Assessment"
+* status = http://hl7.org/fhir/observation-status#final
+* effectiveDateTime = "2021-10-06T10:52:30-07:00"
+* performer = Reference(Practitioner/ex-Practitioner)
+* subject = Reference(Patient/ex-Patient)
+* valueCodeableConcept = $sct#267038008
+* bodySite = $sct#368208006
 
-//eExam.15 - Extremity Assessment Finding Location
+Profile:        EyeAssessment
+Parent:         Observation
+Id:             IHE.pcc.EyeAssessment
+Title:          "IHE eye assesment exam"
+Description:    "TBD."
+* category 1..1
+* category = http://terminology.hl7.org/CodeSystem/observation-category#exam
+* code = http://loinc.org#67534-8
+* effectiveDateTime 1..1
+* dataAbsentReason MS
+* status = #final
+* subject 1..1
+* subject only Reference(Patient)
+* performer 1..*
+* value[x] only CodeableConcept 
+* valueCodeableConcept from Eye_Assessment_VS (extensible)
+* bodySite 1..1
+* bodySite from Eye_Assessment_Finding_Location_VS (extensible)
 
-//eExam.16 - Extremities Assessment
+Instance: ex-EyeAssessment
+InstanceOf: EyeAssessment
+Usage: #example
+Description: "The Example instance for the eye Assessment"
+* status = http://hl7.org/fhir/observation-status#final
+* effectiveDateTime = "2021-10-06T10:52:30-07:00"
+* performer = Reference(Practitioner/ex-Practitioner)
+* subject = Reference(Patient/ex-Patient)
+* valueCodeableConcept = $sct#246636008
+* bodySite = $sct#732141005
+
+Profile:        PupilObservation
+Parent:         Observation
+Id:             IHE.pcc.PupilObservation
+Title:          "IHE PupilObservation"
+Description:    "TBD."
+* category 1..1
+* category = http://terminology.hl7.org/CodeSystem/observation-category#exam
+* code = $sct#247010007
+* effectiveDateTime 1..1
+* dataAbsentReason MS
+* status = #final
+* subject 1..1
+* subject only Reference(Patient)
+* performer 1..*
+* value[x] only CodeableConcept 
+* valueCodeableConcept from Extremity_Assessment_VS (extensible)
+
+Instance: ex-PupilObservation
+InstanceOf: PupilObservation
+Usage: #example
+Description: "The Example instance for the Extremities Assessment"
+* status = http://hl7.org/fhir/observation-status#final
+* effectiveDateTime = "2021-10-06T10:52:30-07:00"
+* performer = Reference(Practitioner/ex-Practitioner)
+* subject = Reference(Patient/ex-Patient)
+* valueCodeableConcept = $sct#267038008
+* bodySite = $sct#368208006
 
 //eExam.EyeGroup
 

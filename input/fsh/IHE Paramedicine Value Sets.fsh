@@ -1,3 +1,47 @@
+ValueSet: Paramedicine_data_absent_reason_VS
+Description: "data absent reason Value set extension to include additional codes that Paramedicine providers use to indicate reason for missing data"
+Id: Paramedicine.data.absent.reason.VS
+* include codes from http://terminology.hl7.org/CodeSystem/data-absent-reason
+* $sct#1220561009       "Not recorded"
+* $sct#410534003        "Not indicated"
+* $sct#410536001        "Contraindicated"
+* $sct#441889009        "Denied"
+* $sct#373572006         "Clinical finding absent"
+* $sct#416098002        "Allergy to drug"
+* $sct#246488008        "Drug used"
+* $sct#409137002        "No known drug allergy"
+* $sct#422768004        "Unresponsive"
+* $sct#876785008        "Unobtainable"
+* $sct#171259000        "Not up to date with immunizations "
+* $sct#26175008         "Approximate"
+* $sct#162275003        "No visual symptom"
+
+
+ValueSet: Injury_Mechanism_VS
+Description: "The Types of Mechanical force that have caused an injury. "
+Id: Injury.Mechanism.VS
+* $sct#1055294009       "Blunt impact"
+* $sct#1162998008       "Sharp impact"
+* $sct#80032004         "Fire"
+
+ValueSet: Protective_Equipment_VS
+Description: "Safety equipment/body protection in use by the patient at the time of the injury."
+Id: Protective.Equipment.VS
+* $sct#285695004      "Helmet"
+* $sct#60054005       "Seat belt, device"
+* $sct#102384007      "Motor vehicle airbag, device"
+* $sct#464916003      "Assistive automobile child safety seat"
+* $sct#38126007        "Protective glasses, device"
+* $sct#427850003        "Life preserver flotation device"
+* $sct#6919005          "Protective clothing material, device"
+* $sct#409526008        "Personal protective equipment"
+* $sct#257389003        "Lap belt"
+* $sct#257388006        "Lap and diagonal"
+* $sct#257385009        "Full harness"
+* $sct#257386005        "Fitted child harness"
+
+
+
 ValueSet: Paramedicine_VitalSigns_VS
 Description: "Vital signs that should be used in the Paramedicine Summary doucmentation"
 Id: Paramedicine.VitalSigns.VS
@@ -301,7 +345,7 @@ Id: Extremity.Assessment.Finding.Location.VS
 
 
 
-ValueSet: Extremity_Assessment__VS
+ValueSet: Extremity_Assessment_VS
 Description: "Physical findings body site; Extremity."
 Id: Extremity.Assessment.VS 
 * codes from valueset Paramedicine.Assessment.Findings.VS
@@ -333,7 +377,7 @@ Id: Eye.Assessment.Finding.Location.VS
 * $sct#8966001     "Left eye structure"
 * $sct#18944008     "Right eye structure"
 
-ValueSet: Eye_Assessment__VS
+ValueSet: Eye_Assessment_VS
 Description: "Physical findings eye; exam."
 Id: Eye.Assessment.VS 
 * $sct#193570009     "Cataract"
@@ -361,6 +405,22 @@ Id: Eye.Assessment.VS
 * $sct#37125009     "Dilated pupil"
 * $sct#271608006     "Pin point pupils"
 * $sct#63102001     "Visual disturbance"
+
+ValueSet: Pupil_Observation_VS
+Description: "the condition of the pupil."
+Id: Pupil.Observation.VS 
+* $sct#301941003    "Normal size pupil (finding)"
+* $sct#271608006    "Pin point pupils (finding)"
+* $sct#37125009     "Dilated pupil (finding)"
+* $sct#32341000146109   "Left pupillary reflex"
+* $sct#32351000146107   "absent right pupillary reflex"
+* $sct#32361000146105   "horizontal gaze paralysis to the left"
+* $sct#32371000146104   "horizontal gaze paralysis to the right"
+* $sct#563001           "Nystagmus (disorder)"
+* $sct#131194007     "Non-Reactive"
+* $sct#418970005     "Pupil equal round and reacting to light"
+* $sct#271732006     "Pupil irregular"
+* $sct#421910007     "Teardrop pupil"
 
 
 ValueSet: Lung_Assessment_Finding_Location_VS
@@ -505,3 +565,237 @@ Id: Cardiac.Rhythm.VS
 * $sct#423863005        "Electrical alternation of heart"
 
 
+ValueSet: IncidentType_VS
+Description: "TBD"
+Id: IncidentType.VS 
+* $sct#409508005     "Bioterrorism related event (event)"
+* $sct#409495001     "Bioterrorist attack (event)"
+* $sct#781249001     "Consumption of contaminated food (event)"
+* $sct#361191000009103     "Consumption of food (event)"
+* $sct#879983006     "Contact with adhesive bandage (event)"
+* $sct#879984000     "Contact with adhesive plaster (event)"
+* $sct#890297007     "Contact with Bryozoa (event)"
+* $sct#890111000     "Contact with clothing material (event)"
+* $sct#890131001     "Contact with fish (event)"
+* $sct#419620001     "Death (event)"
+* $sct#7878000     "Accidental death (event)"
+* $sct#87309006     "Death of unknown cause (event)"
+* $sct#740603007    "Killed (event)"
+* $sct#44301001     "Suicide (event)"
+* $sct#443684005     "Disease outbreak (event)"
+* $sct#276746005     "Environmental event (event)"
+* $sct#8766005     "Earthquake (event)"
+* $sct#111056004    " 	Flood (event)"
+* $sct#1287960006     "Heatwave (event)"
+* $sct#49061008     "Landslide (event)"
+* $sct#5193003     "Lightning (event)"
+* $sct#59262002     "Snowstorm (event)"
+* $sct#1287814005     "Subtropical storm (event)"
+* $sct#1287938008     "Tsunami (event)"
+* $sct#20936008     "Fire storm (event)"
+* $sct#773760007     "Traumatic event (event)"
+* $sct#1912002     "Fall (event)"
+* $sct#405616002     "Airway event (event)"
+* $sct#405618001     "Respiratory event (event)"
+* $sct#405617006     "Cardiovascular event (event)"
+* $sct#405619009     "Neurological event (event)"
+* $sct#49113003     "Blizzard (event)"
+
+ValueSet: Signature_Reason_VS
+Description: "The reason for the individuals signature."
+Id: Signature.Reason.VS
+* Include all codes defined in urn:iso-astm:E1762-95:2013
+* Include all codes defined in http://terminology.hl7.org/CodeSystem/consentscope
+* Include all codes defined in http://terminology.hl7.org/CodeSystem/consentcategorycodes
+* Import all the codes that are contained in https://terminology.hl7.org/5.1.0/ValueSet-v3-ActConsentType.html
+* $loinc#59284-0 	"Patient Consent"
+* $loinc#57016-8 	"Privacy policy acknowledgement Document"
+* $loinc#57017-6 	"Privacy policy Organization Document"
+* $loinc#64292-6 	"Release of information consent"
+* $sct#1234814002   "Return of subjects valuables and belongings" 
+* $sct#703427001    "Refusal of treatment by patient against dental advice (situation)"
+* $sct#49181000087105   "Consent declined for sedation (finding)"
+* $sct#307837007	"Referral to person"
+* $sct#129275003	"Administrative transfer - action (qualifier value)"
+* $sct#737038009	"Declined consent for treatment (finding)"
+* $sct#386249009	"Controlled substance checking (procedure)"
+* $sct#1234814002	"Return of subjects valuables and belongings"
+* $sct#384762007	"Transportation procedure"
+* $sct#429739001	"Patient declined transportation"
+* $sct#442392002	"Ambulance transport to hospital declined"
+* http://terminology.hl7.org/CodeSystem/v3-ActCode#HIPAAConsent   "HIPAA Consent"
+* http://terminology.hl7.org/CodeSystem/v3-ActCode#HIPAANOPP      "HIPAA notice of privacy practices"
+* http://terminology.hl7.org/CodeSystem/v3-ActCode#SecurityPolicy "security policy"
+* http://terminology.hl7.org/CodeSystem/v3-ActCode#AUTHPOL        "authorization policy"
+* http://terminology.hl7.org/CodeSystem/v3-ActCode#_AdvanceBeneficiaryNoticeType  "AdvanceBeneficiaryNoticeType"
+* http://terminology.hl7.org/CodeSystem/v3-ActCode#IDSCL       "information disclosure"
+* http://terminology.hl7.org/CodeSystem/v3-ActCode#INFA       "information access"
+* http://terminology.hl7.org/CodeSystem/v3-ActCode#IMPLIED       "implied consent"
+* http://terminology.hl7.org/CodeSystem/v2-0131#O       "Other"
+
+
+
+
+ValueSet: signer_relationship_VS 
+Description: "The type of relationship the individual signing has to the patient."
+Id: signer.relationship.VS 
+* include these codes as defined in http://terminology.hl7.org/CodeSystem/v3-RoleCode
+*   http://terminology.hl7.org/CodeSystem/v3-RoleCode#INTPRTER     "interpreter"
+*   http://terminology.hl7.org/CodeSystem/v3-RoleCode#POWATT     "power of attorney"
+*   http://terminology.hl7.org/CodeSystem/v3-RoleCode#DPOWATT     "durable power of attorney"
+*   http://terminology.hl7.org/CodeSystem/v3-RoleCode#HPOWATT     "healthcare power of attorney"
+*   http://terminology.hl7.org/CodeSystem/v3-RoleCode#SPOWATT     "special power of attorney"
+*   http://terminology.hl7.org/CodeSystem/v3-RoleCode#FAMMEMB    "family member"
+*   http://terminology.hl7.org/CodeSystem/v3-RoleCode#ONESELF      "self"
+* include these codes as defined in http://terminology.hl7.org/CodeSystem/v3-RoleClass
+*   http://terminology.hl7.org/CodeSystem/v3-RoleClass#PROV       "healthcare provider"
+*   http://terminology.hl7.org/CodeSystem/v3-RoleClass#CAREGIVER       "caregiver"
+*   http://terminology.hl7.org/CodeSystem/v3-RoleClass#NURPRAC       "nurse practitioner"
+*   http://terminology.hl7.org/CodeSystem/v3-RoleClass#NURS       "nurse"
+*   http://terminology.hl7.org/CodeSystem/v3-RoleClass#PA       "physician assistant"
+*   http://terminology.hl7.org/CodeSystem/v3-RoleClass#PHYS       "physician"
+*   http://terminology.hl7.org/CodeSystem/v3-RoleClass#CHILD       "child"
+*   http://terminology.hl7.org/CodeSystem/v3-RoleClass#GUARD       "guardian"
+*   http://terminology.hl7.org/CodeSystem/v3-RoleClass#NOK       "next of kin"
+* include these codes as defined in http://terminology.hl7.org/CodeSystem/v2-0131
+* 	http://terminology.hl7.org/CodeSystem/v2-0131#C      "Emergency Contact"
+* 	http://terminology.hl7.org/CodeSystem/v2-0131#E      "Employer"
+* 	http://terminology.hl7.org/CodeSystem/v2-0131#F      "Federal Agency"
+* 	http://terminology.hl7.org/CodeSystem/v2-0131#I      "Insurance Company"
+* 	http://terminology.hl7.org/CodeSystem/v2-0131#N      "Next-of-Kin"
+* 	http://terminology.hl7.org/CodeSystem/v2-0131#O      "Other"
+* 	http://terminology.hl7.org/CodeSystem/v2-0131#S      "State Agency"
+* 	http://terminology.hl7.org/CodeSystem/v2-0131#U      "Unknown"
+* include codes from http://terminology.hl7.org/CodeSystem/v3-RoleCode where concept is-a _PersonalRelationshipRoleType
+* include these codes as defined in http://terminology.hl7.org/CodeSystem/v3-ParticipationType
+*   http://terminology.hl7.org/CodeSystem/v3-ParticipationType#DIS     "discharger"
+*   http://terminology.hl7.org/CodeSystem/v3-ParticipationType#ESC       "escort"
+*   http://terminology.hl7.org/CodeSystem/v3-ParticipationType#REFT   "Referred to"
+* $sct#265981008        "Security/protective services"
+* $sct#159673003        "Security officer"
+* $sct#159675005        "Security guard"
+* $sct#71970000         "Prison guard"
+* $sct#302314004        "Military personnel"
+* $sct#106382009        "Fire fighter"
+* $sct#106383004        "Policeman/detective"
+* $sct#410603005        "Person in the legal environment"
+
+ValueSet: signer_role_VS 
+Description: "The type of person signing."
+Id: signer.relationship.VS 
+* http://terminology.hl7.org/CodeSystem/v3-ParticipationType#PPRF   "primary performer"
+* http://terminology.hl7.org/CodeSystem/v3-ParticipationType#SPRF   "secondary performer"
+* http://terminology.hl7.org/CodeSystem/v3-ParticipationType#WIT   "witness"
+* http://terminology.hl7.org/CodeSystem/v3-RoleClass#PROV       "healthcare provider"
+* http://terminology.hl7.org/CodeSystem/v3-RoleClass#LIC        "licensed entity"
+* http://terminology.hl7.org/CodeSystem/v3-RoleClass#PAT        "patient"
+* http://terminology.hl7.org/CodeSystem/v3-RoleClass#CAREGIVER  "caregiver"
+* http://terminology.hl7.org/CodeSystem/v3-RoleClass#MBR        "member"
+* http://terminology.hl7.org/CodeSystem/v3-RoleClass#CON        "contact"
+* http://terminology.hl7.org/CodeSystem/v2-0131#O      "Other"
+* http://terminology.hl7.org/CodeSystem/v3-ParticipationType#CON    "consultant"
+* http://terminology.hl7.org/CodeSystem/v3-RoleClass#COMPAR     "commissioning party"
+* $sct#303122009        "Crewmember"
+* $sct#257513009        "Member of public"
+
+ValueSet: signature_status_VS 
+Description: "Indication that the signature has been collected or attempted to be collected."
+Id: signature.status.VS 
+* http://terminology.hl7.org/CodeSystem/v3-ActStatus#active         "active"
+* http://terminology.hl7.org/CodeSystem/v3-ActStatus#cancelled      "cancelled"
+* http://terminology.hl7.org/CodeSystem/v3-ActStatus#aborted        "aborted"
+* http://terminology.hl7.org/CodeSystem/v3-ActStatus#completed      "completed"
+
+ValueSet: signature_status_reason_VS 
+Description: "the reason for the signature status"
+Id: signature.status.reason.VS 
+* $sct#419099009        "Dead"
+* $sct#69328002         "Distress"
+* $sct#397933008        "Equipment error/failure"
+* $sct#224338007        "In police custody"
+* $sct#422693009        "Language barrier"
+* $sct#228150001         "Mental health impairment"
+* $sct#419284004         "Altered mental status"
+* $sct#67822003         "Child (person)"
+* $sct#410599005         "Minor (person)"
+* $sct#82971005         "Impaired mobility "
+* $sct#284140004         "Unable to move arm"
+* $sct#284149003         "Difficulty moving hand"
+* $sct#386806002         "Impaired cognition"
+* $sct#443390004         "Refused"
+* $sct#1861000124105     "Transition of care"
+* $sct#418107008         "Unconscious "
+* $sct#397540003         "Visual impairment"
+* $sct#22151000087106    "Paper report "
+* $sct#707843000         "Illiterate literacy level"
+* $sct#309252004         "Unable to read"
+* $sct#386423001         "Physical restraint"
+* $sct#248042003         "Uncooperative behavior"
+* $sct#609586001         "Combativeness"
+
+ValueSet: Paramedicine_participant_role_VS 
+Description: "The role(s) of the crew member during response, at scene treatment, and/or transport."
+Id: Paramedicine.participant.role.VS 
+
+* http://terminology.hl7.org/CodeSystem/v2-0131#O      "Other"
+* http://terminology.hl7.org/CodeSystem/v3-RoleClass#CAREGIVER    "caregiver"
+* http://terminology.hl7.org/CodeSystem/v3-ParticipationType#PPRF   "primary performer"
+* http://terminology.hl7.org/CodeSystem/v3-ParticipationType#SPRF   "secondary performer"
+* http://terminology.hl7.org/CodeSystem/v3-ParticipationType#PRF    "performer"
+* http://terminology.hl7.org/CodeSystem/v3-ParticipationType#TRANS  "Transcriber"
+* http://terminology.hl7.org/CodeSystem/v3-ParticipationType#ENT     "data entry person"
+* http://terminology.hl7.org/CodeSystem/v3-ParticipationType#RESP    "Responsible Party"
+* http://terminology.hl7.org/CodeSystem/v3-ParticipationType#REFT    "Referrer"
+* http://terminology.hl7.org/CodeSystem/v3-ParticipationType#CON     "Consultant"
+* http://terminology.hl7.org/CodeSystem/v3-ParticipationType#ATND    "Attender"
+* $sct#768832004    "casemanager"
+
+ValueSet: Paramedicine_Practitioner_Qualification_Level_VS 
+Description: "TBD."
+Id: Paramedicine.Practitioner.Qualification.Level.VS 
+* these codes as defined in http://terminology.hl7.org/ValueSet/v2-2.7-0360 
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#CANP        "Certified Adult Nurse Practitioner"
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#CER        "Certificate"
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#CMA        "Certified Medical Assistant"
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#CNM        "Certified Nurse Midwife"
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#CNP        "Certified Nurse Practitioner"
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#CNS        "Certified Nurse Specialist"
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#CPNP 	"Certified Pediatric Nurse Practitioner"	
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#CRN 	"Certified Registered Nurse"	
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#CTR 	"Certified Tumor Registrar"
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#DO 	"Doctor of Osteopathy"	
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#EMT 	"Emergency Medical Technician"	
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#EMTP 	"Emergency Medical Technician - Paramedic"	
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#FPNP 	"Family Practice Nurse Practitioner"
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#JD 	"Juris Doctor"
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#MD 	"Doctor of Medicine"	
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#MDA 	"Medical Assistant"
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#MT 	"Medical Technician"
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#NP 	"Nurse Practitioner"	
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#PA 	"Physician Assistant"
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#PHS 	"Doctor of Science"	
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#PN 	"Advanced Practice Nurse"	
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#PharmD 	"Doctor of Pharmacy"	
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#RMA 	"Registered Medical Assistant"	
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#RN 	"Registered Nurse"	
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#RPH 	"Registered Pharmacist"
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#        ""
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#        ""
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#        ""
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#        ""
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#        ""
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#        ""
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#        ""
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#        ""
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#        ""
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#        ""
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#        ""
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#        ""
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#        ""
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#        ""
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#        ""
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#        ""
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#        ""
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#        ""
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#        ""
+*   http://terminology.hl7.org/ValueSet/v2-2.7-0360#        ""
