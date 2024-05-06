@@ -1,6 +1,6 @@
 Profile:   IHE_PCC_ParamedicineSummary_Encounter_ClinicalSubset
 Parent: Encounter
-Id:             IHE.PCC_.ParamedicineSummary.Encounter.ClinicalSubset
+Id:             IHE.PCC.ParamedicineSummary.Encounter.ClinicalSubset
 Title: "IHE PCS Encounter Clinical Subset"
 Description:      """
 An IHE PCS Encounter Complete Report resource is used to deffine the emergency medical transport encounter of a patient,with only clinically relevant infromaiton.
@@ -18,7 +18,7 @@ An IHE PCS Encounter Complete Report resource is used to deffine the emergency m
 //Note: Encunter type should be Ambulance, Medflight, should be set as an extensible code set
 * class 1..1
 * type 1..*
-* type from NEMSIS.Type.of.Service.Requested.VS (example)
+//* type from NEMSIS.Type.of.Service.Requested.VS (example)
 //Note: Should have as main options $230 "Patient transport", $117 "Emergency Medical" or $465 "Trasnport", $225 "Air ambulance", $226 "Ambulance" 
 * serviceType MS 
 * priority 1..1 MS 

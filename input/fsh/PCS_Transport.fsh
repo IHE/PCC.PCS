@@ -12,7 +12,8 @@ Description:    "Record of transport of a person or patient with constraints mat
 * class MS 
 // extend class codes to include trasnport or emergency transport, interfacility transport
 
-* type = from Tranport_Method.vs (example)
+* type MS 
+//= from Tranport_Method.vs (example)
 // eDisposition.16 - EMS Transport Method
 
 * priority MS 
@@ -59,7 +60,7 @@ Description:    "Record of transport of a person or patient with constraints mat
 //* extension contains trasnferOfCare named trasnferOfCare 0..*
 
 * location 0..* MS 
-*  hospitalization 0..0
+* hospitalization 0..0
 * partOf Reference(IHE.PCC.PCS.Encounter.ClinicalSubset)
 
 Extension: NumberofPatients
@@ -136,7 +137,7 @@ Description: "The number of patients transported by this paramedicine crew and u
 //    trasnportIndicator 0..1 and 
 //    numberOfPatientsTransported 0..1 MS and 
 //    disposition 0..* MS and  
-    //ePayment.41 - Patient Transport Assessment
+//    //ePayment.41 - Patient Transport Assessment
 //    dispositionInstructionsProvidedToPatient 0..* 
 //* TransportDisposition[trasnportIndicator] only Reference(TrasnportIndicator)
 //* TransportDisposition[disposition] only Reference(TrasnportDisposition)

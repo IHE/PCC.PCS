@@ -1,5 +1,5 @@
 Mapping: Paramedicine-Patient-Mapping
-Source:	IHE.PCC.Paramedicine.Patient
+Source:	IHE_PCC_Paramedicine_Patient
 Target: "NEMSIS"
 Title: "NEMSIS to FHIR Mapping"
 
@@ -161,30 +161,30 @@ Title: "NEMSIS to FHIR Mapping"
 //* -> ""
 
 
-Mapping: Paramedicine-data-absent-reason-ValueSet-Mapping
-Source:	Paramedicine.data.absent.reason.VS
-Target: "NEMSIS"
-Title: "NEMSIS to FHIR Mapping"
+//Mapping: Paramedicine-data-absent-reason-ValueSet-Mapping
+//Source:	Paramedicine.data.absent.reason.VS
+//Target: "NEMSIS"
+//Title: "NEMSIS to FHIR Mapping"
 
-* http://terminology.hl7.org/CodeSystem/data-absent-reason#not-applicable ->  "7701001	Not Applicable"
-* $sct#1220561009 "Not recorded" ->  "7701003	Not Recorded"
-* $sct#410534003  "Not indicated" ->  "7701005	Not Reporting"
-* $sct#410536001  "Contraindicated" -> "8801001	Contraindication Noted"
-* $sct#441889009  "Denied" -> "8801003	Denied By Order"
-* $sct#373572006  "Clinical finding absent" -> "8801005	Exam Finding Not Present"
-* $sct#416098002  "Allergy to drug" -> "8801007	Medication Allergy"
-* $sct#182834008  "Drug course completed "  -> "8801009	Medication Already Taken"
-* $sct#182833002  "Medication given"  -> "8801009	Medication Already Taken"
-* $sct#409137002  "No known drug allergy" -> "8801013	No Known Drug Allergy"
-* $sct#410534003  "Not indicated" -> "8801015	None Reported"
-* http://terminology.hl7.org/CodeSystem/data-absent-reason#not-performed  -> "8801017	Not Performed by EMS"
-* http://terminology.hl7.org/CodeSystem/data-absent-reason#asked-declined  -> "8801019	Refused"
-* $sct#422768004  "Unresponsive"  -> "8801021	Unresponsive"
-* $sct#876785008  "Unobtainable"  -> "8801023	Unable to Complete"
-* $sct#171259000  "Not up to date with immunizations "  -> "8801025	Not Immunized"
+//* http://hl7.org/fhir/R4/codesystem-data-absent-reason#not-applicable ->  "7701001	Not Applicable"
+//* $sct#1220561009 "Not recorded" ->  "7701003	Not Recorded"
+//* $sct#410534003  "Not indicated" ->  "7701005	Not Reporting"
+//* $sct#410536001  "Contraindicated" -> "8801001	Contraindication Noted"
+//* $sct#441889009  "Denied" -> "8801003	Denied By Order"
+//* $sct#373572006  "Clinical finding absent" -> "8801005	Exam Finding Not Present"
+//* $sct#416098002  "Allergy to drug" -> "8801007	Medication Allergy"
+//* $sct#182834008  "Drug course completed "  -> "8801009	Medication Already Taken"
+//* $sct#182833002  "Medication given"  -> "8801009	Medication Already Taken"
+//* $sct#409137002  "No known drug allergy" -> "8801013	No Known Drug Allergy"
+//* $sct#410534003  "Not indicated" -> "8801015	None Reported"
+//* http://terminology.hl7.org/CodeSystem/data-absent-reason#not-performed  -> "8801017	Not Performed by EMS"
+//* http://terminology.hl7.org/CodeSystem/data-absent-reason#asked-declined  -> "8801019	Refused"
+//* $sct#422768004  "Unresponsive"  -> "8801021	Unresponsive"
+//* $sct#876785008  "Unobtainable"  -> "8801023	Unable to Complete"
+//* $sct#171259000  "Not up to date with immunizations "  -> "8801025	Not Immunized"
 // Note: no match * -> "8801027	Order Criteria Not Met"
-* $sct#26175008   "Approximate"  -> "8801029	Approximate"
-* $sct#162275003  "No visual symptom"  -> "8801031	Symptom Not Present"
+//* $sct#26175008   "Approximate"  -> "8801029	Approximate"
+//* $sct#162275003  "No visual symptom"  -> "8801031	Symptom Not Present"
 
 
 
