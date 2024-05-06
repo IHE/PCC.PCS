@@ -469,7 +469,7 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionEmergencyNotification].entry ^slicing.description = "Contains notification information"
 * section[sectionEmergencyNotification].entry ^slicing.ordered = false
 * section[sectionEmergencyNotification].entry contains notification 1..1 MS 
-* section[sectionEmergencyNotification].entry[notification] only Reference(IHE_PCC_PS_ServiceRequest_Notification) 
+* section[sectionEmergencyNotification].entry[notification] only Reference(ServiceRequest) 
 
 * section[sectionTransportation] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionTransportation] ^extension.valueString = "Section"
@@ -564,7 +564,7 @@ Id:             Injury.Mechanism
 Title: "Mechanism Type"
 Description:      "The mechanism of the event which caused the injury."
 * code = $loinc#67494-5
-* valueCodeableConcept only from Injury_Mechanism_VS (extensible) 
+//* valueCodeableConcept only from Injury_Mechanism_VS (extensible) 
 
 Profile:   Body_Protection
 Parent: Observation
@@ -572,7 +572,7 @@ Id:             Body.Protection
 Title: "Body Protection"
 Description:      "Patient Protective Equipment."
 * code = $sct#705338000
-* valueCodeableConcept only from Protective_Equipment_VS (extensible) 
+//* valueCodeableConcept only from Protective_Equipment_VS (extensible) 
 
 Profile:   Fall_Height
 Parent: Observation
