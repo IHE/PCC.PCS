@@ -8,13 +8,13 @@ Description:    "The Paramedicine Patient resource utilizes the PQDQM patient re
 * name.family MS
 
 * address 1..*
-* address.county 1..1 MS 
+* address.district 1..1 MS 
 * address.state 1..1 MS 
 * address.postalCode 1..1 MS
 
 * gender 1..1 MS 
 
-* extesnion contains EstimatedAge named EstimatedAge 0..1 MS 
+* extension contains EstimatedAge named EstimatedAge 0..1 MS 
 * estimatedAge only valueQuantity
 
 // NOte: how to properly indicate Homlessness, migrant worker, foreign visitor etc (should i cintinue to extend on the adress or the Pt resource? maybe just a UR realm element), or just leave as an observation

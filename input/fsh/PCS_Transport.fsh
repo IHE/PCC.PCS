@@ -53,7 +53,7 @@ Description:    "Record of transport of a person or patient with constraints mat
 
 //* extension contains TransportInstructions named TransportInstructions 0..* 
 
-* extension contains NumberOfPatientsTransported named NumberOfPatientsTransported 0..*
+* extension contains NumberofPatients named NumberofPatients 0..*
 //* extension contains Disposition named Disposition 0..1  
 // eDisposition.30 - Transport Disposition 
 //* extension contains PreArrivalAlert named PreArrivalAlert 0..*
