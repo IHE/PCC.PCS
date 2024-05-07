@@ -88,7 +88,6 @@ the following cardinalities follow the documentation in the PCS profile:
   sectionPastIllnessHx 0..1 MS and 
   sectionProceduresHx 0..1 MS and 
   sectionImmunizations 0..1 MS and 
-  sectionFamilyMedicalHx 0..1 MS and 
   sectionSocialHistory 0..1 MS and 
   sectionReviewOfSystems 0..1 MS and 
   sectionVitalSigns 0..1 MS and 
@@ -237,20 +236,6 @@ the following cardinalities follow the documentation in the PCS profile:
   immunizationAdministration 0..* 
 * section[sectionImmunizations].entry[immunization] only Reference(ImmunizationUvIps)
 * section[sectionImmunizations].entry[immunizationAdministration] only Reference(MedicationAdministration) 
-
-* section[sectionFamilyMedicalHx] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionFamilyMedicalHx] ^extension.valueString = "Section"
-* section[sectionFamilyMedicalHx] ^short = "IHE Family Medical History Section"
-* section[sectionFamilyMedicalHx] ^definition = "The family history section shall contain a narrative description of the genetic family members, to the extent that they are known, the diseases they suffered from, their ages at death, and other relevant genetic information."
-* section[sectionFamilyMedicalHx].code = $loinc#10157-6
-* section[sectionFamilyMedicalHx].entry only Reference(FamilyMemberHistory or DocumentReference)
-* section[sectionFamilyMedicalHx].entry ^slicing.discriminator.type = #pattern
-* section[sectionFamilyMedicalHx].entry ^slicing.discriminator.path = "reference"
-* section[sectionFamilyMedicalHx].entry ^slicing.rules = #open
-* section[sectionFamilyMedicalHx].entry ^slicing.description = "Information about patient's relatives, relevant for patient."
-* section[sectionFamilyMedicalHx].entry ^slicing.ordered = false
-* section[sectionFamilyMedicalHx].entry contains familyMemberHistory
-* section[sectionFamilyMedicalHx].entry[familyMemberHistory] only Reference(FamilyMemberHistory)
 
 * section[sectionSocialHistory] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionSocialHistory] ^extension.valueString = "Section"
