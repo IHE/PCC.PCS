@@ -14,8 +14,7 @@ Description:    "The Paramedicine Patient resource utilizes the PQDQM patient re
 
 * gender 1..1 MS 
 
-* extension contains EstimatedAge named EstimatedAge 0..1 MS 
-* estimatedAge only valueQuantity
+* extension contains EstimatedAge named estimatedAge 0..1 MS 
 
 // NOte: how to properly indicate Homlessness, migrant worker, foreign visitor etc (should i cintinue to extend on the adress or the Pt resource? maybe just a UR realm element), or just leave as an observation
 
@@ -25,6 +24,6 @@ Id: EstimatedAge
 Title: "Paramedicine patient estimated Age"
 Description: "The estimated age of a patient represented as a number quantity when a date of birth is unknown"
 * ^context[+].type = #element
-* ^context[=].expression = "EstimatedAge"
-* estimatedAge only valueQuantity
-* valueQuantity only from CommonUCUMCodesForAge (required)
+* ^context[=].expression = "Patient"
+* value[x] only Quantity
+//* valueQuantity. only from CommonUCUMCodesForAge (required)

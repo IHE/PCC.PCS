@@ -61,15 +61,15 @@ Description:    "Record of transport of a person or patient with constraints mat
 
 * location 0..* MS 
 * hospitalization 0..0
-* partOf Reference(IHE_PCC_ParamedicineSummary_Encounter_ClinicalSubset)
+* partOf only Reference(IHE_PCC_ParamedicineSummary_Encounter_ClinicalSubset)
 
 Extension: NumberofPatients
 Id: NumberofPatients
 Title: "Number of Patients Transported"
 Description: "The number of patients transported by this paramedicine crew and unit."
 * ^context[+].type = #element
-* ^context[=].expression = "NumberofPatients"
-* value 0..1 MS 
+* ^context[=].expression = "Encounter"
+* value[x] 0..1 MS 
 
 
 //Extension: TransportInstructions

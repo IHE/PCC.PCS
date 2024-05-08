@@ -36,7 +36,7 @@ the following cardinalities follow the documentation in the PCS profile:
 * insert requireAtLeastOneMatch(category, pstat, $loinc#34133-9)
 * confidentiality 1..1
 * language 1..1 MS
-* language only from CommonLanguages (preferred)
+* language from CommonLanguages (preferred)
 * title MS 
 * date MS
 * text MS 
@@ -91,11 +91,11 @@ the following cardinalities follow the documentation in the PCS profile:
   sectionSocialHistory 0..1 MS and 
   sectionReviewOfSystems 0..1 MS and 
   sectionVitalSigns 0..1 MS and 
-  sectionMedicalDevicesHx 0..1 MS
+  sectionMedicalDevicesHx 0..1 MS and
   sectionPhysicalExamination 0..1 MS and
   sectionResults 0..1 MS and 
   sectionCarePlan 0..1 MS and 
-  sectionAdvancedirectives 0..1 MS
+  sectionAdvancedirectives 0..1 MS and
   sectionFunctionalStatus 0..1 MS and
   sectionPayers 0..1 and 
   sectionIncident 0..1 MS and 
@@ -243,7 +243,7 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionSocialHistory] ^definition = "The social history section shall contain a narrative description of the person’s beliefs, home life, community life, work life, hobbies, and risky habits."
 * section[sectionSocialHistory].code = $loinc#29762-2
 * section[sectionSocialHistory].entry ^short = "Social History Entry"
-* section[sectionSocialHistory].entry only Reference(Observation or  or DocumentReference)
+* section[sectionSocialHistory].entry only Reference(Observation or DocumentReference)
 * section[sectionSocialHistory].entry ^slicing.discriminator.type = #pattern
 * section[sectionSocialHistory].entry ^slicing.discriminator.path = "reference"
 * section[sectionSocialHistory].entry ^slicing.rules = #open
@@ -255,7 +255,7 @@ the following cardinalities follow the documentation in the PCS profile:
   employment 0..* 
 * section[sectionSocialHistory].entry[smokingTobaccoUse] only Reference(ObservationTobaccoUseUvIps)
 * section[sectionSocialHistory].entry[alcoholUse] only Reference(ObservationAlcoholUseUvIps) 
-* section[sectionSocialHistory].entry[employment] only Reference(https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-EmploymentStatus or https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-UsualWork) 
+* section[sectionSocialHistory].entry[employment] only Reference(https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-EmploymentStatus or https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-UsualWork)
 
 * section[sectionReviewOfSystems] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionReviewOfSystems] ^extension.valueString = "Section"
@@ -292,7 +292,7 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionMedicalDevicesHx].entry ^slicing.rules = #open
 * section[sectionMedicalDevicesHx].entry ^slicing.description = "medical device use."
 * section[sectionMedicalDevicesHx].entry ^slicing.ordered = false
-* section[sectionMedicalDevicesHx].entry contains deviceStatement
+* section[sectionMedicalDevicesHx].entry contains deviceStatement 1..1
 * section[sectionMedicalDevicesHx].entry[deviceStatement] only Reference(DeviceUseStatementUvIps)
 
 * section[sectionPhysicalExamination] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
@@ -309,8 +309,8 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionPhysicalExamination].section ^slicing.description = "Physical Examination subsections performed"
 * section[sectionPhysicalExamination].section ^slicing.ordered = false
 * section[sectionPhysicalExamination].section contains 
-  respiratorySystem and
-  heart
+  respiratorySystem 1..1 and
+  heart 1..1
 * section[sectionPhysicalExamination].section[respiratorySystem] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionPhysicalExamination].section[respiratorySystem] ^extension.valueString = "subSection"
 * section[sectionPhysicalExamination].section[respiratorySystem] ^short = "Respiratory System Exam"
@@ -376,7 +376,7 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionAdvancedirectives].entry ^slicing.rules = #open
 * section[sectionAdvancedirectives].entry ^slicing.description = "the patient's advance directive concent"
 * section[sectionAdvancedirectives].entry ^slicing.ordered = false
-* section[sectionAdvancedirectives].entry contains advanceDirectivesConsent 
+* section[sectionAdvancedirectives].entry contains advanceDirectivesConsent 1..1
 * section[sectionAdvancedirectives].entry[advanceDirectivesConsent] only Reference(Consent)
 
 * section[sectionFunctionalStatus] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
@@ -483,30 +483,30 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionTreatment].entry ^short = "Treatments"
 * section[sectionTreatment].entry 1..* MS 
 * section[sectionTreatment].entry only Reference(Procedure or MedicationAdministration or DocumentReference)
-* section[sectionTreatment].entry.section ^slicing.discriminator.type = #pattern
-* section[sectionTreatment].entry.section ^slicing.discriminator.path = "code"
-* section[sectionTreatment].entry.section ^slicing.rules = #open
-* section[sectionTreatment].entry.section ^slicing.description = "The Nested sections of the treatment section"
-* section[sectionTreatment].entry.section ^slicing.ordered = false
-* section[sectionTreatment].entry.section contains
+* section[sectionTreatment].section ^slicing.discriminator.type = #pattern
+* section[sectionTreatment].section ^slicing.discriminator.path = "code"
+* section[sectionTreatment].section ^slicing.rules = #open
+* section[sectionTreatment].section ^slicing.description = "The Nested sections of the treatment section"
+* section[sectionTreatment].section ^slicing.ordered = false
+* section[sectionTreatment].section contains
   proceduresPerformed 0..* MS and 
   medicationsAdministered 0..* MS 
-* section[sectionTreatment].entry.section[proceduresPerformed] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionTreatment].entry.section[proceduresPerformed] ^extension.valueString = "subSection"
-* section[sectionTreatment].entry.section[proceduresPerformed] ^short = "IHE Procedures and Interventions Section"
-* section[sectionTreatment].entry.section[proceduresPerformed] ^definition = "The Procedures and Interventions section shall contain a narrative description of the actions performed by a clinician."
-* section[sectionTreatment].entry.section[proceduresPerformed].code = $loinc#29554-3
-* section[sectionTreatment].entry.section[proceduresPerformed].entry ^short = "Procedure Entry"
-* section[sectionTreatment].entry.section[proceduresPerformed].entry 0..* MS 
-* section[sectionTreatment].entry.section[proceduresPerformed].entry only Reference(Procedure or DocumentReference)  
-* section[sectionTreatment].entry.section[medicationsAdministered] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionTreatment].entry.section[medicationsAdministered] ^extension.valueString = "subSection"
-* section[sectionTreatment].entry.section[medicationsAdministered] ^short = "IHE Medications Administered Section"
-* section[sectionTreatment].entry.section[medicationsAdministered] ^definition = "The medications administered section shall contain a narrative description of the relevant medications administered to a patient during the course of an encounter. It shall include entries for medication administration as described in the Entry Content Module."
-* section[sectionTreatment].entry.section[medicationsAdministered].code = $loinc#18610-6
-* section[sectionTreatment].entry.section[medicationsAdministered].entry ^short = "Medications Administered"
-* section[sectionTreatment].entry.section[medicationsAdministered].entry 0..* MS 
-* section[sectionTreatment].entry.section[medicationsAdministered].entry only Reference(MedicationAdministration or DocumentReference)  
+* section[sectionTreatment].section[proceduresPerformed] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionTreatment].section[proceduresPerformed] ^extension.valueString = "subSection"
+* section[sectionTreatment].section[proceduresPerformed] ^short = "IHE Procedures and Interventions Section"
+* section[sectionTreatment].section[proceduresPerformed] ^definition = "The Procedures and Interventions section shall contain a narrative description of the actions performed by a clinician."
+* section[sectionTreatment].section[proceduresPerformed].code = $loinc#29554-3
+* section[sectionTreatment].section[proceduresPerformed].entry ^short = "Procedure Entry"
+* section[sectionTreatment].section[proceduresPerformed].entry 0..* MS 
+* section[sectionTreatment].section[proceduresPerformed].entry only Reference(Procedure or DocumentReference)  
+* section[sectionTreatment].section[medicationsAdministered] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionTreatment].section[medicationsAdministered] ^extension.valueString = "subSection"
+* section[sectionTreatment].section[medicationsAdministered] ^short = "IHE Medications Administered Section"
+* section[sectionTreatment].section[medicationsAdministered] ^definition = "The medications administered section shall contain a narrative description of the relevant medications administered to a patient during the course of an encounter. It shall include entries for medication administration as described in the Entry Content Module."
+* section[sectionTreatment].section[medicationsAdministered].code = $loinc#18610-6
+* section[sectionTreatment].section[medicationsAdministered].entry ^short = "Medications Administered"
+* section[sectionTreatment].section[medicationsAdministered].entry 0..* MS 
+* section[sectionTreatment].section[medicationsAdministered].entry only Reference(MedicationAdministration or DocumentReference)  
 
 * section[sectionTriage] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionTriage] ^extension.valueString = "Section"

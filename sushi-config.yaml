@@ -31,7 +31,11 @@ dependencies:
     id: ihepdqm
     uri: https://profiles.ihe.net/ITI/PDQm/ImplementationGuide/ihe.iti.pdqm
     version: 3.0.x    
- 
+  hl7.fhir.us.ccda:
+    id: CCDAonFHIR
+    uri: http://hl7.org/fhir/us/ccda/ImplementationGuide/hl7.fhir.us.ccda
+    version: 1.2.0
+
 parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
   path-resource:
     - input/resources
