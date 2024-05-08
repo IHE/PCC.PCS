@@ -419,25 +419,20 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionIncident].entry ^short = "Incident data"
 * section[sectionIncident].entry 0..* MS 
 * section[sectionIncident].entry only Reference(Observation or Encounter or DocumentReference)
-//* section[sectionIncident].entry ^slicing.discriminator.type = #pattern
-//* section[sectionIncident].entry ^slicing.discriminator.path = "reference"
-//* section[sectionIncident].entry ^slicing.rules = #open
-//* section[sectionIncident].entry ^slicing.description = "TBD"
-//* section[sectionIncident].entry ^slicing.ordered = false
-//* section[sectionIncident].entry contains 
-//  incidentType 0..* and 
-//  incidentDate 0..1 MS and 
-///  incidentMCI 0..1 and 
-//  numberofPatients 0..1 MS 
-//* section[sectionIncident].entry[incidentType] only Reference()
-//* section[sectionIncident].entry[incidentDate] only Reference() 
-//* section[sectionIncident].entry[incidentMCI] only Reference() 
-//* section[sectionIncident].entry[numberofPatients] only Reference() 
-//TODO: event type observation $sct#272379006
-//todo: incident date observation $loinc#439771001
-
-
-
+* section[sectionIncident].entry ^slicing.discriminator.type = #pattern
+* section[sectionIncident].entry ^slicing.discriminator.path = "reference"
+* section[sectionIncident].entry ^slicing.rules = #open
+* section[sectionIncident].entry ^slicing.description = "TBD"
+* section[sectionIncident].entry ^slicing.ordered = false
+* section[sectionIncident].entry contains 
+  incidentEvent 0..1 and 
+  numberOfAffectedPeople 0..1 and 
+  MassCasualtyIncidentIndicator 0..1 and 
+  possibleInjury 0..1
+* section[sectionIncident].entry[incidentEvent] only Reference(Paramedicine_Incident)
+* section[sectionIncident].entry[numberOfAffectedPeople] only Reference(PSC_Number_of_Affected_People) 
+* section[sectionIncident].entry[MassCasualtyIncidentIndicator] only Reference(PSC_Mass_Casualty_Incident) 
+* section[sectionIncident].entry[numberofPatients] only Reference(PSC_Possible_Injury) 
 
 
 * section[sectionTreatment] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
