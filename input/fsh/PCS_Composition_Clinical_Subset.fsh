@@ -50,7 +50,7 @@ the following cardinalities follow the documentation in the PCS profile:
 
 * event 1..* 
 * event ^slicing.discriminator.type = #value
-* event ^slicing.discriminator.path = ""
+* event ^slicing.discriminator.path = "code"
 * event ^slicing.rules = #open
 * event ^slicing.description = ""
 * event ^slicing.ordered = false
@@ -480,7 +480,8 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionTriage].code = $loinc#11283-9
 * section[sectionTriage].entry ^short = "Acuity Assessment"
 * section[sectionTriage].entry 0..1 MS 
-* section[sectionTriage].entry only Reference(Triage-Acuity-Assessment or Observation or DocumentReference)
+* section[sectionTriage].entry only Reference(Observation or DocumentReference)
+// Triage-Acuity-Assessment  
 
 * section[sectionInjury] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionInjury] ^extension.valueString = "Section"
@@ -489,7 +490,7 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionInjury].code = $loinc#11374-6
 * section[sectionInjury].entry ^short = "Injury observation entires"
 * section[sectionInjury].entry 0..* MS 
-* section[sectionInjury].entry only Reference(Observation  or MedicationRequest or MedicationAdministration or MedicationDispense or DocumentReference)
+* section[sectionInjury].entry only Reference(Observation or ConditionUvIps or MedicationRequest or MedicationAdministration or MedicationDispense or DocumentReference)
 * section[sectionInjury].entry ^slicing.discriminator.type = #pattern
 * section[sectionInjury].entry ^slicing.discriminator.path = "reference"
 * section[sectionInjury].entry ^slicing.rules = #open
