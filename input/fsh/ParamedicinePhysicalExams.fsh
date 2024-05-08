@@ -43,7 +43,7 @@ Description:    "TBD."
 * subject only Reference(Patient)
 * performer 1..*
 * value[x] only CodeableConcept 
-* valueCodeableConcept from Color_Of_Skin_VS (extensible)
+//* valueCodeableConcept from Color_Of_Skin_VS (extensible)
 
 Instance: ex-ColorOfSkin
 InstanceOf: ColorOfSkin
