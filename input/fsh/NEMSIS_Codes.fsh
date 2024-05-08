@@ -25,15 +25,14 @@ For online view of the original publication this is based on visit [NEMSIS dFaci
 * #1701015	"Mental Health Facility"
 * #1701017	"Dialysis Center"
 
-ValueSet: NEMSIS_dFacility_01_VS
-Id: NEMSIS-dFacaility-01-VS
-Title: "ValueSet dFacililty.01"
+ValueSet: NEMSIS_dFacility_02_VS
+Id: NEMSIS-dFacaility-02-VS
+Title: "ValueSet dFacililty.04"
 Description: """
-The valueSet for the codes defined for dFacility.01 - Type of Facility
-
+The valueSet for the codes defined for dFacility.02 XXX Facility
 For online view of the original publication this is based on visit [NEMSIS dFacility.01 - Type of Facility](https://nemsis.org/media/nemsis_v3/release-3.5.0/DataDictionary/PDFHTML/EMSDEMSTATE/index.html)
 """
-* codes from system NEMSIS_dFacility_01
+* codes from NEMSIS_dFacility_01
 
 CodeSystem: NEMSIS_dAgency_13
 Id: NEMSIS-dAgency-13
@@ -84,7 +83,6 @@ Id: NEMSIS
 * #8801019	"Refused"
 * #8801021	"Unresponsive"
 * #8801023	"Unable to Complete"
-* #8801005  "Exam Finding Not Present"
 * #8801025	"Not Immunized"
 * #8801027	"Order Criteria Not Met"
 * #8801029	"Approximate"
