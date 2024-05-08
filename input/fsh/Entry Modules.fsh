@@ -6,7 +6,7 @@ Description:    "Indication whether or not there was an injury."
 //Proper loinc code needs to be requested or found
 //* code = $loinc#21611-9
 * value[x] 1..1
-* value[x] only Boolean 
+* value[x] only boolean 
 
 
 
@@ -106,7 +106,7 @@ Description:    "The number of effected people that are present at the incident.
 //Proper loinc code needs to be requested or found
 * code = $loinc#67489-5
 * value[x] 1..1
-* value[x] only Integer 
+* value[x] only integer 
 
 
 
@@ -118,13 +118,13 @@ Description:    "The Narrative explanation of what the patient was doing prior t
 //Proper loinc code needs to be requested or found
 * code = $loinc#11372-0
 * value[x] 1..1
-* value[x] only String 
+* value[x] only string 
 
 
 
 Profile:        Mechanism_Of_Injury 
 Parent:         Observation
-Id:             Mechanism_Of_Injury 
+Id:             Mechanism.Of.Injury 
 Title:          "Mechanism of Injury"
 Description:    "The General mechanism of the forces which caused the injury."
 //Proper loinc code needs to be requested or found
