@@ -432,7 +432,7 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionIncident].entry[incidentEvent] only Reference(Paramedicine_Incident)
 * section[sectionIncident].entry[numberOfAffectedPeople] only Reference(PSC_Number_of_Affected_People) 
 * section[sectionIncident].entry[MassCasualtyIncidentIndicator] only Reference(PSC_Mass_Casualty_Incident) 
-* section[sectionIncident].entry[numberofPatients] only Reference(PSC_Possible_Injury) 
+* section[sectionIncident].entry[possibleInjury] only Reference(PSC_Possible_Injury) 
 
 
 * section[sectionTreatment] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
@@ -442,7 +442,14 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionTreatment].code = $sct#182991002
 * section[sectionTreatment].entry ^short = "Treatments"
 * section[sectionTreatment].entry 1..* MS 
-* section[sectionTreatment].entry only Reference(Procedure or MedicationAdministration or DocumentReference)
+* section[sectionTreatment].entry only Reference(Observation or Procedure or MedicationAdministration or DocumentReference)
+* section[sectionTreatment].entry ^slicing.discriminator.type = #pattern
+* section[sectionTreatment].entry ^slicing.discriminator.path = "reference"
+* section[sectionTreatment].entry ^slicing.rules = #open
+* section[sectionTreatment].entry ^slicing.description = "TBD"
+* section[sectionTreatment].entry ^slicing.ordered = false
+* section[sectionTreatment].entry contains barriersToCare 0..1 
+* section[sectionTreatment].entry[barriersToCare] only Reference(PSC_BarriersTocare)
 * section[sectionTreatment].section ^slicing.discriminator.type = #pattern
 * section[sectionTreatment].section ^slicing.discriminator.path = "code"
 * section[sectionTreatment].section ^slicing.rules = #open
@@ -450,7 +457,7 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionTreatment].section ^slicing.ordered = false
 * section[sectionTreatment].section contains
   proceduresPerformed 0..* MS and 
-  medicationsAdministered 0..* MS 
+  medicationsAdministered 0..* MS and  
 * section[sectionTreatment].section[proceduresPerformed] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionTreatment].section[proceduresPerformed] ^extension.valueString = "subSection"
 * section[sectionTreatment].section[proceduresPerformed] ^short = "IHE Procedures and Interventions Section"

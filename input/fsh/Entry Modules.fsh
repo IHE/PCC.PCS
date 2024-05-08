@@ -43,9 +43,9 @@ Description: "The Example instance for Last Oral intake observation"
 
 
 
-Profile:        BarriersTocare
+Profile:        PSC_BarriersTocare
 Parent:         Observation
-Id:             IHE.Barriers.To.Care
+Id:             IHE.PSC.Barriers.To.Care
 Title:          "IHE barriers to care observation"
 Description:    "Indication of whether or not there were any patient specific barriers to serving the patient."
 // NEMSIS eHistory.01 - Barriers to Patient Care

@@ -8,7 +8,7 @@ Description:    "The event that is the main focus or cause for the Paramedicine 
 * type MS 
 
 * period MS 
-* Period.start 1..1 MS 
+* period.start 1..1 MS 
 
 * participant ^slicing.discriminator.type = #value
 * participant ^slicing.discriminator.path = "pattern"
@@ -20,7 +20,6 @@ Description:    "The event that is the main focus or cause for the Paramedicine 
 * participant[otherResponders].individual only Reference(Practitioner or PractitionerRole)
 
 * location 1..1 MS 
-* partOf = Reference(IHE_PCC_ParamedicineSummary_Encounter_ClinicalSubset)
 
 * serviceProvider 0..0
 * hospitalization 0..0 
