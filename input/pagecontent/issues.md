@@ -17,21 +17,21 @@ PCSOpenIssue_002: See HL7 patient care work group discussion: [*http://wiki.hl7.
 
 PCSOpenIssue_003: There are a number of issues relating to the FHIR mapping and resources needed to support this profile:
 
-PCSOpenIssue_004: Investigate the FHIR process for defining the resources required to fulfill NEMSIS.
+ - Investigate the FHIR process for defining the resources required to fulfill NEMSIS.
 
-PCSOpenIssue_005: The injury information may need to have more extensive modeling in FHIR.
+ - The injury information may need to have more extensive modeling in FHIR.
 
-PCSOpenIssue_006: There is no value set in FHIR relating to the level of care of ambulance units.
+ - There is no value set in FHIR relating to the level of care of ambulance units.
 
-PCSOpenIssue_007: Extensions in FHIR need to me made to help include some of the needed attributes.
+ - Extensions in FHIR need to me made to help include some of the needed attributes.
 
-PCSOpenIssue_008: IHE has filed a ticket against the FHIR specification \#16237 to allow for EMS events to be recorded in a status history without the use of the extension
+ - IHE has filed a ticket against the FHIR specification \#16237 to allow for EMS events to be recorded in a status history without the use of the extension
 
-PCSOpenIssue_009: IHE has filed a ticket against the FHIR specification \#16238 to allow for there to be an outcome element for the end of the encounter.
+ - IHE has filed a ticket against the FHIR specification \#16238 to allow for there to be an outcome element for the end of the encounter.
 
-PCSOpenIssue_010: Document reference for Advanced Directives in the FHIR mapping table can support the use case as it exists today. Currently there are ongoing efforts within HL7 to make available the clauses of an advanced directives available in coded form.
+ - Document reference for Advanced Directives in the FHIR mapping table can support the use case as it exists today. Currently there are ongoing efforts within HL7 to make available the clauses of an advanced directives available in coded form.
 
-PCSOpenIssue_011: Should there be a section which explicitly describes the differences
+PCSOpenIssue_003: Should there be a section which explicitly describes the differences
     in EMS PCR concepts as opposed to the IHE Medical Summary Sections.
     For example, the Advanced Directives Section in the Medical Summary
     allows for the inclusion of the Advanced Directive documentation (or

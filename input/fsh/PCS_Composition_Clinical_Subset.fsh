@@ -80,7 +80,8 @@ the following cardinalities follow the documentation in the PCS profile:
 * section ^slicing.description = "Paramedicine Summary Sections"
 * section ^slicing.ordered = false
 * section contains
-  sectionReasonForReferral 1..1 and 
+  sectionChiefComplaint 1..1 and 
+  sectionReasonforVisit 1..1 and  
   sectionPresentIllnessHx 1..1 and 
   sectionProblems 1..1 and 
   sectionMedications 1..1 and 
@@ -91,7 +92,7 @@ the following cardinalities follow the documentation in the PCS profile:
   sectionSocialHistory 0..1 MS and 
   sectionReviewOfSystems 0..1 MS and 
   sectionVitalSigns 0..1 MS and 
-  sectionMedicalDevicesHx 0..1 MS and
+  sectionMedicalDevices 0..1 MS and
   sectionPhysicalExamination 0..1 MS and
   sectionResults 0..1 MS and 
   sectionCarePlan 0..1 MS and 
@@ -106,25 +107,21 @@ the following cardinalities follow the documentation in the PCS profile:
   sectionInjury 0..1
 
  
-* section[sectionReasonForReferral] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionReasonForReferral] ^extension.valueString = "Section"
-* section[sectionReasonForReferral] ^short = "IHE Reason for Referral Section"
-* section[sectionReasonForReferral] ^definition = "The reason for referral section shall contain a narrative description of the reason that the patient is being referred."
-* section[sectionReasonForReferral].code = $loinc#42349-1
-* section[sectionReasonForReferral].emptyReason MS 
-* section[sectionReasonForReferral].entry ^short = "Reason for Referral Entry"
-* section[sectionReasonForReferral].entry 0..* MS 
-* section[sectionReasonForReferral].entry only Reference(Observation or Condition or DocumentReference) 
-* section[sectionReasonForReferral].entry ^slicing.discriminator.type = #pattern
-* section[sectionReasonForReferral].entry ^slicing.discriminator.path = "reference"
-* section[sectionReasonForReferral].entry ^slicing.rules = #open
-* section[sectionReasonForReferral].entry ^slicing.description = "Coded Reason for Referral Entries"
-* section[sectionReasonForReferral].entry ^slicing.ordered = false
-* section[sectionReasonForReferral].entry contains 
-  observation 0..* and 
-  condition 0..* 
-* section[sectionReasonForReferral].entry[observation] only Reference(Observation)
-* section[sectionReasonForReferral].entry[condition] only Reference(ConditionUvIps)
+* section[sectionChiefComplaint] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionChiefComplaint] ^extension.valueString = "Section"
+* section[sectionChiefComplaint] ^short = "Chief Complaint Section"
+* section[sectionChiefComplaint] ^definition = "This contains a narrative description of the patient's chief complaint."
+* section[sectionChiefComplaint].code = $loinc#10154-3
+* section[sectionChiefComplaint].emptyReason MS 
+* section[sectionChiefComplaint].text 1..1
+
+* section[sectionReasonforVisit] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionReasonforVisit] ^extension.valueString = "Section"
+* section[sectionReasonforVisit] ^short = "section Reason for Visit Section"
+* section[sectionReasonforVisit] ^definition = "This contains a narrative description of the patient's reason for visit."
+* section[sectionReasonforVisit].code = $loinc#29299-5 
+* section[sectionReasonforVisit].emptyReason MS 
+* section[sectionReasonforVisit].text 1..1
 
 * section[sectionPresentIllnessHx] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionPresentIllnessHx] ^extension.valueString = "Section"
@@ -279,21 +276,21 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionVitalSigns].entry contains vitalSign 0..* 
 * section[sectionVitalSigns].entry[vitalSign] only Reference(http://hl7.org/fhir/StructureDefinition/vitalsigns) 
 
-* section[sectionMedicalDevicesHx] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionMedicalDevicesHx] ^extension.valueString = "Section"
-* section[sectionMedicalDevicesHx] ^short = "IPS Medical Devices Section"
-* section[sectionMedicalDevicesHx] ^definition = "Patient history of medical device use."
-* section[sectionMedicalDevicesHx].code = $loinc#46264-8
-* section[sectionMedicalDevicesHx].entry ^short = "medical device use"
-* section[sectionMedicalDevicesHx].entry 0..* MS 
-* section[sectionMedicalDevicesHx].entry only Reference(DeviceUseStatement or DocumentReference)
-* section[sectionMedicalDevicesHx].entry ^slicing.discriminator.type = #pattern
-* section[sectionMedicalDevicesHx].entry ^slicing.discriminator.path = "reference"
-* section[sectionMedicalDevicesHx].entry ^slicing.rules = #open
-* section[sectionMedicalDevicesHx].entry ^slicing.description = "medical device use."
-* section[sectionMedicalDevicesHx].entry ^slicing.ordered = false
-* section[sectionMedicalDevicesHx].entry contains deviceStatement 1..1
-* section[sectionMedicalDevicesHx].entry[deviceStatement] only Reference(DeviceUseStatementUvIps)
+* section[sectionMedicalDevices] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionMedicalDevices] ^extension.valueString = "Section"
+* section[sectionMedicalDevices] ^short = "Medical Devices Section"
+* section[sectionMedicalDevices] ^definition = "Patient history of medical device use."
+* section[sectionMedicalDevices].code = $loinc#46264-8
+* section[sectionMedicalDevices].entry ^short = "medical device use"
+* section[sectionMedicalDevices].entry 0..* MS 
+* section[sectionMedicalDevices].entry only Reference(DeviceUseStatement or DocumentReference)
+* section[sectionMedicalDevices].entry ^slicing.discriminator.type = #pattern
+* section[sectionMedicalDevices].entry ^slicing.discriminator.path = "reference"
+* section[sectionMedicalDevices].entry ^slicing.rules = #open
+* section[sectionMedicalDevices].entry ^slicing.description = "medical device use."
+* section[sectionMedicalDevices].entry ^slicing.ordered = false
+* section[sectionMedicalDevices].entry contains deviceStatement 1..1
+* section[sectionMedicalDevices].entry[deviceStatement] only Reference(DeviceUseStatementUvIps)
 
 * section[sectionPhysicalExamination] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionPhysicalExamination] ^extension.valueString = "Section"
@@ -440,40 +437,8 @@ the following cardinalities follow the documentation in the PCS profile:
 //todo: incident date observation $loinc#439771001
 
 
-* section[sectionEmergencyNotification] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionEmergencyNotification] ^extension.valueString = "Section"
-* section[sectionEmergencyNotification] ^short = "Emergency Notification Section"
-* section[sectionEmergencyNotification] ^definition = "Emergency Notification: Notification details "
-* section[sectionEmergencyNotification].code = $sct#424483007
-* section[sectionEmergencyNotification].entry ^short = "notification information"
-* section[sectionEmergencyNotification].entry 0..* MS 
-* section[sectionEmergencyNotification].entry only Reference(ServiceRequest or Observation or DocumentReference)
-* section[sectionEmergencyNotification].entry ^slicing.discriminator.type = #pattern
-* section[sectionEmergencyNotification].entry ^slicing.discriminator.path = "reference"
-* section[sectionEmergencyNotification].entry ^slicing.rules = #open
-* section[sectionEmergencyNotification].entry ^slicing.description = "Contains notification information"
-* section[sectionEmergencyNotification].entry ^slicing.ordered = false
-* section[sectionEmergencyNotification].entry contains notification 1..1 MS 
-* section[sectionEmergencyNotification].entry[notification] only Reference(ServiceRequest) 
 
-* section[sectionTransportation] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionTransportation] ^extension.valueString = "Section"
-* section[sectionTransportation] ^short = "Transportation Section"
-* section[sectionTransportation] ^definition = "Transportation data"
-* section[sectionTransportation].code = $loinc#11459-5
-* section[sectionTransportation].entry ^short = "Transportation data"
-* section[sectionTransportation].entry 0..* MS 
-* section[sectionTransportation].entry only Reference(Encounter or Observation or DocumentReference)
-//* section[sectionTransportation].entry ^slicing.discriminator.type = #pattern
-//* section[sectionTransportation].entry ^slicing.discriminator.path = "reference"
-//* section[sectionTransportation].entry ^slicing.rules = #open
-//* section[sectionTransportation].entry ^slicing.description = "TBD"
-//* section[sectionTransportation].entry ^slicing.ordered = false
-//* section[sectionTransportation].entry contains transportData
-//     0..* and 
-//     0..* 
-//* section[sectionTransportation].entry[] only Reference()
-//* section[sectionTransportation].entry[] only Reference() 
+
 
 * section[sectionTreatment] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionTreatment] ^extension.valueString = "Section"
