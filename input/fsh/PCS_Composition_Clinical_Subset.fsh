@@ -145,7 +145,7 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionProblems].entry ^slicing.description = "Clinical problems or conditions currently being monitored for the patient."
 * section[sectionProblems].entry ^slicing.ordered = false
 * section[sectionProblems].entry contains problem 0..* 
-* section[sectionProblems].entry[problem] only Reference(ConditionUvIps)  
+* section[sectionProblems].entry[problem] only Reference(ConditionUvIps) 
 
 * section[sectionMedications] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionMedications] ^extension.valueString = "Section"
@@ -331,7 +331,7 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionResults] ^short = "IHE Results Section"
 * section[sectionResults] ^definition = "the patient’s relevant studies."
 * section[sectionResults].code = $loinc#30954-2
-* section[sectionResults].entry ^short = "results observations "
+* section[sectionResults].entry ^short = "results observations"
 * section[sectionResults].entry 0..* MS 
 * section[sectionResults].entry only Reference(Observation or DiagnosticReport or DocumentReference)
 * section[sectionResults].entry ^slicing.discriminator.type = #pattern
@@ -532,3 +532,8 @@ Title: "Fall Height"
 Description:      "The distance the patient fell, measured from the lowest point of the patient to the ground."
 * code = $loinc#67501-7
 * valueInteger 0..1 MS 
+
+Invariant: psc-required-entry-reference
+Description: "Either section.entry or emptyReason are present"
+Expression: "(entry.reference.exists() or emptyReason.exists())"
+Severity: #error 
