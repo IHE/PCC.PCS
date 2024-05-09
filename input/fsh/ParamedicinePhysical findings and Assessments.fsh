@@ -448,8 +448,6 @@ Description:    "The Acuity Assessment section contains a description of the acu
 * category = http://terminology.hl7.org/CodeSystem/observation-category#exam
 * code = http://loinc.org#56839-4
 * value 1..1 MS 
-* value[x] only Reference 
-* valueReference only Reference(Observation)
 
 
 
