@@ -438,3 +438,66 @@ Description: "The Example instance for the Extremities Assessment"
 //eExam.20 - Neurological Assessment
 
 //eExam.21 - Stroke/CVA Symptoms Resolved
+
+Profile:        AcuityAssessment
+Parent:         Observation
+Id:             IHE.PCC.AcuityAssessment
+Title:          "IHE Acuity Assesment"
+Description:    "The Acuity Assessment section contains a description of the acuity of the patient upon presentation to the Emergency department."
+* category 1..1
+* category = http://terminology.hl7.org/CodeSystem/observation-category#exam
+* code = http://loinc.org#56839-4
+* value 1..1 MS 
+* value[x] only Reference 
+* valueReference only Reference(Observation)
+
+
+
+Profile:        Pain_Scale_Sore
+Parent:         Observation
+Id:             IHE.PCC.Pain.Scale.Sore
+Title:          "IPain Scale Sore"
+Description:    "The Acuity Assessment section contains a description of the acuity of the patient upon presentation to the Emergency department."
+* category 1..1
+* category = http://terminology.hl7.org/CodeSystem/observation-category#exam
+* code = http://loinc.org#38208-5
+* value 1..1 MS 
+// Pain Scale type shall be deffined in the method section
+
+
+
+Profile:        ReperfusionChecklist
+Parent:         Observation
+Id:             ReperfusionChecklist
+Title:          "Reperfusion Checklist"
+Description:    "TBD"
+* category = http://terminology.hl7.org/CodeSystem/observation-category#exam
+//* code = $loinc#      New code needs to be requested 
+* value[x] only CodeableConcept
+
+Profile:        Assessment-GlasgowComaScale
+Parent:         Observation
+Id:             Assessment.GlasgowComaScale
+Title:          "Glasgow Coma Scale Assessment Observation"
+Description:    "The Glasgow Coma Scale is a neurological scale for assessing a person's level of consciousness, both for initial as well as continuing assessment. A patient is assessed against the criteria of the scale, and the resulting points give the Glasgow Coma Score (or GCS)."
+
+* category = http://terminology.hl7.org/CodeSystem/observation-category#exam
+* code  = $loinc#35088-4
+* effectiveDateTime 1..1 MS 
+* subject 1..1 MS 
+* component 1..* MS 
+* component ^slicing.discriminator.type = #value
+* component ^slicing.discriminator.path = "code"
+* component ^slicing.rules = #open
+* component ^slicing.description = "TBD"
+* component ^slicing.ordered = false
+* component contains 
+    GlasgowComaScoreEye 1..1 and 
+    GlasgowComaScoreMotor 1..1 and 
+    GlasgowComaScoreVerbal 1..1 and 
+    GlasgowComaScoreTotal 1..1 and 
+* component[GlasgowComaScoreEye].code = $loinc#9267-6
+* component[GlasgowComaScoreMotor].code = $loinc#9268-4
+* component[GlasgowComaScoreVerbal].code = $loinc#9270-0
+* component[GlasgowComaScoreTotal].code = $loinc#9269-2
+// USA National Extension to add qualifier 
