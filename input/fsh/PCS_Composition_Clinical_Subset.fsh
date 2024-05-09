@@ -100,8 +100,6 @@ the following cardinalities follow the documentation in the PCS profile:
   sectionFunctionalStatus 0..1 MS and
   sectionPayers 0..1 and 
   sectionIncident 0..1 MS and 
-  sectionEmergencyNotification 0..1 and 
-  sectionTransportation 0..1 and 
   sectionTreatment 0..1 and
   sectionTriage 0..1 and 
   sectionInjury 0..1
