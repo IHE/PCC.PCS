@@ -451,16 +451,18 @@ Description:    "The Acuity Assessment section contains a description of the acu
 
 
 
-Profile:        Pain_Scale_Sore
+Profile:        Stroke_Scale_Sore
 Parent:         Observation
-Id:             IHE.PCC.Pain.Scale.Sore
-Title:          "IPain Scale Sore"
-Description:    "The Acuity Assessment section contains a description of the acuity of the patient upon presentation to the Emergency department."
+Id:             IHE.PCC.Stroke.Scale.Sore
+Title:          "Stroke Scale Sore"
+Description:    "The score result based on any type of stroke scale."
 * category 1..1
 * category = http://terminology.hl7.org/CodeSystem/observation-category#exam
-* code = http://loinc.org#38208-5
 * value 1..1 MS 
-// Pain Scale type shall be deffined in the method section
+* method 1..1 MS 
+* interpretation 1..* MS 
+* dataAbsentReason MS
+
 
 
 

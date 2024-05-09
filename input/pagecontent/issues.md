@@ -177,7 +177,7 @@ PCSOpenIssue_042: the http://terminology.hl7.org/CodeSystem/data-absent-reason v
 	- Instead of using a "Exam Finding Not Present" attribute, the SNOMED-CT 373572006 "Clinical finding absent" code will be used instead.  
 	- NEMSIS 8801009 Medication Already Taken cannot have a SNOMED-CT code due to post coordination. the SNOMED-CT 246488008 "Drug used" atribute used instead 
 	- Instead of using a "...." attribute, the SNOMED-CT .... "...." code will be used instead.  
-
+PCSOpenIssue_043: The Revised Trauma Score is a physiologic scoring system based on the initial vital signs of a patient.[1] A lower score indicates a higher severity of injury. This is a calculated score deffined in https://en.wikipedia.org/wiki/Revised_Trauma_Score . Both NEMSIS and NICTIZ have this concept deffined in their standards, however this score is calculated using the already profiled and documented vitals. As long as those vitals are sent in a message the score can be calculated by the reciving system. This data element will not be deffined in this profile at this time.
 #### Closed Issues
 
 1.  (2/12/2018) Committee decided to use both CDA and FHIR. This is the

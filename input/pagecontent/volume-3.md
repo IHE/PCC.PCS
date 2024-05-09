@@ -51,19 +51,19 @@ The following Vital signs Should be references within the Vital Signs section of
 | 2339-0    | LOINC       | BLOOD GLUCOSE LEVEL             |           |               |
 | 35088-4   | LOINC       | GLASGOW COMA Scale Panel            |           |               |
 | 9267-6    | LOINC       | GLASGOW COMA SCORE-EYE            |           |               |
-| 9268-4    | LOINC       | GLASGOW MOTOR            |           |               |
-| 9270-0    | LOINC       | GLASGOW COMA SCORE.VERBAL           |           |               |
-| 9269-2    | LOINC       | TOTAL GLASGOW COMA SCORE            |           |               |
+| 9268-4    | LOINC       | GLASGOW COMA SCORE-MOTOR            |           |               |
+| 9270-0    | LOINC       | GLASGOW COMA SCORE-VERBAL           |           |               |
+| 9269-2    | LOINC       | GLASGOW COMA SCORE-TOTAL SCORE            |           |               |
 | 55285-1   | LOINC       | GLASGOW QUALIFIER            |           |               |
-| 38208-5   | LOINC       | PAIN SCALE SCORE           |           |               |
+| 72514-3   | LOINC       | PAIN SCALE SCORE           |           |               |
 | 80316-3   | LOINC       | PAIN SCALE TYPE           |           |               |
 | 72089-6   | LOINC       | STROKE SCALE SCORE            |           |               |
 | 67520-7   | LOINC       | Stroke Scale Score Interpretation             |           |               |
 | 67521-5   | LOINC       | STROKE SCALE TYPE            |           |               |
 | XXX       | LOINC       | APGAR Generic           |           |               |
-| 48334-7   | LOINC       | APGAR 1 MINUTE            |           |               |
-| 48333-9   | LOINC       | APGAR 5 MINUTE            |           |               |
-| 48332-1   | LOINC       | APGAR 10 MINUTE            |           |               |
+| 9272-6   | LOINC       | APGAR 1 MINUTE            |           |               |
+| 9274-2   | LOINC       | APGAR 5 MINUTE            |           |               |
+| 9271-8   | LOINC       | APGAR 10 MINUTE            |           |               |
 | 80341-1   | LOINC       | RESPIRATORY EFFORT             |           |               |
 | 67775-7   | LOINC       | RESPONSIVENESS ASSESSMENT AT FIRST ENCOUNTER           |           |               |
 | 9279-1    | LOINC       | [Respiratory Rate](http://hl7.org/fhir/StructureDefinition/resprate)            |           |               |
