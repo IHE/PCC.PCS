@@ -20,9 +20,9 @@ Description:    "Intravascular mean blood Pressure"
 * value[x] only Quantity
 * valueQuantity.unit MS 
 * valueQuantity.system MS
-* valueQuantity.system = http://unitsofmeasure.org
+* valueQuantity.system = $ucum
 * valueQuantity.code MS
-* valueQuantity.code = "mm[Hg]"
+* valueQuantity.code = mm[Hg]
 * dataAbsentReason MS
 
 
@@ -38,9 +38,9 @@ Description:    "CO2 content is a measurement of total CO2 in the blood. Most of
 * value[x] only Quantity
 * valueQuantity.unit MS 
 * valueQuantity.system MS
-* valueQuantity.system = http://unitsofmeasure.org
+* valueQuantity.system = $ucum
 * valueQuantity.code MS
-* valueQuantity.code = "%"
+* valueQuantity.code = %
 * dataAbsentReason MS
 
 
@@ -56,9 +56,9 @@ Description:    "Diffusing capacity (DLCO) is the carbon monoxide uptake from a 
 * value[x] only Quantity
 * valueQuantity.unit MS 
 * valueQuantity.system MS
-* valueQuantity.system = http://unitsofmeasure.org 
+* valueQuantity.system = $ucum
 * valueQuantity.code MS
-* valueQuantity.code = "%"
+* valueQuantity.code = %
 * dataAbsentReason MS
 
 Profile:        Pain_Scale_Score

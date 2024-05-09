@@ -447,7 +447,7 @@ Description:    "The Acuity Assessment section contains a description of the acu
 * category 1..1
 * category = http://terminology.hl7.org/CodeSystem/observation-category#exam
 * code = http://loinc.org#56839-4
-* value 1..1 MS 
+* value[x] 1..1 MS 
 
 
 
@@ -458,7 +458,7 @@ Title:          "Stroke Scale Sore"
 Description:    "The score result based on any type of stroke scale."
 * category 1..1
 * category = http://terminology.hl7.org/CodeSystem/observation-category#exam
-* value 1..1 MS 
+* value[x] 1..1 MS 
 * method 1..1 MS 
 * interpretation 1..* MS 
 * dataAbsentReason MS
@@ -475,7 +475,7 @@ Description:    "TBD"
 //* code = $loinc#      New code needs to be requested 
 * value[x] only CodeableConcept
 
-Profile:        Assessment-GlasgowComaScale
+Profile:        Assessment_GlasgowComaScale
 Parent:         Observation
 Id:             Assessment.GlasgowComaScale
 Title:          "Glasgow Coma Scale Assessment Observation"
