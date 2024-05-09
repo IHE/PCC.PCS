@@ -480,7 +480,6 @@ Parent:         Observation
 Id:             Assessment.GlasgowComaScale
 Title:          "Glasgow Coma Scale Assessment Observation"
 Description:    "The Glasgow Coma Scale is a neurological scale for assessing a person's level of consciousness, both for initial as well as continuing assessment. A patient is assessed against the criteria of the scale, and the resulting points give the Glasgow Coma Score (or GCS)."
-
 * category = http://terminology.hl7.org/CodeSystem/observation-category#exam
 * code  = $loinc#35088-4
 * effectiveDateTime 1..1 MS 
@@ -492,10 +491,10 @@ Description:    "The Glasgow Coma Scale is a neurological scale for assessing a 
 * component ^slicing.description = "TBD"
 * component ^slicing.ordered = false
 * component contains 
-    GlasgowComaScoreEye 1..1 and 
-    GlasgowComaScoreMotor 1..1 and 
-    GlasgowComaScoreVerbal 1..1 and 
-    GlasgowComaScoreTotal 1..1 and 
+    GlasgowComaScoreEye 1..1 MS and 
+    GlasgowComaScoreMotor 1..1 MS and 
+    GlasgowComaScoreVerbal 1..1 MS and 
+    GlasgowComaScoreTotal 1..1 MS 
 * component[GlasgowComaScoreEye].code = $loinc#9267-6
 * component[GlasgowComaScoreMotor].code = $loinc#9268-4
 * component[GlasgowComaScoreVerbal].code = $loinc#9270-0
