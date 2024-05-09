@@ -457,7 +457,7 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionTreatment].section ^slicing.ordered = false
 * section[sectionTreatment].section contains
   proceduresPerformed 0..* MS and 
-  medicationsAdministered 0..* MS and  
+  medicationsAdministered 0..* MS   
 * section[sectionTreatment].section[proceduresPerformed] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionTreatment].section[proceduresPerformed] ^extension.valueString = "subSection"
 * section[sectionTreatment].section[proceduresPerformed] ^short = "IHE Procedures and Interventions Section"
