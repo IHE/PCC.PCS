@@ -56,8 +56,8 @@ Description:    "Indication of whether or not there were any patient specific ba
 //* value[x].coding from NEMSIS.Barriers.to.Patient.Care.VS (example)
 // Note Data absent reason codes need to be extended to include NEMSIS values 
 
-Instance: Ex-BarriersTocare
-InstanceOf: BarriersTocare
+Instance: Ex-PSC-BarriersTocare
+InstanceOf: PSC_BarriersTocare
 Usage: #inline
 * code = http://loinc.org#67515-7
 * status  = http://hl7.org/fhir/observation-status#final
