@@ -499,41 +499,24 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionInjury].entry ^slicing.description = "Medications relevant for the scope of the summary document"
 * section[sectionInjury].entry ^slicing.ordered = false
 * section[sectionInjury].entry contains 
-  injuryCause 0..* and 
+  patientActivity 0..1 and 
+  injuryCause 0..1 and  
   injuryMechanism 0..* and 
-  bodyProtection 0..* and 
-  collissionObservations 0..* and 
-  fallObservations 0..*
+  heightOfFall 0..1 and 
+  protectiveEquipmentUsed 0..* and 
+  safetyEquipmentUsed 0..* and
+  collissionData 0..* and 
+  workPlaceInjuryIndicator 0..*
+* section[sectionInjury].entry[patientActivity] only Reference(Patient_Activity)
 * section[sectionInjury].entry[injuryCause] only Reference(ConditionUvIps)
-* section[sectionInjury].entry[injuryMechanism] only Reference(Injury_Mechanism)    
-* section[sectionInjury].entry[bodyProtection] only Reference(Body_Protection)  
-* section[sectionInjury].entry[collissionObservations] only Reference(Observation)  
-* section[sectionInjury].entry[fallObservations] only Reference(Fall_Height)  
+* section[sectionInjury].entry[injuryMechanism] only Reference(Mechanism_Of_Injury) 
+* section[sectionInjury].entry[heightOfFall] only Reference(Height_of_Fall)    
+* section[sectionInjury].entry[protectiveEquipmentUsed] only Reference(Protective_Equipment_Used)
+* section[sectionInjury].entry[safetyEquipmentUsed] only Reference(Safety_Equipment_Used)    
+* section[sectionInjury].entry[collissionData] only Reference(PSC_Collision_Data )
+* section[sectionInjury].entry[workPlaceInjuryIndicator] only Reference(Work_Place_Injury_Indicator)  
+ 
 
-
-Profile:   Injury_Mechanism
-Parent: Observation
-Id:             Injury.Mechanism
-Title: "Mechanism Type"
-Description:      "The mechanism of the event which caused the injury."
-* code = $loinc#67494-5
-//* valueCodeableConcept only from Injury_Mechanism_VS (extensible) 
-
-Profile:   Body_Protection
-Parent: Observation
-Id:             Body.Protection
-Title: "Body Protection"
-Description:      "Patient Protective Equipment."
-* code = $sct#705338000
-//* valueCodeableConcept only from Protective_Equipment_VS (extensible) 
-
-Profile:   Fall_Height
-Parent: Observation
-Id:             Fall.Height
-Title: "Fall Height"
-Description:      "The distance the patient fell, measured from the lowest point of the patient to the ground."
-* code = $loinc#67501-7
-* valueInteger 0..1 MS 
 
 Invariant: psc-required-entry-reference
 Description: "Either section.entry or emptyReason are present"

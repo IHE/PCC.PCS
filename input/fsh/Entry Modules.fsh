@@ -175,3 +175,25 @@ Description:    "Activation of the destination healthcare facility team."
 * code = $loinc#69462-0
 * value[x] 1..1
 * value[x] only CodeableConcept 
+
+
+
+Profile:        Work_Place_Injury_Indicator  
+Parent:         Observation
+Id:             Work.Place.Injury.Indicator     
+Title:          "Work Place Injury Indicator"
+Description:    "An observation indicating if the injury happened at the patient's work place."
+// * code = $loinc#69462-0 Proper code needs to be found or requested
+* value[x] 1..1
+* value[x] only boolean
+
+
+
+Profile:        PSC_Collision_Data  
+Parent:         Observation
+Id:             PSC.Collision.Data     
+Title:          "Collision Data"
+Description:    "The Observation Organizer that contains the Information relivant to a Collision event."
+// * code = $loinc#69462-0 Proper code needs to be found or requested
+* hasMember MS 
+// TODO finish making the observation entries for this has memeber 
