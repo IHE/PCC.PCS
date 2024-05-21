@@ -312,15 +312,6 @@ Id: Physical.Finding.of.Back.TargetSite.VS
 * $sct#48333001     "Burn injury"
 
 
-ValueSet: Physical_Finding_of_Spine_VS
-Description: "TBD"
-Id: Physical.Finding.of.Spine.VS
-* $sct#399963005	"Abrasion (disorder)"
-* $sct#284554003	"Avulsion - injury (disorder)"
-* $sct#25733008		"Burn injury with charring (morphologic abnormality)"
-* $sct#131148009    "Bleeding "
-* $sct#48333001     "Burn injury"
-
 
 ValueSet: Physical_Finding_of_Spine_TargetSite_VS
 Description: "TBD"
@@ -402,7 +393,7 @@ Id: Physical.Finding.of.Pupil.VS
 * $sct#48333001     "Burn injury"
 
 
-ValueSet: Physical_Finding_of_Pupil_TargetSite_VS
+ValueSet: Physical_Finding_of_Back_and_Spine_TargetSite_VS
 Description: "TBD"
 Id: Physical.Finding.of.Pupil.TargetSite.VS
 * $sct#399963005	"Abrasion (disorder)"
