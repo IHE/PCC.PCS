@@ -160,4 +160,358 @@ Id: Vehicle.Type.VS
 
 
 
+ValueSet: Physical_Exam_Findings_Base_VS
+Description: "A subset of SNOMED findings and disorders that may be found in a physical finsing from an assessment."
+Id: Physical.Exam.Findings.Base.VS
+* $sct#399963005	"Abrasion (disorder)"
+* $sct#284554003	"Avulsion - injury (disorder)"
+* $sct#25733008		"Burn injury with charring (morphologic abnormality)"
+* $sct#131148009    "Bleeding "
+* $sct#48333001     "Burn injury"
+* $sct#110014005	"Decapitation (disorder)"
+* $sct#417893002	"Deformity (finding)"
+* $sct#424329008	"Finding of skin drainage (finding)"
+* $sct#125670008	"Foreign body (disorder)"
+* $sct#312608009	"Laceration - injury (disorder)"
+* $sct#300577008	"Finding of lesion (finding)"
+* $sct#300862005	"Mass of body region (finding)"
+* $sct#281900007	"No abnormality detected (finding)"
+* $sct#22253000		"Pain (finding)"
+* $sct#312609001	"Puncture wound - injury (disorder)"
+* $sct#425322008	"Stab wound (disorder)"
+* $sct#283545005	"Gunshot wound (disorder)"
+* $sct#125665001	"Crushing injury (disorder)"
+* $sct#65124004		"Swelling (finding)"
+* $sct#125667009	"Contusion (disorder)"
+* $sct#247348008	"Tenderness (finding)"
+// How to post coordinate for bleeding controlled and uncontrolled 
+// May need to add more coded for 
+
+
+ValueSet: Physical_Finding_of_Skin_VS
+Description: "TBD"
+Id: Physical.Finding.of.Skin.VS
+* $sct#399963005	"Abrasion (disorder)"
+* $sct#284554003	"Avulsion - injury (disorder)"
+* $sct#25733008		"Burn injury with charring (morphologic abnormality)"
+* $sct#131148009    "Bleeding "
+* $sct#48333001     "Burn injury"
+
+
+ValueSet: Physical_Finding_of_Heart_VS
+Description: "TBD"
+Id: Physical.Finding.of.Heart.VS
+* $sct#399963005	"Abrasion (disorder)"
+* $sct#284554003	"Avulsion - injury (disorder)"
+* $sct#25733008		"Burn injury with charring (morphologic abnormality)"
+* $sct#131148009    "Bleeding "
+* $sct#48333001     "Burn injury"
+
+
+ValueSet: Physical_Finding_of_Head_VS
+Description: "TBD"
+Id: Physical.Finding.of.Head.VS
+* include codes from Physical.Exam.Findings.Base.VS 
+* $sct#110014005	"Decapitation (disorder)"
+
+
+ValueSet: Physical_Finding_of_Face_VS
+Description: "TBD"
+Id: Physical.Finding.of.Face.VS
+* include codes from Physical.Finding.of.Head.VS
+* $sct#110014005	"Decapitation (disorder)"
+
+ValueSet: Physical_Finding_of_Neck_VS
+Description: "TBD"
+Id: Physical.Finding.of.Neck.VS
+* include codes from Physical.Exam.Findings.Base.VS 
+* $sct#110014005		"Decapitation (disorder)"
+* $sct#449161000124101	"Distention of jugular vein (finding)"
+* $sct#70407001			"Stridor (finding)"
+* $sct#3830001			"Subcutaneous emphysema (disorder)"
+* $sct#271630007		"Trachea displaced to left (disorder)"
+* $sct#271631006		"Trachea displaced to right (disorder)"
+
+
+ValueSet: Physical_Finding_of_Abdomen_VS
+Description: "TBD"
+Id: Physical.Finding.of.Abdomen.VS
+* $sct#399963005	"Abrasion (disorder)"
+* $sct#284554003	"Avulsion - injury (disorder)"
+* $sct#25733008		"Burn injury with charring (morphologic abnormality)"
+* $sct#131148009    "Bleeding "
+* $sct#48333001     "Burn injury"
+
+
+ValueSet: Physical_Finding_of_Abdomen_TargetSite_VS
+Description: "TBD"
+Id: Physical.Finding.of.Abdomen.TargetSite.VS
+* $sct#399963005	"Abrasion (disorder)"
+* $sct#284554003	"Avulsion - injury (disorder)"
+* $sct#25733008		"Burn injury with charring (morphologic abnormality)"
+* $sct#131148009    "Bleeding "
+* $sct#48333001     "Burn injury"
+
+
+ValueSet: Physical_Finding_of_Eye_VS
+Description: "TBD"
+Id: Physical.Finding.of.Eye.VS
+* $sct#399963005	"Abrasion (disorder)"
+* $sct#284554003	"Avulsion - injury (disorder)"
+* $sct#25733008		"Burn injury with charring (morphologic abnormality)"
+* $sct#131148009    "Bleeding "
+* $sct#48333001     "Burn injury"
+
+
+ValueSet: Physical_Finding_of_Eye_TargetSite_VS
+Description: "TBD"
+Id: Physical.Finding.of.Eye.TargetSite.VS
+* $sct#399963005	"Abrasion (disorder)"
+* $sct#284554003	"Avulsion - injury (disorder)"
+* $sct#25733008		"Burn injury with charring (morphologic abnormality)"
+* $sct#131148009    "Bleeding "
+* $sct#48333001     "Burn injury"
+
+
+
+ValueSet: Physical_Finding_of_Pelvis_VS
+Description: "TBD"
+Id: Physical.Finding.of.Pelvis.VS
+* $sct#399963005	"Abrasion (disorder)"
+* $sct#284554003	"Avulsion - injury (disorder)"
+* $sct#25733008		"Burn injury with charring (morphologic abnormality)"
+* $sct#131148009    "Bleeding "
+* $sct#48333001     "Burn injury"
+
+
+ValueSet: Physical_Finding_of_GenitourinaryTract_VS
+Description: "TBD"
+Id: Physical.Finding.of.GenitourinaryTract.VS
+* $sct#399963005	"Abrasion (disorder)"
+* $sct#284554003	"Avulsion - injury (disorder)"
+* $sct#25733008		"Burn injury with charring (morphologic abnormality)"
+* $sct#131148009    "Bleeding "
+* $sct#48333001     "Burn injury"
+
+
+ValueSet: Physical_Finding_of_Back_VS
+Description: "TBD"
+Id: Physical.Finding.of.Back.VS
+* $sct#399963005	"Abrasion (disorder)"
+* $sct#284554003	"Avulsion - injury (disorder)"
+* $sct#25733008		"Burn injury with charring (morphologic abnormality)"
+* $sct#131148009    "Bleeding "
+* $sct#48333001     "Burn injury"
+
+
+ValueSet: Physical_Finding_of_Back_TargetSite_VS
+Description: "TBD"
+Id: Physical.Finding.of.Back.TargetSite.VS
+* $sct#399963005	"Abrasion (disorder)"
+* $sct#284554003	"Avulsion - injury (disorder)"
+* $sct#25733008		"Burn injury with charring (morphologic abnormality)"
+* $sct#131148009    "Bleeding "
+* $sct#48333001     "Burn injury"
+
+
+ValueSet: Physical_Finding_of_Spine_VS
+Description: "TBD"
+Id: Physical.Finding.of.Spine.VS
+* $sct#399963005	"Abrasion (disorder)"
+* $sct#284554003	"Avulsion - injury (disorder)"
+* $sct#25733008		"Burn injury with charring (morphologic abnormality)"
+* $sct#131148009    "Bleeding "
+* $sct#48333001     "Burn injury"
+
+
+ValueSet: Physical_Finding_of_Spine_TargetSite_VS
+Description: "TBD"
+Id: Physical.Finding.of.Spine.TargetSite.VS
+* $sct#399963005	"Abrasion (disorder)"
+* $sct#284554003	"Avulsion - injury (disorder)"
+* $sct#25733008		"Burn injury with charring (morphologic abnormality)"
+* $sct#131148009    "Bleeding "
+* $sct#48333001     "Burn injury"
+
+
+ValueSet: Physical_Finding_of_Chest_VS
+Description: "TBD"
+Id: Physical.Finding.of.Chest.VS
+* $sct#399963005	"Abrasion (disorder)"
+* $sct#284554003	"Avulsion - injury (disorder)"
+* $sct#25733008		"Burn injury with charring (morphologic abnormality)"
+* $sct#131148009    "Bleeding "
+* $sct#48333001     "Burn injury"
+
+
+ValueSet: Physical_Finding_of_Chest_TargetSite_VS
+Description: "TBD"
+Id: Physical.Finding.of.Chest.TargetSite.VS
+* $sct#399963005	"Abrasion (disorder)"
+* $sct#284554003	"Avulsion - injury (disorder)"
+* $sct#25733008		"Burn injury with charring (morphologic abnormality)"
+* $sct#131148009    "Bleeding "
+* $sct#48333001     "Burn injury"
+
+
+ValueSet: Physical_Finding_of_Extremities_VS
+Description: "TBD"
+Id: Physical.Finding.of.Extremities.VS
+* $sct#399963005	"Abrasion (disorder)"
+* $sct#284554003	"Avulsion - injury (disorder)"
+* $sct#25733008		"Burn injury with charring (morphologic abnormality)"
+* $sct#131148009    "Bleeding "
+* $sct#48333001     "Burn injury"
+
+
+ValueSet: Physical_Finding_of_Extremities_TargetSite_VS
+Description: "TBD"
+Id: Physical.Finding.of.Extremities.TargetSite.VS
+* $sct#399963005	"Abrasion (disorder)"
+* $sct#284554003	"Avulsion - injury (disorder)"
+* $sct#25733008		"Burn injury with charring (morphologic abnormality)"
+* $sct#131148009    "Bleeding "
+* $sct#48333001     "Burn injury"
+
+
+ValueSet: Physical_Finding_of_Lung_VS
+Description: "TBD"
+Id: Physical.Finding.of.Lung.VS
+* $sct#399963005	"Abrasion (disorder)"
+* $sct#284554003	"Avulsion - injury (disorder)"
+* $sct#25733008		"Burn injury with charring (morphologic abnormality)"
+* $sct#131148009    "Bleeding "
+* $sct#48333001     "Burn injury"
+
+
+ValueSet: Physical_Finding_of_Lung_TargetSite_VS
+Description: "TBD"
+Id: Physical.Finding.of.Lung.TargetSite.VS
+* $sct#399963005	"Abrasion (disorder)"
+* $sct#284554003	"Avulsion - injury (disorder)"
+* $sct#25733008		"Burn injury with charring (morphologic abnormality)"
+* $sct#131148009    "Bleeding "
+* $sct#48333001     "Burn injury"
+
+
+ValueSet: Physical_Finding_of_Pupil_VS
+Description: "TBD"
+Id: Physical.Finding.of.Pupil.VS
+* $sct#399963005	"Abrasion (disorder)"
+* $sct#284554003	"Avulsion - injury (disorder)"
+* $sct#25733008		"Burn injury with charring (morphologic abnormality)"
+* $sct#131148009    "Bleeding "
+* $sct#48333001     "Burn injury"
+
+
+ValueSet: Physical_Finding_of_Pupil_TargetSite_VS
+Description: "TBD"
+Id: Physical.Finding.of.Pupil.TargetSite.VS
+* $sct#399963005	"Abrasion (disorder)"
+* $sct#284554003	"Avulsion - injury (disorder)"
+* $sct#25733008		"Burn injury with charring (morphologic abnormality)"
+* $sct#131148009    "Bleeding "
+* $sct#48333001     "Burn injury"
+
+
+ValueSet: Weight_Estimation_Tape_Values_VS
+Description: "This value set applies coded values to the Broselow-Luten color-coded length-based system."
+Id: Weight.Estimation.Tape.Values.VS
+* $sct#444474005	"Broselow Luten pediatric weight estimation blue zone"
+* $sct#444503000	"Broselow Luten pediatric weight estimation green zone (finding)"
+* $sct#736023001	"Broselow Luten pediatric weight estimation gray zone (finding)"
+* $sct#444496004	"Broselow Luten pediatric weight estimation orange zone (finding)"
+* $sct#444488009	"Broselow Luten pediatric weight estimation pink zone (finding)"
+* $sct#444489001	"Broselow Luten pediatric weight estimation purple zone (finding)"
+* $sct#444471002	"Broselow Luten pediatric weight estimation red zone (finding)"
+* $sct#444504006	"Broselow Luten pediatric weight estimation white zone (finding)"
+* $sct#444505007	"Broselow Luten pediatric weight estimation yellow zone (finding)"
+
+
+ValueSet: Triage_Classification_VS
+Description: "The color classes used to document the triage level or classification of a patient."
+Id: Triage.Classification.VS
+* $sct#258392002     "Class 1"
+* $sct#258393007     "Class 2"
+* $sct#258394001     "Class 3"
+* $sct#264750004     "Class 4"
+* $sct#277970007     "Class 5"
+
+ValueSet: Collision_Object_VS
+Description: "TBD"
+Id: Collision.Object.VS
+* $sct#71783008     "Automobile, device"
+* $sct#32906002     "Victim, pedestrian in vehicular AND/OR traffic accident"
+* $sct#25139002     "Moped, device "
+* $sct#22674006     "Motor bus, device"
+* $sct#70224005     "Bicycle, device"
+* $sct#90748009     "Motorcycle, device "
+* $sct#38548008     "Streetcar, device"
+* $sct#62193008     "Railway train, device"
+* $sct#12247004     "Truck, device"
+* $sct#23366006     "Motorized wheelchair device "
+* $sct#224832000    "Van "
+* $sct#90963000     "Animal drawn vehicle, device"
+* $sct#49980008     "Farm tractor, device"
+* $sct#22097005     "Tree"
+* $sct#29611000009106     "Wildlife"
+* $sct#224824008		"Sign posting"
+* $sct#224823002		"Street lighting"
+* $sct#257720004		"Traffic light "
+* $sct#257518000		"Pedestrian"
+* $sct#223404008		"Domestic structure"
+* $sct#224727009		"Walls"
+//* $sct#     ""
+// are there values that cover physical structures like polls or man made structures that are generic? 
+// are there any values that cover natural/nature structures such as rocks or ditches?
+
+
+ValueSet: Level_Of_Responsiveness_AVPU_VS
+Description: "TBD"
+Id: Level.Of.Responsiveness.AVPU.VS
+* $sct#248234008     "Mentally alert"
+* $sct#255373000     "Verbal"
+* $sct#422768004     "Unresponsive "
+* $sct#450847001     "Responds to pain"
+
+ValueSet: Pathient_Transfer_to_Ambulance_Method_VS
+Description: "TBD"
+Id: Pathient.Transfer.to.Ambulance.Method.VS
+
+* $sct#58938008		 "Wheelchair device"
+* $sct#720991006		"Ambulance stretcher, pneumatically-assisted"
+* $sct#700597006		"Ambulance stretcher, manual"
+* $sct#702080003		"Ambulance stretcher, electrohydraulic"
+* $sct#702081004		"Ambulance stretcher loader"
+* $sct#702082006		"Ambulance stretcher docking device"
+* $sct#89149003		"Stretcher, device"
+* $sct#465060008		"Stair chair"
+* $sct#706699008		"Chair"
+* $sct#870595007		"Walking"
+* $sct#707739007		"Ambulating with assistance of one person "
+* $sct#707741008		"Ambulating with assistance of team of people"
+* $sct#707740009		"Ambulating with assistance of two people"
+* $sct#710804006		"Assistance with walking using device"
+* $sct#78086002		"Holding patient"
+* $sct#258141001		"Lifting "
+// Moving a patient (procedure)	56469005
+// Patient position finding (finding)	272525001
+// Moving a patient (procedure)	56469005 then method value set of:
+
+
+
+ValueSet: Paramedicine_Reason_For_Visit_VS
+Description: "A subset of Reason codes that are informed by NEMSIS Dispatch Reasons as a reccomended subset."
+Id: Paramedicine.Reason.For.Visit.VS
+* $sct#21522001      "Abdominal pain (finding)"
+* $sct#125666000	"Burn (disorder)"
+* $sct#242777003	"Accident caused by explosion (event)"
+* $sct#95875007	"Exposure to carbon monoxide (event)"
+* $sct#418715001	"Exposure to potentially harmful entity (event)"
+* $sct#785340007	"Inhalation of substance (event)"
+* $sct#409508005	"Bioterrorism related event (event)"
+* $sct#218190002	"Exposure to radiation (event)"
+* $sct#410429000	"Cardiac arrest (disorder)"
+
+
 
