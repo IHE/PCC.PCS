@@ -211,20 +211,17 @@ Id: Physical.Finding.of.Heart.VS
 ValueSet: Physical_Finding_of_Head_VS
 Description: "TBD"
 Id: Physical.Finding.of.Head.VS
-* include codes from Physical_Exam_Findings_Base_VS
 * $sct#110014005	"Decapitation (disorder)"
 
 
 ValueSet: Physical_Finding_of_Face_VS
 Description: "TBD"
 Id: Physical.Finding.of.Face.VS
-* include codes from Physical_Exam_Findings_Base_VS
 * $sct#110014005	"Decapitation (disorder)"
 
 ValueSet: Physical_Finding_of_Neck_VS
 Description: "TBD"
 Id: Physical.Finding.of.Neck.VS
-* include codes from Physical_Exam_Findings_Base_VS 
 * $sct#110014005		"Decapitation (disorder)"
 * $sct#449161000124101	"Distention of jugular vein (finding)"
 * $sct#70407001			"Stridor (finding)"
