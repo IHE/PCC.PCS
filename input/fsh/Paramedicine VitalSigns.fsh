@@ -18,10 +18,12 @@ Description:    "Intravascular mean blood Pressure"
 * code = $loinc#8478-0
 * value[x] 1..1 MS 
 * value[x] only Quantity
-* valueQuantity = $ucum#mm[Hg]
+* valueQuantity.code 1..1 
+* valueQuantity.system 1..1
+* valueQuantity.value 1..1
 * valueQuantity.unit MS 
-* valueQuantity.system MS
-* valueQuantity.code MS
+* valueQuantity.system = $ucum 
+* valueQuantity.code = #mm[Hg]
 * dataAbsentReason MS
 
 
@@ -35,12 +37,13 @@ Description:    "CO2 content is a measurement of total CO2 in the blood. Most of
 * code = $loinc#19889-5
 * value[x] 1..1 MS 
 * value[x] only Quantity
-* valueQuantity = $ucum#%
+* valueQuantity.code 1..1 
+* valueQuantity.system 1..1
+* valueQuantity.value 1..1
 * valueQuantity.unit MS 
-* valueQuantity.system MS
-* valueQuantity.code MS
+* valueQuantity.system = $ucum 
+* valueQuantity.code = #mm[Hg]
 * dataAbsentReason MS
-
 
 
 Profile:        Carbon_Monoxide_CO
@@ -52,10 +55,12 @@ Description:    "Diffusing capacity (DLCO) is the carbon monoxide uptake from a 
 * code = $loinc#19911-7
 * value[x] 1..1 MS 
 * value[x] only Quantity
-* valueQuantity = $ucum#%
+* valueQuantity.code 1..1 
+* valueQuantity.system 1..1
+* valueQuantity.value 1..1
 * valueQuantity.unit MS 
-* valueQuantity.system MS
-* valueQuantity.code MS
+* valueQuantity.system = $ucum 
+* valueQuantity.code = #mm[Hg]
 * dataAbsentReason MS
 
 Profile:        Pain_Scale_Score
