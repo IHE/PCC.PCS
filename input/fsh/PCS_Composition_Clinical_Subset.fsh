@@ -575,7 +575,7 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionProviderOrders].code = $loinc#46209-3
 * section[sectionProviderOrders].entry ^short = "Provider Orders"
 * section[sectionProviderOrders].entry 0..1 MS 
-* section[sectionProviderOrders].entry only Reference(Medication or MedicationRequest or Procedures or DocumentReference)
+* section[sectionProviderOrders].entry only Reference(Medication or MedicationRequest or Procedure or DocumentReference)
 
 Invariant: psc-required-entry-reference
 Description: "Either section.entry or emptyReason are present"
