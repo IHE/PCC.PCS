@@ -80,12 +80,12 @@ the following cardinalities follow the documentation in the PCS profile:
 * section ^slicing.description = "Paramedicine Summary Sections"
 * section ^slicing.ordered = false
 * section contains
-  sectionChiefComplaint 1..1 and 
-  sectionReasonforVisit 1..1 and  
-  sectionPresentIllnessHx 1..1 and 
-  sectionProblems 1..1 and 
-  sectionMedications 1..1 and 
-  sectionAllergies 1..1 and 
+  sectionDetailedChiefComplaint 1..1 MS and 
+  sectionCodedReasonforVisit 1..1 MS and  
+  sectionPresentIllnessHx 1..1 MS and 
+  sectionProblems 1..1 MS and 
+  sectionMedications 1..1 MS and 
+  sectionAllergies 1..1 MS and 
   sectionPastIllnessHx 0..1 MS and 
   sectionProceduresHx 0..1 MS and 
   sectionImmunizations 0..1 MS and 
@@ -93,7 +93,7 @@ the following cardinalities follow the documentation in the PCS profile:
   sectionReviewOfSystems 0..1 MS and 
   sectionVitalSigns 0..1 MS and 
   sectionMedicalDevices 0..1 MS and
-  sectionPhysicalExamination 0..1 MS and
+  sectionCodedDetailPhysicalExamination 0..1 MS and
   sectionResults 0..1 MS and 
   sectionCarePlan 0..1 MS and 
   sectionAdvancedirectives 0..1 MS and
@@ -102,24 +102,44 @@ the following cardinalities follow the documentation in the PCS profile:
   sectionIncident 0..1 MS and 
   sectionTreatment 0..1 and
   sectionTriage 0..1 and 
-  sectionInjury 0..1
+  sectionInjuryIncidentDescription 0..1 and 
+  sectionAssessments 1..1 and 
+  sectionPregnancyHistory 0..1 MS and 
+  sectionCardiacArrestEvent 0..1 and 
+  sectionProviderOrders 0..1 
 
  
-* section[sectionChiefComplaint] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionChiefComplaint] ^extension.valueString = "Section"
-* section[sectionChiefComplaint] ^short = "Chief Complaint Section"
-* section[sectionChiefComplaint] ^definition = "This contains a narrative description of the patient's chief complaint."
-* section[sectionChiefComplaint].code = $loinc#10154-3
-* section[sectionChiefComplaint].emptyReason MS 
-* section[sectionChiefComplaint].text 1..1
+* section[sectionDetailedChiefComplaint] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionDetailedChiefComplaint] ^extension.valueString = "Section"
+* section[sectionDetailedChiefComplaint] ^short = "Chief Complaint Section"
+* section[sectionDetailedChiefComplaint] ^definition = "This contains a narrative description of the patient's chief complaint."
+* section[sectionDetailedChiefComplaint].code = $loinc#10154-3
+* section[sectionDetailedChiefComplaint].emptyReason MS 
+* section[sectionDetailedChiefComplaint].text MS 
+* section[sectionDetailedChiefComplaint].entry only Reference(Condition or DocumentReference or Observation)
+* section[sectionDetailedChiefComplaint].entry ^slicing.discriminator.type = #pattern
+* section[sectionDetailedChiefComplaint].entry ^slicing.discriminator.path = "reference"
+* section[sectionDetailedChiefComplaint].entry ^slicing.rules = #open
+* section[sectionDetailedChiefComplaint].entry ^slicing.description = "Clinical problems or conditions currently being monitored for the patient."
+* section[sectionDetailedChiefComplaint].entry ^slicing.ordered = false
+* section[sectionDetailedChiefComplaint].entry contains 
+  chiefComplaintObservations 0..* MS and 
+  chiefComplaint 0..1  
+* section[sectionDetailedChiefComplaint].entry[chiefComplaintObservations] only Reference(Observation) 
+* section[sectionDetailedChiefComplaint].entry[chiefComplaint] only Reference(ConditionUvIps) 
+// Note: open issue on how to document a cheif complaint with detailed information about the complaint body site, organ sistem, and time stamps for durations or onset date/time. It sounds like this should be captured in a condition resource with a text entry for the complaint an a coded value of LOINC 10154-3 
+// NOte: invariant needs to be added, The entry shall be present otherwise the Text Shall exist with the Narrative cheif complaint. If not narrative cheif complaint is present then a dataAbsent reason SHall be used
 
-* section[sectionReasonforVisit] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionReasonforVisit] ^extension.valueString = "Section"
-* section[sectionReasonforVisit] ^short = "section Reason for Visit Section"
-* section[sectionReasonforVisit] ^definition = "This contains a narrative description of the patient's reason for visit."
-* section[sectionReasonforVisit].code = $loinc#29299-5 
-* section[sectionReasonforVisit].emptyReason MS 
-* section[sectionReasonforVisit].text 1..1
+* section[sectionCodedReasonforVisit] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionCodedReasonforVisit] ^extension.valueString = "Section"
+* section[sectionCodedReasonforVisit] ^short = "section Reason for Visit Section"
+* section[sectionCodedReasonforVisit] ^definition = "This contains a narrative description of the patient's reason for visit."
+* section[sectionCodedReasonforVisit].code = $loinc#29299-5 
+* section[sectionCodedReasonforVisit].emptyReason MS 
+* section[sectionCodedReasonforVisit].text MS
+* section[sectionCodedReasonforVisit].entry MS 
+* section[sectionCodedReasonforVisit].entry only Reference(Condition or DocumentReference or Observation)
+// Note: conformance statement needs to be added 
 
 * section[sectionPresentIllnessHx] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionPresentIllnessHx] ^extension.valueString = "Section"
@@ -142,7 +162,8 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionProblems].entry ^slicing.rules = #open
 * section[sectionProblems].entry ^slicing.description = "Clinical problems or conditions currently being monitored for the patient."
 * section[sectionProblems].entry ^slicing.ordered = false
-* section[sectionProblems].entry contains problem 0..* 
+* section[sectionProblems].entry contains 
+  problem 0..* 
 * section[sectionProblems].entry[problem] only Reference(ConditionUvIps) 
 
 * section[sectionMedications] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
@@ -290,38 +311,38 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionMedicalDevices].entry contains deviceStatement 1..1
 * section[sectionMedicalDevices].entry[deviceStatement] only Reference(DeviceUseStatementUvIps)
 
-* section[sectionPhysicalExamination] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionPhysicalExamination] ^extension.valueString = "Section"
-* section[sectionPhysicalExamination] ^short = "IHE Physical Examination Section"
-* section[sectionPhysicalExamination] ^definition = "The physical examination section contain a narrative description of the patient’s physical findings. "
-* section[sectionPhysicalExamination].code = $loinc#29545-1
-* section[sectionPhysicalExamination].entry ^short = "Physical findings"
-* section[sectionPhysicalExamination].entry 0..* MS 
-* section[sectionPhysicalExamination].entry only Reference(Observation or DocumentReference)
-* section[sectionPhysicalExamination].section ^slicing.discriminator.type = #pattern
-* section[sectionPhysicalExamination].section ^slicing.discriminator.path = "code"
-* section[sectionPhysicalExamination].section ^slicing.rules = #open
-* section[sectionPhysicalExamination].section ^slicing.description = "Physical Examination subsections performed"
-* section[sectionPhysicalExamination].section ^slicing.ordered = false
-* section[sectionPhysicalExamination].section contains 
+* section[sectionCodedDetailPhysicalExamination] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionCodedDetailPhysicalExamination] ^extension.valueString = "Section"
+* section[sectionCodedDetailPhysicalExamination] ^short = "IHE Physical Examination Section"
+* section[sectionCodedDetailPhysicalExamination] ^definition = "The physical examination section contain a narrative description of the patient’s physical findings. "
+* section[sectionCodedDetailPhysicalExamination].code = $loinc#29545-1
+* section[sectionCodedDetailPhysicalExamination].entry ^short = "Physical findings"
+* section[sectionCodedDetailPhysicalExamination].entry 0..* MS 
+* section[sectionCodedDetailPhysicalExamination].entry only Reference(Observation or DocumentReference)
+* section[sectionCodedDetailPhysicalExamination].section ^slicing.discriminator.type = #pattern
+* section[sectionCodedDetailPhysicalExamination].section ^slicing.discriminator.path = "code"
+* section[sectionCodedDetailPhysicalExamination].section ^slicing.rules = #open
+* section[sectionCodedDetailPhysicalExamination].section ^slicing.description = "Physical Examination subsections performed"
+* section[sectionCodedDetailPhysicalExamination].section ^slicing.ordered = false
+* section[sectionCodedDetailPhysicalExamination].section contains 
   respiratorySystem 1..1 and
   heart 1..1
-* section[sectionPhysicalExamination].section[respiratorySystem] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionPhysicalExamination].section[respiratorySystem] ^extension.valueString = "subSection"
-* section[sectionPhysicalExamination].section[respiratorySystem] ^short = "Respiratory System Exam"
-* section[sectionPhysicalExamination].section[respiratorySystem] ^definition = "The respiratory system section shall contain a description of any type of respiratory exam."
-* section[sectionPhysicalExamination].section[respiratorySystem].code = $loinc#11412-4
-* section[sectionPhysicalExamination].section[respiratorySystem].entry ^short = "Physical findings of the respiratory system exam"
-* section[sectionPhysicalExamination].section[respiratorySystem].entry 0..* MS 
-* section[sectionPhysicalExamination].section[respiratorySystem].entry only Reference(Observation)
-* section[sectionPhysicalExamination].section[heart] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionPhysicalExamination].section[heart] ^extension.valueString = "subSection"
-* section[sectionPhysicalExamination].section[heart] ^short = "Heart Exam"
-* section[sectionPhysicalExamination].section[heart] ^definition = "The heart section shall contain a description of any type of heart exam."
-* section[sectionPhysicalExamination].section[heart].code = $loinc#10200-4
-* section[sectionPhysicalExamination].section[heart].entry ^short = "Physical findings of the heart exam"
-* section[sectionPhysicalExamination].section[heart].entry 0..* MS 
-* section[sectionPhysicalExamination].section[heart].entry only Reference(Observation)  
+* section[sectionCodedDetailPhysicalExamination].section[respiratorySystem] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionCodedDetailPhysicalExamination].section[respiratorySystem] ^extension.valueString = "subSection"
+* section[sectionCodedDetailPhysicalExamination].section[respiratorySystem] ^short = "Respiratory System Exam"
+* section[sectionCodedDetailPhysicalExamination].section[respiratorySystem] ^definition = "The respiratory system section shall contain a description of any type of respiratory exam."
+* section[sectionCodedDetailPhysicalExamination].section[respiratorySystem].code = $loinc#11412-4
+* section[sectionCodedDetailPhysicalExamination].section[respiratorySystem].entry ^short = "Physical findings of the respiratory system exam"
+* section[sectionCodedDetailPhysicalExamination].section[respiratorySystem].entry 0..* MS 
+* section[sectionCodedDetailPhysicalExamination].section[respiratorySystem].entry only Reference(Observation)
+* section[sectionCodedDetailPhysicalExamination].section[heart] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionCodedDetailPhysicalExamination].section[heart] ^extension.valueString = "subSection"
+* section[sectionCodedDetailPhysicalExamination].section[heart] ^short = "Heart Exam"
+* section[sectionCodedDetailPhysicalExamination].section[heart] ^definition = "The heart section shall contain a description of any type of heart exam."
+* section[sectionCodedDetailPhysicalExamination].section[heart].code = $loinc#10200-4
+* section[sectionCodedDetailPhysicalExamination].section[heart].entry ^short = "Physical findings of the heart exam"
+* section[sectionCodedDetailPhysicalExamination].section[heart].entry 0..* MS 
+* section[sectionCodedDetailPhysicalExamination].section[heart].entry only Reference(Observation)  
 // TODO maybe add an acuity assessment in this section?
 
 * section[sectionResults] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
@@ -483,20 +504,20 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionTriage].entry only Reference(Observation or DocumentReference)
 // Triage-Acuity-Assessment  
 
-* section[sectionInjury] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionInjury] ^extension.valueString = "Section"
-* section[sectionInjury] ^short = "Injury section"
-* section[sectionInjury] ^definition = "A section Describing the Injury event, mechanism, and associated observations."
-* section[sectionInjury].code = $loinc#11374-6
-* section[sectionInjury].entry ^short = "Injury observation entires"
-* section[sectionInjury].entry 0..* MS 
-* section[sectionInjury].entry only Reference(Observation or ConditionUvIps or MedicationRequest or MedicationAdministration or MedicationDispense or DocumentReference)
-* section[sectionInjury].entry ^slicing.discriminator.type = #pattern
-* section[sectionInjury].entry ^slicing.discriminator.path = "reference"
-* section[sectionInjury].entry ^slicing.rules = #open
-* section[sectionInjury].entry ^slicing.description = "Medications relevant for the scope of the summary document"
-* section[sectionInjury].entry ^slicing.ordered = false
-* section[sectionInjury].entry contains 
+* section[sectionInjuryIncidentDescription] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionInjuryIncidentDescription] ^extension.valueString = "Section"
+* section[sectionInjuryIncidentDescription] ^short = "Injury section"
+* section[sectionInjuryIncidentDescription] ^definition = "A section Describing the Injury event, mechanism, and associated observations."
+* section[sectionInjuryIncidentDescription].code = $loinc#11374-6
+* section[sectionInjuryIncidentDescription].entry ^short = "Injury observation entires"
+* section[sectionInjuryIncidentDescription].entry 0..* MS 
+* section[sectionInjuryIncidentDescription].entry only Reference(Observation or ConditionUvIps or MedicationRequest or MedicationAdministration or MedicationDispense or DocumentReference)
+* section[sectionInjuryIncidentDescription].entry ^slicing.discriminator.type = #pattern
+* section[sectionInjuryIncidentDescription].entry ^slicing.discriminator.path = "reference"
+* section[sectionInjuryIncidentDescription].entry ^slicing.rules = #open
+* section[sectionInjuryIncidentDescription].entry ^slicing.description = "Medications relevant for the scope of the summary document"
+* section[sectionInjuryIncidentDescription].entry ^slicing.ordered = false
+* section[sectionInjuryIncidentDescription].entry contains 
   patientActivity 0..1 and 
   injuryCause 0..1 and  
   injuryMechanism 0..* and 
@@ -505,16 +526,56 @@ the following cardinalities follow the documentation in the PCS profile:
   safetyEquipmentUsed 0..* and
   collissionData 0..* and 
   workPlaceInjuryIndicator 0..*
-* section[sectionInjury].entry[patientActivity] only Reference(Patient_Activity)
-* section[sectionInjury].entry[injuryCause] only Reference(ConditionUvIps)
-* section[sectionInjury].entry[injuryMechanism] only Reference(Mechanism_Of_Injury) 
-* section[sectionInjury].entry[heightOfFall] only Reference(Height_of_Fall)    
-* section[sectionInjury].entry[protectiveEquipmentUsed] only Reference(Protective_Equipment_Used)
-* section[sectionInjury].entry[safetyEquipmentUsed] only Reference(Safety_Equipment_Used)    
-* section[sectionInjury].entry[collissionData] only Reference(PSC_Collision_Data )
-* section[sectionInjury].entry[workPlaceInjuryIndicator] only Reference(Work_Place_Injury_Indicator)  
+* section[sectionInjuryIncidentDescription].entry[patientActivity] only Reference(Patient_Activity)
+* section[sectionInjuryIncidentDescription].entry[injuryCause] only Reference(ConditionUvIps)
+* section[sectionInjuryIncidentDescription].entry[injuryMechanism] only Reference(Mechanism_Of_Injury) 
+* section[sectionInjuryIncidentDescription].entry[heightOfFall] only Reference(Height_of_Fall)    
+* section[sectionInjuryIncidentDescription].entry[protectiveEquipmentUsed] only Reference(Protective_Equipment_Used)
+* section[sectionInjuryIncidentDescription].entry[safetyEquipmentUsed] only Reference(Safety_Equipment_Used)    
+* section[sectionInjuryIncidentDescription].entry[collissionData] only Reference(PSC_Collision_Data )
+* section[sectionInjuryIncidentDescription].entry[workPlaceInjuryIndicator] only Reference(Work_Place_Injury_Indicator)  
  
+  
+* section[sectionAssessments] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionAssessments] ^extension.valueString = "Section"
+* section[sectionAssessments] ^short = "Assessments"
+* section[sectionAssessments] ^definition = "Assessments Section."
+* section[sectionAssessments].code = $loinc#51848-0 
+* section[sectionAssessments].entry ^short = "Acuity Assessment"
+* section[sectionAssessments].entry 0..1 MS 
+* section[sectionAssessments].entry only Reference(Observation or DocumentReference)
+// Assessments entry 
 
+
+* section[sectionPregnancyHistory] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionPregnancyHistory] ^extension.valueString = "Section"
+* section[sectionPregnancyHistory] ^short = "Pregnancy History"
+* section[sectionPregnancyHistory] ^definition = "Pregnancy History Section."
+* section[sectionPregnancyHistory].code = $loinc#10162-6 
+* section[sectionPregnancyHistory].entry ^short = "Pregnancy Observations"
+* section[sectionPregnancyHistory].entry 0..1 MS 
+* section[sectionPregnancyHistory].entry only Reference(Observation or DocumentReference)
+// add ppregnancy status entry 
+
+* section[sectionCardiacArrestEvent] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionCardiacArrestEvent] ^extension.valueString = "Section"
+* section[sectionCardiacArrestEvent] ^short = "Cardiac Arrest Event"
+* section[sectionCardiacArrestEvent] ^definition = "Cardiac Arrest Event Section"
+* section[sectionCardiacArrestEvent].code = $loinc#67799-7
+* section[sectionCardiacArrestEvent].entry ^short = "Cardiac Arrest Event Observations"
+* section[sectionCardiacArrestEvent].entry 0..1 MS 
+* section[sectionCardiacArrestEvent].entry only Reference(Observation or DocumentReference)
+// TBD 
+
+
+* section[sectionProviderOrders] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionProviderOrders] ^extension.valueString = "Section"
+* section[sectionProviderOrders] ^short = "Provider Orders"
+* section[sectionProviderOrders] ^definition = "Provider Orders Section"
+* section[sectionProviderOrders].code = $loinc#46209-3
+* section[sectionProviderOrders].entry ^short = "Provider Orders"
+* section[sectionProviderOrders].entry 0..1 MS 
+* section[sectionProviderOrders].entry only Reference(Medication or MedicationRequest or Procedures or DocumentReference)
 
 Invariant: psc-required-entry-reference
 Description: "Either section.entry or emptyReason are present"

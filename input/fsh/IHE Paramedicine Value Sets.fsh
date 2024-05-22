@@ -158,6 +158,37 @@ Id: Vehicle.Type.VS
 * $sct#55121009     "Light land transport vehicle, device"
 * $sct#64174005     "Snowmobile, device"
 
+ValueSet: Location_In_Vehicle_VS
+Description: "TBD"
+Id: Location.In.Vehicle.VS
+* $sct#428922000       "Found in automobile driver seat (finding)"
+* $sct#429647007       "Found in automobile passenger seat (finding)"
+* $sct#428828002       "Found in automobile rear car seat (finding)"
+* $sct#428431006       "Found across car seat (finding)"
+* $sct#261665006       "Unknown"
+// * $sct#TBD     "Found in automobile passenger seat left (finding)"
+// * $sct#TBD     "Found in automobile passenger seat right (finding)"
+// * $sct#TBD     "Found in automobile passenger seat middle (finding)"
+// * $sct#TBD     "Found in automobile rear car seat left (finding)"
+// * $sct#TBD     "Found in automobile rear car seat right (finding)"
+// * $sct#TBD     "Found in automobile rear car seat middle (finding)"
+// * $sct#TBD     "Found in automobile median rows seat left (finding)"
+// * $sct#TBD     "Found in automobile median rows seat left (finding)"
+// * $sct#TBD     "Found in automobile median rows seat left  (finding)"
+// * $sct#TBD     "Found in vehicle (finding)"
+// * $sct#TBD     "Found in vehicle Driver Seat  (finding)"
+// * $sct#TBD     "Found in vehicle Cargo area (finding)"
+// * $sct#TBD     "Found in vehicle enclosed Cargo area (finding)"
+// * $sct#TBD     "Found in vehicle exposed Cargo area (finding)"
+// * $sct#TBD     "Found in vehicle passenger seat (finding)"
+// * $sct#TBD     "Found in enclosed vehicle passenger seat (finding)"
+// * $sct#TBD     "Found in exposed vehicle passenger seat (finding)"
+// * $sct#TBD     "Found riding on outside of vehicle (finding)"
+// * $sct#TBD     "Found in sleeping area of a vehicle (finding)"
+// * $sct#TBD     "Found in a Trailer vehicle (finding)"
+
+
+
 
 
 ValueSet: Physical_Exam_Findings_Base_VS
