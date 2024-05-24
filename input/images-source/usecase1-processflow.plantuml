@@ -1,6 +1,27 @@
 @startuml
 hide footbox
-participant "Content Creator" as ContentCreator
-participant "Content Consumer" as ContentConsumer
-"Content Creator" <--> "Content Consumer" : 1. Document Sharing [PCC-1]
+title Use Case 1 - Emergency Response for Heart Attack
+participant "Service Requestor" as Requestor 
+agent "Content\nCreator\nEmergency Control Center" as Disptach
+agent "Content\nConsumer and Creator\nAmbulance" as Ambulance
+agent "Content\nConsumer\nHospital" as Hospital
+agent "Content\nConsumer\nHealth Information Exchange" as HIE [[https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html HIE-Whitepaper]]
+cloud "Share Content\nPCC-1" as pcc1
+autonumber
+activate Requestor
+activate Disptach
+"Service Requestor" --> "Content\nCreator\nEmergency Control Center"
+deactivate Requestor
+activate Ambulance
+"Content\nCreator\nEmergency Control Center" --> Ambulance : Document Sharing [PCC-1]
+deactivate Disptach
+Ambulance --> Ambulance 
+activate Hospital
+"Content\nConsumer and Creator\nAmbulance" --> "Content\nConsumer\nHospital" : Document Sharing [PCC-1]
+Ambulance --> Ambulance
+"Content\nConsumer and Creator\nAmbulance" --> "Content\nConsumer\nHospital" : Document Sharing [PCC-1]
+activate HIE
+deactivate Hospital
+Ambulance --> "Content\nConsumer\nHealth Information Exchange" : Document Sharing [PCC-1]
+deactivate Ambulance
 @enduml
