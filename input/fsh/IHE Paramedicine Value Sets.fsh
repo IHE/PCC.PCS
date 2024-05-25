@@ -59,9 +59,6 @@ Id: Active.Advance.Directive.Finding.VS
 * $sct#425397009	"Active advance directive with verification by healthcare professional" 
 * $sct#425394002	"Active healthcare will" 
 * $sct#310305009	"Active advance directive (copy within chart)"
-* $sct#425396000	"Active advance directive with verification by family"
-* $sct#425397009	"Active advance directive with verification by healthcare professional" 
-* $sct#425393008	"Active Durable Power of Attorney for Healthcare" 
 * $sct#143021000119109	"Do not resuscitate status with supporting documentation" 
 * $sct#734328004        "Does not have current Last Will and Testament" 
 * $sct#697978002	"Provider orders for life-sustaining treatment" 
@@ -83,7 +80,6 @@ Id: Airway.Device.Confirmation.Method.VS
 * $sct#37931006     "Auscultation" 
 * $sct#14766002     "Aspiration" 
 * $sct#428482009	"colorimetric respired carbon dioxide monitoring" 
-* $sct#425543005	"Digital respired carbon dioxide monitoring" 
 * $sct#425543005	"Digital respired carbon dioxide monitoring" 
 * $sct#6427007      "Chest expansion" 
 
@@ -132,7 +128,6 @@ Id: Airway.Device.Type.VS
 * $sct#309804002   "Oral RAE endotracheal tube"
 * $sct#870581009   "Video intubation endotracheal tube"
 * $sct#360111004   "Cricothyroidotomy tube"
-* $sct#26412008    "Endotracheal tube, device "
 * $sct#470610002   "Laryngectomy tube"
 * $sct#463384005   "Operative tracheostomy tube"
 * $sct#464651008   "Oxygen administration transtracheal catheter"
@@ -190,13 +185,7 @@ Id: Cardiac.Arrest.Etiology.VS
 * $sct#423168004	"Cardiac arrest due to respiratory disorder" 
 * $sct#422970001	"Cardiac arrest due to trauma" 
 // other cardiac arrest due to codes 
-
-
-ValueSet: Cardiac_Arrest_Etiology_VS
-Description: "Etiology of a cardiac arrest"
-Id: Cardiac.Arrest.Etiology.VS
-* $sct#32750006    "Inspection"
-
+//Suspected drug overdose (situation) (473128000) 
 
 ValueSet: Cardiac_Arrest_Outcome_VS
 Description: "Outcome of an cardiac arrest event from paramedicine encounter"
@@ -350,7 +339,7 @@ Id: Medication.Administration.Device.VS
 ValueSet: Paramedicine_Observation_Interpretation_VS
 Description: "Interpretations of assessment scales applicable to paramedicine care"
 Id: Paramedicine.Observation.Interpretation.VS
-* include codes from http://hl7.org/fhir/ValueSet/observation-interpretation
+* include codes from http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
 * $sct#419984006        "Inconclusive"
 
 
@@ -383,21 +372,6 @@ Description: "Kind of abnormal effect associated with the Procedure, interventon
 Id: Treatment.Complication.VS
 //TBD
 * $sct#53568006	    "Penetrating" 
-
-
-
-
-
-ValueSet: Mechanism_Of_Injury_VS
-Description: "Kind of physical phenomenon causing an injury"
-Id: Mechanism.Of.Injury.VS
-* $sct#37931006    "Auscultation"
-* $sct#242557008   "Bimanual palpation"
-* $sct#113011001   "Palpation"
-* $sct#239033002   "Digital examination"
-* $sct#32750006    "Inspection"
-
-
 
 
 
@@ -611,7 +585,6 @@ Id: Physical.Finding.of.Back.and.Spine.VS
 * $sct#300577008	"Finding of lesion (finding)"
 * $sct#300862005	"Mass of body region (finding)"
 * $sct#281900007	"No abnormality detected (finding)"
-* $sct#22253000		"Pain (finding)"
 * $sct#312609001	"Puncture wound - injury (disorder)"
 * $sct#425322008	"Stab wound (disorder)"
 * $sct#283545005	"Gunshot wound (disorder)"
@@ -844,12 +817,12 @@ Id: Physical.Finding.of.Pupil.VS
 // get snomed codes for contricted, medium, large, and normal 
 
 
-ECG Interpretation method
-Neurological Assessment Finding
-Organ System
-        Patient Engagement
-assessments 
-Paramedicine protocol
+//ECG Interpretation method
+//Neurological Assessment Finding
+//Organ System
+//        Patient Engagement
+//assessments 
+//Paramedicine protocol
 
 
 
@@ -865,7 +838,6 @@ Id: Physical.Finding.of.Face.VS
 * $sct#50960005         "Hemorrhage"
 //  OR 8573003     "Acute hemorrhage"
 * $sct#48333001         "Burn injury"
-* $sct#110014005	"Decapitation (disorder)"
 * $sct#417893002	"Deformity (finding)"
 * $sct#424329008	"Finding of skin drainage (finding)"
 * $sct#125670008	"Foreign body (disorder)"
@@ -922,7 +894,6 @@ Id: Physical.Finding.of.Head.VS
 * $sct#50960005         "Hemorrhage"
 //  OR 8573003     "Acute hemorrhage"
 * $sct#48333001         "Burn injury"
-* $sct#110014005	"Decapitation (disorder)"
 * $sct#417893002	"Deformity (finding)"
 * $sct#424329008	"Finding of skin drainage (finding)"
 * $sct#125670008	"Foreign body (disorder)"

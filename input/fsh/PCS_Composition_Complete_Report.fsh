@@ -14,7 +14,7 @@ TODO
     sectionConsent 0..1 and 
     sectionPatientPosition 1..1 MS and 
     sectionConsultingExternalProfessional 0..1 MS and
-    sectionReferralSource 0..1 
+    sectionReferralSource 0..1 and 
     sectionEMSBilling 0..1 and 
     sectionProtocols 0..1 
 // FHIR Narratives?
