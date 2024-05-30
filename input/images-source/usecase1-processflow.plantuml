@@ -1,3 +1,10 @@
+@startuml
+hide footbox
+participant "Content Creator" as ContentCreator
+participant "Content Consumer" as ContentConsumer
+"Content Creator" <--> "Content Consumer" : 1. Document Sharing [PCC-1]
+@enduml
+
 //@startuml
 //hide footbox
 //title Use Case 1 - Emergency Response for Heart Attack
