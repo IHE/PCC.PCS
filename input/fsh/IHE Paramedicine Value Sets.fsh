@@ -375,7 +375,7 @@ Id: Medication.Administration.Device.VS
 ValueSet: Paramedicine_Observation_Interpretation_VS
 Description: "Interpretations of assessment scales applicable to paramedicine care"
 Id: Paramedicine.Observation.Interpretation.VS
-* include codes from ObservationInterpretation
+* include codes from http://hl7.org/fhir/ValueSet/observation-interpretation
 * $sct#419984006        "Inconclusive"
 
 
