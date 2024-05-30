@@ -375,7 +375,7 @@ Id: Medication.Administration.Device.VS
 ValueSet: Paramedicine_Observation_Interpretation_VS
 Description: "Interpretations of assessment scales applicable to paramedicine care"
 Id: Paramedicine.Observation.Interpretation.VS
-* include codes from http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
+* include codes from ObservationInterpretation
 * $sct#419984006        "Inconclusive"
 
 
@@ -1168,18 +1168,18 @@ Description: "The Type of transport that is taking place."
 Id: Transport.Method.VS
 * $sct#73957001     "Air transport ambulance, device"
 * $sct#32472009     "Medical helicopter, device"
-44613004        "Ground transport ambulance, device"
-469799000       "All-terrain ambulance"
-1297166001      "Ambulance bus"
-465341007       "Automobile ambulance"
-1285123005      "Basic life support ambulance"
-466597001       "Boat ambulance"
-1285128001      "Emergency and resuscitation ambulance"
-469233002       "Helicopter ambulance"
-1297113004      "Intensive care transport ambulance"
-1285124004      "Intermediate life support ambulance"
-1285126002      "Pediatric inter-hospital transportation ambulance"
-83887000        "Rescue vehicle, device"
+* $sct#44613004        "Ground transport ambulance, device"
+* $sct#469799000       "All-terrain ambulance"
+* $sct#1297166001      "Ambulance bus"
+* $sct#465341007       "Automobile ambulance"
+* $sct#1285123005      "Basic life support ambulance"
+* $sct#466597001       "Boat ambulance"
+* $sct#1285128001      "Emergency and resuscitation ambulance"
+* $sct#469233002       "Helicopter ambulance"
+* $sct#1297113004      "Intensive care transport ambulance"
+* $sct#1285124004      "Intermediate life support ambulance"
+* $sct#1285126002      "Pediatric inter-hospital transportation ambulance"
+* $sct#83887000        "Rescue vehicle, device"
 // * sct#TBD    "Wheelchair Van"
 // * sct#TBD    "Bariatric"
 
