@@ -38,10 +38,8 @@ Options that may be selected for each actor in this implementation guide, are li
 
 | Actor            | Option Name                                         	   |
 |------------------|-----------------------------------------------------------|
-| Content Creator  | CDA Option <sup>Note1</sup>                         	   |
-|				   | FHIR Option <sup>Note1</sup>                        	   |
-|				   | CDA Occupational Data for Health Option <sup>Note4</sup>  |
-|				   | FHIR Occupational Data for Health Option <sup>Note4</sup> |
+| Content Creator  | Create Paramedicine Summary of Care – Clinical Subset Note1 <sup>Note1</sup>                         	   |
+|				   | Create Paramedicine Summary of Care – Complete Report <sup>Note1</sup>                        	   |
 | Content Consumer | View Option <sup>Note2</sup>                        	   |
 |                  | Document Import Option <sup>Note2</sup>             	   |
 |                  | Section Import Option <sup>Note2</sup>              	   |
@@ -58,35 +56,26 @@ Note 3: If the Content Consumer implements any of these options, it must also su
 
 Note 4: If the Content Creator supports the Patient’s Occupation and Patient’s Occupational Industry data elements they shall support the Occupational Data for Health Option. 
 
-#### CDA Option
+#### Create Paramedicine Summary of Care – Clinical Subset Option
 
-This option defines the processing requirements placed on the Content Creators for producing a CDA structured document version of the Paramedicine Care Summary documents. The CDA details are in Volume 3, Section 6.3.1
+This option defines the processing requirements placed on the Content Creators for producing a CDA structured document version of the Create Paramedicine Summary of Care Clinical Subset documents. 
 
-#### FHIR Option
+#### Create Paramedicine Summary of Care – Complete Report Option
 
-This option defines the processing requirements placed on the Content Creators for producing a FHIR document bundle version of the Paramedicine Care Summary documents. The FHIR bundle details are in Volume 3, Section 6.6.x.2.
-
-#### CDA Occupational Data for Health Option
-
-Content Creators implementing this option shall create Occupational Data for Health information that complies with the Occupational Data for Health Section specified in PCC CDA Supplement: 6.3.3.10.5 as a sub-section to the Coded Social History Section as specified in PCC CDA Supplement: 6.3.3.2.36. 
-The Social history observation entry template supports any social history observation available through LOINC codes, including, current/past job(s), usual (longest-held) work, employment status, retirement date(s), combat zone period(s), occupational data for household member, occupations, lifestyle, exercise, exposure risks, environmental health risk factors.
-
-#### FHIR Occupational Data for HealthOption
-
-Content Creators implementing this option shall create Occupational Data for Health information that complies with the Occupational Data for Health Section specified in PCC CDA Supplement: 6.3.3.10.5 as a sub-section to the Coded Social History Section as specified in PCC CDA Supplement: 6.3.3.2.36. 
-Any social history observation may be represented in the open entry under section:socialHistory, including alternate metrics for smoking and alcohol use, as well as work information (e.g., current/past job(s), longest-held occupation, etc.).
-
-#### Quality Data Import Option
-
-This option defines the processing requirements placed on the Content Consumers for providing access and importing quality data from selected sections of the Paramedicine Care Summary. The discrete data import data details are in Volume 3, Section 6.6.x.5.
-
-#### Trauma Data Import Option
-
-This option defines the processing requirements placed on the content consumers for providing access and importing trauma data from selected sections of the Paramedicine Care Summary. The discrete data import data details are in Volume 3, Section 6.6.x.6.
+This option defines the processing requirements placed on the Content Creators for producing a CDA structured document version of the Paramedicine Summary of Care Complete Report documents. 
 
 #### Clinical Subset Data Import Option
 
-This option defines the processing requirements placed on the Content Consumers for providing access and importing the clinical subset data from selected sections of the Paramedicine Care Summary. The discrete data import data details are in Volume 3, Section 6.6.x.4.
+This option defines the processing requirements placed on the Content Consumers for providing access and importing the clinical subset data from selected sections of the Paramedicine Summary of Care document. The discrete data import data details are in Volume 3, Section 6.6.x.4.
+
+#### Trauma Data Import Option
+
+This option defines the processing requirements placed on the content consumers for providing access and importing trauma data from selected sections of the Paramedicine Summary of Care document. The discrete data import data details are in Volume 3, Section 6.6.x.6.
+
+#### Quality Data Import Option
+
+This option defines the processing requirements placed on the Content Consumers for providing access and importing quality data from selected sections of the Paramedicine Summary. The discrete data import data details are in Volume 3, Section 6.6.x.5.
+This applies to the import of airway management events and Cardiac events. 
 
 #### View Option 
 A Content Consumer that supports the View Option:  1.SHALL render the document for viewing. When a CDA Document is used, this rendering shall meet the requirements defined for CDA Release 2 content presentation semantics (See Section 1.2.4 of the CDA Specification: Human readability and rendering CDA Documents). CDA Header information providing context critical 

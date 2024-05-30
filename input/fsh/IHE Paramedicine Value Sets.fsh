@@ -140,6 +140,8 @@ Id: Substance.Use.Evidence.VS
 * $sct#704197006        "Admits alcohol use"
 * $sct#28045007         "Smell of alcohol on breath"
 * $sct#463792004        "Medicine bottle"
+// * $sct#TBD       "Admits to Drug Use"
+// * $sct#TBD       "Admits to Substance Use"
 
 
 
@@ -163,15 +165,23 @@ Id: Barrier.To.Care.VS
 * $sct#271596009	"Mental distress"
 * $sct#415685003	"Suspected alcohol abuse"
 * $sct#162591001	"Suspected drug abuse"
-//suspected alcihol use or drug use should be used so these are here temporarily
+//suspected alcihol use or drug use should be used so these are here temporay
 * $sct#288576002        "Unable to communicate"
 
 
-// TODO
 ValueSet: Blood_Pressure_Measurement_Method_VS
 Description: "Technique or device used for measuring blood pressure"
 Id: Blood.Pressure.Measurement.Method.VS
-* $sct#32750006    "Inspection"
+* $sct#43770009        "Doppler device"
+* $sct#262259000       "Venous line"
+* $sct#261241001       "Arterial line"
+* $sct#113011001       "Palpation"
+* $sct#37931006        "Auscultation"
+* $sct#239033002       "Digital examination"
+// sct#TBD      "Blood pressure cuff, automated"
+
+
+
 
 
 ValueSet: Cardiac_Arrest_Etiology_VS
@@ -179,14 +189,18 @@ Description: "Etiology of a cardiac arrest"
 Id: Cardiac.Arrest.Etiology.VS
 * $sct#423191000	"Cardiac arrest due to cardiac disorder" 
 * $sct#424571008	"Cardiac arrest due to drowning" 
-// 1149222004	Overdose (disorder) replace with poisoning event overdose 
+* $sct#1149222004      "Overdose"
+// sct#TBD      "Cardiac Arrest due to Poisoning"
+// sct#TBD      "Cardiac Arrest due to overdose"
 * $sct#424390001	"Cardiac arrest caused by electrocution"
 * $sct#48149007 	"Exsanguination" 
+// sct#TBD      "Cardiac Arrest Due to Exsanguination"
 * $sct#423168004	"Cardiac arrest due to respiratory disorder" 
 * $sct#422970001	"Cardiac arrest due to trauma" 
-// other cardiac arrest due to codes 
 //Suspected drug overdose (situation) (473128000) 
 
+
+// TODO
 ValueSet: Cardiac_Arrest_Outcome_VS
 Description: "Outcome of an cardiac arrest event from paramedicine encounter"
 Id: Cardiac.Arrest.Outcome.VS
@@ -229,7 +243,7 @@ Id: Cardiac.Rhythm.Reading.VS
 * $sct#705007006	"Inferior ST segment elevation" 
 * $sct#705006002	"Lateral ST segment elevation" 
 * $sct#705010004	"Posterior ST segment elevation" 
-//840680009	Acute ST segment elevation myocardial infarction due to occlusion of septal branch of anterior descending branch of left coronary artery (disorder)
+* $sct#840680009	"Acute ST segment elevation myocardial infarction due to occlusion of septal branch of anterior descending branch of left coronary artery (disorder)"
 * $sct#6456007	        "Supraventricular tachycardia" 
 * $sct#426761007	"Electrocardiographic supraventricular tachycardia" 
 * $sct#31722008	        "Torsades de pointes" 
@@ -239,7 +253,8 @@ Id: Cardiac.Rhythm.Reading.VS
 * $sct#71908006	        "Ventricular fibrillation"
 * $sct#233905006	"Ventricular tachycardia with normal heart" 
 * $sct#405806007	"Pulseless ventricular tachycardia" 
-// missing two codes 
+* $sct#868222004        "Occlusion of posterior descending branch of right coronary artery"
+* $sct#840679006        "Occlusion of septal branch of anterior descending branch of left coronary artery"
 
 
 
@@ -248,13 +263,30 @@ Description: "Kind of procedure used for cardiopulmonary resuscitation"
 Id: Cardiopulmonary.Resuscitation.Type.VS
 // todo
 * $sct#32750006    "Inspection"
+// 74596007     "Resuscitation with artificial ventilation" 
+* $sct#37113006        "Mouth-to-mouth resuscitation"
+* $sct#441893003       "Active compression decompression cardiopulmonary resuscitation with use of inspiratory impedance threshold device"
 
 
-ValueSet: Treatment_Response_VS
-Description: "the type of change in the patient's condition after a procedure, intervention, or a medication administration"
-Id: Treatment.Response.VS
+ValueSet: ChiefComplaint_Anatomic_Location_VS
+Description: "TBD"
+Id: ChiefComplaint.Anatomic.Location.VS
 // todo
 * $sct#32750006    "Inspection"
+
+ValueSet: ChiefComplaint_Organ_System_VS
+Description: "TBD"
+Id: ChiefComplaint.Organ.System.VS
+// todo
+* $sct#32750006    "Inspection"
+
+ValueSet: Response_VS
+Description: "the type of change in the patient's condition after a procedure, intervention, or a medication administration"
+Id: Response.VS
+* $sct#385425000	"Improved" 
+* $sct#260388006	"No status change"
+* $sct#231877006	"Worse" 
+
 
 
 //Crew Role Level? provider roll value set subset or expansion?
@@ -323,6 +355,10 @@ Id: Medication.Administration.Device.VS
 * $sct#433296005	"Infusion pump for intravenous fluids"
 * $sct#334947002	"Nebulizer" 
 * $sct#446476009	"Umbilical catheter" 
+* $sct#336623009       "Oxygen nasal cannula"
+* $sct#464233000       "Partial-rebreathing oxygen face mask"
+* $sct#465504007       "Subcutaneous injection/infusion port needle"
+// new code?
 
 
 
@@ -367,18 +403,46 @@ Id: Mechanism.Of.Injury.VS
 * $sct#53568006	    "Penetrating" 
 
 
-ValueSet: Treatment_Complication_VS
-Description: "Kind of abnormal effect associated with the Procedure, interventon, or medication adeministration"
-Id: Treatment.Complication.VS
+ValueSet: Medication_Complication_VS
+Description: "Kind of abnormal effect associated with a medication adeministration"
+Id: Medication.Complication.VS
 //TBD
 * $sct#53568006	    "Penetrating" 
 
 
-
+ValueSet: Complication_Subset_VS
+Description: "Kind of abnormal effect associated with a Procedure, interventon, or Medication Administration."
+Id: Complication.Subset.VS
+* $sct#419284004       "Altered mental status"
+* $sct#1023001         "Apnea"
+* $sct#131148009       "Bleeding"
+* $sct#386614005        "Slow shallow breathing"
+// Temporary sct#TBD    "Bradypnea"
+* $sct#62315008        "Diarrhea"
+* $sct#1263661003      "Unintended insertion of tracheal tube into esophagus"
+* $sct#371100002       "Extravasation injury"
+* $sct#24184005        "Increased blood pressure"
+// sct#TBD      "Hypertension following procedure"         
+* $sct#1197782006      "Hyperthermia"
+* $sct#16055431000119108       "Hypotension following procedure"
+* $sct#386689009       "Hypothermia"
+* $sct#389086002       "Hypoxia"
+* $sct#735912006       "Injury due to procedure"
+* $sct#417163006       "Traumatic or non-traumatic injury"
+// none
+* $sct#422587007       "Nausea"
+// other 
+* $sct#271825005       "Respiratory distress"
+* $sct#3424008         "Tachycardia"
+* $sct#271823003       "Tachypnea"
+* $sct#422400008       "Vomiting"
+* $sct#48867003        "Bradycardia"
+* $sct#418290006       "Itching"
+* $sct#126485001       "Urticaria"
 
 
 ValueSet: Vehicle_Type_VS
-Description: "TBD"
+Description: "The Types of vehicles."
 Id: Vehicle.Type.VS
 * $sct#705447007    "Industrial transport vehicle"
 * $sct#21753002     "Aircraft, device "
@@ -538,7 +602,7 @@ Id: Vehicle.Type.VS
 * $sct#64174005     "Snowmobile, device"
 
 ValueSet: Location_In_Vehicle_VS
-Description: "TBD"
+Description: "The seat or other locations that the patient has been found, within a vehicle."
 Id: Location.In.Vehicle.VS
 * $sct#428922000       "Found in automobile driver seat (finding)"
 * $sct#429647007       "Found in automobile passenger seat (finding)"
@@ -801,7 +865,7 @@ Description: "The eye assement finding is about"
 Id: Physical.Finding.of.Eye.TargetSite.VS
 * $sct#8966001	    "Left eye structure" 
 * $sct#18944008	    "Right eye structure" 
-// code for both
+* $sct#40638003        "Structure of both eyes"
 
 
 ValueSet: Physical_Finding_of_Pupil_VS
@@ -814,6 +878,14 @@ Id: Physical.Finding.of.Pupil.VS
 * $sct#421141009	"Sluggish pupil movement" 
 * $sct#131194007	"Non-Reactive" 
 * $sct#271608006	"Pin point pupils" 
+* $sct#301939004       "Constricted pupil"
+// 1-2 mm
+* $sct#188557000       "Large pupil"
+* $sct#37125009        "Dilated pupil"
+// 4-8>mm
+* $sct#420335002       "Medium size pupil"
+* $sct#301941003       "Normal size pupil"
+// 3-5 mm 
 // get snomed codes for contricted, medium, large, and normal 
 
 
@@ -988,9 +1060,6 @@ Id: Physical.Finding.of.Neck.VS
 
 
 
-
-
-
 ValueSet: Physical_Finding_of_Pelvis_VS
 Description: "TBD"
 Id: Physical.Finding.of.Pelvis.VS
@@ -1067,7 +1136,7 @@ Id: Triage.Classification.VS
 * $sct#277970007     "Class 5"
 
 ValueSet: Collision_Object_VS
-Description: "TBD"
+Description: "What has been hit in a Collision"
 Id: Collision.Object.VS
 * $sct#71783008         "Automobile, device"
 * $sct#32906002         "Victim, pedestrian in vehicular AND/OR traffic accident"
@@ -1094,13 +1163,33 @@ Id: Collision.Object.VS
 // are there values that cover physical structures like polls or man made structures that are generic? 
 // are there any values that cover natural/nature structures such as rocks or ditches?
 
+ValueSet: Transport_Method_VS
+Description: "The Type of transport that is taking place."
+Id: Transport.Method.VS
+* $sct#73957001     "Air transport ambulance, device"
+* $sct#32472009     "Medical helicopter, device"
+44613004        "Ground transport ambulance, device"
+469799000       "All-terrain ambulance"
+1297166001      "Ambulance bus"
+465341007       "Automobile ambulance"
+1285123005      "Basic life support ambulance"
+466597001       "Boat ambulance"
+1285128001      "Emergency and resuscitation ambulance"
+469233002       "Helicopter ambulance"
+1297113004      "Intensive care transport ambulance"
+1285124004      "Intermediate life support ambulance"
+1285126002      "Pediatric inter-hospital transportation ambulance"
+83887000        "Rescue vehicle, device"
+// * sct#TBD    "Wheelchair Van"
+// * sct#TBD    "Bariatric"
+
 
 ValueSet: Level_Of_Responsiveness_AVPU_VS
 Description: "TBD"
 Id: Level.Of.Responsiveness.AVPU.VS
 * $sct#248234008     "Mentally alert"
 * $sct#255373000     "Verbal"
-* $sct#422768004     "Unresponsive "
+* $sct#422768004     "Unresponsive"
 * $sct#450847001     "Responds to pain"
 
 ValueSet: Pathient_Transfer_to_Ambulance_Method_VS
@@ -1132,15 +1221,181 @@ Id: Pathient.Transfer.to.Ambulance.Method.VS
 ValueSet: Paramedicine_Reason_For_Visit_VS
 Description: "A subset of Reason codes that are informed by NEMSIS Dispatch Reasons as a reccomended subset."
 Id: Paramedicine.Reason.For.Visit.VS
-* $sct#21522001         "Abdominal pain (finding)"
-* $sct#125666000	"Burn (disorder)"
-* $sct#242777003	"Accident caused by explosion (event)"
-* $sct#95875007	        "Exposure to carbon monoxide (event)"
-* $sct#418715001	"Exposure to potentially harmful entity (event)"
-* $sct#785340007	"Inhalation of substance (event)"
-* $sct#409508005	"Bioterrorism related event (event)"
-* $sct#218190002	"Exposure to radiation (event)"
-* $sct#410429000	"Cardiac arrest (disorder)"
+* $sct#21522001         "Abdominal pain"
+* $sct#118948005       "Disorder of abdomen"
+* $sct#419076005       "Allergic reaction"
+* $sct#871927008       "Allergic reaction caused by insect bite and/or insect sting"
+* $sct#299970006       "Animal sting"
+* $sct#242651001       "Injury caused by animal"
+* $sct#52684005        "Assault"
+// post coordination? 8359006   Automated, 
+* $NEMSIS#2301009	"Automated Crash Notification"
+* $sct#161891005       "Backache"
+* $sct#50043002        "Disorder of respiratory system"
+* $sct#271825005       "Respiratory distress"
+* $sct#230145002       "Difficulty breathing"
+* $sct#125666000	"Burn"
+* $sct#242777003	"Accident caused by explosion"
+* $sct#95875007	        "Exposure to carbon monoxide"
+* $sct#418715001	"Exposure to potentially harmful entity"
+* $sct#785340007	"Inhalation of substance"
+* $sct#409508005	"Bioterrorism related event"
+* $sct#218190002	"Exposure to radiation"
+* $sct#410429000	"Cardiac arrest"
+* $sct#419620001       "Death"
+* $sct#29857009        "Chest pain"
+* $sct#249489001       "Choking"
+* $sct#431521000       "Acute pain due to injury"
+* $sct#91175000        "Seizure"
+* $sct#74627003        "Complication due to diabetes mellitus"
+* $sct#219359001       "Injury of unknown intent by electrocution"
+* $sct#5193003         "Lightning"
+* $sct#371409005       "Disorder of eye region"
+* $sct#282752000       "Injury of eye region"
+* $sct#1912002         "Fall"
+* $sct#217176002       "Accident caused by fire and flames"
+* $sct#25064002        "Headache"
+* $sct#405776004       "Planned admission"
+* $sct#185406000       "Ambulance request for patient"
+* $sct#103321005       "Request by physician"
+* $sct#103323008       "Request by health care worker"
+* $sct#405617006       "Cardiovascular event"
+* $sct#40537000        "Cold exposure"
+* $sct#95867001        "Heat exposure"
+* $sct#309535002       "Industrial accident"
+* $sct#462994002       "Personal emergency response system"
+* $sct#39869006        "Alarm, device"
+// medical alarm 
+// no other approriate choice 
+* $sct#1149222004      "Overdose"
+* $sct#75478009        "Poisoning"
+* $sct#443684005       "Disease outbreak"
+* $sct#198609003       "Complication of pregnancy, childbirth and/or puerperium"
+* $sct#17369002        "Miscarriage"
+* $sct#405619009       "Neurological event"
+* $sct#82313006        "Suicide attempt"
+* $sct#413307004       "Mental health problem"
+// sick person (open issue)
+* $sct#84829006        "Struck by projectile"
+* $sct#69129000        "Struck by sharp object"
+* $sct#425322008       "Stab wound"
+* $sct#283545005       "Gunshot wound"
+* $sct#242999003       "Injury due to projectile"
+// Standby 2301065 NEMSIS 
+* $sct#230690007       "Cerebrovascular accident"
+* $sct#274215009       "Transport accident"
+* $sct#107724000       "Patient transfer"
+* $sct#417746004       "Traumatic injury"
+// Well Person Check    2301075
+* $sct#418107008       "Unconscious"
+* $sct#271594007       "Syncope"
+* $sct#419045004       "Loss of consciousness"
+* $sct#40917007        "Clouded consciousness"
+// 	2301079	Unknown Problem/Person Down simlar to unresponsive?
+* $sct#40947009        "Drowning"
+* $sct#242664000       "Accidental drowning or near drowning while scuba diving"
+// 2301083	Airmedical Transport 
+// 2301087	Intercept
+* $sct#419284004       "Altered mental status"
+* $sct#422587007       "Nausea"
+* $sct#422400008       "Vomiting"
 
 
+ValueSet: Paramedicine_Emergency_Event_Sub_List_VS
+Description: "TBD"
+Id: Paramedicine.Emergency.Event.Sub.List.VS
+* $sct#409508005       "Bioterrorism related event"
+* $sct#409495001       "Bioterrorist attack"
+* $sct#781249001       "Consumption of contaminated food"
+* $sct#419620001       "Death"
+// many other child codes
+* $sct#44301001        "Suicide"
+// many other child codes 
+* $sct#443684005       "Disease outbreak"
+* $sct#1290248002      "Electrical power disruption"
+* $sct#276746005       "Environmental event"
+* $sct#1290213009      "Acid rain"
+* $sct#82145005        "Avalanche"
+* $sct#1289992003      "Snow avalanche"
+* $sct#1287996005      "Rock avalanche"
+* $sct#1287962003      "Cold wave"
+* $sct#48071004        "Cyclone"
+* $sct#35314007        "Hurricane"
+* $sct#1287963008      "Subtropical cyclone"
+* $sct#88644004        "Tornado"
+* $sct#1287966000      "Tropical cyclone"
+* $sct#1287815006      "Drought"
+* $sct#8766005         "Earthquake"
+* $sct#20936008        "Fire storm"
+* $sct#111056004       "Flood"
+// many other child codes 
+* $sct#37933009        "Flash flood"
+* $sct#256236005       "Fog"
+* $sct#1287961005      "Freezing rain"
+* $sct#1287812009      "Hailstorm"
+* $sct#1289984007      "Harmful algal bloom"
+* $sct#1287960006      "Heatwave"
+* $sct#1287813004      "Ice storm"
+* $sct#49061008        "Landslide"
+* $sct#102406006       "Mud slide"
+* $sct#1289989002      "Landslide caused by volcanic activity"
+* $sct#5193003         "Lightning"
+* $sct#1290047001      "Meteorite impact"
+* $sct#102410009       "Pollution"
+* $sct#102411008       "Environmental pollution"
+* $sct#1287965001      "Rockfall"
+* $sct#1287807008      "Sand and dust storm"
+* $sct#59262002        "Snowstorm"
+* $sct#49113003        "Blizzard"
+* $sct#829975002       "Thunderstorm"
+* $sct#19224001        "Tidal wave"
+* $sct#24454008        "Torrential rain"
+* $sct#1287938008      "Tsunami"
+* $sct#90978007        "Volcanic eruption"
+* $sct#219329006       "Hanging of unknown intent"
+* $sct#219328003       "Hanging, strangulation or suffocation of unknown intent"
+* $sct#418307001       "Exposure to biological agent"
+* $sct#418715001       "Exposure to potentially harmful entity"
+* $sct#418420002       "Intentionally harming self"
+* $sct#248007002       "Killing"
+* $sct#27935005        "Homicide"
+* $sct#418635006       "Legal intervention"
+* $sct#417928002       "Abuse"
+* $sct#405616002       "Airway event"
+* $sct#405617006       "Cardiovascular event"
+* $sct#405619009       "Neurological event"
+* $sct#405618001       "Respiratory event"
+* $sct#418781000       "Operations of war"
+* $sct#419912001       "Overexertion"
+* $sct#773760007       "Traumatic event"
+* $sct#218164000       "Accident caused by electric current"
+* $sct#418098005       "Accidental exposure to potentially harmful entity"
+* $sct#309535002       "Industrial accident"
+* $sct#274215009       "Transport accident"
+* $sct#782161000       "Bite"
+* $sct#242605002       "Human bite"
+* $sct#782162007       "Bite of nonhuman animal"
+* $sct#898189008       "Contact with hot or corrosive substance"
+* $sct#1290037004      "Human stampede"
+* $sct#54719000        "Exposure to human stampede"
+* $sct#35468003        "Crushed in between objects"
+* $sct#39826003        "Struck by explosion"
+* $sct#84829006        "Struck by projectile"
+* $sct#69129000        "Struck by sharp object"
+* $sct#1912002         "Fall"
+* $sct#71893005        "Struck by falling object"
+* $sct#397866006        "Staff injury or damage"
 
+//Unit Equipment Capability
+
+
+ValueSet: Safety_Equipment_VS
+Description: "TBD"
+Id: Safety.Equipment.VS
+* $sct#397866006        "Staff injury or damage"
+
+
+ValueSet: Protective_Equipment_VS
+Description: "TBD"
+Id: Protective.Equipment.VS
+* $sct#397866006        "Staff injury or damage"
