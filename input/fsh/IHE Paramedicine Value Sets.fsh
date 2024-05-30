@@ -378,6 +378,18 @@ Id: Paramedicine.Observation.Interpretation.VS
 //* include codes from http://hl7.org/fhir/ValueSet/observation-interpretation
 * $sct#419984006        "Inconclusive"
 
+ValueSet: Paramedicine_Roles_VS
+Description: "TBD"
+Id: Paramedicine.Roles.VS
+//* include codes from http://hl7.org/fhir/ValueSet/observation-interpretation
+* $sct#419984006        "Inconclusive"
+
+ValueSet: Paramedicine_Provider_Types_VS
+Description: "TBD"
+Id: Paramedicine.Provider.Types.VS
+//* include codes from http://hl7.org/fhir/ValueSet/observation-interpretation
+* $sct#419984006        "Inconclusive"
+
 
 
 ValueSet: Length_Based_Weight_Class_VS
