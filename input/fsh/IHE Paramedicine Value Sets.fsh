@@ -453,6 +453,27 @@ Id: Complication.Subset.VS
 * $sct#126485001       "Urticaria"
 
 
+ValueSet: Paramedicine_Vehicle_Type_VS
+Description: "The Types of vehicles Paramedicine services may use."
+Id: Paramedicine.Vehicle.Type.VS
+* $sct#49122002    "Ambulance"
+* $sct#73957001    "Air transport ambulance"
+* $sct#32472009    "Medical helicopter"
+* $sct#469799000   "All-terrain ambulance"
+* $sct#1297166001  "Ambulance bus"
+* $sct#465341007   "Automobile ambulance"
+* $sct#1285123005  "Basic life support ambulance"
+* $sct#466597001   "Boat ambulance"
+* $sct#1285128001  "Emergency and resuscitation ambulance"
+* $sct#44613004    "Ground transport ambulance"
+* $sct#469233002   "Helicopter ambulance"
+* $sct#1297113004  "Intensive care transport ambulance"
+* $sct#1285124004  "Intermediate life support ambulance"
+* $sct#1285126002  "Pediatric inter-hospital transportation ambulance"
+* $sct#83887000    "Rescue vehicle"
+
+
+
 ValueSet: Vehicle_Type_VS
 Description: "The Types of vehicles."
 Id: Vehicle.Type.VS

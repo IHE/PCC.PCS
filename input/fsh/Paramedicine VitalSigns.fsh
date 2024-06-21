@@ -83,7 +83,7 @@ Id:             IHE.PCC.APGAR.Score
 Title:          "General APGAR Score"
 Description:    "a new method of evaluation of the newborn infant. General Value."
 * category 1..1
-// * code = $loinc#9272-6 proper LOINC needs to be requested 
+* code = $sct#1287344004
 * value[x] 1..1 MS 
 * dataAbsentReason MS
 * value[x] only integer
