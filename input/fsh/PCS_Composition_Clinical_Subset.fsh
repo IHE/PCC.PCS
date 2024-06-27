@@ -41,7 +41,7 @@ the following cardinalities follow the documentation in the PCS profile:
 * date MS
 * text MS 
 * subject 1..1 MS 
-* subject only Reference(IHE_mPSC_Patient)
+* subject only Reference(IHE_PCC_mPSC_Patient)
 * author MS
 * attester MS 
 * attester.mode MS 

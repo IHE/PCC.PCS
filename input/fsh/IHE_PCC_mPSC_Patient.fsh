@@ -1,6 +1,6 @@
-Profile:        IHE_PCC_Paramedicine_Patient
+Profile:        IHE_PCC_mPSC_Patient
 Parent:         https://profiles.ihe.net/ITI/PDQm/StructureDefinition/IHE.PDQm.Patient
-Id:             IHE.PCC.Paramedicine.Patient
+Id:             IHE.PCC.mPSC.Patient
 Title:          "Paramedicine Patient"
 Description:    "The Paramedicine Patient resource utilizes the PQDQM patient resource in allignment with the IPS patient resource. It contrains the resource to support the data elements that are required if known in the Paramedicine Summary Profile."
 
@@ -20,7 +20,7 @@ Description:    "The Paramedicine Patient resource utilizes the PQDQM patient re
 
 * contact MS
 * contact.relationship MS
-* contact.relationship.CodeableConcept only Patient_Contact_Relationship_Roles_VS
+* contact.relationship from Patient_Contact_Relationship_Roles_VS (required)
 * contact.name MS 
 * contact.telecom MS 
 * contact.address MS 
