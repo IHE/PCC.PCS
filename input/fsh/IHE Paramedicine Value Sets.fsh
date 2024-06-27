@@ -4,6 +4,14 @@
 
 
 // Acuity value set? US centric 
+ValueSet: Patient_Contact_Relationship_Roles_VS
+Description: "The roleCodes that encompas the relationships that can be had with a patient."
+Id: Patient.Contact.Relationship.Roles.VS
+* codes from PatientContactRelationship 
+* codes from http://terminology.hl7.org/CodeSystem/v3-RoleCode where concept is-a #_PersonalRelationshipRoleType
+* http://terminology.hl7.org/CodeSystem/v3-RoleCode#GUARD   "guardian"
+
+
 
 ValueSet: Physical_Finding_of_Abdomen_VS
 Description: "A subset of Finding resulting from an abdominal assessment"
