@@ -1,5 +1,5 @@
 Mapping: Paramedicine-Patient-Mapping
-Source:	IHE.PCC.Paramedicine.Patient
+Source:	IHE.PCC.mPSC.Patient
 Target: "NEMSIS"
 Title: "NEMSIS to FHIR Mapping"
 
@@ -28,6 +28,7 @@ Title: "NEMSIS to FHIR Mapping"
 // where telecom.system = #phone
 * telecom.value -> "ePatient.19 - Patient's Email Address"
 // where telecom.system = #email 
+* generalPractitioner -> "eHistory.PractitionerGroup"
 
 
 // NEMSIS codes that can only map to US Real elements:
