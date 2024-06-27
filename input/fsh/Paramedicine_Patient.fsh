@@ -18,47 +18,13 @@ Description:    "The Paramedicine Patient resource utilizes the PQDQM patient re
 
 * gender 1..1 MS 
 
-
-
 * contact MS
 * contact.relationship MS
 * contact.relationship.CodeableConcept only Patient_Contact_Relationship_Roles_VS
 * contact.name MS 
 * contact.telecom MS 
 * contact.address MS 
-* contact.organization MS 
-* contact ^slicing.discriminator.type = #pattern
-* contact ^slicing.discriminator.path = "code"
-* contact ^slicing.rules = #open
-* contact ^slicing.description = "the Types of patient contacts that should be supported"
-* contact ^slicing.ordered = false
-* contact contains 
-    guardian 0..1 MS and 
-    nextOfKin 0..* MS and 
-    employer 0..1 MS 
-* contact[guardian].relationship ^slicing.discriminator.type = #value
-* contact[guardian].relationship ^slicing.discriminator.path = "code"
-* contact[guardian].relationship ^slicing.rules = #open
-* contact[guardian].relationship ^slicing.description = "The relationship types of patient's guardian"
-* contact[guardian].relationship ^slicing.ordered = false
-* contact[guardian].relationship contains 
-    relationshipRole 1..1 MS and 
-    relationshipType 0..1 MS
-* contact[guardian].relationship[relationshipRole] = #GUARD 
-* contact[guardian].relationship[relationshipType].CodeableConcept only Patient_Contact_Relationship_Roles_VS
-
-* contact[nextOfKin].relationship ^slicing.discriminator.type = #value
-* contact[nextOfKin].relationship ^slicing.discriminator.path = "code"
-* contact[nextOfKin].relationship ^slicing.rules = #open
-* contact[nextOfKin].relationship ^slicing.description = "The relationship types of patient's guardian"
-* contact[nextOfKin].relationship ^slicing.ordered = false
-* contact[nextOfKin].relationship contains 
-    relationshipRole 1..1 MS and 
-    relationshipType 0..1 MS
-* contact[nextOfKin].relationship[relationshipRole] = #N
-* contact[nextOfKin].relationship[relationshipType].CodeableConcept only Patient_Contact_Relationship_Roles_VS
-
-* contact[employer].relationship = #E
+* contact.organization MS
 
 * communication MS 
 
