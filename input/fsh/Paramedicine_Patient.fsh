@@ -22,7 +22,7 @@ Description:    "The Paramedicine Patient resource utilizes the PQDQM patient re
 
 * contact MS
 * contact.relationship MS
-* contact.relationship.CodeableConcept only Patient_Contact_Relationship_Roles_VS (required) 
+* contact.relationship.CodeableConcept only Patient_Contact_Relationship_Roles_VS
 * contact.name MS 
 * contact.telecom MS 
 * contact.address MS 
@@ -45,7 +45,7 @@ Description:    "The Paramedicine Patient resource utilizes the PQDQM patient re
     relationshipRole 1..1 MS and 
     relationshipType 0..1 MS
 * contact[guardian].relationship[relationshipRole] = #GUARD 
-* contact[guardian].relationship[relationshipType].CodeableConcept only Patient_Contact_Relationship_Roles_VS (required) 
+* contact[guardian].relationship[relationshipType].CodeableConcept only Patient_Contact_Relationship_Roles_VS
 
 * contact[nextOfKin].relationship ^slicing.discriminator.type = #value
 * contact[nextOfKin].relationship ^slicing.discriminator.path = "code"
@@ -56,7 +56,7 @@ Description:    "The Paramedicine Patient resource utilizes the PQDQM patient re
     relationshipRole 1..1 MS and 
     relationshipType 0..1 MS
 * contact[nextOfKin].relationship[relationshipRole] = #N
-* contact[nextOfKin].relationship[relationshipType].CodeableConcept only Patient_Contact_Relationship_Roles_VS (required) 
+* contact[nextOfKin].relationship[relationshipType].CodeableConcept only Patient_Contact_Relationship_Roles_VS
 
 * contact[employer].relationship = #E
 

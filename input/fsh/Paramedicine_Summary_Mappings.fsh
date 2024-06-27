@@ -23,8 +23,6 @@ Title: "NEMSIS to FHIR Mapping"
 * address.country -> "ePatient.10 - Patient's Country of Residence"
 // where address.use = http://hl7.org/fhir/address-use#home
 * gender -> "ePatient.13 - Gender"
-* extension[estimatedAge] -> "ePatient.15 - Age"
-* extension[estimatedAge].valueQuantity.unit -> "ePatient.16 - Age Units"
 * birthDate -> "ePatient.17 - Date of Birth"
 * telecom.value -> "ePatient.18 - Patient's Phone Number"
 // where telecom.system = #phone
