@@ -1,6 +1,6 @@
-Profile:   IHE_PCC_ParamedicineSummary_Composition_ClinicalSubset
+Profile:   IHE_PCC_mPSC_Composition_ClinicalSubset
 Parent: http://hl7.org/fhir/StructureDefinition/clinicaldocument
-Id:             IHE.PCC.ParamedicineSummary.Composition.ClinicalSubset
+Id:             IHE.PCC.mPSC.Composition.ClinicalSubset
 Title: "Paramedicince Summary Composition Clinical Subset"
 Description:      """
 The composition of the FHIR elements that are used to build the FHIR Document for the Paramedicine Care Summary Clinical Subset

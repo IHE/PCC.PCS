@@ -1,4 +1,49 @@
-Mapping: Paramedicine-Patient-Mapping
+Mapping: IHE-PCC-mPSC-Composition-ClinicalSubset-Mapping
+Source:	IHE.PCC.mPSC.Composition.ClinicalSubset
+Target: "NEMSIS"
+Title: "NEMSIS to FHIR Mapping"
+* section[sectionMedications].entry[medicationStatement] -> "eHistory.CurrentMedsGroup"
+* section[sectionAllergies].entry[allergyOrIntolerance] -> "eHistory.06 - Medication Allergies"
+* section[sectionAllergies].entry[allergyOrIntolerance] -> "eHistory.07 - Environmental/Food Allergies"
+* section[sectionProblems].entry[problem] -> "eSituation.11 - Provider's Primary Impression"
+* section[sectionProblems].entry[problem] -> "eSituation.12 - Provider's Secondary Impressions"
+//* section.sectionProceduresHx -> ""
+//* section.sectionImmunizations -> ""
+//* section.sectionMedicalDevices -> ""
+//* section.sectionResults -> ""
+//* section.sectionVitalSigns -> ""
+//* section.sectionPastIllnessHx -> ""
+//* section.sectionFunctionalStatus -> ""
+//* section.sectionPlanOfCare -> ""
+//* section.sectionSocialHistory -> ""
+//* section.sectionPregnancyHx -> ""
+//* section.sectionAdvanceDirectives -> ""
+//* section.sectionDetailedChiefComplaint -> ""
+//* section.sectionCodedReasonforVisit -> ""
+//* section.sectionPresentIllnessHx -> ""
+//* section.sectionReviewOfSystems -> ""
+//* section.sectionCodedDetailPhysicalExamination -> ""
+//* section.sectionPayers -> ""
+//* section.sectionIncident -> ""
+//* section.sectionTreatment -> ""
+//* section.sectionTriage -> ""
+//* section.sectionInjuryIncidentDescription -> ""
+//* section.sectionAssessments -> ""
+//* section.sectionCardiacArrestEvent -> ""
+//* section.sectionProviderOrders -> ""
+
+
+Mapping: IHE-PCC-mPSC-Composition-Complete-Report-Mapping
+Source:	IHE.PCC.mPSC.Composition.Complete.Report
+Target: "NEMSIS"
+Title: "NEMSIS to FHIR Mapping"
+* section[sectionMedications].entry[medicationStatement] -> "eHistory.CurrentMedsGroup"
+* section[sectionAllergies].entry[allergyOrIntolerance] -> "eHistory.06 - Medication Allergies"
+* section[sectionAllergies].entry[allergyOrIntolerance] -> "eHistory.07 - Environmental/Food Allergies"
+* section[sectionProblems].entry[problem] -> "eSituation.11 - Provider's Primary Impression"
+* section[sectionProblems].entry[problem] -> "eSituation.12 - Provider's Secondary Impressions"
+
+Mapping: IHE-PCC-mPSC-Patient-Mapping
 Source:	IHE.PCC.mPSC.Patient
 Target: "NEMSIS"
 Title: "NEMSIS to FHIR Mapping"
@@ -29,8 +74,6 @@ Title: "NEMSIS to FHIR Mapping"
 * telecom.value -> "ePatient.19 - Patient's Email Address"
 // where telecom.system = #email 
 * generalPractitioner -> "eHistory.PractitionerGroup"
-
-
 // NEMSIS codes that can only map to US Real elements:
 // - ePatient.11 - Patient Home Census Tract
 // ePatient.14 - Race
@@ -40,6 +83,73 @@ Title: "NEMSIS to FHIR Mapping"
 //Source:	IHE.PCC.Paramedicine.Patient
 //Target: "NEMSIS"
 //Title: "NEMSIS to FHIR Mapping"
+
+Mapping: IHE-PCC-mPSC-Organization-Mapping
+Source:	IHE.PCC.mPSC.Organization
+Target: "NEMSIS"
+Title: "NEMSIS to FHIR Mapping"
+* identifier.value -> "dAgency.01 - EMS Agency Unique State ID"
+// where identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#PRN
+* identifier.value -> "dAgency.26 - Fire Department ID Number"
+// where identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#PRN
+* identifier.value -> "dAgency.02 - Agency Number"
+// where identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#PRN
+* identifier.value -> "eResponse.01 - EMS Agency Number"
+// where identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#PRN
+* identifier.value -> "dAgency.25 - National Provider Identifier"
+// where identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#NPI
+* name -> "dAgency.03 - EMS Agency Name" 
+* address.state -> "dAgency.04 - EMS Agency State"
+* type -> "dAgency.09 - Primary Type of Service"
+* type -> "dAgency.10 - Other Types of Service"
+
+
+Mapping: IHE-PCC-mPSC-AllergyIntolerance-Mapping
+Source:	IHE.PCC.mPSC.AllergyIntolerance
+Target: "NEMSIS"
+Title: "NEMSIS to FHIR Mapping"
+* code -> "eHistory.06 - Medication Allergies"
+// Where category = #medication 
+* code -> "eHistory.07 - Environmental/Food Allergies"
+// Where category = #environment OR #food  
+
+Mapping: Practitioner-Mapping
+Source:	Practitioner
+Target: "NEMSIS"
+Title: "NEMSIS to FHIR Mapping"
+* name.family -> "eHistory.02 - Last Name of Patient's Practitioner"
+* name.given -> "eHistory.03 - First Name of Patient's Practitioner"
+* name.given -> "eHistory.04 - Middle Name/Initial of Patient's Practitioner"
+
+Mapping: ImmunizationUvIps-Mapping
+Source:	ImmunizationUvIps
+Target: "NEMSIS"
+Title: "NEMSIS to FHIR Mapping"
+* vaccineCode -> "eHistory.10 - The Patient's Type of Immunization"
+* occurrence[x].occurrenceDateTime -> "eHistory.11 - Immunization Year"
+* occurrence[x].data-absent-reason -> "eHistory.11 - Immunization Year"
+// Where eHistory.11 = $NEMSIS#8801025 "Not Immunized"
+
+Mapping: PregnancyStatus-Mapping
+Source:	ObservationPregnancyStatusUvIps
+Target: "NEMSIS"
+Title: "NEMSIS to FHIR Mapping"
+* valueCodeableConcept -> "eHistory.18 - Pregnancy"
+
+Mapping: MedicalHistory-Mapping
+Source:	ConditionUvIps
+Target: "NEMSIS"
+Title: "NEMSIS to FHIR Mapping"
+* code -> "eHistory.08 - Medical/Surgical History"
+
+
+Mapping: SurgicalHistory-Mapping
+Source:	ProcedureUvIps
+Target: "NEMSIS"
+Title: "NEMSIS to FHIR Mapping"
+* code -> "eHistory.08 - Medical/Surgical History"
+//-> ""
+//-> ""
 
 //* -> "eDevice.01 - Medical Device Serial Number"
 //* -> "eDevice.02 - Date/Time of Event (per Medical Device)"

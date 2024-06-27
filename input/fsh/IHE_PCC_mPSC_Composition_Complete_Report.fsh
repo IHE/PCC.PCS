@@ -1,6 +1,6 @@
-Profile:   IHE_PCC_ParamedicineSummary_Composition_Complete_Report 
-Parent: IHE_PCC_ParamedicineSummary_Composition_ClinicalSubset
-Id:             IHE.PCC.ParamedicineSummary.Composition.Complete.Report 
+Profile:   IHE_PCC_mPSC_Composition_Complete_Report 
+Parent: IHE_PCC_mPSC_Composition_ClinicalSubset
+Id:             IHE.PCC.mPSC.Composition.Complete.Report 
 Title: "Paramedicince Summary Composition Clinical Subset"
 Description:      """
 TODO 
