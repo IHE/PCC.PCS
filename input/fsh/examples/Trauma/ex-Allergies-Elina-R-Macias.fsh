@@ -6,6 +6,7 @@ Description: "The Example instance for Elina R Macias Allergy-Penicillin utilizi
 * type = #allergy
 * category = #medication
 * code = $ICD10#Z88.0   "Allergy status to penicillin"
+* subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 
 Instance: ex-Allergies-Elina-R-Macias-Aspirin
 InstanceOf: IHE_PCC_mPSC_AllergyIntolerance
@@ -15,6 +16,7 @@ Description: "The Example instance for Elina R Macias Allergy-Aspirin utilizing 
 * type = #allergy
 * category = #medication
 * code = $RxNorm#1191  "aspirin"
+* subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 
 Instance: ex-Allergies-Elina-R-Macias-Acetaminophen
 InstanceOf: IHE_PCC_mPSC_AllergyIntolerance
@@ -24,6 +26,7 @@ Description: "The Example instance for Elina R Macias Allergy-Acetaminophen util
 * type = #allergy
 * category = #medication
 * code = $RxNorm#161  "acetaminophen"
+* subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 
 Instance: ex-Allergies-Elina-R-Macias-Remdesivir
 InstanceOf: IHE_PCC_mPSC_AllergyIntolerance
@@ -33,6 +36,7 @@ Description: "The Example instance for Elina R Macias Allergy-Remdesivir utilizi
 * type = #allergy
 * category = #medication
 * code = $RxNorm#2284718  "remdesivir"
+* subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 
 Instance: ex-Allergies-Elina-R-Macias-Cats 
 InstanceOf: IHE_PCC_mPSC_AllergyIntolerance
@@ -42,6 +46,7 @@ Description: "The Example instance for Elina R Macias Allergy-Cats utilizing dat
 * type = #allergy
 * category = #environment
 * code = $sct#232346004   "Cat allergy"
+* subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 
 Instance: ex-Allergies-Elina-R-Macias-Apples
 InstanceOf: IHE_PCC_mPSC_AllergyIntolerance
@@ -51,3 +56,4 @@ Description: "The Example instance for Elina R Macias Allergy-Apples utilizing d
 * type = #allergy
 * category = #food
 * code = $sct#860604008   "Allergy to apple"
+* subject = Reference(Patient/ex-Patient-Elina-R-Macias)

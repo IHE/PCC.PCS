@@ -1,5 +1,5 @@
 Instance:   ex-Organization-Paramedicine-Agency
-InstanceOf: IHE_PCC_PSC_Organizaiton 
+InstanceOf: IHE_PCC_mPSC_Organization
 Title:      "Paramdicine Summary Paramedicine Organization example utilizing data from the NEMSIS pretesting examples."
 Description: "Paramedicince Agency Organization example for Paramdicine Summary of Care"
 Usage: #example

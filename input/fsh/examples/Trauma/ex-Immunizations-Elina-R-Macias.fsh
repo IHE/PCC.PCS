@@ -3,7 +3,8 @@ InstanceOf: ImmunizationUvIps
 Usage: #example
 Description: "The instance for Patient Elina R Macias immunization-TDaP  Resource utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
-* vaccineCode = 	http://hl7.org/fhir/ValueSet/vaccine-code#20 "diphtheria, tetanus toxoids and acellular pertussis vaccine"
+* status  = http://hl7.org/fhir/ValueSet/immunization-status#final
+* vaccineCode = http://hl7.org/fhir/sid/cvx#20 "diphtheria, tetanus toxoids and acellular pertussis vaccine"
 * patient = Reference(Patient/ex-Patient-Elina-R-Macias)
 * occurrenceDateTime = "1950"
 
@@ -12,7 +13,8 @@ InstanceOf: ImmunizationUvIps
 Usage: #example
 Description: "The instance for Patient Elina R Macias immunization-Influenza-Seasonal Resource utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
-* vaccineCode = 	http://hl7.org/fhir/ValueSet/vaccine-code#141 "Influenza, seasonal, injectable"
+* status  = http://hl7.org/fhir/ValueSet/immunization-status#final
+* vaccineCode = http://hl7.org/fhir/sid/cvx#141 "Influenza, seasonal, injectable"
 * patient = Reference(Patient/ex-Patient-Elina-R-Macias)
 * occurrenceDateTime = "2022"
 
@@ -21,7 +23,8 @@ InstanceOf: ImmunizationUvIps
 Usage: #example
 Description: "The instance for Patient Elina R Macias immunization-MMR Resource utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
-* vaccineCode = 	http://hl7.org/fhir/ValueSet/vaccine-code#3 "measles, mumps and rubella virus vaccine"
+* status  = http://hl7.org/fhir/ValueSet/immunization-status#final
+* vaccineCode = http://hl7.org/fhir/sid/cvx#3 "measles, mumps and rubella virus vaccine"
 * patient = Reference(Patient/ex-Patient-Elina-R-Macias)
 * occurrenceDateTime = "1950"
 
@@ -30,6 +33,7 @@ InstanceOf: ImmunizationUvIps
 Usage: #example
 Description: "The instance for Patient Elina R Macias immunization-Other-NotListed Resource utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
-* vaccineCode = 	http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips#no-immunization-info
+* status  = http://hl7.org/fhir/ValueSet/immunization-status#final
+* vaccineCode = http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips#no-immunization-info
 * patient = Reference(Patient/ex-Patient-Elina-R-Macias)
 * occurrenceDateTime = "2022"

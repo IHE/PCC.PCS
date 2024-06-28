@@ -5,10 +5,12 @@ Description: "The Fall Example instance for the Paramedicine Patient Resource ut
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * identifier[+].type = http://terminology.hl7.org/CodeSystem/v2-0203#PI
 * identifier[=].value = "659JEX"
+* identifier[=].system = "http://www.acme.com/identifiers/patient"
 * identifier[=].assigner = Reference(Organization/ex-Organization-Paramedicine-Agency)
 
 * identifier[+].type = http://terminology.hl7.org/CodeSystem/v2-0203#SS
 * identifier[=].value = "430153583"
+* identifier[=].system = "http://www.acme.com/identifiers/patient"
 
 * name.family = "Macias"
 
