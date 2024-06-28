@@ -188,7 +188,12 @@ Id: Blood.Pressure.Measurement.Method.VS
 * $sct#239033002       "Digital examination"
 // sct#TBD      "Blood pressure cuff, automated"
 
-
+ValueSet: Pulse_Rhythm_VS
+Description: "Findings of the pulse rhythm"
+Id: Pulse.Rhythm.VS
+* $sct#271637005    "Pulse irregularly irregular"
+* $sct#271638000    "Pulse regularly irregular"
+* $sct#248632004    "Regular intermission in pulse"
 
 
 
@@ -421,6 +426,20 @@ Id: Mechanism.Of.Injury.VS
 * $sct#3821009	    "Blunt injury" 
 * $sct#48333001	    "Burn injury" 
 * $sct#53568006	    "Penetrating" 
+
+ValueSet: Respiratory_Effort_VS
+Description: "Findings that describe the respiratory efforts of the patient."
+Id: Respiratory.Effort.VS
+* $sct#90480005	    "Interrupted breathing"
+* $sct#248583008	"Stops breathing"
+* $sct#1023001	    "Apnea" 
+* $sct#248549001	"Labored breathing"
+* $sct#419663003	"Airway device present"
+* $sct#1290338002	"Normal respiratory effort"
+* $sct#271823003	"Tachypnea" 
+* $sct#248581005	"Rapid shallow breathing"
+* $sct#386616007	"Shallow breathing"
+* $sct#430546009	"Agonal respiration"
 
 
 ValueSet: Medication_Complication_VS
