@@ -1,10 +1,10 @@
-CodeSystem:  ISCO-08
-Title: "ISCO-08"
+CodeSystem:  ISCO08
+Title: "ISCO08"
 Description: """
 The International Classification of Occupations (ISCO) seeks to facilitate international communication about occupations by providing statisticians with a framework to make internationally comparable occupational data available, and by allowing international occupational data to be produced in a form that can be useful for research as well as for specific decision-making and action-oriented activities.
 The current version, known as ISCO-08, was published in 2008 and is the fourth iteration, following ISCO-58, ISCO-68 and ISCO-88. 
 """
-Id: ISCO-08
+Id: ISCO08
 
 * #1	    "Managers"
     * #11	    "Chief Executives, Senior Officials and Legislators"
