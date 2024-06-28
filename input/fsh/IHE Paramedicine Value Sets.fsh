@@ -31,7 +31,13 @@ Id: IHE.PCC.mPSC.DataAbsentReason.VS
 * http://terminology.hl7.org/CodeSystem/v3-NullFlavor#NAV   "temporarily unavailable"
 * http://terminology.hl7.org/CodeSystem/v3-NullFlavor#ASKU  "asked but unknown"
 
-
+ValueSet: IHE_PCC_APGAR_VS
+Description: "The set of APGAR assessment codes that can be used represent an APGAR score."
+Id: IHE.PCC.APGAR.VS
+* $loinc#48334-7 "APGAR 1 MINUTE"
+* $loinc#48333-9 "APGAR 5 MINUTE"
+* $loinc#48332-1 "APGAR 10 MINUTE"
+* $sct#1287344004 "Apgar score"
 
 
 

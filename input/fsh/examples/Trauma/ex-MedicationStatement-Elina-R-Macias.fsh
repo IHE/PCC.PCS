@@ -10,4 +10,4 @@ Description: "The instance for Patient Elina R Macias MedicationStatement-Warfar
 * dosage.timing.repeat.frequency = 1 
 * dosage.timing.repeat.periodUnit = $ucum#d "day"
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T8:48:00-05:00"
+* effectiveDateTime = "2022-10-09T8:48:00GMT-05:00"
