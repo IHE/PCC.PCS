@@ -596,7 +596,7 @@ Id: ISCO08
   * #94	    "Food Preparation Assistants"
     * #941	    "Food Preparation Assistants"
       * #9411 	"Fast Food Preparers"
-       * #9412	    "Kitchen Helpers"
+      * #9412	    "Kitchen Helpers"
   * #95	    "Street and Related Sales and Service Workers"
     * #951	    "Street and Related Service Workers"
       * #9510	    "Street and Related Service Workers"

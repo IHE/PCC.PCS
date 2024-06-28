@@ -576,7 +576,7 @@ Id: ISICRev4
       * #6820	"Real estate activities on a fee or contract basis"
 * #M	"Professional, scientific and technical activities"     "This section includes specialized professional, scientific and technical activities. These activities require a high degree of training, and make specialized knowledge and skills available to users."
   * #69	"Legal and accounting activities"
-     * #691	"Legal activities"
+    * #691	"Legal activities"
       * #6910	"Legal activities"
     * #692	"Accounting, bookkeeping and auditing activities; tax consultancy"
       * #6920	"Accounting, bookkeeping and auditing activities; tax consultancy"
