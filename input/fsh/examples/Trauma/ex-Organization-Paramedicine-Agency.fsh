@@ -6,18 +6,18 @@ Usage: #example
 
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 
-* identifier.use[+] = #official  
+* identifier.value[+] = "501"
+* identifier.use[=] = #official  
 * identifier.type[=] = http://terminology.hl7.org/CodeSystem/v2-0203#PRN
-* identifier.value[=] = "501"
 * identifier.assigner[=] = Reference(Organization/ex-Organization-Paramedicine-Agency-StateID-Assigner)	
 
-* identifier.use[+] = #official  
+* identifier.value[+] = "350-501"
+* identifier.use[=] = #official  
 * identifier.type[=] = http://terminology.hl7.org/CodeSystem/v2-0203#PRN
-* identifier.value[=] = "350-501"
 
-* identifier.use[+] = #official  
+* identifier.value[+] = "3502360501"
+* identifier.use[=] = #official  
 * identifier.type[=] = http://terminology.hl7.org/CodeSystem/v2-0203#NPI
-* identifier.value[=] = "3502360501"
 * identifier.system[=] = "http://hl7.org/fhir/sid/us-npi"
 
 * active = true

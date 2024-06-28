@@ -1,5 +1,37 @@
 // EMS Data absent reason codes that have been taken out of some value sets - 
 // Airbag type - No airbag present
+ValueSet: IHE_PCC_VitalSigns_VS
+Description: "The set of reccomended vital sign codes that can be used to represent vital signs in IHE's PCC profiles."
+Id: IHE.PCC.VitalSigns.VS
+* codes from valueset http://hl7.org/fhir/ValueSet/observation-vitalsignresult
+* exclude $loinc#9843-4 "Head Occipital-frontal circumference"
+* $loinc#3141-9 "Body weight Measured"
+* $loinc#8306-3 "Body height --lying"
+* $loinc#8287-5 "Head Occipital-frontal circumference by Tape measure"
+
+ValueSet: IHE_PCC_mPSC_VitalSigns_VS
+Description: "The set of vital sign codes that can be used for vital signs captured by paramedicine providers."
+Id: IHE.PCC.mPSC.VitalSigns.VS
+//* codes from valueset IHE_PCC_VitalSigns_VS
+* $loinc#80341-1 "Respiratory Effort"
+* $loinc#67775-7 "Level of responsiveness"
+* $loinc#44969-4 "Heart rate rhythm palpation"
+* $loinc#19889-5 "End Title Carbon Dioxide (ETCO2)"
+* $loinc#19911-7 "Carbon Monoxide (CO)"
+* $loinc#8884-9  "Heart Rate Rhythm"
+* $loinc#2339-0  "Blood Glucose Level"
+* $loinc#38208-5 "Pain severity - Reported"
+
+
+ValueSet: IHE_PCC_mPSC_DataAbsentReason_VS
+Description: "The set of Data Absent Reasons utilized on the mPSC profile elements."
+Id: IHE.PCC.mPSC.DataAbsentReason.VS
+* codes from system http://terminology.hl7.org/CodeSystem/data-absent-reason
+* http://terminology.hl7.org/CodeSystem/v3-NullFlavor#NI    "NoInformation"
+* http://terminology.hl7.org/CodeSystem/v3-NullFlavor#NAV   "temporarily unavailable"
+* http://terminology.hl7.org/CodeSystem/v3-NullFlavor#ASKU  "asked but unknown"
+
+
 
 
 

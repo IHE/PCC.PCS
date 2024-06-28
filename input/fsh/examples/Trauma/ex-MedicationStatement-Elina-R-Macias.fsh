@@ -7,6 +7,7 @@ Description: "The instance for Patient Elina R Macias MedicationStatement-Warfar
 * medicationCodeableConcept = $RxNorm#11289 "warfarin"
 * dosage.doseAndRate.doseQuantity = 3 $ucum#mg "mg"
 * dosage.route = $sct#26643006  "Oral use"
-* dosage.timing = 1 $ucum#d "day"
+* dosage.timing.repeat.frequency = 1 
+* dosage.timing.repeat.periodUnit = $ucum#d "day"
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T8:48:00GMT-05:00"
+* effectiveDateTime = "2022-10-09T8:48:00-05:00"
