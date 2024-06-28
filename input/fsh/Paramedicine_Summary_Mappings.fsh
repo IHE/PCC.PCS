@@ -113,41 +113,13 @@ Title: "NEMSIS to FHIR Mapping"
 * code -> "eHistory.07 - Environmental/Food Allergies"
 // Where category = #environment OR #food  
 
-Mapping: Practitioner-Mapping
-Source:	Practitioner
-Target: "NEMSIS"
-Title: "NEMSIS to FHIR Mapping"
-* name.family -> "eHistory.02 - Last Name of Patient's Practitioner"
-* name.given -> "eHistory.03 - First Name of Patient's Practitioner"
-* name.given -> "eHistory.04 - Middle Name/Initial of Patient's Practitioner"
-
-Mapping: ImmunizationUvIps-Mapping
-Source:	ImmunizationUvIps
-Target: "NEMSIS"
-Title: "NEMSIS to FHIR Mapping"
-* vaccineCode -> "eHistory.10 - The Patient's Type of Immunization"
-* occurrence[x].occurrenceDateTime -> "eHistory.11 - Immunization Year"
-* occurrence[x].data-absent-reason -> "eHistory.11 - Immunization Year"
-// Where eHistory.11 = $NEMSIS#8801025 "Not Immunized"
-
-Mapping: PregnancyStatus-Mapping
-Source:	ObservationPregnancyStatusUvIps
-Target: "NEMSIS"
-Title: "NEMSIS to FHIR Mapping"
-* valueCodeableConcept -> "eHistory.18 - Pregnancy"
-
-Mapping: MedicalHistory-Mapping
-Source:	ConditionUvIps
-Target: "NEMSIS"
-Title: "NEMSIS to FHIR Mapping"
-* code -> "eHistory.08 - Medical/Surgical History"
 
 
-Mapping: SurgicalHistory-Mapping
-Source:	ProcedureUvIps
-Target: "NEMSIS"
-Title: "NEMSIS to FHIR Mapping"
-* code -> "eHistory.08 - Medical/Surgical History"
+
+
+
+
+
 //-> ""
 //-> ""
 
