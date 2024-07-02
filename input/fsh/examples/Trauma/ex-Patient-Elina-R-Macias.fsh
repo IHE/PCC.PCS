@@ -35,24 +35,8 @@ Description: "The Fall Example instance for the Paramedicine Patient Resource ut
 
 * address.country = "US"
 
-* generalPractitioner[+] = Reference(Practitioner/ex-Patient-Elina-R-Macias-Practitioner-1)
-* generalPractitioner[+] = Reference(Practitioner/ex-Patient-Elina-R-Macias-Practitioner-2)
+* generalPractitioner[+] = Reference(Practitioner/ex-Practitioner-Darlene-T-Beck)
+* generalPractitioner[+] = Reference(Practitioner/ex-Practitioner-Randall-M-Sadler)
 
-Instance: ex-Patient-Elina-R-Macias-Practitioner-1
-InstanceOf: Practitioner
-Usage: #example
-Description: "The Fall Example instance for Elina's practitioner-1 utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
-* meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
-* name.family = "Sadler"
-* name.given = "Randall"
-* name.given = "M"
 
-Instance: ex-Patient-Elina-R-Macias-Practitioner-2
-InstanceOf: Practitioner
-Usage: #example
-Description: "The Fall Example instance for Elina's practitioner-1 utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
-* meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
-* name.family = "Beck"
-* name.given = "Darlene"
-* name.given = "T"
 

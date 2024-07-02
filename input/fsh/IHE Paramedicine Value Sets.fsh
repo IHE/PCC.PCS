@@ -429,9 +429,9 @@ Id: Paramedicine.Observation.Interpretation.VS
 //* include codes from http://hl7.org/fhir/ValueSet/observation-interpretation
 * $sct#419984006        "Inconclusive"
 
-ValueSet: Paramedicine_Roles_VS
+ValueSet: Paramedicine_Provider_Roles_VS
 Description: "TBD"
-Id: Paramedicine.Roles.VS
+Id: Paramedicine.Provider.Roles.VS
 //* include codes from http://hl7.org/fhir/ValueSet/observation-interpretation
 * $sct#419984006        "Inconclusive"
 
@@ -1497,3 +1497,29 @@ ValueSet: Protective_Equipment_VS
 Description: "TBD"
 Id: Protective.Equipment.VS
 * $sct#397866006        "Staff injury or damage"
+
+ValueSet: Stroke_Scale_Type_VS
+Description: "The codes that identify what stroke scale is used to identify a stroke in the field."
+Id: Stroke.Scale.Type.VS
+* $sct#1290002002   "Alberta Stroke Program Early CT score"
+* $sct#705003005    "Stroke impact scale version 3.0"
+* $sct#1287356003   "Cincinnati Prehospital Stroke Scale"
+* $sct#450741005    "National Institutes of Health stroke scale"
+* $sct#736709006    "Postural Assessment Scale for Stroke Patients"
+
+ValueSet: Stroke_Assessment_Interpretation_VS
+Description: "The codes that identify what stroke scale is used to identify a stroke in the field."
+Id: Stroke.Assessment.Interpretation.VS
+* http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#NEG    "Negative"
+* http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#POS    "Positive"
+* $sct#419984006    "Inconclusive"
+
+
+ValueSet: PSC_Location_Type_VS
+Description: "TBD"
+Id: PSC.Location.Type.VS
+* codes from valueset http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType
+* $sct#34261000087105   "Dispatch location"
+* $sct#702869004    "Incident site"
+* $sct#285141008    "Work environment"
+
