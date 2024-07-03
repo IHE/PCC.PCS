@@ -26,10 +26,10 @@ Title:      "Paramdicine Summary Paramedicine Prcatitioner Randall M Sadler exam
 Description: "Paramdicine Summary Paramedicine Prcatitioner Randall M Sadler example utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 pretesting example."
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
-* name[+] = "Randall M Sadler"
-* name.family[=] = "Sadler"
-* name.given[=] = "Randall"
-* name.given[=] = "M"
+* name = "Randall M Sadler"
+* name.family = "Sadler"
+* name.given[+] = "Randall"
+* name.given[+] = "M"
 
 Instance:   ex-Practitioner-Darlene-T-Beck
 InstanceOf: PractitionerUvIps
@@ -37,7 +37,7 @@ Title:      "Paramdicine Summary Paramedicine Prcatitioner Darlene T Beck exampl
 Description: "Paramdicine Summary Paramedicine Prcatitioner Darlene T Beck example utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 pretesting example."
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
-* name[+] = "Darlene T Beck"
-* name.family[=] = "Beck"
-* name.given[=] = "Darlene"
-* name.given[=] = "T"
+* name = "Darlene T Beck"
+* name.family = "Beck"
+* name.given[+] = "Darlene"
+* name.given[+] = "T"
