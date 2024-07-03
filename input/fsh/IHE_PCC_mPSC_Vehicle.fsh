@@ -8,6 +8,6 @@ Description:    "The Paramedicince Vehicel information, identifying the type of 
 // NEMSIS eResponse.07 
 // SHOUDL document the specific type of Vehicle 
 
-* physicalType.CodeableConcept from Vehicle_Type_VS (preferred)
+* physicalType from Vehicle_Type_VS (preferred)
 // NEMSIS dVehicle.04 - Vehicle Type 
 
