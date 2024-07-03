@@ -1,5 +1,5 @@
 Profile:        IHE_PCC_mPSC_Vehicle
-Parent:         IHE_Paramedicine_Location
+Parent:         IHE_PCC_mPSC_Location
 Id:             IHE.PCC.mPSC.Vehicle
 Title:          "IHE Paramedicine Vehicle"
 Description:    "The Paramedicince Vehicel information, identifying the type of vehicle, service Level, and capabilities."
