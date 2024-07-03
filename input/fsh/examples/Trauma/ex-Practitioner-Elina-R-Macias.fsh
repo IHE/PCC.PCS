@@ -4,7 +4,7 @@ Title:      "Paramdicine Summary Paramedicine Prcatitioner Chase Grey example fo
 Description: "Paramdicine Summary Paramedicine Prcatitioner Chase Grey  example utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 pretesting example."
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
-* identifier = "7492"
+* identifier.value = "7492"
 * name.family = "Grey"
 * name.given = "Chase"
 * qualification.code = https://phinvads.cdc.gov/vads/SearchVocab.action#53-3011.00.014720    "EMS Medic"
@@ -15,7 +15,7 @@ Title:      "Paramdicine Summary Paramedicine Prcatitioner Ellen Costa example f
 Description: "Paramdicine Summary Paramedicine Prcatitioner Ellen Costa example utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 pretesting example."
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
-* identifier = "35781"
+* identifier.value = "35781"
 * name.family = "Costa"
 * name.given = "Ellen"
 * qualification.code = $sct#397897005 "Paramedic"
@@ -26,8 +26,8 @@ Title:      "Paramdicine Summary Paramedicine Prcatitioner Randall M Sadler exam
 Description: "Paramdicine Summary Paramedicine Prcatitioner Randall M Sadler example utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 pretesting example."
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
-* name = "Randall M Sadler"
-* name.family[+] = "Sadler"
+* name[+] = "Randall M Sadler"
+* name.family[=] = "Sadler"
 * name.given[=] = "Randall"
 * name.given[=] = "M"
 
@@ -37,7 +37,7 @@ Title:      "Paramdicine Summary Paramedicine Prcatitioner Darlene T Beck exampl
 Description: "Paramdicine Summary Paramedicine Prcatitioner Darlene T Beck example utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 pretesting example."
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
-* name = "Darlene T Beck"
-* name.family[+] = "Beck"
+* name[+] = "Darlene T Beck"
+* name.family[=] = "Beck"
 * name.given[=] = "Darlene"
 * name.given[=] = "T"
