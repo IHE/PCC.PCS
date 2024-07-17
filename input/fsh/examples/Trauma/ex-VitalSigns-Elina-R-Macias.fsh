@@ -9,7 +9,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-BloodPressure-S
 * effectiveDateTime = "2022-10-09T08:48:00-05:00"
 * method = $sct#239033002   "Digital examination"
 * device = Reference(Device/ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device)
-* valueQuantity = 102 $ucum#mmhg "mm[Hg]"
+* valueQuantity = 102 $ucum#mmHg "mm[Hg]"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Diastolic-1 
 InstanceOf: IHE_PCC_mPSC_VitalSigns
@@ -22,7 +22,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-BloodPressure-D
 * effectiveDateTime = "2022-10-09T08:48:00-05:00"
 * method = $sct#239033002   "Digital examination"
 * device = Reference(Device/ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device)
-* valueQuantity = 64 $ucum#mmhg "mm[Hg]"
+* valueQuantity = 64 $ucum#mmHg "mm[Hg]"
 
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-HeartRate-1 
@@ -126,7 +126,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Estimated-Weigh
 * code = $loinc#8335-2
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T08:48:30-05:00"
-* valueQuantity = 53.8 $ucum#Kg "kg"
+* valueQuantity = 53.8 $ucum#kg "kg"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-PainSeverity-1  
 InstanceOf: IHE_PCC_mPSC_VitalSigns  
@@ -163,7 +163,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-BloodPressure-S
 * effectiveDateTime = "2022-10-09T09:00:00-05:00"
 * method = $sct#239033002   "Digital examination"
 * device = Reference(Device/ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device)
-* valueQuantity = 98 $ucum#mmhg "mm[Hg]"
+* valueQuantity = 98 $ucum#mmHg "mm[Hg]"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Diastolic-2
 InstanceOf: IHE_PCC_mPSC_VitalSigns
@@ -176,7 +176,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-BloodPressure-D
 * effectiveDateTime = "2022-10-09T09:00:00-05:00"
 * method = $sct#239033002   "Digital examination"
 * device = Reference(Device/ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device)
-* valueQuantity = 60 $ucum#mmhg "mm[Hg]"
+* valueQuantity = 60 $ucum#mmHg "mm[Hg]"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-HeartRate-2 
 InstanceOf: IHE_PCC_mPSC_VitalSigns
@@ -293,7 +293,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-BloodPressure-S
 * effectiveDateTime = "2022-10-09T09:10:00-05:00"
 * method = $sct#239033002   "Digital examination"
 * device = Reference(Device/ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device)
-* valueQuantity = 100 $ucum#mmhg "mm[Hg]"
+* valueQuantity = 100 $ucum#mmHg "mm[Hg]"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Diastolic-3
 InstanceOf: IHE_PCC_mPSC_VitalSigns
@@ -306,7 +306,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-BloodPressure-D
 * effectiveDateTime = "2022-10-09T09:10:00-05:00"
 * method = $sct#239033002   "Digital examination"
 * device = Reference(Device/ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device)
-* valueQuantity = 62 $ucum#mmhg "mm[Hg]"
+* valueQuantity = 62 $ucum#mmHg "mm[Hg]"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-HeartRate-3 
 InstanceOf: IHE_PCC_mPSC_VitalSigns
@@ -423,7 +423,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-BloodPressure-S
 * effectiveDateTime = "2022-10-09T09:20:00-05:00"
 * method = $sct#239033002   "Digital examination"
 * device = Reference(Device/ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device)
-* valueQuantity = 96 $ucum#mmhg "mm[Hg]"
+* valueQuantity = 96 $ucum#mmHg "mm[Hg]"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Diastolic-4
 InstanceOf: IHE_PCC_mPSC_VitalSigns
@@ -436,7 +436,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-BloodPressure-D
 * effectiveDateTime = "2022-10-09T09:20:00-05:00"
 * method = $sct#239033002   "Digital examination"
 * device = Reference(Device/ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device)
-* valueQuantity = 60 $ucum#mmhg "mm[Hg]"
+* valueQuantity = 60 $ucum#mmHg "mm[Hg]"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device
 InstanceOf: Device

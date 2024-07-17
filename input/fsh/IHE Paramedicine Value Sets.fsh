@@ -526,8 +526,7 @@ ValueSet: Paramedicine_Provider_Roles_VS
 Title: "Paramedicine Provider Roles Value Set"
 Description: "Extension of the known provider roles in HL7 to suppor the driver role of the Paramedicine Providers."
 Id: Paramedicine.Provider.Roles.VS
-
-* include codes from system http://terminology.hl7.org/CodeSystem/v2-0286 
+* include codes from valueset http://hl7.org/fhir/ValueSet/encounter-participant-type
 * $sct#236320001        "Vehicle driver"
 
 ValueSet: Paramedicine_Provider_Types_USA_VS

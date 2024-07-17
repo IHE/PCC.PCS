@@ -1,7 +1,7 @@
-Profile:   IHE_PCC_ParamedicineSummary_Encounter_ClinicalSubset
+Profile:   IHE_PCC_mPSC_Encounter
 Parent: Encounter
-Id:             IHE.PCC.ParamedicineSummary.Encounter.ClinicalSubset
-Title: "IHE PCS Encounter Clinical Subset"
+Id:             IHE.PCC.mPSC.Encounter
+Title: "IHE mPSC Encounter"
 Description:      """
 An IHE PCS Encounter Complete Report resource is used to deffine the emergency medical transport encounter of a patient,with only clinically relevant infromaiton.
 - Identifier is Required
@@ -25,14 +25,8 @@ An IHE PCS Encounter Complete Report resource is used to deffine the emergency m
 * subject 1..1
 * reasonCode 1..*
 * participant MS 
+* participant.type from  Paramedicine_Provider_Roles_VS (extensible)
 * diagnosis 1..*
-//* diagnosis ^slicing.discriminator.type = #pattern
-//* diagnosis ^slicing.discriminator.path = "code"
-//* diagnosis ^slicing.rules = #open
-//* diagnosis ^slicing.ordered = false
-//* diagnosis ^slicing.description = "TBD"
-//* diagnosis contains chiefComplaint 0..1 MS 
-//* diagnosis[ChiefComplaint].use = #CC
 
 * location MS 
 

@@ -181,11 +181,9 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionMedications].entry ^slicing.ordered = false
 * section[sectionMedications].entry contains 
   medicationStatement 0..* and 
-  medicationRequest 0..* and 
-  medicationAdministration 0..*
+  medicationRequest 0..* 
 * section[sectionMedications].entry[medicationStatement] only Reference(MedicationStatementIPS)
 * section[sectionMedications].entry[medicationRequest] only Reference(MedicationRequestIPS)    
-* section[sectionMedications].entry[MedicationAdministration] only Reference(MedicationAdministration)  
 
 * section[sectionAllergies] ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionAllergies] ^extension.valueString = "Section"

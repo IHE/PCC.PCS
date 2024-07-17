@@ -25,7 +25,7 @@ Description: "The Observation instance for Patient Elina R Macias Height of Fall
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * status  = http://hl7.org/fhir/observation-status#final
-* valueQuantity = 1 $ucum#ft_i "Feet"
+* valueQuantity = 1 $ucum#ft "Feet"
 
 Instance:   ex-Observation-Elina-R-Macias-Mechanism-Of-Injury  
 InstanceOf: Mechanism_Of_Injury 
@@ -73,3 +73,13 @@ Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * status  = http://hl7.org/fhir/observation-status#final
 * valueDateTime = "2022-10-09T07:00:00-05:00"
+
+
+Instance:   ex-Observation-Elina-R-Macias-Possible-Injury
+InstanceOf: PSC_Possible_Injury
+Title:      "Paramdicine Summary Paramedicine Patient Possible Injury Observation example for NEMSIS 2023-EMS-3-FallTransport_v350 pretesting example."
+Description: "The Observation instance for Patient Elina R Macias Possible Injury, utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
+Usage: #example
+* meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
+* status  = http://hl7.org/fhir/observation-status#final
+* valueBoolean = true 

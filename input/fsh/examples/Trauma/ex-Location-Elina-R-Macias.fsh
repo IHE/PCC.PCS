@@ -41,3 +41,16 @@ Usage: #example
 * address.postalCode = "71801"
 * address.state = "Arkansas"
 * address.country = "US"
+
+Instance:   ex-Location-Elina-R-Macias-Destination
+InstanceOf: IHE_PCC_mPSC_Location
+Title:      "Paramdicine Summary Paramedicine incident location example for NEMSIS 2023-EMS-3-FallTransport_v350 pretesting example."
+Description: "Paramdicine Summary Paramedicine incident location utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 pretesting example."
+Usage: #example
+* meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
+* type[+] = http://terminology.hl7.org/CodeSystem/v3-RoleCode#HOSP
+* type[+] = http://terminology.hl7.org/CodeSystem/v3-RoleCode#ER
+* type[+] = http://terminology.hl7.org/CodeSystem/v3-RoleCode#CHR 
+* name = "CHRISTUS St. Michael Health System"
+* identifier.value = "1295736734"
+* type = http://terminology.hl7.org/CodeSystem/v3-RoleCode#AMB
