@@ -119,6 +119,7 @@ Description: "The Observation instance for Patient Elina R Macias Last Known Wel
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * status  = http://hl7.org/fhir/observation-status#final
+* code = http://loinc.org#67517-3
 * dataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason#not-performed
 * performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)

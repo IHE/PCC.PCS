@@ -56,7 +56,7 @@ Id:             Last.Known.Well
 Title:          "Last Known Well"
 Description:    "The estimated date and time the patient was last known to be well or in their usual state of health. This is described or estimated by the patient, family, and/or bystanders."
 //Proper loinc code needs to be requested or found
-* value[x] 1..1
+* value[x] MS
 * value[x] only dateTime
 
 Instance: Ex-LastKnownWell
