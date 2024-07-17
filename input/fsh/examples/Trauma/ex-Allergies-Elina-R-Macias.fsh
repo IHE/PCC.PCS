@@ -4,7 +4,7 @@ Usage: #example
 Description: "The Example instance for Elina R Macias Allergy-Penicillin utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * type = http://hl7.org/fhir/allergy-intolerance-type#allergy
-* clinicalStatus = http://hl7.org/fhir/ValueSet/allergyintolerance-clinical#active
+* clinicalStatus = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical#active
 * category = http://hl7.org/fhir/allergy-intolerance-category#medication
 * code = $ICD10#Z88.0   "Personal history of allergy to penicillin"
 * patient = Reference(Patient/ex-Patient-Elina-R-Macias)
@@ -16,7 +16,7 @@ Description: "The Example instance for Elina R Macias Allergy-Aspirin utilizing 
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * type = http://hl7.org/fhir/allergy-intolerance-type#allergy
 * category = http://hl7.org/fhir/allergy-intolerance-category#medication
-* clinicalStatus = http://hl7.org/fhir/ValueSet/allergyintolerance-clinical#active
+* clinicalStatus = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical#active
 * code = $RxNorm#1191  "aspirin"
 * patient = Reference(Patient/ex-Patient-Elina-R-Macias)
 
@@ -27,7 +27,7 @@ Description: "The Example instance for Elina R Macias Allergy-Acetaminophen util
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * type = http://hl7.org/fhir/allergy-intolerance-type#allergy
 * category = http://hl7.org/fhir/allergy-intolerance-category#medication
-* clinicalStatus = http://hl7.org/fhir/ValueSet/allergyintolerance-clinical#active
+* clinicalStatus = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical#active
 * code = $RxNorm#161  "acetaminophen"
 * patient = Reference(Patient/ex-Patient-Elina-R-Macias)
 
@@ -38,7 +38,7 @@ Description: "The Example instance for Elina R Macias Allergy-Remdesivir utilizi
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * type = http://hl7.org/fhir/allergy-intolerance-type#allergy
 * category = http://hl7.org/fhir/allergy-intolerance-category#medication
-* clinicalStatus = http://hl7.org/fhir/ValueSet/allergyintolerance-clinical#active
+* clinicalStatus = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical#active
 * code = $RxNorm#2284718  "remdesivir"
 * patient = Reference(Patient/ex-Patient-Elina-R-Macias)
 
@@ -49,7 +49,7 @@ Description: "The Example instance for Elina R Macias Allergy-Cats utilizing dat
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * type = http://hl7.org/fhir/allergy-intolerance-type#allergy
 * category = http://hl7.org/fhir/allergy-intolerance-category#environment
-* clinicalStatus = http://hl7.org/fhir/ValueSet/allergyintolerance-clinical#active
+* clinicalStatus = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical#active
 * code = $sct#232346004   "Cat allergy"
 * patient = Reference(Patient/ex-Patient-Elina-R-Macias)
 
@@ -60,6 +60,6 @@ Description: "The Example instance for Elina R Macias Allergy-Apples utilizing d
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * type = http://hl7.org/fhir/allergy-intolerance-type#allergy
 * category = http://hl7.org/fhir/allergy-intolerance-category#food
-* clinicalStatus = http://hl7.org/fhir/ValueSet/allergyintolerance-clinical#active
+* clinicalStatus = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical#active
 * code = $sct#860604008   "Allergy to apple"
 * patient = Reference(Patient/ex-Patient-Elina-R-Macias)

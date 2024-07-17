@@ -449,7 +449,7 @@ the following cardinalities follow the documentation in the PCS profile:
   MassCasualtyIncidentIndicator 0..1 and 
   possibleInjury 0..1
 * section[sectionIncident].entry[incidentEvent] only Reference(Paramedicine_Incident)
-* section[sectionIncident].entry[numberOfAffectedPeople] only Reference(PSC_Number_of_Affected_People) 
+* section[sectionIncident].entry[numberOfAffectedPeople] only Reference(IHE_PCC_mPSC_Number_of_Affected_People) 
 * section[sectionIncident].entry[MassCasualtyIncidentIndicator] only Reference(PSC_Mass_Casualty_Incident) 
 * section[sectionIncident].entry[possibleInjury] only Reference(PSC_Possible_Injury) 
 
@@ -468,7 +468,7 @@ the following cardinalities follow the documentation in the PCS profile:
 * section[sectionTreatment].entry ^slicing.description = "TBD"
 * section[sectionTreatment].entry ^slicing.ordered = false
 * section[sectionTreatment].entry contains barriersToCare 0..1 
-* section[sectionTreatment].entry[barriersToCare] only Reference(PSC_BarriersTocare)
+* section[sectionTreatment].entry[barriersToCare] only Reference(IHE_PCC_mPSC_BarriersTocare)
 * section[sectionTreatment].section ^slicing.discriminator.type = #pattern
 * section[sectionTreatment].section ^slicing.discriminator.path = "code"
 * section[sectionTreatment].section ^slicing.rules = #open
@@ -526,7 +526,7 @@ the following cardinalities follow the documentation in the PCS profile:
   safetyEquipmentUsed 0..* and
   collissionData 0..* and 
   workPlaceInjuryIndicator 0..*
-* section[sectionInjuryIncidentDescription].entry[patientActivity] only Reference(Patient_Activity)
+* section[sectionInjuryIncidentDescription].entry[patientActivity] only Reference(IHE_PCC_mPSC_Patient_Activity)
 * section[sectionInjuryIncidentDescription].entry[injuryCause] only Reference(ConditionUvIps)
 * section[sectionInjuryIncidentDescription].entry[injuryMechanism] only Reference(Mechanism_Of_Injury) 
 * section[sectionInjuryIncidentDescription].entry[heightOfFall] only Reference(Height_of_Fall)    

@@ -125,7 +125,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Estimated-Weigh
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#8335-2
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T08:48:30 -05:00"
+* effectiveDateTime = "2022-10-09T08:48:30-05:00"
 * valueQuantity = 53.8 $ucum#Kg "kg"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-PainSeverity-1  
@@ -136,19 +136,19 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Pain Resource u
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#38208-5
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T08:48:30 -05:00"
+* effectiveDateTime = "2022-10-09T08:48:30-05:00"
 * valueQuantity = 8
 * method = $sct#1284852002  "Numeric Pain Rating Scale"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-AVPU-1  
-InstanceOf: Level_Of_Responsiveness_AVPU  
+InstanceOf: IHE_PCC_mPSC_VitalSigns  
 Usage: #example
 Description: "The instance for Patient Elina R Macias VitalSigns-AVPU Resource utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#67775-7
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T08:48:30 -05:00"
+* effectiveDateTime = "2022-10-09T08:48:30-05:00"
 * valueCodeableConcept = $sct#255373000     "Verbal"
 
 
@@ -245,7 +245,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Carbon Monoxide
 * code = $loinc#19911-7
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T09:00:00-05:00"
-* dataAbsentReason = http://hl7.org/fhir/ValueSet/data-absent-reason#not-performed
+* dataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason#not-performed
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-Blood-Glucose-Level-2 
 InstanceOf: IHE_PCC_mPSC_VitalSigns
@@ -256,7 +256,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-BloodGlucoseLev
 * code = $loinc#2339-0
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T09:00:00-05:00"
-* dataAbsentReason = http://hl7.org/fhir/ValueSet/data-absent-reason#not-performed
+* dataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason#not-performed
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-Temperature-2 
 InstanceOf: IHE_PCC_mPSC_VitalSigns
@@ -375,7 +375,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Carbon Monoxide
 * code = $loinc#19911-7
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T09:10:00-05:00"
-* dataAbsentReason = http://hl7.org/fhir/ValueSet/data-absent-reason#not-performed
+* dataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason#not-performed
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-Blood-Glucose-Level-3 
 InstanceOf: IHE_PCC_mPSC_VitalSigns
@@ -386,7 +386,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-BloodGlucoseLev
 * code = $loinc#2339-0
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T09:10:00-05:00"
-* dataAbsentReason = http://hl7.org/fhir/ValueSet/data-absent-reason#not-performed
+* dataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason#not-performed
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-Temperature-3 
 InstanceOf: IHE_PCC_mPSC_VitalSigns
@@ -512,7 +512,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Carbon Monoxide
 * code = $loinc#19911-7
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T09:20:00-05:00"
-* dataAbsentReason = http://hl7.org/fhir/ValueSet/data-absent-reason#not-performed
+* dataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason#not-performed
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-Blood-Glucose-Level-4 
 InstanceOf: IHE_PCC_mPSC_VitalSigns
@@ -523,7 +523,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-BloodGlucoseLev
 * code = $loinc#2339-0
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T09:20:00-05:00"
-* dataAbsentReason = http://hl7.org/fhir/ValueSet/data-absent-reason#not-performed
+* dataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason#not-performed
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-Temperature-4 
 InstanceOf: IHE_PCC_mPSC_VitalSigns
