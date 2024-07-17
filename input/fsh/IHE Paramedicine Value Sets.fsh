@@ -478,7 +478,7 @@ Id: Paramedicine.Provider.Types.VS
 
 ValueSet: Paramedicine_Provider_Types_USA_VS
 Description: "TBD"
-Id: Paramedicine.Provider.Types.VS
+Id: Paramedicine.Provider.Types.USA.VS
 * include codes from valueset http://hl7.org/fhir/ValueSet/practitioner-role
 //* $ONETSOC#29-2041.00.014721	"EMT Intermediate (Emergency Medical Technician, Intermediate) [Emergency Medical Technicians and Paramedics]"
 //* $ONETSOC#29-2041.00.014725	"EMT-I/85 [Emergency Medical Technicians and Paramedics]"

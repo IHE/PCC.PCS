@@ -19,7 +19,7 @@ InstanceOf: IHE_PCC_mPSC_Organization
 Description: "The Fall Example instance for the Coverage organization utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
-* identifier = "12345"
+* identifier.value = "12345"
 * name = "Medicare"
 * address.line = "PO Box 1437, Slot S401"
 * address.city = "Little Rock"

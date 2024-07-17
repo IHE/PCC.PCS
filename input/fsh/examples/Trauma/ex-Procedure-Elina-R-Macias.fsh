@@ -5,7 +5,6 @@ Description: "The instance for Patient Elina R Macias Procedure-external warming
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * status  = http://hl7.org/fhir/medication-statement-status#completed
-* data-absent-reason = http://terminology.hl7.org/CodeSystem/data-absent-reason#unknown
 * code = $sct#431949004  "Active external warming of subject"
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * performer.function = $sct#125677006   "Relative"
@@ -24,7 +23,7 @@ Description: "The instance for Patient Elina R Macias Procedure- Resource utiliz
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * status  = http://hl7.org/fhir/medication-statement-status#completed
-* performedDateTime = "2022-10-09T8:50:00-05:00"
+* performedDateTime = "2022-10-09T08:50:00-05:00"
 * code = $sct#304562007     "Informing doctor"
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * performer.actor = Reference(Practitioner/ex-Practitioner-Chase-Grey)
@@ -40,7 +39,7 @@ Description: "The instance for Patient Elina R Macias Procedure-Catheterisation-
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * status  = http://hl7.org/fhir/medication-statement-status#completed
-* performedDateTime = "2022-10-09T8:51:00-05:00"
+* performedDateTime = "2022-10-09T08:51:00-05:00"
 * code = $sct#392230005 "Catheterisation of vein"
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * performer.function = $sct#397897005   "Paramedic"
@@ -72,7 +71,7 @@ Description: "The instance for Patient Elina R Macias Procedure-Application of s
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * status  = http://hl7.org/fhir/event-status#completed
-* performedDateTime = "2022-10-09T8:54:00-05:00"
+* performedDateTime = "2022-10-09T08:54:00-05:00"
 * code = $sct#79321009 "Application of splint"
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * performer.actor = Reference(Practitioner/ex-Practitioner-Chase-Grey)
@@ -89,7 +88,7 @@ Description: "The instance for Patient Elina R Macias Procedure-Moving-Patient-S
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * status  = http://hl7.org/fhir/event-status#completed
-* performedDateTime = "2022-10-09T8:55:00-05:00"
+* performedDateTime = "2022-10-09T08:55:00-05:00"
 * code = $sct#58715004 "Moving a patient to a stretcher"
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * performer.actor = Reference(Practitioner/ex-Practitioner-Chase-Grey)

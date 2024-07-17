@@ -5,7 +5,7 @@ Description: "The instance for Patient Elina R Macias MedicationStatement-Warfar
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * status  = http://terminology.hl7.org/CodeSystem/medication-admin-status#in-progress
-* effectiveDateTime = "2022-10-09T8:52:00-05:00"
+* effectiveDateTime = "2022-10-09T08:52:00-05:00"
 * medicationCodeableConcept	= $RxNorm#7052 "morphine"
 * dosage.doseAndRate.doseQuantity = 10 $ucum#mg "mg"
 * dosage.route = $sct#47625008 "Intravenous use"

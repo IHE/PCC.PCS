@@ -17,7 +17,7 @@ Title:      "Paramdicine Summary Paramedicine Vehicle example for NEMSIS 2023-EM
 Description: "Paramdicine Summary Paramedicine vehicle example utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 pretesting example."
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
-* identifier = "501.183"
+* identifier.value = "501.183"
 * name = "GA 11"
 * type = http://terminology.hl7.org/CodeSystem/v3-RoleCode#AMB
 * physicalType = $sct#44613004    "Ground transport ambulance"
