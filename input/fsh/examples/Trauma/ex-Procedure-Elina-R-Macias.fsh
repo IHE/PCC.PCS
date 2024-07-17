@@ -8,7 +8,7 @@ Usage: #example
 * code = $sct#431949004  "Active external warming of subject"
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * performer.function = $sct#125677006   "Relative"
-* performer.actor = Reference(RelatedPerson/ex-Practitioner-Ellen-Costa)
+* performer.actor = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 // more robust ?
 * performedDateTime	= "2022-10-09"
 * outcome = $sct#385669000 	"Successful"

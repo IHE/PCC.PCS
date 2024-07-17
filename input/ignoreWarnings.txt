@@ -22,3 +22,12 @@ INFORMATION: Observation/ex-Patient-Elina-R-Macias-VitalSigns-RespiratoryEffort-
 INFORMATION: Observation/ex-Patient-Elina-R-Macias-VitalSigns-RespiratoryEffort-2: Observation.value.ofType(CodeableConcept): This element does not match any known slice defined in the profile https://profiles.ihe.net/PCC/PCS/StructureDefinition/IHE.PCC.mPSC.VitalSigns|2.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Observation/ex-Patient-Elina-R-Macias-VitalSigns-RespiratoryEffort-3: Observation.value.ofType(CodeableConcept): This element does not match any known slice defined in the profile https://profiles.ihe.net/PCC/PCS/StructureDefinition/IHE.PCC.mPSC.VitalSigns|2.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Observation/ex-Patient-Elina-R-Macias-VitalSigns-RespiratoryEffort-4: Observation.value.ofType(CodeableConcept): This element does not match any known slice defined in the profile https://profiles.ihe.net/PCC/PCS/StructureDefinition/IHE.PCC.mPSC.VitalSigns|2.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+
+
+# The Value set is externally referencenced
+INFORMATION: Practitioner/ex-Practitioner-Chase-Grey: Practitioner.qualification[0].code.coding[0].system: A definition for CodeSystem 'https://phinvads.cdc.gov/vads/SearchVocab.action' could not be found, so the code cannot be validated
+
+
+#These can be ignored becasue they are codes in example files 
+INFORMATION: StructureDefinition/IHE.PCC.mPSC.Composition.Complete.Report: StructureDefinition.snapshot.element[609].pattern.ofType(CodeableConcept).coding[0].code: The code '223475005' is valid but is not active
+INFORMATION: StructureDefinition/IHE.PCC.mPSC.Composition.Complete.Report: StructureDefinition.differential.element[24].pattern.ofType(CodeableConcept).coding[0].code: The code '223475005' is valid but is not active
