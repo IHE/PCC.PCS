@@ -11,7 +11,7 @@ Description:    "Location Resource conformant to the data needs of the Paramedic
 * description MS 
 
 * type 1..* MS
-* type from PSC_Location_Type_VS
+* type from PSC_Location_Type_VS (example)
 
 * address MS 
 

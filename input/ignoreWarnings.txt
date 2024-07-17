@@ -31,3 +31,4 @@ INFORMATION: Practitioner/ex-Practitioner-Chase-Grey: Practitioner.qualification
 #These can be ignored becasue they are codes in example files 
 INFORMATION: StructureDefinition/IHE.PCC.mPSC.Composition.Complete.Report: StructureDefinition.snapshot.element[609].pattern.ofType(CodeableConcept).coding[0].code: The code '223475005' is valid but is not active
 INFORMATION: StructureDefinition/IHE.PCC.mPSC.Composition.Complete.Report: StructureDefinition.differential.element[24].pattern.ofType(CodeableConcept).coding[0].code: The code '223475005' is valid but is not active
+INFORMATION: AllergyIntolerance/ex-Allergies-Elina-R-Macias-Cats: AllergyIntolerance.code.coding[0].code: The code '232346004' is valid but is not active

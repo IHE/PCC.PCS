@@ -2,6 +2,8 @@ CodeSystem:  NEMSIS
 Title: "NEMSIS"
 Description: "The codede Values used in the NEMSIS Standard"
 Id: NEMSIS
+* ^experimental = true 
+* ^caseSensitive = true 
 * #8801001	"Contraindication Noted"
 * #8801003	"Denied By Order"
 * #8801005	"Exam Finding Not Present"

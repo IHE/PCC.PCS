@@ -1,4 +1,4 @@
-**This Content Profile Deinfes the Pmobile Paramedicine Summary of Care document requirement that can be shared with a reciving facility to convey pertinant patient infromation**
+**This Content Profile Deinfes the mobile Paramedicine Summary of Care document requirement that can be shared with a reciving facility to convey pertinant patient infromation**
 
 [Open and Closed Issues](issues.html)
 
@@ -6,7 +6,7 @@
 This guide is organized into four main sections:
 
 1. Volume I:
-   1. [Pmobile Paramedicine Summary of Care (mPSC) Profile](volume-1.html)
+   1. [mobile Paramedicine Summary of Care (mPSC) Profile](volume-1.html)
 
 2. Volume II: Transaction Detail
    1. [Document Sharing [PCC-1]](PCC-1.html)
@@ -19,10 +19,10 @@ This guide is organized into four main sections:
 	
 5. Appendix
 	1. **mPSC FHIR Composition**
-	[Pmobile Paramedicine Summary of Care International Composition Complete Report](StructureDefinition-IHE_PCC_mPSC_Composition_Complete_Report.html)
-	[Pmobile Paramedicine Summary of Care International Composition Clinical Subset](StructureDefinition-IHE_PCC_mPSC_Composition_ClinicalSubset.html)
-	(TODO)[Pmobile Paramedicine Summary of Care US-Realm Composition Complete Report](mPSC_Composition.fsh)
-	(TODO)[Pmobile Paramedicine Summary of Care US-Realm Composition Clinical Subset](mPSC_Composition.fsh)
+	[mobile Paramedicine Summary of Care International Composition Complete Report](StructureDefinition-IHE_PCC_mPSC_Composition_Complete_Report.html)
+	[mobile Paramedicine Summary of Care International Composition Clinical Subset](StructureDefinition-IHE_PCC_mPSC_Composition_ClinicalSubset.html)
+	(TODO)[mobile Paramedicine Summary of Care US-Realm Composition Complete Report](mPSC_Composition.fsh)
+	(TODO)[mobile Paramedicine Summary of Care US-Realm Composition Clinical Subset](mPSC_Composition.fsh)
 	2. **mPSC CDA Template**
 	(TODO)
 	3. **NEMSIS to mPSC FHIR Mappings**

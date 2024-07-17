@@ -111,3 +111,15 @@ Usage: #example
 * performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T08:41:00-05:00"
+
+Instance:   ex-Observation-Elina-R-Macias-Last-Known-Well
+InstanceOf: Last_Known_Well
+Title:      "Paramdicine Summary Paramedicine Patient Last Known Well Observation example for NEMSIS 2023-EMS-3-FallTransport_v350 pretesting example."
+Description: "The Observation instance for Patient Elina R Macias Last Known Well, utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
+Usage: #example
+* meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
+* status  = http://hl7.org/fhir/observation-status#final
+* dataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason#not-performed
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
+* subject = Reference(Patient/ex-Patient-Elina-R-Macias)
+* effectiveDateTime = "2022-10-09T08:41:00-05:00"

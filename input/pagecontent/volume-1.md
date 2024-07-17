@@ -34,7 +34,7 @@ Figure X.1-1 shows the actors directly involved in the mPSC Profile and the rele
 | Content Consumer  	| Document Sharing [PCC-1](ITI-65.html) | Responder				| R				| TBD		|
 Figure X.1-1 shows the actors directly involved in the mPSC Profile and the direction that the content is exchanged. 
 
-A product implementation using this profile may group actors from this profile with actors from a workflow or transport profile to be functional. The grouping of the content module described in this profile to specific actors is described in more detail in [Required Actor Groupings](volume-1.html#mPSC-required-actor-groupings) or in [Cross Profile Considerations](volume-1.html#mPSC-cross-profile-considerations).
+A product implementation using this profile may group actors from this profile with actors from a workflow or transport profile to be functional. The grouping of the content module described in this profile to specific actors is described in more detail in [Required Actor Groupings](volume-1.html#mpsc-required-actor-groupings) or in [Cross Profile Considerations](volume-1.html#mpsc-cross-profile-considerations).
 
 **Table X.1-2: mPSC – Actors and Content Modules**
 | Actors 			    | Content Modules  										 | Optionality	| Reference	|
@@ -92,8 +92,8 @@ This option defines the processing requirements placed on the Content Creators f
 
 ### FHIR Option
 This option defines the processing requirements placed on the Content Creators for producing a FHIR document bundle version of the mobile Paramedicine Summary of Care documents. The FHIR details are defined in the:
-[mobile Paramedicine Summary of Care International Composition Complete Report](StructureDefinition-IHE.PCC.mPSC.Composition.CR.html)
-[mobile Paramedicine Summary of Care International Composition Clinical Subset](StructureDefinition-IHE.PCC.mPSC.Composition.CS.html)
+[mobile Paramedicine Summary of Care International Composition Complete Report](StructureDefinition-IHE_PCC_mPSC_Composition_Complete_Report.html)
+[mobile Paramedicine Summary of Care International Composition Clinical Subset](StructureDefinition-IHE_PCC_mPSC_Composition_ClinicalSubset.html)
 
 ### Quality Data Import Option
 This option defines the processing requirements placed on the Content Consumers for providing access and importing quality data from selected sections of the mobile Paramedicine Summary of Care. 
