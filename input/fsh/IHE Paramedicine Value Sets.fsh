@@ -474,7 +474,7 @@ ValueSet: Paramedicine_Provider_Types_VS
 Description: "TBD"
 Id: Paramedicine.Provider.Types.VS
 * include codes from valueset http://hl7.org/fhir/ValueSet/practitioner-role
-* $ISCO08#224	    "Paramedical Practitioners"
+//* $ISCO08#224	    "Paramedical Practitioners"
 
 ValueSet: Paramedicine_Provider_Types_USA_VS
 Description: "TBD"

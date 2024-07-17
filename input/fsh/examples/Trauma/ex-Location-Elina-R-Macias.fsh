@@ -5,7 +5,8 @@ Description: "Paramdicine Summary Paramedicine Dispatch Location example utilizi
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * name = "Texarkana Arkansas Station"
-* position = "33.460,-94.002"
+* position.longitude = 33.460
+* position.latitude = 94.002
 * type = $sct#34261000087105
 * address.state[+] = "Arkansas"
 
@@ -16,7 +17,7 @@ Title:      "Paramdicine Summary Paramedicine Vehicle example for NEMSIS 2023-EM
 Description: "Paramdicine Summary Paramedicine vehicle example utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 pretesting example."
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
-* identifier = "501.183"
+* identifier = 501.183
 * name = "GA 11"
 * type = http://terminology.hl7.org/CodeSystem/v3-RoleCode#AMB
 * physicalType = $sct#44613004    "Ground transport ambulance"
@@ -30,11 +31,12 @@ Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * type[+] = $sct#419955002 "Residential institution"
 * type[+] = $sct#702869004 "Incident site"
-* position = "33.663,-93.594"
-* address.line[+] = "520 South Pine Street"
-* address.line[=] = "Unit A"
-* address.city[=] = "City of Hope"
-* address.district[=] = "Hempstead County"
-* address.postalCode[=] = "71801"
-* address.state[=] = "Arkansas"
-* address.country[=] = "US"
+* position.longitude = 33.663
+* position.latitude = 93.594
+* address.line = "520 South Pine Street"
+* address.line = "Unit A"
+* address.city = "City of Hope"
+* address.district = "Hempstead County"
+* address.postalCode = "71801"
+* address.state = "Arkansas"
+* address.country = "US"

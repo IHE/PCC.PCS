@@ -4,7 +4,7 @@ Title:      "Paramdicine Summary Paramedicine MedicationAdministration example f
 Description: "The instance for Patient Elina R Macias MedicationStatement-Warfarin Resource utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
-* status  = http://hl7.org/fhir/ValueSet/medication-statement-status#in-progress
+* status  = http://terminology.hl7.org/CodeSystem/medication-admin-status#in-progress
 * effectiveDateTime = "2022-10-09T8:52:00-05:00"
 * medicationCodeableConcept	= $RxNorm#7052 "morphine"
 * dosage.doseAndRate.doseQuantity = 10 $ucum#mg "mg"
