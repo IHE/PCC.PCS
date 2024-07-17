@@ -75,7 +75,7 @@ Usage: #example
 * code = $sct#79321009 "Application of splint"
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * performer.actor = Reference(Practitioner/ex-Practitioner-Chase-Grey)
-* performedDateTime	= "2022-10-09T8:54:00-05:00"
+* performedDateTime	= "2022-10-09T08:54:00-05:00"
 // prior to EMS Flag
 // written orders?/protocol 
 // response
