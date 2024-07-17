@@ -61,7 +61,7 @@ Description:    "Record of transport of a person or patient with constraints mat
 
 * location 0..* MS 
 * hospitalization 0..0
-* partOf only Reference(IHE_PCC_ParamedicineSummary_Encounter_ClinicalSubset)
+* partOf only Reference(IHE_PCC_mPSC_Encounter)
 
 Extension: NumberofPatients
 Id: NumberofPatients

@@ -82,4 +82,5 @@ Description: "The Observation instance for Patient Elina R Macias Possible Injur
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * status  = http://hl7.org/fhir/observation-status#final
+* code = $loinc#21611-9
 * valueBoolean = true 

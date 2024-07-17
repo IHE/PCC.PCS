@@ -114,11 +114,87 @@ Title: "NEMSIS to FHIR Mapping"
 // Where category = #environment OR #food  
 
 
+Mapping: IHE-PCC-mPSC-Coverage-Mapping
+Source:	Coverage
+Target: "NEMSIS"
+Title: "NEMSIS to FHIR Mapping"
+* identifier -> "ePayment.18 - Insurance Policy ID Number"
+// Where type = #MB
+* type -> "ePayment.57 - Payer Type" 
+* payor -> "IHE.PCC.mPSC.Organization"
+* order -> "ePayment.11 - Insurance Company Billing Priority"
+* class.value -> "ePayment.17 - Insurance Group ID"
+* class.name -> "Insurance Group Name"
+//WHERE class.type = http://terminology.hl7.org/CodeSystem/coverage-class#group
+* subscriber -> "ePayment.19 - Last Name of the Insured"
+// WHERE Reference(Patient or RelatedPerson).name.family
+* subscriber -> "ePayment.20 - First Name of the Insured"
+// WHERE Reference(Patient or RelatedPerson).name.given
+* subscriber -> "ePayment.21 - Middle Initial/Name of the Insured"
+// WHERE Reference(Patient or RelatedPerson).name.given
+* subscriber -> "ePayment.60 - Date of Birth of the Insured"
+// WHERE Reference(Patient or RelatedPerson).birthDate
+* relationship -> "ePayment.22 - Relationship to the Insured"
+
+Mapping: IHE-PCC-mPSC-Coverage-Organization-Mapping
+Source:	IHE.PCC.mPSC.Organization
+Target: "NEMSIS"
+Title: "NEMSIS to FHIR Mapping"
+* identifier -> "ePayment.09 - Insurance Company ID"
+* name -> "ePayment.10 - Insurance Company Name"
+* address.line -> "ePayment.12 - Insurance Company Address"
+* address.city -> "ePayment.13 - Insurance Company City"
+* address.state -> "ePayment.14 - Insurance Company State"
+* address.postalCode -> "ePayment.15 - Insurance Company ZIP Code"
+* address.country -> "ePayment.16 - Insurance Company Country"
+* telecom -> "ePayment.59 - Insurance Company Phone Number"
 
 
+Mapping: IHE-PCC-mPSC-RelatedPerson-Mapping
+Source:	RelatedPerson
+Target: "NEMSIS"
+Title: "NEMSIS to FHIR Mapping"
+* relationship -> "ePayment.32 - Closest Relative/ Guardian Relationship"
+* name.family -> "ePayment.23 - Closest Relative/Guardian Last Name"
+* name.given -> "ePayment.24 - Closest Relative/ Guardian First Name"
+* name.given -> "ePayment.25 - Closest Relative/ Guardian Middle Initial/Name"
+* address.line -> "ePayment.26 - Closest Relative/ Guardian Street Address"
+* address.city -> "ePayment.27 - Closest Relative/ Guardian City"
+* address.state -> "ePayment.28 - Closest Relative/ Guardian State"
+* address.postalCode -> "ePayment.29 - Closest Relative/ Guardian ZIP Code"
+* address.country -> "ePayment.30 - Closest Relative/ Guardian Country"
+* telecom -> "ePayment.31 - Closest Relative/ Guardian Phone Number"
 
+Mapping: IHE-PCC-mPSC-Employer-Mapping
+Source:	RelatedPerson
+Target: "NEMSIS"
+Title: "NEMSIS to FHIR Mapping"
+* relationship -> "ePayment.32 - Closest Relative/ Guardian Relationship"
+// WHERE relationship = http://terminology.hl7.org/CodeSystem/v2-0131#E "Employer"
+* name -> "ePayment.33 - Patient's Employer"
+* address.line -> "ePayment.34 - Patient's Employer's Address"
+* address.city -> "ePayment.35 - Patient's Employer's City"
+* address.state -> "ePayment.36 - Patient's Employer's State"
+* address.postalCode -> "ePayment.37 - Patient's Employer's ZIP Code"
+* address.country -> "ePayment.38 - Patient's Employer's Country"
+* telecom -> "ePayment.39 - Patient's Employer's Primary Phone Number"
 
-
+Mapping: IHE-PCC-mPSC-Vehicle-Mapping
+Source:	IHE_PCC_mPSC_Vehicle
+Target: "NEMSIS"
+Title: "NEMSIS to FHIR Mapping"
+* identifier -> "eResponse.13 - EMS Vehicle (Unit) Number"
+// WHERE relationship = http://terminology.hl7.org/CodeSystem/v2-0131#E "Employer"
+* identifier -> "eResponse.04 - EMS Response Number"
+* identifier -> "dVehicle.01 - Unit/Vehicle Number"
+* name -> "eResponse.14 - EMS Unit Call Sign"
+* type -> "eResponse.07 - Unit Transport and Equipment Capability" 
+* physicalType -> "dVehicle.04 - Vehicle Type"
+* address.city -> "ePayment.35 - Patient's Employer's City"
+* address.state -> "ePayment.36 - Patient's Employer's State"
+* address.postalCode -> "ePayment.37 - Patient's Employer's ZIP Code"
+* address.country -> "ePayment.38 - Patient's Employer's Country"
+* telecom -> "ePayment.39 - Patient's Employer's Primary Phone Number"
 
 //-> ""
 //-> ""
