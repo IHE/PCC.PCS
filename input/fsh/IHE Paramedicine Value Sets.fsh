@@ -467,7 +467,7 @@ Id: Paramedicine.Observation.Interpretation.VS
 ValueSet: Paramedicine_Provider_Roles_VS
 Description: "TBD"
 Id: Paramedicine.Provider.Roles.VS
-* include codes from CodeSystem http://terminology.hl7.org/CodeSystem/v2-0286 
+* include codes from system http://terminology.hl7.org/CodeSystem/v2-0286 
 * $sct#236320001        "Vehicle driver"
 
 ValueSet: Paramedicine_Provider_Types_VS
@@ -480,12 +480,12 @@ ValueSet: Paramedicine_Provider_Types_USA_VS
 Description: "TBD"
 Id: Paramedicine.Provider.Types.VS
 * include codes from valueset http://hl7.org/fhir/ValueSet/practitioner-role
-* $ONETSOC#29-2041.00.014721	"EMT Intermediate (Emergency Medical Technician, Intermediate) [Emergency Medical Technicians and Paramedics]"
-* $ONETSOC#29-2041.00.014725	"EMT-I/85 [Emergency Medical Technicians and Paramedics]"
-* $ONETSOC#29-2041.00.014726	"EMT-I/99 [Emergency Medical Technicians and Paramedics]"
-* $ONETSOC#53-3011.00.014718	"EMS First Responder (Emergency Medical Services First Responder) [Ambulance Drivers and Attendants, Except Emergency Medical Technicians]"
-* $ONETSOC#29-2041.00.014618	"Emergency Medical Technician, Basic (EMT, B) [Emergency Medical Technicians and Paramedics]"
-* $ONETSOC#29-2061.00.024145	"Licensed Practical Nurse (LPN) [Licensed Practical and Licensed Vocational Nurses]"
+//* $ONETSOC#29-2041.00.014721	"EMT Intermediate (Emergency Medical Technician, Intermediate) [Emergency Medical Technicians and Paramedics]"
+//* $ONETSOC#29-2041.00.014725	"EMT-I/85 [Emergency Medical Technicians and Paramedics]"
+//* $ONETSOC#29-2041.00.014726	"EMT-I/99 [Emergency Medical Technicians and Paramedics]"
+//* $ONETSOC#53-3011.00.014718	"EMS First Responder (Emergency Medical Services First Responder) [Ambulance Drivers and Attendants, Except Emergency Medical Technicians]"
+//* $ONETSOC#29-2041.00.014618	"Emergency Medical Technician, Basic (EMT, B) [Emergency Medical Technicians and Paramedics]"
+//* $ONETSOC#29-2061.00.024145	"Licensed Practical Nurse (LPN) [Licensed Practical and Licensed Vocational Nurses]"
 
 
 ValueSet: Length_Based_Weight_Class_VS

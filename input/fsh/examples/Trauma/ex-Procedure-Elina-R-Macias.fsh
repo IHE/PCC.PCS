@@ -4,15 +4,17 @@ Title:      "Paramdicine Summary Paramedicine Procedure-external warming example
 Description: "The instance for Patient Elina R Macias Procedure-external warming Resource utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
-* status  = http://hl7.org/fhir/event-status#completed
+* status  = http://hl7.org/fhir/medication-statement-status#completed
 * data-absent-reason = http://terminology.hl7.org/CodeSystem/data-absent-reason#unknown
 * code = $sct#431949004  "Active external warming of subject"
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * performer.function = $sct#125677006   "Relative"
 * performer.actor = Reference(RelatedPerson/ex-Practitioner-Ellen-Costa)
 // more robust ?
+* performedDateTime	= "2022-10-09"
 * outcome = $sct#385669000 	"Successful"
 // prior to EMS Flag
+
 
 
 Instance:   ex-Procedure-Elina-R-Macias-Informing-Doctor
@@ -21,7 +23,7 @@ Title:      "Paramdicine Summary Paramedicine Procedure-Informing-Doctor example
 Description: "The instance for Patient Elina R Macias Procedure- Resource utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
-* status  = http://hl7.org/fhir/event-status#completed
+* status  = http://hl7.org/fhir/medication-statement-status#completed
 * performedDateTime = "2022-10-09T8:50:00-05:00"
 * code = $sct#304562007     "Informing doctor"
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
@@ -37,7 +39,7 @@ Title:      "Paramdicine Summary Paramedicine Procedure-Catheterisation-Of-Vein 
 Description: "The instance for Patient Elina R Macias Procedure-Catheterisation-Of-Vein Resource utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
-* status  = http://hl7.org/fhir/event-status#completed
+* status  = http://hl7.org/fhir/medication-statement-status#completed
 * performedDateTime = "2022-10-09T8:51:00-05:00"
 * code = $sct#392230005 "Catheterisation of vein"
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
@@ -74,6 +76,7 @@ Usage: #example
 * code = $sct#79321009 "Application of splint"
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * performer.actor = Reference(Practitioner/ex-Practitioner-Chase-Grey)
+* performedDateTime	= "2022-10-09T8:54:00-05:00"
 // prior to EMS Flag
 // written orders?/protocol 
 // response
@@ -95,16 +98,3 @@ Usage: #example
 // written orders?/protocol 
 // response
 
-
-
-* status  = http://hl7.org/fhir/ValueSet/medication-statement-status#in-progress
-* effectiveDateTime = "2022-10-09T8:52:00-05:00"
-* medicationCodeableConcept	= $RxNorm#7052 "morphine"
-* dosage.doseAndRate.doseQuantity = 10 $ucum#mg "mg"
-* dosage.route = $sct#47625008 "Intravenous use"
-* subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* performer.function = $sct#397897005   "Paramedic"
-* performer.actor = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
-// Complication 
-// outcome 
-// Authorizaiton 
