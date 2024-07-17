@@ -5,7 +5,7 @@ a standard classification of economic activities arranged so that entities can b
 Published by IHE with authority from the International Labor Organization Given on July 18th 2024. This code system will be removed if and when a more formal publication is taken on by this organization.  
 """
 Id: ISICRev4
-* ^Experimental = false 
+* ^experimental = false 
 * ^caseSensitive = true 
 * #A    "Agriculture, forestry and fishing"     "This section includes the exploitation of vegetal and animal natural resources, comprising the activities of growing of crops, raising and breeding of animals, harvesting of timber and other plants, animals or animal products from a farm or their natural"
   * #01   "Crop and animal production, hunting and related service activities"    "This division includes two basic activities, namely the production of crop products and production of animal products, covering also the forms of organic agriculture, the growing of genetically modified crops and the raising of genetically modified animal"

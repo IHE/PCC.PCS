@@ -9,10 +9,10 @@ Description: "The instance for Patient Elina R Macias VitalSigns-BloodPressure-S
 * effectiveDateTime = "2022-10-09T08:48:00-05:00"
 * method = $sct#239033002   "Digital examination"
 * device = Reference(Device/ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device)
-* component.code[+] = $loinc#8480-6
-* component.valueQuantity[=] = 102
-* component.code[+] = $loinc#8462-4
-* component.valueQuantity[=] = 64
+* component[+].code = $loinc#8480-6
+* component[=].valueQuantity = "102"
+* component[+].code = $loinc#8462-4
+* component[=].valueQuantity = "64"
 * performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 
@@ -166,10 +166,10 @@ Description: "The instance for Patient Elina R Macias VitalSigns-BloodPressure-S
 * effectiveDateTime = "2022-10-09T09:00:00-05:00"
 * method = $sct#239033002   "Digital examination"
 * device = Reference(Device/ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device)
-* component.code[+] = $loinc#8480-6
-* component.valueQuantity[=] = 98
-* component.code[+] = $loinc#8462-4
-* component.valueQuantity[=] = 60
+* component[+].code = $loinc#8480-6
+* component[=].valueQuantity = "98"
+* component[+].code = $loinc#8462-4
+* component[=].valueQuantity = "60"
 * performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 
@@ -298,10 +298,10 @@ Description: "The instance for Patient Elina R Macias VitalSigns-BloodPressure-S
 * effectiveDateTime = "2022-10-09T09:10:00-05:00"
 * method = $sct#239033002   "Digital examination"
 * device = Reference(Device/ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device)
-* component.code[+] = $loinc#8480-6
-* component.valueQuantity[=] = 100
-* component.code[+] = $loinc#8462-4
-* component.valueQuantity[=] = 62
+* component[+].code = $loinc#8480-6
+* component[=].valueQuantity = "100"
+* component[+].code = $loinc#8462-4
+* component[=].valueQuantity = "62"
 * performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-HeartRate-3 
@@ -430,10 +430,10 @@ Description: "The instance for Patient Elina R Macias VitalSigns-BloodPressure-S
 * effectiveDateTime = "2022-10-09T09:20:00-05:00"
 * method = $sct#239033002   "Digital examination"
 * device = Reference(Device/ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device)
-* component.code[+] = $loinc#8480-6
-* component.valueQuantity[=] = 196
-* component.code[+] = $loinc#8462-4
-* component.valueQuantity[=] = 60
+* component[+].code = $loinc#8480-6
+* component[=].valueQuantity = "196"
+* component[+].code = $loinc#8462-4
+* component[=].valueQuantity = "60"
 * performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device

@@ -4,7 +4,7 @@ ValueSet: IHE_PCC_VitalSigns_VS
 Title: "IHE PCC Vital Signs Value Set"
 Description: "The set of reccomended vital sign codes that can be used to represent vital signs in IHE's PCC profiles."
 Id: IHE.PCC.VitalSigns.VS
-* ^Experimental = false 
+* ^experimental = false 
 * codes from valueset http://hl7.org/fhir/ValueSet/observation-vitalsignresult
 * exclude $loinc#9843-4 "Head Occipital-frontal circumference"
 * $loinc#3141-9 "Body weight Measured"
@@ -15,7 +15,7 @@ ValueSet: IHE_PCC_mPSC_VitalSigns_VS
 Title: "IHE PCC mPSC Vital Signs Value Set"
 Description: "The set of vital sign codes that can be used for vital signs captured by paramedicine providers."
 Id: IHE.PCC.mPSC.VitalSigns.VS
-* ^Experimental = false 
+* ^experimental = false 
 //* codes from valueset IHE_PCC_VitalSigns_VS
 * $loinc#80341-1 "Respiratory Effort"
 * $loinc#67775-7 "Level of responsiveness"
@@ -31,7 +31,7 @@ ValueSet: IHE_PCC_mPSC_DataAbsentReason_VS
 Title: "IHE PCC mPSC Data Absent Reason Value Set"
 Description: "The set of Data Absent Reasons utilized on the mPSC profile elements."
 Id: IHE.PCC.mPSC.DataAbsentReason.VS
-* ^Experimental = false 
+* ^experimental = false 
 * codes from system http://terminology.hl7.org/CodeSystem/data-absent-reason
 * http://terminology.hl7.org/CodeSystem/v3-NullFlavor#NI    "NoInformation"
 * http://terminology.hl7.org/CodeSystem/v3-NullFlavor#NAV   "temporarily unavailable"
@@ -41,7 +41,7 @@ ValueSet: IHE_PCC_APGAR_VS
 Title: "IHE PCC mPSC APGAR Assessment Type Value Set"
 Description: "The set of APGAR assessment codes that can be used represent an APGAR score."
 Id: IHE.PCC.APGAR.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $loinc#48334-7 "APGAR 1 MINUTE"
 * $loinc#48333-9 "APGAR 5 MINUTE"
 * $loinc#48332-1 "APGAR 10 MINUTE"
@@ -52,7 +52,7 @@ ValueSet: IHE_PCC_Facility_Ward_VS
 Title: "IHE PCC mPSC Facility Ward Value Set"
 Description: "A subset of codes documenting the Hospital or facility unit/ward."
 Id: IHE.PCC.Facility.Ward.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#309906004	"Burns unit"
 // Cath -Lab 
 * $sct#309907008	"Cardiac intensive care unit"
@@ -91,7 +91,7 @@ ValueSet: Patient_Contact_Relationship_Roles_VS
 Title: "IHE PCC Patient Contact Relationship Roles Value Set"
 Description: "The roleCodes that encompas the relationships that can be had with a patient."
 Id: Patient.Contact.Relationship.Roles.VS
-* ^Experimental = false 
+* ^experimental = false 
 * codes from valueset http://hl7.org/fhir/ValueSet/patient-contactrelationship 
 * codes from system http://terminology.hl7.org/CodeSystem/v3-RoleCode where concept is-a #_PersonalRelationshipRoleType
 * http://terminology.hl7.org/CodeSystem/v3-RoleCode#GUARD   "guardian"
@@ -102,7 +102,7 @@ ValueSet: Physical_Finding_of_Abdomen_VS
 Title: "Physical Finding of Abdomen Value Set"
 Description: "A subset of Finding resulting from an abdominal assessment"
 Id: Physical.Finding.of.Abdomen.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#399963005	"Abrasion (disorder)"
 * $sct#284554003	"Avulsion - injury (disorder)"
 * $sct#25733008	        "Burn injury with charring (morphologic abnormality)"
@@ -137,7 +137,7 @@ ValueSet: Physical_Finding_of_Abdomen_TargetSite_VS
 Title: "Physical Finding of Abdomen Target Site Value Set"
 Description: "A subset of body site locations that apply to an abdominal assessment"
 Id: Physical.Finding.of.Abdomen.TargetSite.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#302553009    "Entire abdomen" 
 * $sct#68505006     "Structure of left lower quadrant of abdomen" 
 * $sct#86367003     "Structure of left upper quadrant of abdomen" 
@@ -151,7 +151,7 @@ ValueSet: Active_Advanced_Healthcare_Directives_Finding_VS
 Title: "Active Advanced Healthcare Directives Findings Value Set"
 Description: "The documentation of the finding of a patient having active advance directives"
 Id: Active.Advance.Directive.Finding.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#425396000	"Active advance directive with verification by family"
 * $sct#425395001	"Active living will"
 * $sct#425393008	"Active Durable Power of Attorney for Healthcare" 
@@ -167,7 +167,7 @@ ValueSet: Airbag_Type_VS
 Title: "Airbag Type Value Set"
 Description: "Coded values that can be used to represent the type of airbag observed"
 Id: Airbag.Type.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#102385008   "Front airbag, device (physical object)"
 * $sct#102386009   "Front driver airbag, device (physical object)"
 * $sct#102387000   "Front passenger airbag, device (physical object)"
@@ -179,7 +179,7 @@ ValueSet: Airway_Device_Confirmation_Method_VS
 Title: "Airway Device Confirmation Method Value Set"
 Description: "Confirmation method for airway device placement"
 Id: Airway.Device.Confirmation.Method.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#37931006     "Auscultation" 
 * $sct#14766002     "Aspiration" 
 * $sct#428482009	"colorimetric respired carbon dioxide monitoring" 
@@ -191,7 +191,7 @@ ValueSet: Airway_Device_Type_VS
 Title: "Airway Device Type Value Set"
 Description: "Coded values that can be used to represent the type of devices used for airway management"
 Id: Airway.Device.Type.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#429375002	"Esophageal tracheal double lumen supraglottic airway device" 
 //* $sct#450571000124105	"Single lumen supraglottic airway device" 
 * $sct#257268009	"Laryngeal mask"
@@ -243,7 +243,7 @@ ValueSet: Substance_Use_Evidence_VS
 Title: "Substance Use Evidence Value Set"
 Description: "the objects, observable entites, and information that indicates that the patient has used a substance."
 Id: Substance.Use.Evidence.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#704197006        "Admits alcohol use"
 * $sct#28045007         "Smell of alcohol on breath"
 * $sct#463792004        "Medicine bottle"
@@ -256,7 +256,7 @@ ValueSet: Barrier_To_Care_VS
 Title: "Barrier To Care Value Set"
 Description: "Circumstances limiting one's ability to provide care to a patient"
 Id: Barrier.To.Care.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#1400009	        "Spiritual or religious belief"
 * $sct#704301008	"Cultural belief conflict"
 * $sct#5294002	        "Developmental disorder"
@@ -282,7 +282,7 @@ ValueSet: Blood_Pressure_Measurement_Method_VS
 Title: "Blood Pressure Measurement Method Value Set"
 Description: "Technique or device used for measuring blood pressure"
 Id: Blood.Pressure.Measurement.Method.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#43770009        "Doppler device"
 * $sct#262259000       "Venous line"
 * $sct#261241001       "Arterial line"
@@ -295,7 +295,7 @@ ValueSet: Pulse_Rhythm_VS
 Title: "Pulse Rhythm Value Set"
 Description: "Findings of the pulse rhythm"
 Id: Pulse.Rhythm.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#271637005    "Pulse irregularly irregular"
 * $sct#271638000    "Pulse regularly irregular"
 * $sct#248632004    "Regular intermission in pulse"
@@ -306,7 +306,7 @@ ValueSet: Cardiac_Arrest_Etiology_VS
 Title: "Cardiac Arrest Etiology Value Set"
 Description: "Etiology of a cardiac arrest"
 Id: Cardiac.Arrest.Etiology.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#423191000	"Cardiac arrest due to cardiac disorder" 
 * $sct#424571008	"Cardiac arrest due to drowning" 
 * $sct#1149222004      "Overdose"
@@ -325,7 +325,7 @@ ValueSet: Cardiac_Arrest_Outcome_VS
 Title: "Cardiac Arrest Outcome Value Set"
 Description: "Outcome of an cardiac arrest event from paramedicine encounter"
 Id: Cardiac.Arrest.Outcome.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#32750006    "Inspection"
 
 
@@ -336,7 +336,7 @@ ValueSet: Cardiac_Arrest_Witness_Role_VS
 Title: "Cardiac Arrest Witness Role Value Set"
 Description: "Kind of person who witnessed a cardiac arrest"
 Id: Cardiac.Arrest.Witness.Role.VS
-* ^Experimental = false 
+* ^experimental = false 
 // reated person value set?
 * $sct#32750006    "Inspection"
 
@@ -346,7 +346,7 @@ ValueSet: Cardiac_Rhythm_Reading_VS
 Title: "Cardiac Rhythm Readings Value Set"
 Description: "Kind of rhythm found in a cardiac arrest patient"
 Id: Cardiac.Rhythm.Reading.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#49260003	        "Idioventricular rhythm"
 * $sct#397829000	"Asystole"
 * $sct#251143007	"Electrocardiogram artifact" 
@@ -389,7 +389,7 @@ ValueSet: Cardiopulmonary_Resuscitation_Type_VS
 Title: "Cardiopulmonary Resuscitation Type Value Set"
 Description: "Kind of procedure used for cardiopulmonary resuscitation"
 Id: Cardiopulmonary.Resuscitation.Type.VS
-* ^Experimental = false 
+* ^experimental = false 
 // todo
 * $sct#32750006    "Inspection"
 // 74596007     "Resuscitation with artificial ventilation" 
@@ -402,7 +402,7 @@ ValueSet: ChiefComplaint_Anatomic_Location_VS
 Title: "ChiefComplaint Anatomic Location Value Set"
 Description: "TBD"
 Id: ChiefComplaint.Anatomic.Location.VS
-* ^Experimental = false 
+* ^experimental = false 
 // todo
 * $sct#32750006    "Inspection"
 
@@ -410,7 +410,7 @@ ValueSet: ChiefComplaint_Organ_System_VS
 Title: "ChiefComplaint Organ System Value Set"
 Description: "TBD"
 Id: ChiefComplaint.Organ.System.VS
-* ^Experimental = false 
+* ^experimental = false 
 // todo
 * $sct#32750006    "Inspection"
 
@@ -418,7 +418,7 @@ ValueSet: Paramedicine_Treatment_Response_VS
 Title: "Paramedicine Treatment Response Value Set"
 Description: "the type of change in the patient's condition after a procedure, intervention, or a medication administration"
 Id: Response.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#385425000	"Improved" 
 * $sct#260388006	"No status change"
 * $sct#231877006	"Worse" 
@@ -433,7 +433,7 @@ ValueSet: Destination_Prearrival_Activation_Type_VS
 Title: "Destination Prearrival Activation Type Value Set"
 Description: "The location within the hospital that the patient was taken directly by EMS"
 Id: Destination.Prearrival.Activation.Type.VS
-* ^Experimental = false 
+* ^experimental = false 
 // todo
 * $sct#32750006    "Inspection"
 
@@ -454,7 +454,7 @@ ValueSet: Disaster_Type_VS
 Title: "Disaster Type Value Set"
 Description: "Kind of incident resulting in or likely to result in injuries or clinically adverse events"
 Id: Disaster.Type.VS
-* ^Experimental = false 
+* ^experimental = false 
 // todo
 * $sct#32750006    "Inspection"
 
@@ -465,7 +465,7 @@ ValueSet: Reason_For_Visit_VS
 Title: "Reason For Visit Value Set"
 Description: "Kind of medical problem or incident reported, subset"
 Id: Reason.For.Visit.VS
-* ^Experimental = false 
+* ^experimental = false 
 // todo
 * $sct#32750006    "Inspection"
 
@@ -473,7 +473,7 @@ ValueSet: ECG_Device_Type_VS
 Title: "ECG Device Type Value Set"
 Description: "Kind of electrocardiogram equipment"
 Id: Device.Type.VS
-* ^Experimental = false 
+* ^experimental = false 
 // todo
 * $sct#32750006    "Inspection"
 
@@ -486,7 +486,7 @@ ValueSet: Medication_Administration_Device_VS
 Title: "Medication Administration Device Value Set"
 Description: "Kind of electrocardiogram equipment"
 Id: Medication.Administration.Device.VS
-* ^Experimental = false 
+* ^experimental = false 
 // todo
 * $sct#425478008	"Blow by oxygen mask"
 * $sct#26412008	        "Endotracheal tube, device"
@@ -521,7 +521,7 @@ ValueSet: Paramedicine_Observation_Interpretation_VS
 Title: "Paramedicine Observation Interpretation Value Set"
 Description: "Interpretations of assessment scales applicable to paramedicine care"
 Id: Paramedicine.Observation.Interpretation.VS
-* ^Experimental = false 
+* ^experimental = false 
 * include codes from valueset http://hl7.org/fhir/ValueSet/observation-interpretation
 * $sct#419984006        "Inconclusive"
 
@@ -529,7 +529,7 @@ ValueSet: Paramedicine_Provider_Roles_VS
 Title: "Paramedicine Provider Roles Value Set"
 Description: "Extension of the known provider roles in HL7 to suppor the driver role of the Paramedicine Providers."
 Id: Paramedicine.Provider.Roles.VS
-* ^Experimental = false 
+* ^experimental = false 
 * include codes from valueset http://hl7.org/fhir/ValueSet/encounter-participant-type
 * $sct#236320001        "Vehicle driver"
 
@@ -537,7 +537,7 @@ ValueSet: Paramedicine_Provider_Types_USA_VS
 Title: "Paramedicine Provider Types Value Set"
 Description: "The Provider type codes added to include concepts for EMTs and other sub types of paramedicine providers in the USA. "
 Id: Paramedicine.Provider.Types.USA.VS
-* ^Experimental = false 
+* ^experimental = false 
 * include codes from valueset http://hl7.org/fhir/ValueSet/practitioner-role
 //* $ONETSOC#29-2041.00.014721	"EMT Intermediate (Emergency Medical Technician, Intermediate) [Emergency Medical Technicians and Paramedics]"
 //* $ONETSOC#29-2041.00.014725	"EMT-I/85 [Emergency Medical Technicians and Paramedics]"
@@ -551,7 +551,7 @@ ValueSet: Length_Based_Weight_Class_VS
 Title: "Length Based Weight Class Value Set"
 Description: "Weight estimated by tape measure"
 Id: Length.Based.Weight.Class.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#444474005	"Broselow Luten pediatric weight estimation blue zone" 
 * $sct#444503000	"Broselow Luten pediatric weight estimation green zone" 
 * $sct#736023001	"Broselow Luten pediatric weight estimation gray zone" 
@@ -567,7 +567,7 @@ ValueSet: Mechanism_Of_Injury_VS
 Title: "Mechanism Of Injury Value Set"
 Description: "Kind of physical phenomenon causing an injury"
 Id: Mechanism.Of.Injury.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#3821009	    "Blunt injury" 
 * $sct#48333001	    "Burn injury" 
 * $sct#53568006	    "Penetrating" 
@@ -582,7 +582,7 @@ ValueSet: Respiratory_Effort_VS
 Title: "Respiratory Effort Value Set"
 Description: "Findings that describe the respiratory efforts of the patient."
 Id: Respiratory.Effort.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#90480005	    "Interrupted breathing"
 * $sct#248583008	"Stops breathing"
 * $sct#1023001	    "Apnea" 
@@ -599,7 +599,7 @@ ValueSet: Medication_Complication_VS
 Title: "Medication Complication Value Set"
 Description: "Kind of abnormal effect associated with a medication adeministration"
 Id: Medication.Complication.VS
-* ^Experimental = false 
+* ^experimental = false 
 //TBD
 * $sct#53568006	    "Penetrating" 
 
@@ -608,7 +608,7 @@ ValueSet: Complication_Subset_VS
 Title: "Complication Subset Value Set"
 Description: "Kind of abnormal effect associated with a Procedure, interventon, or Medication Administration."
 Id: Complication.Subset.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#419284004       "Altered mental status"
 * $sct#1023001         "Apnea"
 * $sct#131148009       "Bleeding"
@@ -641,7 +641,7 @@ ValueSet: Paramedicine_Vehicle_Type_VS
 Title: "Paramedicine Vehicle Type Value Set"
 Description: "The Types of vehicles Paramedicine services may use."
 Id: Paramedicine.Vehicle.Type.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#49122002    "Ambulance"
 * $sct#73957001    "Air transport ambulance"
 * $sct#32472009    "Medical helicopter"
@@ -664,7 +664,7 @@ ValueSet: Vehicle_Type_VS
 Title: "Vehicle Type Value Set"
 Description: "The Types of vehicles."
 Id: Vehicle.Type.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#705447007    "Industrial transport vehicle"
 * $sct#21753002     "Aircraft, device"
 * $sct#73957001     "Air transport ambulance, device"
@@ -826,7 +826,7 @@ ValueSet: Location_In_Vehicle_VS
 Title: "Location In Vehicle Value Set"
 Description: "The seat or other locations that the patient has been found, within a vehicle."
 Id: Location.In.Vehicle.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#428922000       "Found in automobile driver seat (finding)"
 * $sct#429647007       "Found in automobile passenger seat (finding)"
 * $sct#428828002       "Found in automobile rear car seat (finding)"
@@ -858,7 +858,7 @@ ValueSet: Physical_Finding_of_Back_and_Spine_VS
 Title: "Physical Finding of Back and Spine Value Set"
 Description: "Findings resulting from a back and spine assessment"
 Id: Physical.Finding.of.Back.and.Spine.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#399963005	"Abrasion (disorder)"
 * $sct#284554003	"Avulsion - injury (disorder)"
 * $sct#25733008		"Burn injury with charring (morphologic abnormality)"
@@ -889,7 +889,7 @@ ValueSet: Physical_Finding_of_Back_and_Spine_TargetSite_VS
 Title: "Physical Finding of Back and Spine Target Site Value Set"
 Description: "A subset of body site locations that apply to a Back and Spine assessment"
 Id: Physical.Finding.of.Pupil.TargetSite.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#77568009    "Structure of back of trunk"
 * $sct#1141983003       "Structure of cervical vertebral column region"
 //Cervical Left 
@@ -913,7 +913,7 @@ ValueSet: Physical_Finding_of_Chest_VS
 Title: "Physical Finding of Chest Value Set"
 Description: "Findings resulting from a chest assessment"
 Id: Physical.Finding.of.Chest.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#399963005	"Abrasion (disorder)"
 * $sct#284554003	"Avulsion - injury (disorder)"
 * $sct#25733008		"Burn injury with charring (morphologic abnormality)"
@@ -948,7 +948,7 @@ ValueSet: Physical_Finding_of_Chest_TargetSite_VS
 Title: "Physical Finding of Chest Target Site Value Set"
 Description: "A subset of body site locations that apply to a chest assessment"
 Id: Physical.Finding.of.Chest.TargetSite.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#1290343009	"Structure of left half of anterior chest wall"
 * $sct#788647001	"Structure of left half of posterior chest wall"
 * $sct#1290342004	"Structure of right half of anterior chest wall"
@@ -965,7 +965,7 @@ ValueSet: Physical_Finding_of_Extremities_VS
 Title: "Physical Finding of Extremities Value Set"
 Description: "Findings resulting from an Extremities assessment"
 Id: Physical.Finding.of.Extremities.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#399963005	"Abrasion (disorder)"
 * $sct#284554003	"Avulsion - injury (disorder)"
 * $sct#25733008		"Burn injury with charring (morphologic abnormality)"
@@ -1016,7 +1016,7 @@ ValueSet: Physical_Finding_of_Extremities_TargetSite_VS
 Title: "Physical Finding of Extremities Target Site Value Set"
 Description: "A subset of body site locations that apply to a chest assessment"
 Id: Physical.Finding.of.Extremities.TargetSite.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#51636004	        "Structure of left ankle" 
 * $sct#6685009	        "Structure of right ankle" 
 * $sct#368208006	"Left upper arm structure" 
@@ -1079,7 +1079,7 @@ ValueSet: Physical_Finding_of_Eye_VS
 Title: "Physical Finding of Eye Value Set"
 Description: "Findings resulting from an Eye assessment"
 Id: Physical.Finding.of.Eye.VS
-* ^Experimental = false 
+* ^experimental = false 
 // need to find codes for generic blindness 
 * $sct#193570009	"Cataract" 
 * $sct#246636008	"Hazy vision" 
@@ -1111,7 +1111,7 @@ ValueSet: Physical_Finding_of_Eye_TargetSite_VS
 Title: "Physical Finding of Eye Target Site Value Set"
 Description: "The eye assement finding is about"
 Id: Physical.Finding.of.Eye.TargetSite.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#8966001	    "Left eye structure" 
 * $sct#18944008	    "Right eye structure" 
 * $sct#40638003     "Structure of both eyes"
@@ -1121,7 +1121,7 @@ ValueSet: Physical_Finding_of_Pupil_VS
 Title: "Physical Finding of Pupil Value Set"
 Description: "Findings resulting from a pupil assessment"
 Id: Physical.Finding.of.Pupil.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#418970005	"Pupil equal round and reacting to light" 
 * $sct#271732006	"Pupil irregular" 
 * $sct#421910007	"Teardrop pupil" 
@@ -1155,7 +1155,7 @@ ValueSet: Physical_Finding_of_Face_VS
 Title: "Physical Finding of Face Value Set"
 Description: "Findings resulting from a face assessment"
 Id: Physical.Finding.of.Face.VS
-* ^Experimental = false 
+* ^experimental = false 
 // Include codes that are a part of the SNOMED 301310005  Finding of face tree 
 * $sct#399963005	"Abrasion (disorder)"
 * $sct#284554003	"Avulsion - injury (disorder)"
@@ -1187,7 +1187,7 @@ ValueSet: Physical_Finding_of_Head_VS
 Title: "Physical Finding of Head Value Set"
 Description: "Findings resulting from a head assessment"
 Id: Physical.Finding.of.Head.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#399963005	"Abrasion (disorder)"
 * $sct#284554003	"Avulsion - injury (disorder)"
 * $sct#25733008		"Burn injury with charring (morphologic abnormality)"
@@ -1217,7 +1217,7 @@ ValueSet: Physical_Finding_of_Heart_VS
 Title: "Physical Finding of Heart Value Set"
 Description: "Findings resulting from a heart assessment"
 Id: Physical.Finding.of.Heart.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#3747008	    "Ejection click"
 * $sct#271662005	"Heart sounds diminished"
 * $sct#30782001	    "Diastolic murmur" 
@@ -1234,7 +1234,7 @@ ValueSet: Physical_Finding_of_Lung_VS
 Title: "Physical Finding of Lung Value Set"
 Description: "Findings resulting from a lung assessment"
 Id: Physical.Finding.of.Lung.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#65503000	        "Absent breath sounds" 
 * $sct#58840004	        "Decreased breath sounds" 
 * $sct#48348007	        "Normal breath sounds" 
@@ -1256,7 +1256,7 @@ ValueSet: Physical_Finding_of_Lung_TargetSite_VS
 Title: "Physical Finding of Lung Tartget Site Value Set"
 Description: "The lung assement finding is about"
 Id: Physical.Finding.of.Lung.TargetSite.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#44029006	    "Left lung structure" 
 * $sct#3341006	    "Right lung structure" 
 * $sct#74101002	    "Both lungs"
@@ -1266,7 +1266,7 @@ ValueSet: Paramedicine_Physical_Findings_of_Nervous_System_VS
 Title: "Physical Finding of Nervous System Value Set"
 Description: "A subset of cades to deffine finsings that come from a Physical Exam of the Nervous System."
 Id: Paramedicine.Physical.Findings.of.Nervous.System.VS
-* ^Experimental = false 
+* ^experimental = false 
 // codes form the Neurological finding 102957003 tree 
 * $sct#60818005	    "Aphagia"
 * $sct#87486003	    "Aphasia"
@@ -1297,7 +1297,7 @@ ValueSet: Paramedicine_Physical_Findings_of_Respiratory_System_VS
 Title: "Physical Finding of Respiratory System Value Set"
 Description: "A subset of cades to deffine finsings that come from a Physical Exam of the Respiratory System."
 Id: Paramedicine.Physical.Findings.of.Respiratory.System.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#65503000	        "Absent breath sounds" 
 * $sct#58840004	        "Decreased breath sounds" 
 * $sct#48348007	        "Normal breath sounds" 
@@ -1323,7 +1323,7 @@ ValueSet: Physical_Finding_of_Skin_VS
 Title: "Physical Finding of Skin Value Set"
 Description: "A subset of cades to deffine finsings that come from a Physical Exam of the skin"
 Id: Physical.Finding.of.Skin.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#102598000	"Clammy skin"
 * $sct#703883009	"Cold skin"
 * $sct#119419001	"Cyanosis of skin"
@@ -1355,7 +1355,7 @@ ValueSet: Physical_Finding_of_Neck_VS
 Title: "Physical Finding of Neck Value Set"
 Description: "A subset of cades to deffine finsings that come from a Physical Exam of the Neck"
 Id: Physical.Finding.of.Neck.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#399963005	"Abrasion"
 * $sct#284554003	"Avulsion - injury"
 * $sct#131148009	"Bleeding"
@@ -1393,7 +1393,7 @@ ValueSet: Physical_Finding_of_Pelvis_VS
 Title: "Physical Finding of Pelvis Value Set"
 Description: "A subset of cades to deffine finsings that come from a Physical Exam of the Pelvis"
 Id: Physical.Finding.of.Pelvis.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#399963005	"Abrasion (disorder)"
 * $sct#284554003	"Avulsion - injury (disorder)"
 * $sct#25733008		"Burn injury with charring (morphologic abnormality)"
@@ -1405,7 +1405,7 @@ ValueSet: Physical_Finding_of_GenitourinaryTract_VS
 Title: "Physical Finding of Genitourinary Tract Value Set"
 Description: "A subset of cades to deffine finsings that come from a Physical Exam of the Genitourinary Tract"
 Id: Physical.Finding.of.GenitourinaryTract.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#399963005	"Abrasion (disorder)"
 * $sct#284554003	"Avulsion - injury (disorder)"
 * $sct#25733008		"Burn injury with charring (morphologic abnormality)"
@@ -1416,7 +1416,7 @@ ValueSet: Physical_Finding_of_Pelvis_and_Genitourinary_VS
 Title: "Physical Finding of Pelvis and Genitourinary Value Set"
 Description: "A subset of cades to deffine finsings that come from a Physical Exam of the Pelvis and Genitourinary Tract"
 Id: Physical.Finding.of.Pelvis.and.Genitourinary.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#399963005	"Abrasion"
 * $sct#284554003	"Avulsion - injury"
 * $sct#131148009	"Bleeding"
@@ -1451,7 +1451,7 @@ ValueSet: Physical_Finding_of_Back_VS
 Title: "Physical Finding of Back Value Set"
 Description: "A subset of codes to deffine finsings that come from a Physical Exam of the back"
 Id: Physical.Finding.of.Back.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#399963005	"Abrasion (disorder)"
 * $sct#284554003	"Avulsion - injury (disorder)"
 * $sct#25733008		"Burn injury with charring (morphologic abnormality)"
@@ -1463,7 +1463,7 @@ ValueSet: Physical_Finding_of_Back_TargetSite_VS
 Title: "Physical Finding of Back Target Site Value Set"
 Description: "A subset of codes to deffine finsings that come from a Physical Exam of the back target site."
 Id: Physical.Finding.of.Back.TargetSite.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#399963005	"Abrasion (disorder)"
 * $sct#284554003	"Avulsion - injury (disorder)"
 * $sct#25733008		"Burn injury with charring (morphologic abnormality)"
@@ -1476,7 +1476,7 @@ ValueSet: Physical_Finding_of_Spine_TargetSite_VS
 Title: "Physical Finding of Spine Spine Target Site Value Set"
 Description: "A subset of codes to deffine finsings that come from a Physical Exam of the spine target site."
 Id: Physical.Finding.of.Spine.TargetSite.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#399963005	"Abrasion (disorder)"
 * $sct#284554003	"Avulsion - injury (disorder)"
 * $sct#25733008		"Burn injury with charring (morphologic abnormality)"
@@ -1489,7 +1489,7 @@ ValueSet: Weight_Estimation_Tape_Values_VS
 Title: "Physical Finding of Pelvis and Genitourinary Value Set"
 Description: "This value set applies coded values to the Broselow-Luten color-coded length-based system."
 Id: Weight.Estimation.Tape.Values.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#444474005	"Broselow Luten pediatric weight estimation blue zone"
 * $sct#444503000	"Broselow Luten pediatric weight estimation green zone"
 * $sct#736023001	"Broselow Luten pediatric weight estimation gray zone"
@@ -1506,7 +1506,7 @@ ValueSet: Collision_Object_VS
 Title: "Collision Object Value Set"
 Description: "What has been hit in a Collision"
 Id: Collision.Object.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#71783008         "Automobile, device"
 * $sct#32906002         "Victim, pedestrian in vehicular AND/OR traffic accident"
 * $sct#25139002         "Moped, device"
@@ -1536,7 +1536,7 @@ ValueSet: Transport_Method_VS
 Title: "Transport Method Value Set"
 Description: "The Type of transport that is taking place."
 Id: Transport.Method.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#73957001     "Air transport ambulance, device"
 * $sct#32472009     "Medical helicopter, device"
 * $sct#44613004        "Ground transport ambulance, device"
@@ -1559,7 +1559,7 @@ ValueSet: Level_Of_Responsiveness_AVPU_VS
 Title: "Level Of Responsiveness AVPU Value Set"
 Description: "Level Of Responsiveness AVPU findings"
 Id: Level.Of.Responsiveness.AVPU.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#248234008     "Mentally alert"
 * $sct#255373000     "Verbal"
 * $sct#422768004     "Unresponsive"
@@ -1569,7 +1569,7 @@ ValueSet: Pathient_Transfer_to_Ambulance_Method_VS
 Title: "Pathient Transfer to Ambulance_Method Value Set"
 Description: "How the Patient was transfered into the Ambulance."
 Id: Pathient.Transfer.to.Ambulance.Method.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#58938008		"Wheelchair device"
 * $sct#720991006        "Ambulance stretcher, pneumatically-assisted"
 * $sct#700597006	"Ambulance stretcher, manual"
@@ -1596,7 +1596,7 @@ ValueSet: Paramedicine_Reason_For_Visit_VS
 Title: "Paramedicine Reason For Visit Value Set"
 Description: "A subset of Reason codes that are informed by NEMSIS Dispatch Reasons as a reccomended subset."
 Id: Paramedicine.Reason.For.Visit.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#21522001         "Abdominal pain"
 * $sct#118948005       "Disorder of abdomen"
 * $sct#419076005       "Allergic reaction"
@@ -1681,7 +1681,7 @@ ValueSet: Paramedicine_Emergency_Event_Sub_List_VS
 Title: "Paramedicine Emergency Event Sub List Value Set"
 Description: "A subset of the Events that a PAramedicince Service will respond to to initiate an encounter."
 Id: Paramedicine.Emergency.Event.Sub.List.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#409508005       "Bioterrorism related event"
 * $sct#409495001       "Bioterrorist attack"
 * $sct#781249001       "Consumption of contaminated food"
@@ -1771,7 +1771,7 @@ ValueSet: Safety_Equipment_VS
 Title: "Safety Equipment Value Set"
 Description: "Safety Equiptment"
 Id: Safety.Equipment.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#397866006        "Staff injury or damage"
 
 //todo
@@ -1779,14 +1779,14 @@ ValueSet: Protective_Equipment_VS
 Title: "Protective Equipment Value Set"
 Description: "Protective Equipment"
 Id: Protective.Equipment.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#397866006        "Staff injury or damage"
 
 ValueSet: Stroke_Scale_Type_VS
 Title: "Stroke Scale Type Value Set"
 Description: "The codes that identify what stroke scale is used to identify a stroke in the field."
 Id: Stroke.Scale.Type.VS
-* ^Experimental = false 
+* ^experimental = false 
 * $sct#1290002002   "Alberta Stroke Program Early CT score"
 * $sct#705003005    "Stroke impact scale version 3.0"
 * $sct#1287356003   "Cincinnati Prehospital Stroke Scale"
@@ -1797,7 +1797,7 @@ ValueSet: Stroke_Assessment_Interpretation_VS
 Title: "Stroke Assessment Interpretation Value Set"
 Description: "The codes that identify what stroke scale is used to identify a stroke in the field."
 Id: Stroke.Assessment.Interpretation.VS
-* ^Experimental = false 
+* ^experimental = false 
 * http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#NEG    "Negative"
 * http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#POS    "Positive"
 * $sct#419984006    "Inconclusive"
@@ -1807,7 +1807,7 @@ ValueSet: PSC_Location_Type_VS
 Title: "PSC Location Type Value Set"
 Description: "Loaction types used to descrive the type of facility or environment in a Paramedicine Encounter."
 Id: PSC.Location.Type.VS
-* ^Experimental = false 
+* ^experimental = false 
 * codes from valueset http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType
 * $sct#34261000087105   "Dispatch location"
 * $sct#702869004    "Incident site"
