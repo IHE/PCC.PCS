@@ -7,11 +7,11 @@ Usage: #example
 * identifier.value = "37468674"
 * status = http://hl7.org/fhir/fm-status#active
 * type = http://terminology.hl7.org/CodeSystem/v3-ActCode#SUBSUPP
-* subscriber = Reference(Paitent/ex-Patient-Elina-R-Macias)
+* subscriber = Reference(Patient/ex-Patient-Elina-R-Macias)
 * relationship = http://terminology.hl7.org/CodeSystem/subscriber-relationship#self
 * payor = Reference(Organization/ex-Coverage-Elina-R-Macias-Organization)
 * order = 1
-* beneficiary = Reference(Paitent/ex-Patient-Elina-R-Macias) 
+* beneficiary = Reference(Patient/ex-Patient-Elina-R-Macias) 
 
 
 Instance: ex-Coverage-Elina-R-Macias-Organization
