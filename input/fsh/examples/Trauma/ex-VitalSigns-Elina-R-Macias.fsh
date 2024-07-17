@@ -137,7 +137,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Pain Resource u
 * code = $loinc#38208-5
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T08:48:30-05:00"
-* valueQuantity = 8
+* valueInteger = 8
 * method = $sct#1284852002  "Numeric Pain Rating Scale"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-AVPU-1  
@@ -279,7 +279,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Pain Resource u
 * code = $loinc#38208-5
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T09:00:00-05:00"
-* valueQuantity = 5
+* valueInteger = 5
 * method = $sct#1284852002  "Numeric Pain Rating Scale"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Systolic-3
@@ -409,7 +409,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Pain Resource u
 * code = $loinc#38208-5
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T09:10:00-05:00"
-* valueQuantity = 5
+* valueInteger = 5
 * method = $sct#1284852002  "Numeric Pain Rating Scale"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Systolic-4
@@ -546,6 +546,6 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Pain Resource u
 * code = $loinc#38208-5
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T09:20:00-05:00"
-* valueQuantity = 5
+* valueInteger = 5
 * method = $sct#1284852002  "Numeric Pain Rating Scale"
 
