@@ -40,8 +40,43 @@ Id: IHE.PCC.APGAR.VS
 * $sct#1287344004 "Apgar score"
 
 
+ValueSet: IHE_PCC_Facility_Ward_VS
+Description: "TBD."
+Id: IHE.PCC.Facility.Ward.VS
+* $sct#309906004	"Burns unit"
+// Cath -Lab 
+* $sct#309907008	"Cardiac intensive care unit"
+* $sct#309926000	"Gastroenterology department"
+* $sct#284546000	"Hospice"
+* $sct#18678000	    "Hyperbaric oxygen therapy" 
+* $sct#91318002	    "Hyperbaric chamber, device"
+* $sct#309904001	"Intensive care unit" 
+* $sct#52668009	    "Hospital-based birthing center" 
+* $sct#398156002	"Medical or surgical floor" 
+* $sct#309958005	"Psychiatry department" 
+* $sct#441994008	"Medical intensive care unit"
+* $sct#405269005	"Neonatal intensive care unit" 
+* $sct#427695007	"Newborn nursery unit" 
+* $sct#309945009	"Pediatric department" 
+* $sct#309910001	"Pediatric intensive care unit"
+* $sct#225738002	"Operating room" 
+* $sct#309989009	"Orthopedic department" 
+* $sct#22232009	    "Hospital" 
+* $sct#33022008	    "Hospital-based outpatient department"
+* $sct#79491001	    "Hospital-based radiology facility" 
+* $sct#90003000	    "Magnetic resonance imaging unit, device"
+* $sct#67670006	    "Radiographic-tomographic unit, device"
+* $sct#39821008	    "Positron emission tomography unit, device" 
+* $sct#225747005	"X-ray department"
+* $sct#309903007	"Radiotherapy department "
+* $sct#309940004	"Rehabilitation department" 
+* $sct#418433008	"Surgical intensive care unit" 
+* $sct#89972002	    "Hospital-based outpatient oncology clinic" 
+* $sct#90484001	    "Hospital-based outpatient general surgery clinic" 
 
-// Acuity value set? US centric 
+
+
+
 ValueSet: Patient_Contact_Relationship_Roles_VS
 Description: "The roleCodes that encompas the relationships that can be had with a patient."
 Id: Patient.Contact.Relationship.Roles.VS
@@ -432,15 +467,25 @@ Id: Paramedicine.Observation.Interpretation.VS
 ValueSet: Paramedicine_Provider_Roles_VS
 Description: "TBD"
 Id: Paramedicine.Provider.Roles.VS
-//* include codes from http://hl7.org/fhir/ValueSet/observation-interpretation
-* $sct#419984006        "Inconclusive"
+* include codes from CodeSystem http://terminology.hl7.org/CodeSystem/v2-0286 
+* $sct#236320001        "Vehicle driver"
 
 ValueSet: Paramedicine_Provider_Types_VS
 Description: "TBD"
 Id: Paramedicine.Provider.Types.VS
-//* include codes from http://hl7.org/fhir/ValueSet/observation-interpretation
-* $sct#419984006        "Inconclusive"
+* include codes from valueset http://hl7.org/fhir/ValueSet/practitioner-role
+* $ISCO08#224	    "Paramedical Practitioners"
 
+ValueSet: Paramedicine_Provider_Types_USA_VS
+Description: "TBD"
+Id: Paramedicine.Provider.Types.VS
+* include codes from valueset http://hl7.org/fhir/ValueSet/practitioner-role
+* $ONETSOC#29-2041.00.014721	"EMT Intermediate (Emergency Medical Technician, Intermediate) [Emergency Medical Technicians and Paramedics]"
+* $ONETSOC#29-2041.00.014725	"EMT-I/85 [Emergency Medical Technicians and Paramedics]"
+* $ONETSOC#29-2041.00.014726	"EMT-I/99 [Emergency Medical Technicians and Paramedics]"
+* $ONETSOC#53-3011.00.014718	"EMS First Responder (Emergency Medical Services First Responder) [Ambulance Drivers and Attendants, Except Emergency Medical Technicians]"
+* $ONETSOC#29-2041.00.014618	"Emergency Medical Technician, Basic (EMT, B) [Emergency Medical Technicians and Paramedics]"
+* $ONETSOC#29-2061.00.024145	"Licensed Practical Nurse (LPN) [Licensed Practical and Licensed Vocational Nurses]"
 
 
 ValueSet: Length_Based_Weight_Class_VS
@@ -754,7 +799,7 @@ Id: Physical.Finding.of.Back.and.Spine.VS
 * $sct#65124004		"Swelling (finding)"
 * $sct#125667009	"Contusion (disorder)"
 * $sct#247348008	"Tenderness (finding)"
-* $sct#22253000          "Pain"
+* $sct#22253000     "Pain"
 * $sct#425423002	"Pain provoked by movement"
 
 
@@ -762,18 +807,20 @@ ValueSet: Physical_Finding_of_Back_and_Spine_TargetSite_VS
 Description: "A subset of body site locations that apply to a Back and Spine assessment"
 Id: Physical.Finding.of.Pupil.TargetSite.VS
 * $sct#77568009    "Structure of back of trunk"
-
 * $sct#1141983003       "Structure of cervical vertebral column region"
-* $sct#1017210004       "Structure of left lumbar region of back" 
-* $sct#1141990008	"Entire lumbar vertebral column region" 
+//Cervical Left 
+//Cervical Right 
+* $sct#1141985005   "Structure of lumbar vertebral column region"
+* $sct#1017210004   "Structure of left lumbar region of back" 
 * $sct#1017211000	"Structure of right lumbar region of back" 
 * $sct#40768004	         "Left thorax structure" 
 * $sct#1141986006        "Structure of thoracic vertebral column region"
 * $sct#51872008	        "Right thorax structure" 
-
 * $sct#1144746008      "Structure of sacral vertebral column region"
-
+// left sacral structure
+// right sacral structure
 * $sct#424072006   "Structure of thoracic paraspinous muscle group"
+* $sct#55678000     "Structure of spinous process of vertebra" 
 // Finish finding some codes
 
 
@@ -814,7 +861,15 @@ Id: Physical.Finding.of.Chest.VS
 ValueSet: Physical_Finding_of_Chest_TargetSite_VS
 Description: "A subset of body site locations that apply to a chest assessment"
 Id: Physical.Finding.of.Chest.TargetSite.VS
-// need to find new codes 
+* $sct#1290343009	"Structure of left half of anterior chest wall"
+* $sct#788647001	"Structure of left half of posterior chest wall"
+* $sct#1290342004	"Structure of right half of anterior chest wall"
+* $sct#788648006	"Structure of right half of posterior chest wall"
+* $sct#63698005	    "Anterior chest wall structure"
+* $sct#76052000	    "Structure of posterior chest wall"
+* $sct#40768004	    "Left thorax structure"
+* $sct#51872008	    "Right thorax structure"
+
 
 
 
@@ -963,7 +1018,7 @@ Description: "The eye assement finding is about"
 Id: Physical.Finding.of.Eye.TargetSite.VS
 * $sct#8966001	    "Left eye structure" 
 * $sct#18944008	    "Right eye structure" 
-* $sct#40638003        "Structure of both eyes"
+* $sct#40638003     "Structure of both eyes"
 
 
 ValueSet: Physical_Finding_of_Pupil_VS
@@ -1001,6 +1056,7 @@ Id: Physical.Finding.of.Pupil.VS
 ValueSet: Physical_Finding_of_Face_VS
 Description: "Findings resulting from a face assessment"
 Id: Physical.Finding.of.Face.VS
+// Include codes that are a part of the SNOMED 301310005  Finding of face tree 
 * $sct#399963005	"Abrasion (disorder)"
 * $sct#284554003	"Avulsion - injury (disorder)"
 * $sct#25733008		"Burn injury with charring (morphologic abnormality)"
@@ -1024,6 +1080,8 @@ Id: Physical.Finding.of.Face.VS
 * $sct#125667009	"Contusion (disorder)"
 * $sct#247348008	"Tenderness (finding)"
 * $sct#110014005	"Decapitation (disorder)"
+* $sct#95666008	    "Weakness of face muscles"
+
 
 ValueSet: Physical_Exam_Findings_Base_VS
 Description: "A subset of findings and disorders that may be found in a physical finsing from an assessment."
@@ -1085,15 +1143,16 @@ Id: Physical.Finding.of.Head.VS
 ValueSet: Physical_Finding_of_Heart_VS
 Description: "Findings resulting from a heart assessment"
 Id: Physical.Finding.of.Heart.VS
-* $sct#3747008	        "Ejection click"
+* $sct#3747008	    "Ejection click"
 * $sct#271662005	"Heart sounds diminished"
-* $sct#30782001	        "Diastolic murmur" 
-* $sct#31574009	        "Systolic murmur" 
+* $sct#30782001	    "Diastolic murmur" 
+* $sct#31574009	    "Systolic murmur" 
 * $sct#281900007	"No abnormality detected" 
-* $sct#76310001	        "Abnormal first heart sound, S>1<" 
-* $sct#82048005	        "Abnormal second heart sound, S>2< "
-* $sct#67551009	        "Abnormal third heart sound, S>3<" 
-* $sct#86484008	        "Abnormal fourth heart sound, S>4<" 
+* $sct#7036007      "Pericardial friction rub"
+* $sct#76310001	    "Abnormal first heart sound, S>1<" 
+* $sct#82048005	    "Abnormal second heart sound, S>2< "
+* $sct#67551009	    "Abnormal third heart sound, S>3<" 
+* $sct#86484008	    "Abnormal fourth heart sound, S>4<" 
 
 
 ValueSet: Physical_Finding_of_Lung_VS
@@ -1121,19 +1180,83 @@ Description: "The lung assement finding is about"
 Id: Physical.Finding.of.Lung.TargetSite.VS
 * $sct#44029006	    "Left lung structure" 
 * $sct#3341006	    "Right lung structure" 
-// better lung code for bilateral
+* $sct#74101002	    "Both lungs"
+
+
+ValueSet: Paramedicine_Physical_Findings_of_Nervous_System_VS
+Description: "TBD"
+Id: Paramedicine.Physical.Findings.of.Nervous.System.VS
+// codes form the Neurological finding 102957003 tree 
+* $sct#60818005	    "Aphagia"
+* $sct#87486003	    "Aphasia"
+* $sct#223176004	"Cerebellar disorder"
+* $sct#281900007	"No abnormality detected"
+* $sct#23073007	    "Decerebrate posture"
+* $sct#85157005	    "Decorticate posture"
+* $sct#22325002	    "Abnormal gait"
+* $sct#8117002	    "Gait normal"
+* $sct#278285008	"Left hemiplegia"
+* $sct#278284007	"Right hemiplegia"
+* $sct#128974000	"Baseline state"
+* $sct#230456007	"Status epilepticus"
+* $sct#91175000	    "Seizure" 
+* $sct#719401001	"Intelligible speech"
+* $sct#289195008	"Slurred speech" 
+* $sct#20022000	    "Hemiparesis"
+* $sct#26079004	    "Tremor"
+* $sct#734756006	"Weakness of left facial muscle" 
+* $sct#734757002	"Weakness of right facial muscle" 
+* $sct#278287000	"Left hemiparesis" 
+* $sct#278286009	"Right hemiparesis" 
+* $sct#428334004	"Downward drift of outstretched supinated arm"
+
+
+
+ValueSet: Paramedicine_Physical_Findings_of_Respiratory_System_VS
+Description: "TBD"
+Id: Paramedicine.Physical.Findings.of.Respiratory.System.VS
+* $sct#65503000	        "Absent breath sounds" 
+* $sct#58840004	        "Decreased breath sounds" 
+* $sct#48348007	        "Normal breath sounds" 
+* $sct#24385003	        "Foreign body in lung" 
+* $sct#248549001	"Labored breathing"  
+* $sct#281900007	"No abnormality detected" 
+* $sct#301355003	"Pain of respiratory structure" 
+* $sct#426976009	"pain provoked by breathing" 
+* $sct#48409008	        "Respiratory crackles "
+* $sct#53541006	        "Low-pitched rhonchi "
+* $sct#24612001	        "Wheeze - rhonchi "
+* $sct#70407001	        "Stridor" 
+* $sct#9763007	        "Expiratory wheezing" 
+* $sct#31572008	        "Inspiratory wheezing" 
+
+
+
+
 
 
 
 ValueSet: Physical_Finding_of_Skin_VS
 Description: "TBD"
 Id: Physical.Finding.of.Skin.VS
-* $sct#399963005        "Abrasion (disorder)"
-* $sct#284554003	"Avulsion - injury (disorder)"
-* $sct#25733008		"Burn injury with charring (morphologic abnormality)"
-* $sct#131148009        "Bleeding "
-* $sct#48333001         "Burn injury"
-
+* $sct#102598000	"Clammy skin"
+* $sct#703883009	"Cold skin"
+* $sct#119419001	"Cyanosis of skin"
+* $sct#52613005	    "Excessive sweating"
+* $sct#16386004	    "Dry skin" 
+* $sct#248213001	"Flushed complexion"
+* $sct#707793005	"Hot skin" 
+* $sct#267030001	"Yellow or jaundiced color" 
+* $sct#13423002	    "Lividity" 
+* $sct#406128001	"Mottling of skin"
+* $sct#225544001	"Skin appearance normal" 
+* $sct#398979000	"Pale complexion" 
+* $sct#425244000	"Decreased skin turgor"
+* $sct#827160004	"Erythematous rash" 
+* $sct#102599008	"Warm skin" 
+* $sct#50427001	    "Increased capillary filling time" 
+* $sct#45332005	    "Normal capillary filling" 
+* $sct#27157002	    "Decreased capillary filling time" 
 
 // mental status assessment findings
 
@@ -1146,12 +1269,33 @@ Id: Physical.Finding.of.Skin.VS
 ValueSet: Physical_Finding_of_Neck_VS
 Description: "TBD"
 Id: Physical.Finding.of.Neck.VS
-* $sct#110014005		"Decapitation (disorder)"
-* $sct#449161000124101	        "Distention of jugular vein (finding)"
-* $sct#70407001			"Stridor (finding)"
-* $sct#3830001			"Subcutaneous emphysema (disorder)"
-* $sct#271630007		"Trachea displaced to left (disorder)"
-* $sct#271631006		"Trachea displaced to right (disorder)"
+* $sct#399963005	"Abrasion"
+* $sct#284554003	"Avulsion - injury"
+* $sct#131148009	"Bleeding"
+* $sct#50960005	    "Hemorrhage"
+// XXX	Burn injury with blistering
+* $sct#25733008	    "Burn injury with charring"
+// XXX	Burn injury with redness
+// XXX	Burn injury with white waxy appearance
+* $sct#110014005	"Decapitation"
+* $sct#125670008	"Foreign body"
+* $sct#449161000124101	"Distention of jugular vein"
+* $sct#312608009	"Laceration - injury "
+* $sct#281900007	"No abnormality detected"
+* $sct#22253000	    "Pain" 
+* $sct#312609001	"Puncture wound - injury"
+* $sct#425322008	"Stab wound "
+* $sct#70407001	    "Stridor" 
+* $sct#3830001	    "Subcutaneous emphysema"
+* $sct#271630007	"Trachea displaced to left "
+* $sct#271631006	"Trachea displaced to right "
+* $sct#283545005	"Gunshot wound"
+* $sct#125665001	"Crushing injury "
+* $sct#65124004	    "Swelling" 
+* $sct#125667009	"Contusion" 
+* $sct#417893002	"Deformity" 
+* $sct#247348008	"Tenderness" 
+
 
 
 
@@ -1176,6 +1320,38 @@ Id: Physical.Finding.of.GenitourinaryTract.VS
 * $sct#25733008		"Burn injury with charring (morphologic abnormality)"
 * $sct#131148009        "Bleeding "
 * $sct#48333001         "Burn injury"
+
+ValueSet: Physical_Finding_of_Pelvis_and_Genitourinary_VS
+Description: "TBD"
+Id: Physical.Finding.of.Pelvis.and.Genitourinary.VS
+* $sct#399963005	"Abrasion"
+* $sct#284554003	"Avulsion - injury"
+* $sct#131148009	"Bleeding"
+* $sct#50960005	    "Hemorrhage"
+// XXX	Burn injury with blistering
+* $sct#25733008	    "Burn injury with charring"
+// XXX	Burn injury with redness
+// XXX	Burn injury with white waxy appearance
+* $sct#125670008	"Foreign body"
+* $sct#282772005	"Genital injury"
+* $sct#312608009	"Laceration - injury"
+* $sct#300577008	"Finding of lesion"
+* $sct#300862005	"Mass of body region"
+// pulsating mass term needed 	
+* $sct#281900007	"No abnormality detected"
+* $sct#22253000	    "Pain"
+* $sct#77493009	    "Fracture of pelvis"
+* $sct#444792001	"Instability of joint of pelvis"
+* $sct#6273006	    "Priapism"
+* $sct#89934007	    "Crowning"
+* $sct#312609001	"Puncture wound - injury"
+* $sct#425322008	"Stab wound"
+* $sct#247348008	"Tenderness"
+* $sct#283545005	"Gunshot wound"
+* $sct#125665001	"Crushing injury"
+* $sct#65124004	    "Swelling"
+* $sct#125667009	"Contusion"
+
 
 
 ValueSet: Physical_Finding_of_Back_VS

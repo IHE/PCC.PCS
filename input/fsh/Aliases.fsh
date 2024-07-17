@@ -6,3 +6,4 @@ Alias: $ICD10 = http://hl7.org/fhir/sid/icd-10
 Alias: $NEMSIS = NEMSIS
 Alias: $ISCO08 = InternationalClassificationOfOccupations2008
 Alias: $ISICRev4 = InternationalStandardIndustrialClassificationCodesRev4
+Alias: $ONETSOC = https://phinvads.cdc.gov/vads/ViewValueSet.action?id=3ED71C35-8147-492B-B88F-94953573E55F 
