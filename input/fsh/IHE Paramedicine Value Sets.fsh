@@ -4,7 +4,6 @@ ValueSet: IHE_PCC_VitalSigns_VS
 Title: "IHE PCC Vital Signs Value Set"
 Description: "The set of reccomended vital sign codes that can be used to represent vital signs in IHE's PCC profiles."
 Id: IHE.PCC.VitalSigns.VS
-
 * codes from valueset http://hl7.org/fhir/ValueSet/observation-vitalsignresult
 * exclude $loinc#9843-4 "Head Occipital-frontal circumference"
 * $loinc#3141-9 "Body weight Measured"

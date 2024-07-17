@@ -6,9 +6,9 @@ Description: "The instance for Patient Elina R Macias VitalSigns-BloodPressure-S
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#8480-6
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T08:48:00GMT-05:00"
+* effectiveDateTime = "2022-10-09T08:48:00 GMT-05:00"
 * method = $sct#239033002   "Digital examination"
-* device = $sct#1287473000    "Automatic inflation electronic sphygmomanometer"
+* device = Reference(Device/ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device)
 * valueQuantity = 102 $ucum#mmhg "mm[Hg]"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Diastolic-1 
@@ -19,9 +19,9 @@ Description: "The instance for Patient Elina R Macias VitalSigns-BloodPressure-D
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#8462-4
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T08:48:00GMT-05:00"
+* effectiveDateTime = "2022-10-09T08:48:00 GMT-05:00"
 * method = $sct#239033002   "Digital examination"
-* device = $sct#1287473000    "Automatic inflation electronic sphygmomanometer"
+* device = Reference(Device/ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device)
 * valueQuantity = 64 $ucum#mmhg "mm[Hg]"
 
 
@@ -33,7 +33,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-HeartRate Resou
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#8867-4
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T08:48:00GMT-05:00"
+* effectiveDateTime = "2022-10-09T08:48:00 GMT-05:00"
 * valueQuantity = 80 $ucum#/min "/min"
 * method = $sct#113011001   "Palpation"
 
@@ -46,7 +46,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-OxygenSat Resou
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#2708-6
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T08:48:00GMT-05:00"
+* effectiveDateTime = "2022-10-09T08:48:00 GMT-05:00"
 * valueQuantity.value = 90 $ucum#% "%"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-PulseRhythm-1 
@@ -57,7 +57,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-PulseRhythm Res
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#44969-4
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T08:48:00GMT-05:00"
+* effectiveDateTime = "2022-10-09T08:48:00 GMT-05:00"
 * valueCodeableConcept = $sct#248632004    "Regular intermission in pulse"
 
 
@@ -69,7 +69,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-RespiratoryRate
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#9279-1
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T08:48:00GMT-05:00"
+* effectiveDateTime = "2022-10-09T08:48:00 GMT-05:00"
 * valueQuantity = 25 $ucum#/min "/min"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-RespiratoryEffort-1 
@@ -80,7 +80,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns- Resource utili
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#80341-1
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T08:48:00GMT-05:00"
+* effectiveDateTime = "2022-10-09T08:48:00 GMT-05:00"
 * valueCodeableConcept = $sct#1290338002	"Normal respiratory effort"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-Carbon-Monoxide-1 
@@ -91,7 +91,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Carbon Monoxide
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#19911-7
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T08:48:00GMT-05:00"
+* effectiveDateTime = "2022-10-09T08:48:00 GMT-05:00"
 * valueQuantity = 2.1 $ucum#% "%"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-Blood-Glucose-Level-1 
@@ -102,8 +102,8 @@ Description: "The instance for Patient Elina R Macias VitalSigns-BloodGlucoseLev
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#2339-0
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T08:48:00GMT-05:00"
-* valueQuantity= 130 $ucum#mg/dl "mg/dl"
+* effectiveDateTime = "2022-10-09T08:48:00 GMT-05:00"
+* valueQuantity = 130 $ucum#mg/dl "mg/dl"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-Temperature-1 
 InstanceOf: IHE_PCC_mPSC_VitalSigns
@@ -113,7 +113,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Temperature Res
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#8310-5
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T08:48:00GMT-05:00"
+* effectiveDateTime = "2022-10-09T08:48:00 GMT-05:00"
 * valueQuantity = 35.2 $ucum#Cel "Cel"
 * method = $sct#448093005   "Measurement of temperature using tympanic thermometer"
 
@@ -146,7 +146,7 @@ Usage: #example
 Description: "The instance for Patient Elina R Macias VitalSigns-AVPU Resource utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * status  = http://hl7.org/fhir/observation-status#final
-* code = $loinc#
+* code = $loinc#67775-7
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T08:48:30 GMT-05:00"
 * valueCodeableConcept = $sct#255373000     "Verbal"
@@ -162,7 +162,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-BloodPressure-S
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T09:00:00-05:00"
 * method = $sct#239033002   "Digital examination"
-* device = $sct#1287473000    "Automatic inflation electronic sphygmomanometer"
+* device = Reference(Device/ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device)
 * valueQuantity = 98 $ucum#mmhg "mm[Hg]"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Diastolic-2
@@ -175,7 +175,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-BloodPressure-D
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T09:00:00-05:00"
 * method = $sct#239033002   "Digital examination"
-* device = $sct#1287473000    "Automatic inflation electronic sphygmomanometer"
+* device = Reference(Device/ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device)
 * valueQuantity = 60 $ucum#mmhg "mm[Hg]"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-HeartRate-2 
@@ -292,7 +292,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-BloodPressure-S
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T09:10:00-05:00"
 * method = $sct#239033002   "Digital examination"
-* device = $sct#1287473000    "Automatic inflation electronic sphygmomanometer"
+* device = Reference(Device/ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device)
 * valueQuantity = 100 $ucum#mmhg "mm[Hg]"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Diastolic-3
@@ -305,7 +305,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-BloodPressure-D
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T09:10:00-05:00"
 * method = $sct#239033002   "Digital examination"
-* device = $sct#1287473000    "Automatic inflation electronic sphygmomanometer"
+* device = Reference(Device/ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device)
 * valueQuantity = 62 $ucum#mmhg "mm[Hg]"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-HeartRate-3 
@@ -418,12 +418,11 @@ Usage: #example
 Description: "The instance for Patient Elina R Macias VitalSigns-BloodPressure-Systolic Resource utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * status  = http://hl7.org/fhir/observation-status#final
-* code = $loinc#
 * code = $loinc#8480-6
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T09:20:00-05:00"
 * method = $sct#239033002   "Digital examination"
-* device = $sct#1287473000    "Automatic inflation electronic sphygmomanometer"
+* device = Reference(Device/ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device)
 * valueQuantity = 96 $ucum#mmhg "mm[Hg]"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Diastolic-4
@@ -432,13 +431,19 @@ Usage: #example
 Description: "The instance for Patient Elina R Macias VitalSigns-BloodPressure-Diastolic Resource utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * status  = http://hl7.org/fhir/observation-status#final
-* code = $loinc#
 * code = $loinc#8462-4
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T09:20:00-05:00"
 * method = $sct#239033002   "Digital examination"
-* device = $sct#1287473000    "Automatic inflation electronic sphygmomanometer"
+* device = Reference(Device/ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device)
 * valueQuantity = 60 $ucum#mmhg "mm[Hg]"
+
+Instance: ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device
+InstanceOf: Device
+Usage: #example
+Description: "The instance for Patient Elina R Macias VitalSigns-BloodPressure-Diastolic Resource utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
+* meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
+* type = $sct#1287473000  "Automatic inflation electronic sphygmomanometer"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-HeartRate-4 
 InstanceOf: IHE_PCC_mPSC_VitalSigns

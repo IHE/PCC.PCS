@@ -1,5 +1,5 @@
 Instance:   ex-Observation-Elina-R-Macias-BarriersTocare-Language
-InstanceOf: mPSC_BarriersTocare 
+InstanceOf: IHE_PCC_mPSC_BarriersTocare
 Title:      "Paramdicine Summary Paramedicine Barriers To Care Observation example for NEMSIS 2023-EMS-3-FallTransport_v350 pretesting example."
 Description: "The Observation instance for Patient Elina R Macias Barriers To care, utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
 Usage: #example
@@ -47,7 +47,7 @@ Usage: #example
 * valueInteger = 1
 
 Instance:   ex-Observation-Elina-R-Macias-Activity-Laundry  
-InstanceOf: mPSC_Patient_Activity
+InstanceOf: IHE_PCC_mPSC_Patient_Activity
 Title:      "Paramdicine Summary Paramedicine Patient Activity Observation example for NEMSIS 2023-EMS-3-FallTransport_v350 pretesting example."
 Description: "The Observation instance for Patient Elina R Macias Patient Activity, utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
 Usage: #example
@@ -56,7 +56,7 @@ Usage: #example
 * valueCodeableConcept = $ICD10#Y93.E2    "Activity, laundry"
 
 Instance:   ex-Observation-Elina-R-Macias-Activity-Vacuuming  
-InstanceOf: mPSC_Patient_Activity
+InstanceOf: IHE_PCC_mPSC_Patient_Activity
 Title:      "Paramdicine Summary Paramedicine Patient Activity Observation example for NEMSIS 2023-EMS-3-FallTransport_v350 pretesting example."
 Description: "The Observation instance for Patient Elina R Macias Patient Activity, utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
 Usage: #example

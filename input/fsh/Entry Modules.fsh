@@ -43,9 +43,9 @@ Description: "The Example instance for Last Oral intake observation"
 
 
 
-Profile:        mPSC_BarriersTocare
+Profile:        IHE_PCC_mPSC_BarriersTocare
 Parent:         Observation
-Id:             IHE.PSC.Barriers.To.Care
+Id:             IHE.PCC.mPSC.Barriers.To.Care
 Title:          "IHE barriers to care observation"
 Description:    "Indication of whether or not there were any patient specific barriers to serving the patient."
 //* code = $loinc#67515-7
@@ -111,9 +111,9 @@ Description:    "The number of effected people that are present at the incident.
 
 
 
-Profile:        mPSC_Patient_Activity  
+Profile:        IHE_PCC_mPSC_Patient_Activity  
 Parent:         Observation
-Id:             mPSC_Patient.Activity 
+Id:             IHE.PCC.mPSC.Patient.Activity 
 Title:          "Patient Activity"
 Description:    "The Narrative explanation of what the patient was doing prior to the onset of a condition or injury."
 //Proper loinc code needs to be requested or found
@@ -130,8 +130,8 @@ Description:    "The General mechanism of the forces which caused the injury."
 //Proper loinc code needs to be requested or found
 * code = $loinc#67494-5
 * value[x] 1..1
-* value[x] only CodeableConcept from Mechanism_Of_Injury_VS (example)
-
+* value[x] only CodeableConcept 
+* valueCodeableConcept from Mechanism_Of_Injury_VS (example)
 
 
 Profile:        Height_of_Fall  

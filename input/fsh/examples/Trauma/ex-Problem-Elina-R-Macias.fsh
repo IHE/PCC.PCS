@@ -4,8 +4,8 @@ Title:      "Paramdicine Summary Paramedicine Problem Hip Injury example for NEM
 Description: "The Condition instance for Patient Elina R Macias Hip Injry, utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
-* clinicalStatus  = http://hl7.org/fhir/ValueSet/condition-clinical#active
-* verificationStatus = http://hl7.org/fhir/ValueSet/condition-ver-status#unconfirmed
+* clinicalStatus  = http://terminology.hl7.org/CodeSystem/condition-clinical#active
+* verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#unconfirmed
 * code = $ICD10#S79.91 "Unspecified injury of hip"
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * onsetDateTime = "2022-10-09T07:30:00-05:00"
@@ -18,8 +18,8 @@ Title:      "Paramdicine Summary Paramedicine Problem Multiple Injury example fo
 Description: "The Condition instance for Patient Elina R Macias Multiple Injry, utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
-* clinicalStatus  = http://hl7.org/fhir/ValueSet/condition-clinical#active
-* verificationStatus = http://hl7.org/fhir/ValueSet/condition-ver-status#unconfirmed
+* clinicalStatus  = http://terminology.hl7.org/CodeSystem/condition-clinical#active
+* verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#unconfirmed
 * code = $ICD10#T07 "Unspecified multiple injuries"
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * onsetDateTime = "2022-10-09T07:30:00-05:00"

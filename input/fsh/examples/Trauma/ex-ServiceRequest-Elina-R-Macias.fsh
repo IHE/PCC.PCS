@@ -12,10 +12,10 @@ Usage: #example
 * code = $sct#310000008 "Accident and Emergency service"
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * reasonCode = $sct#1912002 "Fall"
-* performer = Reference(Organization/ex-Organization-Dispatch-Agency-Texarkana-Arkansas-Police-Department)
+* performer = Reference(Organization/ex-Organization-Texarkana-Arkansas-Police-Department)
 
 
-Instance:   ex-Organization-Dispatch-Agency-Texarkana-Arkansas-Police-Department
+Instance:   ex-Organization-Texarkana-Arkansas-Police-Department
 InstanceOf: IHE_PCC_mPSC_Organization
 Title:      "Paramdicine Summary Paramedicine Organization example utilizing data from the NEMSIS pretesting examples."
 Description: "Paramedicince Agency Organization example for Paramdicine Summary of Care"
