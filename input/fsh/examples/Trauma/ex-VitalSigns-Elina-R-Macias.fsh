@@ -10,9 +10,9 @@ Description: "The instance for Patient Elina R Macias VitalSigns-BloodPressure-S
 * method = $sct#239033002   "Digital examination"
 * device = Reference(Device/ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device)
 * component[+].code = $loinc#8480-6
-* component[=].valueQuantity = 102  "mm[Hg]"
+* component[=].valueQuantity = 102 $ucum#mm[Hg] "mm[Hg]"
 * component[+].code = $loinc#8462-4
-* component[=].valueQuantity = 64  "mm[Hg]"
+* component[=].valueQuantity = 64 $ucum#mm[Hg] "mm[Hg]"
 * performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 
@@ -167,9 +167,9 @@ Description: "The instance for Patient Elina R Macias VitalSigns-BloodPressure-S
 * method = $sct#239033002   "Digital examination"
 * device = Reference(Device/ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device)
 * component[+].code = $loinc#8480-6
-* component[=].valueQuantity = "98"
+* component[=].valueQuantity = 98 $ucum#mm[Hg] "mm[Hg]"
 * component[+].code = $loinc#8462-4
-* component[=].valueQuantity = "60"
+* component[=].valueQuantity = 60 $ucum#mm[Hg] "mm[Hg]"
 * performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 
@@ -299,9 +299,9 @@ Description: "The instance for Patient Elina R Macias VitalSigns-BloodPressure-S
 * method = $sct#239033002   "Digital examination"
 * device = Reference(Device/ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device)
 * component[+].code = $loinc#8480-6
-* component[=].valueQuantity = 100  "mm[Hg]"
+* component[=].valueQuantity = 100 $ucum#mm[Hg]  "mm[Hg]"
 * component[+].code = $loinc#8462-4
-* component[=].valueQuantity = 62  "mm[Hg]"
+* component[=].valueQuantity = 62 $ucum#mm[Hg]  "mm[Hg]"
 * performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-HeartRate-3 
@@ -431,9 +431,9 @@ Description: "The instance for Patient Elina R Macias VitalSigns-BloodPressure-S
 * method = $sct#239033002   "Digital examination"
 * device = Reference(Device/ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device)
 * component[+].code = $loinc#8480-6
-* component[=].valueQuantity = 196 "mm[Hg]"
+* component[=].valueQuantity = 196 $ucum#mm[Hg] "mm[Hg]"
 * component[+].code = $loinc#8462-4
-* component[=].valueQuantity = 60 "mm[Hg]"
+* component[=].valueQuantity = 60 $ucum#mm[Hg] "mm[Hg]"
 * performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device
