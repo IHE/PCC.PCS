@@ -33,16 +33,6 @@ Description:    "Date and Time of last oral intake."
 
 
 
-Instance: Ex-LastOralIntake
-InstanceOf: Last_Oral_Intake
-Usage: #example
-Description: "The Example instance for Last Oral intake observation"
-* status  = http://hl7.org/fhir/observation-status#final
-* effectiveDateTime = "2023-08-03T14:14:45-05:00"
-* valueDateTime = "2023-08-03T12:00:00-05:00"
-
-
-
 Profile:        IHE_PCC_mPSC_BarriersTocare
 Parent:         Observation
 Id:             IHE.PCC.mPSC.Barriers.To.Care
@@ -57,13 +47,6 @@ Description:    "Indication of whether or not there were any patient specific ba
 //* value[x].coding from NEMSIS.Barriers.to.Patient.Care.VS (example)
 // Note Data absent reason codes need to be extended to include NEMSIS values 
 
-Instance: Ex-PSC-BarriersTocare
-InstanceOf: PSC_BarriersTocare
-Usage: #inline
-* code = http://loinc.org#67515-7
-* status  = http://hl7.org/fhir/observation-status#final
-* effectiveDateTime = "2023-08-03T14:14:45-05:00"
-* valueCodeableConcept = $NEMSIS#3101027
 
 
 
@@ -99,9 +82,9 @@ Description:    "The indication of weather and incident is considered a mass cas
 
 
 
-Profile:        mPSC_Number_of_Affected_People  
+Profile:        IHE_PCC_mPSC_Number_of_Affected_People  
 Parent:         Observation
-Id:             mPSC.Number.of.Affected.People  
+Id:             IHE.PCC.mPSC.Number.of.Affected.People  
 Title:          "Number of Affected People "
 Description:    "The number of effected people that are present at the incident. This numeric does not apply to the number of providers at the incident."
 //Proper loinc code needs to be requested or found

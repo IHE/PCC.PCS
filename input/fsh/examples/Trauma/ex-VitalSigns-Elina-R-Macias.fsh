@@ -6,7 +6,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-BloodPressure-S
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#8480-6
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T08:48:00 GMT-05:00"
+* effectiveDateTime = "2022-10-09T08:48:00-05:00"
 * method = $sct#239033002   "Digital examination"
 * device = Reference(Device/ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device)
 * valueQuantity = 102 $ucum#mmhg "mm[Hg]"
@@ -19,7 +19,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-BloodPressure-D
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#8462-4
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T08:48:00 GMT-05:00"
+* effectiveDateTime = "2022-10-09T08:48:00-05:00"
 * method = $sct#239033002   "Digital examination"
 * device = Reference(Device/ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device)
 * valueQuantity = 64 $ucum#mmhg "mm[Hg]"
@@ -33,7 +33,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-HeartRate Resou
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#8867-4
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T08:48:00 GMT-05:00"
+* effectiveDateTime = "2022-10-09T08:48:00-05:00"
 * valueQuantity = 80 $ucum#/min "/min"
 * method = $sct#113011001   "Palpation"
 
@@ -46,8 +46,8 @@ Description: "The instance for Patient Elina R Macias VitalSigns-OxygenSat Resou
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#2708-6
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T08:48:00 GMT-05:00"
-* valueQuantity.value = 90 $ucum#% "%"
+* effectiveDateTime = "2022-10-09T08:48:00-05:00"
+* valueQuantity = 90 $ucum#% "%"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-PulseRhythm-1 
 InstanceOf: IHE_PCC_mPSC_VitalSigns
@@ -57,7 +57,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-PulseRhythm Res
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#44969-4
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T08:48:00 GMT-05:00"
+* effectiveDateTime = "2022-10-09T08:48:00-05:00"
 * valueCodeableConcept = $sct#248632004    "Regular intermission in pulse"
 
 
@@ -69,7 +69,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-RespiratoryRate
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#9279-1
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T08:48:00 GMT-05:00"
+* effectiveDateTime = "2022-10-09T08:48:00-05:00"
 * valueQuantity = 25 $ucum#/min "/min"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-RespiratoryEffort-1 
@@ -80,7 +80,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns- Resource utili
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#80341-1
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T08:48:00 GMT-05:00"
+* effectiveDateTime = "2022-10-09T08:48:00-05:00"
 * valueCodeableConcept = $sct#1290338002	"Normal respiratory effort"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-Carbon-Monoxide-1 
@@ -91,7 +91,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Carbon Monoxide
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#19911-7
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T08:48:00 GMT-05:00"
+* effectiveDateTime = "2022-10-09T08:48:00-05:00"
 * valueQuantity = 2.1 $ucum#% "%"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-Blood-Glucose-Level-1 
@@ -102,7 +102,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-BloodGlucoseLev
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#2339-0
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T08:48:00 GMT-05:00"
+* effectiveDateTime = "2022-10-09T08:48:00-05:00"
 * valueQuantity = 130 $ucum#mg/dl "mg/dl"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-Temperature-1 
@@ -113,7 +113,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Temperature Res
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#8310-5
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T08:48:00 GMT-05:00"
+* effectiveDateTime = "2022-10-09T08:48:00-05:00"
 * valueQuantity = 35.2 $ucum#Cel "Cel"
 * method = $sct#448093005   "Measurement of temperature using tympanic thermometer"
 
@@ -125,8 +125,8 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Estimated-Weigh
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#8335-2
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T08:48:30 GMT-05:00"
-* valueQuantity.value = 53.8 $ucum#Kg "kg"
+* effectiveDateTime = "2022-10-09T08:48:30 -05:00"
+* valueQuantity = 53.8 $ucum#Kg "kg"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-PainSeverity-1  
 InstanceOf: IHE_PCC_mPSC_VitalSigns  
@@ -136,8 +136,8 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Pain Resource u
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#38208-5
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T08:48:30 GMT-05:00"
-* valueQuantity.value = 8
+* effectiveDateTime = "2022-10-09T08:48:30 -05:00"
+* valueQuantity = 8
 * method = $sct#1284852002  "Numeric Pain Rating Scale"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-AVPU-1  
@@ -148,7 +148,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-AVPU Resource u
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#67775-7
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T08:48:30 GMT-05:00"
+* effectiveDateTime = "2022-10-09T08:48:30 -05:00"
 * valueCodeableConcept = $sct#255373000     "Verbal"
 
 
@@ -186,7 +186,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-HeartRate Resou
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#8867-4
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T09:00:00 GMT-05:00"
+* effectiveDateTime = "2022-10-09T09:00:00-05:00"
 * valueQuantity = 70 $ucum#/min "/min"
 * method = $sct#113011001   "Palpation"
 
@@ -199,8 +199,8 @@ Description: "The instance for Patient Elina R Macias VitalSigns-OxygenSat Resou
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#2708-6
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T09:00:00 GMT-05:00"
-* valueQuantity.value = 94 $ucum#% "%"
+* effectiveDateTime = "2022-10-09T09:00:00-05:00"
+* valueQuantity = 94 $ucum#% "%"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-PulseRhythm-2 
 InstanceOf: IHE_PCC_mPSC_VitalSigns
@@ -210,7 +210,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-PulseRhythm Res
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#44969-4
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T09:00:00 GMT-05:00"
+* effectiveDateTime = "2022-10-09T09:00:00-05:00"
 * valueCodeableConcept = $sct#248632004    "Regular intermission in pulse"
 
 
@@ -222,7 +222,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-RespiratoryRate
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#9279-1
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T09:00:00 GMT-05:00"
+* effectiveDateTime = "2022-10-09T09:00:00-05:00"
 * valueQuantity = 22 $ucum#/min "/min"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-RespiratoryEffort-2 
@@ -233,7 +233,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns- Resource utili
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#80341-1
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T09:00:00 GMT-05:00"
+* effectiveDateTime = "2022-10-09T09:00:00-05:00"
 * valueCodeableConcept = $sct#1290338002	"Normal respiratory effort"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-Carbon-Monoxide-2 
@@ -244,7 +244,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Carbon Monoxide
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#19911-7
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T09:00:00 GMT-05:00"
+* effectiveDateTime = "2022-10-09T09:00:00-05:00"
 * dataAbsentReason = http://hl7.org/fhir/ValueSet/data-absent-reason#not-performed
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-Blood-Glucose-Level-2 
@@ -255,7 +255,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-BloodGlucoseLev
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#2339-0
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T09:00:00 GMT-05:00"
+* effectiveDateTime = "2022-10-09T09:00:00-05:00"
 * dataAbsentReason = http://hl7.org/fhir/ValueSet/data-absent-reason#not-performed
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-Temperature-2 
@@ -266,7 +266,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Temperature Res
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#8310-5
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T09:00:00 GMT-05:00"
+* effectiveDateTime = "2022-10-09T09:00:00-05:00"
 * valueQuantity = 35.6 $ucum#Cel "Cel"
 * method = $sct#448093005   "Measurement of temperature using tympanic thermometer"
 
@@ -278,8 +278,8 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Pain Resource u
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#38208-5
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T09:00:00 GMT-05:00"
-* valueQuantity.value = 5
+* effectiveDateTime = "2022-10-09T09:00:00-05:00"
+* valueQuantity = 5
 * method = $sct#1284852002  "Numeric Pain Rating Scale"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Systolic-3
@@ -316,7 +316,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-HeartRate Resou
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#8867-4
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T09:10:00 GMT-05:00"
+* effectiveDateTime = "2022-10-09T09:10:00-05:00"
 * valueQuantity = 66 $ucum#/min "/min"
 * method = $sct#113011001   "Palpation"
 
@@ -329,8 +329,8 @@ Description: "The instance for Patient Elina R Macias VitalSigns-OxygenSat Resou
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#2708-6
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T09:10:00 GMT-05:00"
-* valueQuantity.value = 95 $ucum#% "%"
+* effectiveDateTime = "2022-10-09T09:10:00-05:00"
+* valueQuantity = 95 $ucum#% "%"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-PulseRhythm-3
 InstanceOf: IHE_PCC_mPSC_VitalSigns
@@ -340,7 +340,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-PulseRhythm Res
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#44969-4
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T09:10:00 GMT-05:00"
+* effectiveDateTime = "2022-10-09T09:10:00-05:00"
 * valueCodeableConcept = $sct#248632004    "Regular intermission in pulse"
 
 
@@ -352,8 +352,8 @@ Description: "The instance for Patient Elina R Macias VitalSigns-RespiratoryRate
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#9279-1
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T09:10:00 GMT-05:00"
-* valueQuantity.value = 20 $ucum#/min "/min"
+* effectiveDateTime = "2022-10-09T09:10:00-05:00"
+* valueQuantity = 20 $ucum#/min "/min"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-RespiratoryEffort-3 
 InstanceOf: IHE_PCC_mPSC_VitalSigns  
@@ -363,7 +363,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns- Resource utili
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#80341-1
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T09:10:00 GMT-05:00"
+* effectiveDateTime = "2022-10-09T09:10:00-05:00"
 * valueCodeableConcept = $sct#1290338002	"Normal respiratory effort"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-Carbon-Monoxide-3 
@@ -374,7 +374,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Carbon Monoxide
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#19911-7
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T09:10:00 GMT-05:00"
+* effectiveDateTime = "2022-10-09T09:10:00-05:00"
 * dataAbsentReason = http://hl7.org/fhir/ValueSet/data-absent-reason#not-performed
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-Blood-Glucose-Level-3 
@@ -385,7 +385,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-BloodGlucoseLev
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#2339-0
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T09:10:00 GMT-05:00"
+* effectiveDateTime = "2022-10-09T09:10:00-05:00"
 * dataAbsentReason = http://hl7.org/fhir/ValueSet/data-absent-reason#not-performed
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-Temperature-3 
@@ -396,7 +396,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Temperature Res
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#8310-5
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T09:10:00 GMT-05:00"
+* effectiveDateTime = "2022-10-09T09:10:00-05:00"
 * valueQuantity = 35.8 $ucum#Cel "Cel"
 * method = $sct#448093005   "Measurement of temperature using tympanic thermometer"
 
@@ -408,8 +408,8 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Pain Resource u
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#38208-5
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T09:10:00 GMT-05:00"
-* valueQuantity.value = 5
+* effectiveDateTime = "2022-10-09T09:10:00-05:00"
+* valueQuantity = 5
 * method = $sct#1284852002  "Numeric Pain Rating Scale"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Systolic-4
@@ -453,7 +453,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-HeartRate Resou
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#8867-4
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T09:20:00 GMT-05:00"
+* effectiveDateTime = "2022-10-09T09:20:00-05:00"
 * valueQuantity = 68 $ucum#/min "/min"
 * method = $sct#113011001   "Palpation"
 
@@ -466,7 +466,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-OxygenSat Resou
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#2708-6
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T09:20:00 GMT-05:00"
+* effectiveDateTime = "2022-10-09T09:20:00-05:00"
 * valueQuantity = 95 $ucum#% "%"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-PulseRhythm-4
@@ -477,7 +477,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-PulseRhythm Res
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#44969-4
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T09:20:00 GMT-05:00"
+* effectiveDateTime = "2022-10-09T09:20:00-05:00"
 * valueCodeableConcept = $sct#248632004    "Regular intermission in pulse"
 
 
@@ -489,8 +489,8 @@ Description: "The instance for Patient Elina R Macias VitalSigns-RespiratoryRate
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#9279-1
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T09:20:00 GMT-05:00"
-* valueQuantity.value = 22 $ucum#/min "/min"
+* effectiveDateTime = "2022-10-09T09:20:00-05:00"
+* valueQuantity = 22 $ucum#/min "/min"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-RespiratoryEffort-4 
 InstanceOf: IHE_PCC_mPSC_VitalSigns 
@@ -500,7 +500,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns- Resource utili
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#80341-1
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T09:20:00 GMT-05:00"
+* effectiveDateTime = "2022-10-09T09:20:00-05:00"
 * valueCodeableConcept = $sct#1290338002	"Normal respiratory effort"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-Carbon-Monoxide-4 
@@ -511,7 +511,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Carbon Monoxide
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#19911-7
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T09:20:00 GMT-05:00"
+* effectiveDateTime = "2022-10-09T09:20:00-05:00"
 * dataAbsentReason = http://hl7.org/fhir/ValueSet/data-absent-reason#not-performed
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-Blood-Glucose-Level-4 
@@ -522,7 +522,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-BloodGlucoseLev
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#2339-0
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T09:20:00 GMT-05:00"
+* effectiveDateTime = "2022-10-09T09:20:00-05:00"
 * dataAbsentReason = http://hl7.org/fhir/ValueSet/data-absent-reason#not-performed
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-Temperature-4 
@@ -533,7 +533,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Temperature Res
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#8310-5
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T09:20:00 GMT-05:00"
+* effectiveDateTime = "2022-10-09T09:20:00-05:00"
 * valueQuantity = 35.8 $ucum#Cel "Cel"
 * method = $sct#448093005   "Measurement of temperature using tympanic thermometer"
 
@@ -545,7 +545,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Pain Resource u
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#38208-5
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T09:20:00 GMT-05:00"
-* valueQuantity.value = 5
+* effectiveDateTime = "2022-10-09T09:20:00-05:00"
+* valueQuantity = 5
 * method = $sct#1284852002  "Numeric Pain Rating Scale"
 

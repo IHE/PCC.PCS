@@ -3,9 +3,9 @@ InstanceOf: IHE_PCC_mPSC_AllergyIntolerance
 Usage: #example
 Description: "The Example instance for Elina R Macias Allergy-Penicillin utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
-* type = #allergy
+* type = http://hl7.org/fhir/allergy-intolerance-type#allergy
 * clinicalStatus = http://hl7.org/fhir/ValueSet/allergyintolerance-clinical#active
-* category = #medication
+* category = http://hl7.org/fhir/allergy-intolerance-category#medication
 * code = $ICD10#Z88.0   "Personal history of allergy to penicillin"
 * patient = Reference(Patient/ex-Patient-Elina-R-Macias)
 
@@ -14,8 +14,8 @@ InstanceOf: IHE_PCC_mPSC_AllergyIntolerance
 Usage: #example
 Description: "The Example instance for Elina R Macias Allergy-Aspirin utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
-* type = #allergy
-* category = #medication
+* type = http://hl7.org/fhir/allergy-intolerance-type#allergy
+* category = http://hl7.org/fhir/allergy-intolerance-category#medication
 * clinicalStatus = http://hl7.org/fhir/ValueSet/allergyintolerance-clinical#active
 * code = $RxNorm#1191  "aspirin"
 * patient = Reference(Patient/ex-Patient-Elina-R-Macias)
@@ -25,8 +25,8 @@ InstanceOf: IHE_PCC_mPSC_AllergyIntolerance
 Usage: #example
 Description: "The Example instance for Elina R Macias Allergy-Acetaminophen utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
-* type = #allergy
-* category = #medication
+* type = http://hl7.org/fhir/allergy-intolerance-type#allergy
+* category = http://hl7.org/fhir/allergy-intolerance-category#medication
 * clinicalStatus = http://hl7.org/fhir/ValueSet/allergyintolerance-clinical#active
 * code = $RxNorm#161  "acetaminophen"
 * patient = Reference(Patient/ex-Patient-Elina-R-Macias)
@@ -36,8 +36,8 @@ InstanceOf: IHE_PCC_mPSC_AllergyIntolerance
 Usage: #example
 Description: "The Example instance for Elina R Macias Allergy-Remdesivir utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
-* type = #allergy
-* category = #medication
+* type = http://hl7.org/fhir/allergy-intolerance-type#allergy
+* category = http://hl7.org/fhir/allergy-intolerance-category#medication
 * clinicalStatus = http://hl7.org/fhir/ValueSet/allergyintolerance-clinical#active
 * code = $RxNorm#2284718  "remdesivir"
 * patient = Reference(Patient/ex-Patient-Elina-R-Macias)
@@ -47,8 +47,8 @@ InstanceOf: IHE_PCC_mPSC_AllergyIntolerance
 Usage: #example
 Description: "The Example instance for Elina R Macias Allergy-Cats utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
-* type = #allergy
-* category = #environment
+* type = http://hl7.org/fhir/allergy-intolerance-type#allergy
+* category = http://hl7.org/fhir/allergy-intolerance-category#environment
 * clinicalStatus = http://hl7.org/fhir/ValueSet/allergyintolerance-clinical#active
 * code = $sct#232346004   "Cat allergy"
 * patient = Reference(Patient/ex-Patient-Elina-R-Macias)
@@ -58,8 +58,8 @@ InstanceOf: IHE_PCC_mPSC_AllergyIntolerance
 Usage: #example
 Description: "The Example instance for Elina R Macias Allergy-Apples utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
-* type = #allergy
-* category = #food
+* type = http://hl7.org/fhir/allergy-intolerance-type#allergy
+* category = http://hl7.org/fhir/allergy-intolerance-category#food
 * clinicalStatus = http://hl7.org/fhir/ValueSet/allergyintolerance-clinical#active
 * code = $sct#860604008   "Allergy to apple"
 * patient = Reference(Patient/ex-Patient-Elina-R-Macias)
