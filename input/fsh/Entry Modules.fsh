@@ -43,16 +43,17 @@ Description: "The Example instance for Last Oral intake observation"
 
 
 
-Profile:        PSC_BarriersTocare
+Profile:        mPSC_BarriersTocare
 Parent:         Observation
 Id:             IHE.PSC.Barriers.To.Care
 Title:          "IHE barriers to care observation"
 Description:    "Indication of whether or not there were any patient specific barriers to serving the patient."
-// NEMSIS eHistory.01 - Barriers to Patient Care
 //* code = $loinc#67515-7
 // new loinc code needs to be requested 
-* value[x] 1..1
+* value[x] 1..1 MS 
 * value[x] only CodeableConcept 
+* valueCodeableConcept from Barrier_To_Care_VS (example)
+* dataAbsentReason MS 
 //* value[x].coding from NEMSIS.Barriers.to.Patient.Care.VS (example)
 // Note Data absent reason codes need to be extended to include NEMSIS values 
 
@@ -98,9 +99,9 @@ Description:    "The indication of weather and incident is considered a mass cas
 
 
 
-Profile:        PSC_Number_of_Affected_People  
+Profile:        mPSC_Number_of_Affected_People  
 Parent:         Observation
-Id:             PSC.Number.of.Affected.People  
+Id:             mPSC.Number.of.Affected.People  
 Title:          "Number of Affected People "
 Description:    "The number of effected people that are present at the incident. This numeric does not apply to the number of providers at the incident."
 //Proper loinc code needs to be requested or found
@@ -110,15 +111,14 @@ Description:    "The number of effected people that are present at the incident.
 
 
 
-Profile:        Patient_Activity  
+Profile:        mPSC_Patient_Activity  
 Parent:         Observation
-Id:             Patient.Activity 
+Id:             mPSC_Patient.Activity 
 Title:          "Patient Activity"
 Description:    "The Narrative explanation of what the patient was doing prior to the onset of a condition or injury."
 //Proper loinc code needs to be requested or found
 * code = $loinc#11372-0
-* value[x] 1..1
-* value[x] only string 
+* value[x] 1..1 MS
 
 
 
@@ -130,14 +130,14 @@ Description:    "The General mechanism of the forces which caused the injury."
 //Proper loinc code needs to be requested or found
 * code = $loinc#67494-5
 * value[x] 1..1
-* value[x] only CodeableConcept 
+* value[x] only CodeableConcept from Mechanism_Of_Injury_VS (example)
 
 
 
 Profile:        Height_of_Fall  
 Parent:         Observation
 Id:             Height.of.Fall   
-Title:          "Height of Fall  "
+Title:          "Height of Fall"
 Description:    "The distance the patient fell."
 * code = $loinc#67501-7
 * value[x] 1..1

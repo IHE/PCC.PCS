@@ -24,7 +24,7 @@ Usage: #example
 Description: "The instance for Patient Elina R Macias immunization-MMR Resource utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * status  = http://hl7.org/fhir/immunization-status#completed
-* vaccineCode = http://hl7.org/fhir/sid/cvx#3 "measles, mumps and rubella virus vaccine"
+* vaccineCode = http://hl7.org/fhir/sid/cvx#03 "measles, mumps and rubella virus vaccine"
 * patient = Reference(Patient/ex-Patient-Elina-R-Macias)
 * occurrenceDateTime = "1950"
 

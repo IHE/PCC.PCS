@@ -565,11 +565,15 @@ ValueSet: Mechanism_Of_Injury_VS
 Title: "Mechanism Of Injury Value Set"
 Description: "Kind of physical phenomenon causing an injury"
 Id: Mechanism.Of.Injury.VS
-
-//take in the nictiz codes too 
 * $sct#3821009	    "Blunt injury" 
 * $sct#48333001	    "Burn injury" 
 * $sct#53568006	    "Penetrating" 
+* $sct#1055294009	"Blunt impact"
+* $sct#88999006	    "Heat"
+* $sct#1162998008	"Sharp impact"
+* $ICD10#T30 	    "Burn and corrosion, body region unspecified"
+* $ICD10#T75	    "Other and unspecified effects of other external causes" 
+
 
 ValueSet: Respiratory_Effort_VS
 Title: "Respiratory Effort Value Set"
