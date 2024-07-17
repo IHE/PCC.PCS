@@ -2,9 +2,11 @@ CodeSystem:  ISICRev4
 Title: "ISICRev4"
 Description: """
 a standard classification of economic activities arranged so that entities can be classified according to the activity they carry out. The categories of ISIC at the most detailed level (classes) are delineated according to what is, in most countries, the customary combination of activities described in statistical units and considers the relative importance of the activities included in these classes. While the latest version, ISIC Rev.4, continues to use criteria such as input, output and use of the products produced, more emphasis has been given to the character of the production process in defining and delineating ISIC classes. 
+Published by IHE with authority from the International Labor Organization Given on July 18th 2024. This code system will be removed if and when a more formal publication is taken on by this organization.  
 """
 Id: ISICRev4
-
+* ^Experimental = false 
+* ^caseSensitive = true 
 * #A    "Agriculture, forestry and fishing"     "This section includes the exploitation of vegetal and animal natural resources, comprising the activities of growing of crops, raising and breeding of animals, harvesting of timber and other plants, animals or animal products from a farm or their natural"
   * #01   "Crop and animal production, hunting and related service activities"    "This division includes two basic activities, namely the production of crop products and production of animal products, covering also the forms of organic agriculture, the growing of genetically modified crops and the raising of genetically modified animal"
     * #011  "Growing of non-perennial crops"    
@@ -42,7 +44,7 @@ Id: ISICRev4
       * #0162	"Support activities for animal production"
       * #0163	"Post-harvest crop activities"
       * #0164	"Seed processing for propagation"
-    * #017	"Hunting, trapping and related service activities"  "	This class includes: - hunting and trapping on a commercial basis - taking of animals (dead or alive) for food, fur, skin, or for use in research, in zoos or as pets - production of fur skins, reptile or bird skins from hunting or trapping activities"
+    * #017	"Hunting, trapping and related service activities"    "This class includes: - hunting and trapping on a commercial basis - taking of animals (dead or alive) for food, fur, skin, or for use in research, in zoos or as pets - production of fur skins, reptile or bird skins from hunting or trapping activities"
       * #0170	"Hunting, trapping and related service activities"
   * #02	"Forestry and logging"      "This division includes the production of roundwood for the forest-based manufacturing industries (ISIC divisions 16 and 17) as well as the extraction and gathering of wild growing non-wood forest products."
     * #021	"Silviculture and other forestry activities"  

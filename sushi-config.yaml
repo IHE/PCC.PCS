@@ -1,10 +1,10 @@
     # sushi-config.yaml is documented https://fshschool.org/docs/sushi/configuration/
 # ───────────────────────────────────────────────────
-id: ihe.pcc.pcs
-canonical: https://profiles.ihe.net/PCC/PCS
+id: ihe.pcc.mpsc
+canonical: https://profiles.ihe.net/PCC/mPSC
 version: 2.0.0-draft
-name: IHE_PCC_PCS
-title: "PCC - Paramedicine Care Summary (PCS)"
+name: IHE_PCC_mPSC
+title: "PCC - mobile Paramedicine Summary of Care (mPSC)"
 status: draft
 publisher:
   - name: IHE Patient Care Coordination
@@ -15,7 +15,7 @@ contact:
     telecom:
       - system: email
         value: pcc@ihe.net
-description: This content profiles defiines the Paramedicine Care Summary (PCS) document that should be passed to the hospital for the trasnport of a patient from emergency medical services systems.
+description: This content profiles defiines the mobile Paramedicine Summary of Care (mPSC) document that should be passed to the hospital for the trasnport of a patient from emergency medical services systems.
 license:  CC-BY-4.0
 fhirVersion: 4.0.1
 jurisdiction: 'http://unstats.un.org/unsd/methods/m49/m49.htm#001'
@@ -93,12 +93,12 @@ menu:
   PCS Home: index.html
   Volume 1:
     Introduction: volume-1.html
-    Actors and Transactions: volume-1.html#pcs-actors-and-transactions
+    Actors and Transactions: volume-1.html#mpsc-actors-and-transactions
     Actor Options: volume-1.html#pcs-actor-options
-    Required Actor Groupings: volume-1.html#pcs-required-actor-groupings
+    Required Actor Groupings: volume-1.html#mpsc-required-actor-groupings
     Overview: volume-1.html#pcs-overview
-    Security Considerations: volume-1.html#pcs-security-considerations
-    Cross-Profile Considerations: volume-1.html#pcs-cross-profile-considerations
+    Security Considerations: volume-1.html#mpsc-security-considerations
+    Cross-Profile Considerations: volume-1.html#mpsc-cross-profile-considerations
   Volume 2:
     PCC-1: PCC-1.html
   Volume 3:

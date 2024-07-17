@@ -4,15 +4,15 @@
 
 This national extension document was authored under the sponsorship and supervision of the IHE Patient Care Coordination Technical Committee who welcome comments on this document and the IHE USA initiative. Comments should be directed to: http://www.ihe.net/PCC_Public_Comments
 
-### **Paramedicine Care Summary (PCS)**
+### **mobile Paramedicine Summary of Care (mPSC)**
 
 --------
 
-#### **PCS US Volume 3 Constraints **
+#### **mPSC US Volume 3 Constraints **
 
 ----------
 
-##### **PCS US Volume 3 Attribute Constraints** 
+##### **mPSC US Volume 3 Attribute Constraints** 
 
 The following attribute cardinalities constraints apply in the US.
 
@@ -29,22 +29,22 @@ The following attribute cardinalities constraints apply in the US.
 | Religious Affiliation | RE [0..*]   |
 {:grid}
 
-##### **PCS US Volume 3 Section Constraints** 
+##### **mPSC US Volume 3 Section Constraints** 
 
-The following additional cardinality constraints apply to the Paramedicine Care Summary document.
+The following additional cardinality constraints apply to the mobile Paramedicine Summary of Care document.
 
 **FHIR**
 
-For Use in the United states the following Structured Definitions should be replaced within the PCS Composition: 
+For Use in the United states the following Structured Definitions should be replaced within the mPSC Composition: 
 
-**PCS US Resource Constraints**
+**mPSC US Resource Constraints**
 
 |International					    | US Relm							   |
 |-----------------------------------|--------------------------------------|
-| IHE-PCS-Encounter-ClinicalSubset  | IHE-PCS-Encounter-ClinicalSubset-US  |
-| IHE-PCS-Encounter-CompleteReport  | IHE-PCS-Encounter-CompleteReport-US  |
-| IHE-PCS-Composition-CompleteReport| IHE-PCS-Composition-CompleteReport-US|
-| IHE-PCS-Encounter-CompleteReport  | IHE-PCS-Encounter-CompleteReport-US  |
+| IHE-mPSC-Encounter-ClinicalSubset  | IHE-mPSC-Encounter-ClinicalSubset-US  |
+| IHE-mPSC-Encounter-CompleteReport  | IHE-mPSC-Encounter-CompleteReport-US  |
+| IHE-mPSC-Composition-CompleteReport| IHE-mPSC-Composition-CompleteReport-US|
+| IHE-mPSC-Encounter-CompleteReport  | IHE-mPSC-Encounter-CompleteReport-US  |
 | StructureDefinition/Patient-uv-ips| StructureDefinition/us-core-patient  |
 | Resource Location					| StructureDefinition/us-core-location |
 {:grid}
@@ -53,7 +53,7 @@ For Use in the United states the following Structured Definitions should be repl
 
 The following additional cardinality constraints apply to the Paramedicine Care document specification and entries:
 
-**Table 4.I.2.1.2-1: PCS US Section Constraints **
+**Table 4.I.2.1.2-1: mPSC US Section Constraints **
 
 |Cardinality		    | Section Element 	    |Value Set OID   					| Specification Document | Vocabulary Constraint |
 |-----------------------|-----------------------|-----------------------------------|------------------------|-----------------------|
@@ -61,11 +61,11 @@ The following additional cardinality constraints apply to the Paramedicine Care 
 | RE [0..1]  			| Payer   				| 1.3.6.1.4.1.19376.1.5.3.1.1.5.3.7 | HL7 EMS Run Report R2  | PCC TF-2: 6.3.3.7.1   | 
 {:grid}
 
-#### **PCS Value Set Binding for US Realm Concept Domains**
+#### **mPSC Value Set Binding for US Realm Concept Domains**
 
 This section defines the actual value sets and code systems for any coded concepts that were described by concept domains in the main profile and binds the value set to the coded concepts.
 
-**Table 4.I.2.2-1: PCS Value Set Binding for US Realm Concept Domains**
+**Table 4.I.2.2-1: mPSC Value Set Binding for US Realm Concept Domains**
 
 |UV Concept Domain		           | US Realm Vocabulary Binding or Single Code Binding | Value Set OID    				| 
 |----------------------------------|----------------------------------------------------|-------------------------------|

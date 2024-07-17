@@ -7,10 +7,10 @@ The Antepartum Summary represents a summary of the most critical information to 
 
 ### 1:X.6.1 Format Code
 
-The following new Format Codes are introduced with the PCS Profile. A complete listing of IHE Format Codes can be found at http://wiki.ihe.net/index.php/IHE_Format_Codes.
+The following new Format Codes are introduced with the mPSC Profile. A complete listing of IHE Format Codes can be found at http://wiki.ihe.net/index.php/IHE_Format_Codes.
 
-* Paramedicine Care Summary – Clinical Subset (PCS-CS)
-* Paramedicine Care Summary – Complete Report (PCS-CR)
+* mobile Paramedicine Summary of Care – Clinical Subset (mPSC-CS)
+* mobile Paramedicine Summary of Care – Complete Report (mPSC-CR)
 
 
 ### 1:X.6.2 LOINC Code

@@ -1,15 +1,15 @@
 
 This section defines the actors and transactions in this implementation guide.
 
-Figure below shows the actors directly involved in the PCS Profile and the relevant transactions between them.
+Figure below shows the actors directly involved in the mPSC Profile and the relevant transactions between them.
 
-![Figure: PCS Actor Diagram](ActorsAndTransactions.svg "Figure: PCS Actor Diagram")
+![Figure: mPSC Actor Diagram](ActorsAndTransactions.svg "Figure: mPSC Actor Diagram")
 
 <div style="clear: left"/>
 
-**Figure: PCS Actor Diagram**
+**Figure: mPSC Actor Diagram**
 
-Table X.1-1: PCS Profile - Actors and Transactions
+Table X.1-1: mPSC Profile - Actors and Transactions
 
 | Actors          | Transactions           			| Initiator or Responder | Optionality     | Reference     |
 |-----------------|---------------------------------|------------------------|-----------------|---------------|
@@ -23,14 +23,14 @@ Note 1: The Document Sharing PCC-1 transaction supports the MHD ITI-65 transacti
 
 
 ### Actors
-The Content Creator shall be responsible for the creation of content and sharing of two documents that summarize the PCS transport: 
-- Paramedicine Care Summary – Clinical Subset (PCS-CS) containing the data elements defined in PCC TF-3: 6.3.1.D1 or, where the FHIR Option is used, containing the FHIR Composition bundle defined in PCC TF-3:6.6.x.2.1
+The Content Creator shall be responsible for the creation of content and sharing of two documents that summarize the mPSC transport: 
+- mobile Paramedicine Summary of Care – Clinical Subset (mPSC-CS) containing the data elements defined in PCC TF-3: 6.3.1.D1 or, where the FHIR Option is used, containing the FHIR Composition bundle defined in PCC TF-3:6.6.x.2.1
 
-- Paramedicine Care Summary – Complete Report (PCS-CR) containing the data elements defined in PCC TF-3: 6.3.1.D2, or, where the FHIR Option is used, containing the FHIR Composition bundle defined in PCC TF-3:6.6.x.2.1
+- mobile Paramedicine Summary of Care – Complete Report (mPSC-CR) containing the data elements defined in PCC TF-3: 6.3.1.D2, or, where the FHIR Option is used, containing the FHIR Composition bundle defined in PCC TF-3:6.6.x.2.1
 
 ##### Document Consumer
 
-A Content Consumer is responsible for viewing, importing, or other processing options for Paramedicine Care Summary – Clinical Subset (1.3.6.1.4.1.19376.1.5.3.1.1.29.1) and Paramedicine Care Summary – Complete Report (1.3.6.1.4.1.19376.1.5.3.1.1.30.1) documents content created by a PCS Content Creator. This is specified in \[PCC-1\] document sharing transaction in PCC TF-2: 3.1
+A Content Consumer is responsible for viewing, importing, or other processing options for mobile Paramedicine Summary of Care – Clinical Subset (1.3.6.1.4.1.19376.1.5.3.1.1.29.1) and mobile Paramedicine Summary of Care – Complete Report (1.3.6.1.4.1.19376.1.5.3.1.1.30.1) documents content created by a mPSC Content Creator. This is specified in \[PCC-1\] document sharing transaction in PCC TF-2: 3.1
 
 ### Actor Options
 

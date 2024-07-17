@@ -31,7 +31,7 @@ Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * type[+] = $sct#419955002 "Residential institution"
 * type[+] = $sct#702869004 "Incident site"
-* type[+] = $ICD10#Y92.0 "Non-institutional (private) residence as the place of occurrence of the external cause"
+* type[+] = $ICD10-CM#Y92.0 "Non-institutional (private) residence as the place of occurrence of the external cause"
 * position.longitude = 33.663
 * position.latitude = 93.594
 * address.line = "520 South Pine Street"

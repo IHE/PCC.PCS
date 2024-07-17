@@ -85,7 +85,7 @@ Description:    "The indication of weather and incident is considered a mass cas
 Profile:        IHE_PCC_mPSC_Number_of_Affected_People  
 Parent:         Observation
 Id:             IHE.PCC.mPSC.Number.of.Affected.People  
-Title:          "Number of Affected People "
+Title:          "Number of Affected People"
 Description:    "The number of effected people that are present at the incident. This numeric does not apply to the number of providers at the incident."
 //Proper loinc code needs to be requested or found
 * code = $loinc#67489-5

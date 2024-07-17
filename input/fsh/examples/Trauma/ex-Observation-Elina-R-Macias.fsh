@@ -7,6 +7,9 @@ Usage: #example
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#67515-7 
 * valueCodeableConcept = $sct#422693009	"Language barrier"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
+* subject = Reference(Patient/ex-Patient-Elina-R-Macias)
+* effectiveDateTime = "2022-10-09T08:41:00-05:00"
 
 Instance:   ex-Observation-Elina-R-Macias-BarriersTocare-HearingImpaired
 InstanceOf: IHE_PCC_mPSC_BarriersTocare
@@ -17,6 +20,9 @@ Usage: #example
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#67515-7 
 * valueCodeableConcept = $sct#15188001  "Hearing loss"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
+* subject = Reference(Patient/ex-Patient-Elina-R-Macias)
+* effectiveDateTime = "2022-10-09T08:41:00-05:00"
 
 Instance:   ex-Observation-Elina-R-Macias-Height-of-Fall 
 InstanceOf: Height_of_Fall  
@@ -26,6 +32,9 @@ Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * status  = http://hl7.org/fhir/observation-status#final
 * valueQuantity = 1 $ucum#ft "Feet"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
+* subject = Reference(Patient/ex-Patient-Elina-R-Macias)
+* effectiveDateTime = "2022-10-09T08:41:00-05:00"
 
 Instance:   ex-Observation-Elina-R-Macias-Mechanism-Of-Injury  
 InstanceOf: Mechanism_Of_Injury 
@@ -35,6 +44,9 @@ Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * status  = http://hl7.org/fhir/observation-status#final
 * valueCodeableConcept = $sct#1055294009	"Blunt impact"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
+* subject = Reference(Patient/ex-Patient-Elina-R-Macias)
+* effectiveDateTime = "2022-10-09T08:41:00-05:00"
 
 
 Instance:   ex-Observation-Elina-R-Macias-Number-of-People  
@@ -45,6 +57,9 @@ Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * status  = http://hl7.org/fhir/observation-status#final
 * valueInteger = 1
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
+* subject = Reference(Patient/ex-Patient-Elina-R-Macias)
+* effectiveDateTime = "2022-10-09T08:41:00-05:00"
 
 Instance:   ex-Observation-Elina-R-Macias-Activity-Laundry  
 InstanceOf: IHE_PCC_mPSC_Patient_Activity
@@ -53,7 +68,10 @@ Description: "The Observation instance for Patient Elina R Macias Patient Activi
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * status  = http://hl7.org/fhir/observation-status#final
-* valueCodeableConcept = $ICD10#Y93.E2    "Activity, laundry"
+* valueCodeableConcept = $ICD10-CM#Y93.E2    "Activity, laundry"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
+* subject = Reference(Patient/ex-Patient-Elina-R-Macias)
+* effectiveDateTime = "2022-10-09T08:41:00-05:00"
 
 Instance:   ex-Observation-Elina-R-Macias-Activity-Vacuuming  
 InstanceOf: IHE_PCC_mPSC_Patient_Activity
@@ -62,7 +80,10 @@ Description: "The Observation instance for Patient Elina R Macias Patient Activi
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * status  = http://hl7.org/fhir/observation-status#final
-* valueCodeableConcept = $ICD10#Y93.E3    "Activity, vacuuming"
+* valueCodeableConcept = $ICD10-CM#Y93.E3    "Activity, vacuuming"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
+* subject = Reference(Patient/ex-Patient-Elina-R-Macias)
+* effectiveDateTime = "2022-10-09T08:41:00-05:00"
 
 
 Instance:   ex-Observation-Elina-R-Macias-Last-Oral-Intake  
@@ -73,6 +94,9 @@ Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * status  = http://hl7.org/fhir/observation-status#final
 * valueDateTime = "2022-10-09T07:00:00-05:00"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
+* subject = Reference(Patient/ex-Patient-Elina-R-Macias)
+* effectiveDateTime = "2022-10-09T08:41:00-05:00"
 
 
 Instance:   ex-Observation-Elina-R-Macias-Possible-Injury
@@ -84,3 +108,6 @@ Usage: #example
 * status  = http://hl7.org/fhir/observation-status#final
 * code = $loinc#21611-9
 * valueBoolean = true 
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
+* subject = Reference(Patient/ex-Patient-Elina-R-Macias)
+* effectiveDateTime = "2022-10-09T08:41:00-05:00"

@@ -1,28 +1,19 @@
-Instance: ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Systolic-1 
+Instance: ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-1 
 InstanceOf: IHE_PCC_mPSC_VitalSigns
 Usage: #example
 Description: "The instance for Patient Elina R Macias VitalSigns-BloodPressure-Systolic Resource utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * status  = http://hl7.org/fhir/observation-status#final
-* code = $loinc#8480-6
+* code = $loinc#85354-9
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T08:48:00-05:00"
 * method = $sct#239033002   "Digital examination"
 * device = Reference(Device/ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device)
-* valueQuantity = 102 $ucum#mmHg "mm[Hg]"
-
-Instance: ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Diastolic-1 
-InstanceOf: IHE_PCC_mPSC_VitalSigns
-Usage: #example
-Description: "The instance for Patient Elina R Macias VitalSigns-BloodPressure-Diastolic Resource utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
-* meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
-* status  = http://hl7.org/fhir/observation-status#final
-* code = $loinc#8462-4
-* subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T08:48:00-05:00"
-* method = $sct#239033002   "Digital examination"
-* device = Reference(Device/ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device)
-* valueQuantity = 64 $ucum#mmHg "mm[Hg]"
+* component.code[+] = $loinc#8480-6
+* component.valueQuantity[=] = 102
+* component.code[+] = $loinc#8462-4
+* component.valueQuantity[=] = 64
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-HeartRate-1 
@@ -36,6 +27,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-HeartRate Resou
 * effectiveDateTime = "2022-10-09T08:48:00-05:00"
 * valueQuantity = 80 $ucum#/min "/min"
 * method = $sct#113011001   "Palpation"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-PulseOximetry-1 
@@ -48,6 +40,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-OxygenSat Resou
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T08:48:00-05:00"
 * valueQuantity = 90 $ucum#% "%"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-PulseRhythm-1 
 InstanceOf: IHE_PCC_mPSC_VitalSigns
@@ -59,6 +52,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-PulseRhythm Res
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T08:48:00-05:00"
 * valueCodeableConcept = $sct#248632004    "Regular intermission in pulse"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-RespiratoryRate-1 
@@ -71,6 +65,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-RespiratoryRate
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T08:48:00-05:00"
 * valueQuantity = 25 $ucum#/min "/min"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-RespiratoryEffort-1 
 InstanceOf: IHE_PCC_mPSC_VitalSigns 
@@ -82,6 +77,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns- Resource utili
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T08:48:00-05:00"
 * valueCodeableConcept = $sct#1290338002	"Normal respiratory effort"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-Carbon-Monoxide-1 
 InstanceOf: IHE_PCC_mPSC_VitalSigns
@@ -93,6 +89,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Carbon Monoxide
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T08:48:00-05:00"
 * valueQuantity = 2.1 $ucum#% "%"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-Blood-Glucose-Level-1 
 InstanceOf: IHE_PCC_mPSC_VitalSigns
@@ -104,6 +101,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-BloodGlucoseLev
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T08:48:00-05:00"
 * valueQuantity = 130 $ucum#mg/dl "mg/dl"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-Temperature-1 
 InstanceOf: IHE_PCC_mPSC_VitalSigns
@@ -116,6 +114,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Temperature Res
 * effectiveDateTime = "2022-10-09T08:48:00-05:00"
 * valueQuantity = 35.2 $ucum#Cel "Cel"
 * method = $sct#448093005   "Measurement of temperature using tympanic thermometer"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-Estimated-Weight-1 
 InstanceOf: IHE_PCC_mPSC_VitalSigns  
@@ -127,6 +126,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Estimated-Weigh
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T08:48:30-05:00"
 * valueQuantity = 53.8 $ucum#kg "kg"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-PainSeverity-1  
 InstanceOf: IHE_PCC_mPSC_VitalSigns  
@@ -139,6 +139,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Pain Resource u
 * effectiveDateTime = "2022-10-09T08:48:30-05:00"
 * valueInteger = 8
 * method = $sct#1284852002  "Numeric Pain Rating Scale"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-AVPU-1  
 InstanceOf: IHE_PCC_mPSC_VitalSigns  
@@ -150,33 +151,27 @@ Description: "The instance for Patient Elina R Macias VitalSigns-AVPU Resource u
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T08:48:30-05:00"
 * valueCodeableConcept = $sct#255373000     "Verbal"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 
-Instance: ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Systolic-2
+
+Instance: ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-2 
 InstanceOf: IHE_PCC_mPSC_VitalSigns
 Usage: #example
 Description: "The instance for Patient Elina R Macias VitalSigns-BloodPressure-Systolic Resource utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * status  = http://hl7.org/fhir/observation-status#final
-* code = $loinc#8480-6
+* code = $loinc#85354-9
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T09:00:00-05:00"
 * method = $sct#239033002   "Digital examination"
 * device = Reference(Device/ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device)
-* valueQuantity = 98 $ucum#mmHg "mm[Hg]"
+* component.code[+] = $loinc#8480-6
+* component.valueQuantity[=] = 98
+* component.code[+] = $loinc#8462-4
+* component.valueQuantity[=] = 60
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
-Instance: ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Diastolic-2
-InstanceOf: IHE_PCC_mPSC_VitalSigns
-Usage: #example
-Description: "The instance for Patient Elina R Macias VitalSigns-BloodPressure-Diastolic Resource utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
-* meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
-* status  = http://hl7.org/fhir/observation-status#final
-* code = $loinc#8462-4
-* subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T09:00:00-05:00"
-* method = $sct#239033002   "Digital examination"
-* device = Reference(Device/ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device)
-* valueQuantity = 60 $ucum#mmHg "mm[Hg]"
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-HeartRate-2 
 InstanceOf: IHE_PCC_mPSC_VitalSigns
@@ -189,6 +184,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-HeartRate Resou
 * effectiveDateTime = "2022-10-09T09:00:00-05:00"
 * valueQuantity = 70 $ucum#/min "/min"
 * method = $sct#113011001   "Palpation"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-PulseOximetry-2 
@@ -201,6 +197,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-OxygenSat Resou
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T09:00:00-05:00"
 * valueQuantity = 94 $ucum#% "%"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-PulseRhythm-2 
 InstanceOf: IHE_PCC_mPSC_VitalSigns
@@ -212,6 +209,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-PulseRhythm Res
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T09:00:00-05:00"
 * valueCodeableConcept = $sct#248632004    "Regular intermission in pulse"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-RespiratoryRate-2 
@@ -224,6 +222,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-RespiratoryRate
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T09:00:00-05:00"
 * valueQuantity = 22 $ucum#/min "/min"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-RespiratoryEffort-2 
 InstanceOf: IHE_PCC_mPSC_VitalSigns  
@@ -235,6 +234,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns- Resource utili
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T09:00:00-05:00"
 * valueCodeableConcept = $sct#1290338002	"Normal respiratory effort"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-Carbon-Monoxide-2 
 InstanceOf: IHE_PCC_mPSC_VitalSigns
@@ -246,6 +246,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Carbon Monoxide
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T09:00:00-05:00"
 * dataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason#not-performed
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-Blood-Glucose-Level-2 
 InstanceOf: IHE_PCC_mPSC_VitalSigns
@@ -257,6 +258,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-BloodGlucoseLev
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T09:00:00-05:00"
 * dataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason#not-performed
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-Temperature-2 
 InstanceOf: IHE_PCC_mPSC_VitalSigns
@@ -269,6 +271,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Temperature Res
 * effectiveDateTime = "2022-10-09T09:00:00-05:00"
 * valueQuantity = 35.6 $ucum#Cel "Cel"
 * method = $sct#448093005   "Measurement of temperature using tympanic thermometer"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-PainSeverity-2  
 InstanceOf: IHE_PCC_mPSC_VitalSigns 
@@ -281,32 +284,25 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Pain Resource u
 * effectiveDateTime = "2022-10-09T09:00:00-05:00"
 * valueInteger = 5
 * method = $sct#1284852002  "Numeric Pain Rating Scale"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
-Instance: ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Systolic-3
+
+Instance: ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-3 
 InstanceOf: IHE_PCC_mPSC_VitalSigns
 Usage: #example
 Description: "The instance for Patient Elina R Macias VitalSigns-BloodPressure-Systolic Resource utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * status  = http://hl7.org/fhir/observation-status#final
-* code = $loinc#8480-6
+* code = $loinc#85354-9
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T09:10:00-05:00"
 * method = $sct#239033002   "Digital examination"
 * device = Reference(Device/ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device)
-* valueQuantity = 100 $ucum#mmHg "mm[Hg]"
-
-Instance: ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Diastolic-3
-InstanceOf: IHE_PCC_mPSC_VitalSigns
-Usage: #example
-Description: "The instance for Patient Elina R Macias VitalSigns-BloodPressure-Diastolic Resource utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
-* meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
-* status  = http://hl7.org/fhir/observation-status#final
-* code = $loinc#8462-4
-* subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T09:10:00-05:00"
-* method = $sct#239033002   "Digital examination"
-* device = Reference(Device/ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device)
-* valueQuantity = 62 $ucum#mmHg "mm[Hg]"
+* component.code[+] = $loinc#8480-6
+* component.valueQuantity[=] = 100
+* component.code[+] = $loinc#8462-4
+* component.valueQuantity[=] = 62
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-HeartRate-3 
 InstanceOf: IHE_PCC_mPSC_VitalSigns
@@ -319,6 +315,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-HeartRate Resou
 * effectiveDateTime = "2022-10-09T09:10:00-05:00"
 * valueQuantity = 66 $ucum#/min "/min"
 * method = $sct#113011001   "Palpation"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-PulseOximetry-3 
@@ -331,6 +328,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-OxygenSat Resou
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T09:10:00-05:00"
 * valueQuantity = 95 $ucum#% "%"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-PulseRhythm-3
 InstanceOf: IHE_PCC_mPSC_VitalSigns
@@ -342,6 +340,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-PulseRhythm Res
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T09:10:00-05:00"
 * valueCodeableConcept = $sct#248632004    "Regular intermission in pulse"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-RespiratoryRate-3 
@@ -354,6 +353,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-RespiratoryRate
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T09:10:00-05:00"
 * valueQuantity = 20 $ucum#/min "/min"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-RespiratoryEffort-3 
 InstanceOf: IHE_PCC_mPSC_VitalSigns  
@@ -365,6 +365,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns- Resource utili
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T09:10:00-05:00"
 * valueCodeableConcept = $sct#1290338002	"Normal respiratory effort"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-Carbon-Monoxide-3 
 InstanceOf: IHE_PCC_mPSC_VitalSigns
@@ -376,6 +377,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Carbon Monoxide
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T09:10:00-05:00"
 * dataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason#not-performed
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-Blood-Glucose-Level-3 
 InstanceOf: IHE_PCC_mPSC_VitalSigns
@@ -387,6 +389,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-BloodGlucoseLev
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T09:10:00-05:00"
 * dataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason#not-performed
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-Temperature-3 
 InstanceOf: IHE_PCC_mPSC_VitalSigns
@@ -399,6 +402,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Temperature Res
 * effectiveDateTime = "2022-10-09T09:10:00-05:00"
 * valueQuantity = 35.8 $ucum#Cel "Cel"
 * method = $sct#448093005   "Measurement of temperature using tympanic thermometer"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-PainSeverity-3 
 InstanceOf: IHE_PCC_mPSC_VitalSigns 
@@ -411,32 +415,26 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Pain Resource u
 * effectiveDateTime = "2022-10-09T09:10:00-05:00"
 * valueInteger = 5
 * method = $sct#1284852002  "Numeric Pain Rating Scale"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
-Instance: ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Systolic-4
+
+
+Instance: ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-4
 InstanceOf: IHE_PCC_mPSC_VitalSigns
 Usage: #example
 Description: "The instance for Patient Elina R Macias VitalSigns-BloodPressure-Systolic Resource utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * status  = http://hl7.org/fhir/observation-status#final
-* code = $loinc#8480-6
+* code = $loinc#85354-9
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T09:20:00-05:00"
 * method = $sct#239033002   "Digital examination"
 * device = Reference(Device/ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device)
-* valueQuantity = 96 $ucum#mmHg "mm[Hg]"
-
-Instance: ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Diastolic-4
-InstanceOf: IHE_PCC_mPSC_VitalSigns
-Usage: #example
-Description: "The instance for Patient Elina R Macias VitalSigns-BloodPressure-Diastolic Resource utilizing data from the NEMSIS 2023-EMS-3-FallTransport_v350 example"
-* meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
-* status  = http://hl7.org/fhir/observation-status#final
-* code = $loinc#8462-4
-* subject = Reference(Patient/ex-Patient-Elina-R-Macias)
-* effectiveDateTime = "2022-10-09T09:20:00-05:00"
-* method = $sct#239033002   "Digital examination"
-* device = Reference(Device/ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device)
-* valueQuantity = 60 $ucum#mmHg "mm[Hg]"
+* component.code[+] = $loinc#8480-6
+* component.valueQuantity[=] = 196
+* component.code[+] = $loinc#8462-4
+* component.valueQuantity[=] = 60
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-BloodPressure-Device
 InstanceOf: Device
@@ -456,6 +454,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-HeartRate Resou
 * effectiveDateTime = "2022-10-09T09:20:00-05:00"
 * valueQuantity = 68 $ucum#/min "/min"
 * method = $sct#113011001   "Palpation"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-PulseOximetry-4 
@@ -468,6 +467,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-OxygenSat Resou
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T09:20:00-05:00"
 * valueQuantity = 95 $ucum#% "%"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-PulseRhythm-4
 InstanceOf: IHE_PCC_mPSC_VitalSigns
@@ -479,6 +479,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-PulseRhythm Res
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T09:20:00-05:00"
 * valueCodeableConcept = $sct#248632004    "Regular intermission in pulse"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-RespiratoryRate-4 
@@ -491,6 +492,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-RespiratoryRate
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T09:20:00-05:00"
 * valueQuantity = 22 $ucum#/min "/min"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-RespiratoryEffort-4 
 InstanceOf: IHE_PCC_mPSC_VitalSigns 
@@ -502,6 +504,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns- Resource utili
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T09:20:00-05:00"
 * valueCodeableConcept = $sct#1290338002	"Normal respiratory effort"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-Carbon-Monoxide-4 
 InstanceOf: IHE_PCC_mPSC_VitalSigns
@@ -513,6 +516,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Carbon Monoxide
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T09:20:00-05:00"
 * dataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason#not-performed
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-Blood-Glucose-Level-4 
 InstanceOf: IHE_PCC_mPSC_VitalSigns
@@ -524,6 +528,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-BloodGlucoseLev
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * effectiveDateTime = "2022-10-09T09:20:00-05:00"
 * dataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason#not-performed
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-Temperature-4 
 InstanceOf: IHE_PCC_mPSC_VitalSigns
@@ -536,6 +541,7 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Temperature Res
 * effectiveDateTime = "2022-10-09T09:20:00-05:00"
 * valueQuantity = 35.8 $ucum#Cel "Cel"
 * method = $sct#448093005   "Measurement of temperature using tympanic thermometer"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
 Instance: ex-Patient-Elina-R-Macias-VitalSigns-PainSeverity-4 
 InstanceOf: IHE_PCC_mPSC_VitalSigns 
@@ -548,4 +554,5 @@ Description: "The instance for Patient Elina R Macias VitalSigns-Pain Resource u
 * effectiveDateTime = "2022-10-09T09:20:00-05:00"
 * valueInteger = 5
 * method = $sct#1284852002  "Numeric Pain Rating Scale"
+* performer = Reference(Practitioner/ex-Practitioner-Ellen-Costa)
 
