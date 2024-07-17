@@ -3,8 +3,8 @@ feedback:
   - active: true
     dashboard:
       label: New Issue
-      url: https://github.com/IHE/PCC.PCS/issues/new/choose
+      url: https://github.com/IHE/PCC.mPSC/issues/new/choose
   - active: true
     dashboard:
       label: Issues
-      url: https://github.com/IHE/PCC.PCS/issues
+      url: https://github.com/IHE/PCC.mPSC/issues

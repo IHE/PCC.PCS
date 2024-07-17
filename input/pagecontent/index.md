@@ -1,4 +1,4 @@
-**This Content Profile Deinfes the Paramedicine Care Summary document requirement that can be shared with a reciving facility to convey pertinant patient infromation**
+**This Content Profile Deinfes the Pmobile Paramedicine Summary of Care document requirement that can be shared with a reciving facility to convey pertinant patient infromation**
 
 [Open and Closed Issues](issues.html)
 
@@ -6,7 +6,7 @@
 This guide is organized into four main sections:
 
 1. Volume I:
-   1. [Paramedicine Care Summary (PCS) Profile](volume-1.html)
+   1. [Pmobile Paramedicine Summary of Care (mPSC) Profile](volume-1.html)
 
 2. Volume II: Transaction Detail
    1. [Document Sharing [PCC-1]](PCC-1.html)
@@ -18,16 +18,16 @@ This guide is organized into four main sections:
     4.I [**National Extensions for IHE USA**](volume-4.html)
 	
 5. Appendix
-	1. **PCS FHIR Composition**
-	[Paramedicine Care Summary International Composition Complete Report](StructureDefinition-IHE.PCC.PCS.Composition.CR.html)
-	(TODO)[Paramedicine Care Summary International Composition Clinical Subset](PCS_Composition.fsh)
-	(TODO)[Paramedicine Care Summary US-Realm Composition Complete Report](PCS_Composition.fsh)
-	(TODO)[Paramedicine Care Summary US-Realm Composition Clinical Subset](PCS_Composition.fsh)
-	2. **PCS CDA Template**
+	1. **mPSC FHIR Composition**
+	[Pmobile Paramedicine Summary of Care International Composition Complete Report](StructureDefinition-IHE_PCC_mPSC_Composition_Complete_Report.html)
+	[Pmobile Paramedicine Summary of Care International Composition Clinical Subset](StructureDefinition-IHE_PCC_mPSC_Composition_ClinicalSubset.html)
+	(TODO)[Pmobile Paramedicine Summary of Care US-Realm Composition Complete Report](mPSC_Composition.fsh)
+	(TODO)[Pmobile Paramedicine Summary of Care US-Realm Composition Clinical Subset](mPSC_Composition.fsh)
+	2. **mPSC CDA Template**
 	(TODO)
-	3. **NEMSIS to PCS FHIR Mappings**
+	3. **NEMSIS to mPSC FHIR Mappings**
 	(TODO)
-	4. **NEMSIS to PCS CDA Mappings**
+	4. **NEMSIS to mPSC CDA Mappings**
 	(TODO)
 
 Click on any of the links above, head on over the [table of contents](toc.html), or

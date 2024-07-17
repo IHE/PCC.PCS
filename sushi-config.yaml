@@ -90,13 +90,13 @@ pages:
     generation: markdown
     
 menu:
-  PCS Home: index.html
+  mPSC Home: index.html
   Volume 1:
     Introduction: volume-1.html
     Actors and Transactions: volume-1.html#mpsc-actors-and-transactions
-    Actor Options: volume-1.html#pcs-actor-options
+    Actor Options: volume-1.html#mpsc-actor-options
     Required Actor Groupings: volume-1.html#mpsc-required-actor-groupings
-    Overview: volume-1.html#pcs-overview
+    Overview: volume-1.html#mpsc-overview
     Security Considerations: volume-1.html#mpsc-security-considerations
     Cross-Profile Considerations: volume-1.html#mpsc-cross-profile-considerations
   Volume 2:
