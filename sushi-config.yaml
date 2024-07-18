@@ -88,7 +88,10 @@ pages:
   PCC-1.md:
     title: PCC-1
     generation: markdown
-    
+  download.md:
+    title: Download and Analysis
+    generation: markdown
+
 menu:
   mPSC Home: index.html
   Volume 1:
@@ -107,3 +110,4 @@ menu:
     "National Extensions": volume-4.html
   Test Plan: testplan.html
   Artifacts: artifacts.html
+  Download: download.html
