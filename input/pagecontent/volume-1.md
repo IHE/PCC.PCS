@@ -30,13 +30,14 @@ Figure X.1-1 shows the actors directly involved in the mPSC Profile and the rele
 * Transactions
 
   - [PCC-1](PCC-1.html)
-  - [ITI-65](ITI-65.html)
+
   
 **Table X.1-1: mPSC Profile – Actors and Transactions**
 | Actors 			    | Transactions   					    | Initiator or Responder	| Optionality	| Reference	|
 |-----------------------|----------------------------			|--------------------------|---------------|-----------|
 | Content Creator   	| Document Sharing [PCC-1](PCC-1.html)  | Initiator				| R				| TBD		|
-| Content Consumer  	| Document Sharing [PCC-1](ITI-65.html) | Responder				| R				| TBD		|
+{:.grid}
+
 Figure X.1-1 shows the actors directly involved in the mPSC Profile and the direction that the content is exchanged. 
 
 A product implementation using this profile may group actors from this profile with actors from a workflow or transport profile to be functional. The grouping of the content module described in this profile to specific actors is described in more detail in [Required Actor Groupings](volume-1.html#mpsc-required-actor-groupings) or in [Cross Profile Considerations](volume-1.html#mpsc-cross-profile-considerations).
@@ -45,9 +46,11 @@ A product implementation using this profile may group actors from this profile w
 | Actors 			    | Content Modules  										 | Optionality	| Reference	|
 |-----------------------|-----------------------------							 |--------------|-----------|
 | Content Creator   	| mobile Paramedicine Summary of Care – Clinical Subset Document   | R			| TBD		|
-						| mobile Paramedicine Summary of Care – Complete Report Document 	 | R 			| TBD		|
+|						| mobile Paramedicine Summary of Care – Complete Report Document 	 | R 			| TBD		|
 | Content Consumer  	| mobile Paramedicine Summary of Care – Clinical Subset Document   | O(Note 1)	| TBD		|
-						| mobile Paramedicine Summary of Care – Complete Report Document 	 | O(Note 1)	| TBD		|
+|						| mobile Paramedicine Summary of Care – Complete Report Document 	 | O(Note 1)	| TBD		|
+{:.grid}
+
 Note 1: The Content Consumer must be able to support at least one of these options. 
 Table X.1-2 lists the content module(s) defined in the mPSC Profile. To claim support with this profile, an actor shall support all required content modules (labeled “R”) and may support optional content modules (labeled “O”). 
 
@@ -73,8 +76,11 @@ A Content Consumer is responsible for viewing, importing, or other processing op
 FHIR Capability Statement for [Content Consumer](CapabilityStatement-IHE.mPSC.Content-Consumer.html)  
 
 ## mPSC Actor Options
+
 Options that may be selected for each actor in this profile, if any, are listed in the Table X.2-1. Dependencies between options, when applicable, are specified in notes.
+
 **Table X.2-1: mobile Paramedicine Summary of Care – Actors and Options**
+
 | Actors 			    | Option Name  				   				| Reference	|
 |-----------------------|----------------------------- 				|--------------|
 | Content Creator   	| CDA Option (Note 1) 		   				| TBD			|
@@ -86,6 +92,8 @@ Options that may be selected for each actor in this profile, if any, are listed 
 						| Clinical Subset Data Import Option Note3  | TBD			|
 						| Quality Data Import Option Note3 			| TBD			|
 						| Trauma Data Import Option Note3 			| TBD			|
+{:.grid}
+
 Note 1: The Content Creator must be able to support at least one of these options. 
 Note 2: The Content Consumer must implement at least one of these options. 
 Note 3: If the Content Consumer implements any of these options, it must also support the Discrete Data Import Option. 

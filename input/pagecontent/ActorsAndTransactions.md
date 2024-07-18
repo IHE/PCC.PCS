@@ -100,7 +100,7 @@ The Content Consumer that supports the Discrete Data Import Option shall be able
 allergy in a list) for import as part of the local patient record.   
 Note:The Discrete Data Import Option does not require the support of the View, Import Document or Import Sections Options so that it could be used alone to support implementations of Content Consumers such as Public Health Data or Clinical Research systems that might aggregate and anonymize specific population healthcare information data as Document Consumer Actors, 
 but one where no care provider actually views the medical summaries. 
-When discrete data is accessed after it was imported, a Content Consumer may c hoose to check if the document related to the discrete data viewed has been deprecated, replaced or addended. 
+When discrete data is accessed after it was imported, a Content Consumer may choose to check if the document related to the discrete data viewed has been deprecated, replaced or addended. 
 A Content Consumer Actor grouped with the XDS Document Source Actor may query the Document Registry about a document from which discrete data was previously imported in order to find out if this previously imported document may have been replaced or has received an addendum.
 
 ### Transaction Descriptions
