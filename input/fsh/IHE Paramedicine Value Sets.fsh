@@ -157,7 +157,7 @@ Id: Active.Advance.Directive.Finding.VS
 * $sct#425393008	"Active Durable Power of Attorney for Healthcare" 
 * $sct#425397009	"Active advance directive with verification by healthcare professional" 
 * $sct#425394002	"Active healthcare will" 
-* $sct#310305009	"Active advance directive (copy within chart)"
+* $sct#310305009	"Active advance directive"
 * $sct#143021000119109	"Do not resuscitate status with supporting documentation" 
 * $sct#734328004        "Does not have current Last Will and Testament" 
 * $sct#697978002	"Provider orders for life-sustaining treatment" 

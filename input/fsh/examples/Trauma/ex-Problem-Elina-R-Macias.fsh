@@ -6,10 +6,10 @@ Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * clinicalStatus  = http://terminology.hl7.org/CodeSystem/condition-clinical#active
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#unconfirmed
-* code = $ICD10#S79.91 "Unspecified injury of hip"
+* code = $ICD10-CM#S79.91 "Unspecified injury of hip"
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * onsetDateTime = "2022-10-09T07:30:00-05:00"
-* evidence.code = $ICD10#M25.55 "Pain in hip"
+* evidence.code = $ICD10-CM#M25.55 "Pain in hip"
 
 
 Instance:   ex-Problem-Elina-R-Macias-Multiple-Injury
@@ -20,13 +20,13 @@ Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * clinicalStatus  = http://terminology.hl7.org/CodeSystem/condition-clinical#active
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#unconfirmed
-* code = $ICD10#T07 "Unspecified multiple injuries"
+* code = $ICD10-CM#T07 "Unspecified multiple injuries"
 * subject = Reference(Patient/ex-Patient-Elina-R-Macias)
 * onsetDateTime = "2022-10-09T07:30:00-05:00"
-* evidence.code[+] = $ICD10#M79.6 "Pain in limb"
-* evidence.code[+] = $ICD10#M54.5 "Low back pain"
-* evidence.code[+] = $ICD10#R60.9 "Oedema, unspecified"
-* evidence.code[+] = $ICD10#R22 "Localized swelling, mass and lump of skin and subcutaneous tissue"
+* evidence.code[+] = $ICD10-CM#M79.6 "Pain in limb"
+* evidence.code[+] = $ICD10-CM#M54.5 "Low back pain"
+* evidence.code[+] = $ICD10-CM#R60.9 "Oedema, unspecified"
+* evidence.code[+] = $ICD10-CM#R22 "Localized swelling, mass and lump of skin and subcutaneous tissue"
 
 Instance:   ex-Problem-Elina-R-Macias-CheifComplaint
 InstanceOf: ConditionUvIps

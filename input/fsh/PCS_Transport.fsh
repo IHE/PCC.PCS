@@ -1,6 +1,6 @@
-Profile:        Patient_Transport_ClinicalSubset
+Profile:        IHE_PCC_Patient_Transport
 Parent:         Encounter
-Id:             Patient.Transport.ClinicalSubset
+Id:             IHE.PCC.Patient.Transport
 Title:          "Patient Transport ClinicalSubset"
 Description:    "Record of transport of a person or patient with constraints matching the Clinical Subset."
 

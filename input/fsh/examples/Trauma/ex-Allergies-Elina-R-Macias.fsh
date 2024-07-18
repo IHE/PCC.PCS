@@ -6,7 +6,7 @@ Description: "The Example instance for Elina R Macias Allergy-Penicillin utilizi
 * type = http://hl7.org/fhir/allergy-intolerance-type#allergy
 * clinicalStatus = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical#active
 * category = http://hl7.org/fhir/allergy-intolerance-category#medication
-* code = $ICD10-CM#Z88.0   "Personal history of allergy to penicillin"
+* code = $ICD10-CM#Z88.0   "Allergy status to penicillin"
 * patient = Reference(Patient/ex-Patient-Elina-R-Macias)
 
 Instance: ex-Allergies-Elina-R-Macias-Aspirin
