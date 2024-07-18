@@ -13,14 +13,19 @@ Currently, patient interventions and assessments are written into an ambulance e
 ## mPSC Actors, and Transactions
 This section defines the actors, transactions, and/or content modules in this profile. General definitions of actors are given in the Technical Frameworks General Introduction Appendix A. IHE Transactions can be found in the Technical Frameworks General Introduction Appendix B. Both appendices are located at http://ihe.net/Technical_Frameworks/#GenIntro
  
- [Figure X.1-1: mPSC Actor Diagram](docSharing)
+<figure>
+{%include docSharing.svg%}
+<figcaption><b>Figure: 1:X.1-1: mPSC Actor Diagram</b></figcaption>
+</figure>
+<br clear="all">
+
 Figure X.1-1 shows the actors directly involved in the mPSC Profile and the relevant transactions between them. If needed for context, other actors that may be indirectly involved due to their participation in other related profiles are shown in dotted lines. Actors which have a required grouping are shown in conjoined boxes (see Section X.3).
 
 * Actors
 
-  - [Content Creator](2_actors_and_transactions.html#Content-Creator)
+  - [Content Creator](ActorsAndTransactions.html#Content-Creator)
 
-  - [Content Consumer](2_actors_and_transactions.html#Content-Consumer)
+  - [Content Consumer](ActorsAndTransactions.html#Content-Consumer)
 
 * Transactions
 
@@ -53,8 +58,8 @@ Content module requirements are documented in PCC TF-2 Content Modules. This sec
 
 #### Content Creator
 The Content Creator shall be responsible for the creation of content and sharing of two documents that summarize the emergency transport encounter:
-•	mobile Paramedicine Summary of Care – Clinical Subset (mPSC-CS) containing the data elements defined in PCC TF-3: 6.3.1.D1 or, where the FHIR Option is used, containing the FHIR Composition bundle defined (here)[StructureDefinition-IHE_PCC_mPSC_Composition_Complete_Report.html]
-•	mobile Paramedicine Summary of Care – Complete Report (mPSC-CR) containing the data elements defined in PCC TF-3: 6.3.1.D2, or, where the FHIR Option is used, containing the FHIR Composition bundle defined (here)[StructureDefinition-IHE_PCC_mPSC_Composition_ClinicalSubset.html]
+•	mobile Paramedicine Summary of Care – Clinical Subset (mPSC-CS) containing the data elements defined in PCC TF-3: 6.3.1.D1 or, where the FHIR Option is used, containing the FHIR Composition bundle defined (here)[StructureDefinition-IHE.PCC.mPSC.Composition.Complete.Report.html]
+•	mobile Paramedicine Summary of Care – Complete Report (mPSC-CR) containing the data elements defined in PCC TF-3: 6.3.1.D2, or, where the FHIR Option is used, containing the FHIR Composition bundle defined (here)[StructureDefinition-IHE.PCC.mPSC.Composition.ClinicalSubset.html]
 
 FHIR Capability Statement for [Content Creator](CapabilityStatement-IHE.mPSC.Content-Creator.html)     
 
@@ -92,8 +97,8 @@ This option defines the processing requirements placed on the Content Creators f
 
 ### FHIR Option
 This option defines the processing requirements placed on the Content Creators for producing a FHIR document bundle version of the mobile Paramedicine Summary of Care documents. The FHIR details are defined in the:
-[mobile Paramedicine Summary of Care International Composition Complete Report](StructureDefinition-IHE_PCC_mPSC_Composition_Complete_Report.html)
-[mobile Paramedicine Summary of Care International Composition Clinical Subset](StructureDefinition-IHE_PCC_mPSC_Composition_ClinicalSubset.html)
+[mobile Paramedicine Summary of Care International Composition Complete Report](StructureDefinition-IHE.PCC.mPSC.Composition.Complete.Report.html)
+[mobile Paramedicine Summary of Care International Composition Clinical Subset](StructureDefinition-IHE.PCC.mPSC.Composition.ClinicalSubset.html)
 
 ### Quality Data Import Option
 This option defines the processing requirements placed on the Content Consumers for providing access and importing quality data from selected sections of the mobile Paramedicine Summary of Care. 

@@ -19,8 +19,8 @@ This guide is organized into four main sections:
 	
 5. Appendix
 	1. **mPSC FHIR Composition**
-	[mobile Paramedicine Summary of Care International Composition Complete Report](StructureDefinition-IHE_PCC_mPSC_Composition_Complete_Report.html)
-	[mobile Paramedicine Summary of Care International Composition Clinical Subset](StructureDefinition-IHE_PCC_mPSC_Composition_ClinicalSubset.html)
+	[mobile Paramedicine Summary of Care International Composition Complete Report](StructureDefinition-IHE.PCC.mPSC.Composition.Complete.Report.html)
+	[mobile Paramedicine Summary of Care International Composition Clinical Subset](StructureDefinition-IHE.PCC.mPSC.Composition.ClinicalSubset.html)
 	(TODO)[mobile Paramedicine Summary of Care US-Realm Composition Complete Report](mPSC_Composition.fsh)
 	(TODO)[mobile Paramedicine Summary of Care US-Realm Composition Clinical Subset](mPSC_Composition.fsh)
 	2. **mPSC CDA Template**

@@ -15,10 +15,8 @@ Table X.1-1: mPSC Profile - Actors and Transactions
 |-----------------|---------------------------------|------------------------|-----------------|---------------|
 | Content Creator | Document Sharing PCC-1 			| Initiator              | R               | PCC TF-2: 3.1 |
 | Content Consumer| Document Sharing PCC-1 			| Responder              | R               | PCC TF-2: 3.1 |
-| Content Creator | Provide Document Bundle ITI-65	| Initiator              | R               | PCC TF-2: 3.1 |
-| Content Consumer| Provide Document Bundle ITI-65	| Responder              | R               | PCC TF-2: 3.1 |
 
-Note 1: The Document Sharing PCC-1 transaction supports the MHD ITI-65 transaction that can be used for the FHIR version of this profile
+Note 1: The Document Sharing PCC-1 transaction supports the MHD that can be used for the FHIR version of this profile
  
 
 
