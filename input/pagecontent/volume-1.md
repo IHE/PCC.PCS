@@ -23,9 +23,9 @@ Figure X.1-1 shows the actors directly involved in the mPSC Profile and the rele
 
 * Actors
 
-  - [Content Creator](ActorsAndTransactions.html#Content-Creator)
+  - [Content Creator](ActorsAndTransactions.html#content-creator)
 
-  - [Content Consumer](ActorsAndTransactions.html#Content-Consumer)
+  - [Content Consumer](ActorsAndTransactions.html#content-consumer)
 
 * Transactions
 

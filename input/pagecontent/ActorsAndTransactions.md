@@ -26,7 +26,15 @@ The Content Creator shall be responsible for the creation of content and sharing
 
 - mobile Paramedicine Summary of Care – Complete Report (mPSC-CR) containing the data elements defined in PCC TF-3: 6.3.1.D2, or, where the FHIR Option is used, containing the FHIR Composition bundle defined in PCC TF-3:6.6.x.2.1
 
-##### Document Consumer
+#### Content Creator
+
+blah blah
+
+#### Content Consumer
+
+blah blah
+
+#### Document Consumer
 
 A Content Consumer is responsible for viewing, importing, or other processing options for mobile Paramedicine Summary of Care – Clinical Subset (1.3.6.1.4.1.19376.1.5.3.1.1.29.1) and mobile Paramedicine Summary of Care – Complete Report (1.3.6.1.4.1.19376.1.5.3.1.1.30.1) documents content created by a mPSC Content Creator. This is specified in \[PCC-1\] document sharing transaction in PCC TF-2: 3.1
 

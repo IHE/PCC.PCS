@@ -9,7 +9,7 @@ Usage: #definition
 * experimental = false
 * date = "2024-07-17"
 * publisher = "Integrating the Healthcare Enterprise (IHE)"
-* description = "The mPCS[Content Creator](ActorsAndTransactions.html#Content-Creator)"
+* description = "The mPCS [Content Creator](ActorsAndTransactions.html#content-creator)"
 * kind = #requirements
 * fhirVersion = #4.0.1
 * format[0] = #application/fhir+xml
@@ -30,7 +30,7 @@ Usage: #definition
 * experimental = false
 * date = "2024-07-17"
 * publisher = "Integrating the Healthcare Enterprise (IHE)"
-* description = "The mPCS[Content Creator](ActorsAndTransactions.html#Content-Consumer)"
+* description = "The mPCS [Content Creator](ActorsAndTransactions.html#content-consumer)"
 * kind = #requirements
 * fhirVersion = #4.0.1
 * format[0] = #application/fhir+xml
