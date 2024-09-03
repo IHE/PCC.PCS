@@ -16,8 +16,10 @@ Usage: #definition
 * format[+] = #application/fhir+json
 * document[+].mode = #producer 
 * document[=].profile = Canonical(IHE_PCC_mPSC_Composition_ClinicalSubset)
+* document[=].documentation = "The composition of the FHIR elements that are used to build the FHIR Document for the Paramedicine Care Summary Clinical Subset"
 * document[+].mode = #producer 
 * document[=].profile = Canonical(IHE_PCC_mPSC_Composition_Complete_Report)
+* document[=].documentation = "TODO"
 
 Instance: IHE.mPSC.Content-Consumer
 InstanceOf: CapabilityStatement
@@ -35,7 +37,9 @@ Usage: #definition
 * fhirVersion = #4.0.1
 * format[0] = #application/fhir+xml
 * format[+] = #application/fhir+json
-* document[+].mode = #producer 
+* document[+].mode = #consumer 
 * document[=].profile = Canonical(IHE_PCC_mPSC_Composition_ClinicalSubset)
-* document[+].mode = #producer 
+* document[=].documentation = "The composition of the FHIR elements that are used to build the FHIR Document for the Paramedicine Care Summary Clinical Subset"
+* document[+].mode = #consumer
 * document[=].profile = Canonical(IHE_PCC_mPSC_Composition_Complete_Report)
+* document[=].documentation = "TODO"
