@@ -23,18 +23,25 @@ jurisdiction: 'http://unstats.un.org/unsd/methods/m49/m49.htm#001'
 copyrightYear: 2023+
 releaseLabel: ci-build
 dependencies:
-  hl7.fhir.uv.ips: 1.1.x
+  hl7.fhir.uv.ips:
+    id: hl7ips
+  #  uri: http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips
+    version: 2.0.0
+  hl7.fhir.uv.fhir-clinical-document:
+  #  id: FHIRClinicalDocumentIG
+    uri: http://hl7.org/fhir/uv/fhir-clinical-document
+    version: 1.0.0  
   ihe.pcc.odh: 
     id: ihepccodh
-    version: current
+    version: 1.0.0
   ihe.iti.pdqm: 
     id: ihepdqm
     uri: https://profiles.ihe.net/ITI/PDQm/ImplementationGuide/ihe.iti.pdqm
-    version: 3.0.x    
-  hl7.fhir.us.ccda:
-    id: CCDAonFHIR
-    uri: http://hl7.org/fhir/us/ccda/ImplementationGuide/hl7.fhir.us.ccda
-    version: 1.2.0
+    version: 3.1.0
+  ihe.iti.mhd:
+    id: ihemhd
+    uri: https://profiles.ihe.net/ITI/PDQm/ImplementationGuide/ihe.iti.mhd
+    version: 4.2.2
 
 parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
   path-resource:
@@ -88,10 +95,7 @@ pages:
   PCC-1.md:
     title: PCC-1
     generation: markdown
-  download.md:
-    title: Download and Analysis
-    generation: markdown
-
+    
 menu:
   mPSC Home: index.html
   Volume 1:
@@ -110,4 +114,3 @@ menu:
     "National Extensions": volume-4.html
   Test Plan: testplan.html
   Artifacts: artifacts.html
-  Download: download.html
