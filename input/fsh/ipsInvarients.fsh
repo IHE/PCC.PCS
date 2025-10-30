@@ -24,6 +24,9 @@ Description: "If observation has components, at least one of these Observation.c
 Severity: #error
 Expression: "component.exists() implies (component.value.exists() or component.dataAbsentReason.exists())"
 
+
+
+
 Invariant: ips-comp-1
 Description: "Either section.entry or emptyReason are present"
 * severity = #error
