@@ -6,6 +6,7 @@ Description:    "Combines the requirements and contraints from IPS, and PDQ prof
 
 
 * name obeys iti-pdqm-patname
+* name obeys ihe-pcc-pat-1
 
 * active MS 
 
@@ -40,6 +41,13 @@ An extension that incoperates the rules and uses of a person's ethnicity in a pa
 In some jurisdictions, it is prohibited to send race and/or ethnicity. Use of this extension may be constrained by national extension and or implementation.There may be a local jurisdiction extension deffined that may be permitted instead of this extension ex: http://hl7.org.au/fhir/StructureDefinition/ethnicity
 """
 * value[x] only CodeableConcept
+
+
+Invariant: ihe-pcc-pat-1
+Description: "Patient.name.given, Patient.name.family or Patient.name.text SHALL be present"
+* severity = #error
+* expression = "family.exists() or given.exists() or text.exists()"
+* xpath = "f:given or f:family or f:text"
 
 
 
