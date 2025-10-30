@@ -1,13 +1,13 @@
 Instance: ContentConsumer
 InstanceOf: ActorDefinition
 // Usage: #example
-//* url = "http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer"
+* url = "https://profiles.ihe.net/PCC/mPSC/ActorDefinition/Content-Consumer"
 //* version = "2.0"
 * name = "Content Consumer"
 * title = "IHE Content Consumer"
 * status = #active
 //* date = "2025-03-19T14:31:30.239Z"
-* description = "An Content Consumer actor is a system that receives a document and uses the content of this document."
+* description = "The Content Consumer Actor views, imports, or performs other processing of content created by a Content Creator Actor."
 //* jurisdiction = $m49.htm#001
 * type = #system
 * documentation = """A Content Consumer actor is the system that receives a document and uses the content of this document. 
