@@ -24,17 +24,22 @@ Description:    "Combines the requirements and contraints from IPS, and PDQ prof
 Extension: UvRace
 Id:  pcc-uv-race
 Title: "Universal realm Race Extension"
-Description: "An extension that incoperates the rules and uses of a person's race in a patient resource egnostic of country or realm. Remains an optional element within the resource so that it can be Banned in Country specific profile or implementations"
-* ^comment = "In some jurisdictions, it is prohibited to send race and/or ethnicity. Use of this extension may be constrained by national extension and or implementation. There may be a local jurisdiction extension deffined that may be permitted instead of this extension ex: http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+Description: """
+An extension that incoperates the rules and uses of a person's race in a patient resource egnostic of country or realm. Remains an optional element within the resource so that it can be Banned in Country specific profile or implementations
+
+In some jurisdictions, it is prohibited to send race and/or ethnicity. Use of this extension may be constrained by national extension and or implementation. There may be a local jurisdiction extension deffined that may be permitted instead of this extension ex: http://hl7.org/fhir/us/core/StructureDefinition/us-core-race
+"""
 * value[x] only CodeableConcept
 
 Extension: UvEthnicity
 Id:  pcc-uv-ethnicity
 Title: "Universal realm Ethnicity Extension"
-Description: "An extension that incoperates the rules and uses of a person's ethnicity in a patient resource egnostic of country or realm. Remains an optional element within the resource so that it can be Banned in Country specific profile or implementations"
-* ^comment = "In some jurisdictions, it is prohibited to send race and/or ethnicity. Use of this extension may be constrained by national extension and or implementation.There may be a local jurisdiction extension deffined that may be permitted instead of this extension ex: http://hl7.org.au/fhir/StructureDefinition/ethnicity"
+Description: """
+An extension that incoperates the rules and uses of a person's ethnicity in a patient resource egnostic of country or realm. Remains an optional element within the resource so that it can be Banned in Country specific profile or implementations
+
+In some jurisdictions, it is prohibited to send race and/or ethnicity. Use of this extension may be constrained by national extension and or implementation.There may be a local jurisdiction extension deffined that may be permitted instead of this extension ex: http://hl7.org.au/fhir/StructureDefinition/ethnicity
+"""
 * value[x] only CodeableConcept
-* value[x] ^comment = "Values will very by jurisdiction"
 
 
 
